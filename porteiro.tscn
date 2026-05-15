@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://b7p70rsvu2xf0"]
+
+[ext_resource type="PackedScene" uid="uid://byftnwq0rl76l" path="res://Porteiro.glb" id="1_rn8gm"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rn8gm"]
+animation = &"Idle_Porteiro"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_u52i8"]
+animation = &"Talk_Porteiro"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_u52i8"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_u52i8"]
+states/Idle_Porteiro/node = SubResource("AnimationNodeAnimation_rn8gm")
+states/Idle_Porteiro/position = Vector2(426, 100)
+states/Start/position = Vector2(198, 100)
+states/Talk_Porteiro/node = SubResource("AnimationNodeAnimation_u52i8")
+states/Talk_Porteiro/position = Vector2(448, 182)
+transitions = ["Start", "Idle_Porteiro", SubResource("AnimationNodeStateMachineTransition_u52i8")]
+graph_offset = Vector2(-208, 29)
+
+[node name="Porteiro" unique_id=93237742 instance=ExtResource("1_rn8gm")]
+
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(402796763) index="0" unique_id=656996876]
+bones/3/rotation = Quaternion(0.10448847, 0.00020358278, 0.004049784, 0.9945179)
+bones/5/rotation = Quaternion(0.47523588, 0.15327922, -0.08899899, 0.8618211)
+bones/6/rotation = Quaternion(0.23734012, -0.00918699, 0.04007863, 0.9705561)
+bones/7/rotation = Quaternion(0.16662073, 0.06346444, 0.121380135, 0.9764613)
+bones/20/rotation = Quaternion(0.44892225, 0.34601402, -0.21260121, 0.7959547)
+bones/23/rotation = Quaternion(0.079030104, -0.22904983, 0.03393614, 0.9696076)
+bones/26/rotation = Quaternion(-0.15765382, 0.034277394, 0.5210745, 0.83812404)
+bones/27/rotation = Quaternion(0.1687562, 0.16089106, 0.1178465, 0.9652708)
+bones/28/rotation = Quaternion(-0.05790916, 0.16639844, 0.2610983, 0.9490974)
+bones/29/rotation = Quaternion(-0.08167926, 0.11385532, 0.4276291, 0.8930279)
+bones/30/rotation = Quaternion(-0.058373053, 0.109124996, 0.33892164, 0.9326395)
+bones/32/rotation = Quaternion(-0.07264473, 0.100151435, 0.38473523, 0.91469747)
+bones/33/rotation = Quaternion(-0.09473828, 0.17322035, 0.53579175, 0.8209425)
+bones/35/rotation = Quaternion(-0.07177923, 0.10740169, 0.40322956, 0.9059353)
+bones/36/rotation = Quaternion(-0.091194525, 0.012032207, 0.57365084, 0.81391865)
+bones/38/rotation = Quaternion(-0.07798141, 0.10967939, 0.4192199, 0.8978552)
+bones/39/rotation = Quaternion(-0.14400901, 0.07238912, 0.6976749, 0.6980481)
+bones/42/rotation = Quaternion(-0.45501104, 0.35649008, 0.1503664, 0.802041)
+bones/44/rotation = Quaternion(-0.49947995, 0.50225794, 0.508893, -0.48916727)
+bones/46/rotation = Quaternion(0.7499166, 0.050244663, -0.12216179, 0.6482107)
+bones/47/rotation = Quaternion(0.27934548, 0.03533717, 0.0046481476, 0.959529)
+bones/48/rotation = Quaternion(0.4616709, -0.042255998, -0.070298515, 0.88325125)
+bones/49/rotation = Quaternion(-0.7430025, -0.17602517, -0.036613356, 0.6446876)
+bones/50/rotation = Quaternion(0.7499166, -0.050244823, 0.12216201, 0.6482106)
+bones/51/rotation = Quaternion(0.27934548, -0.035337187, -0.004648097, 0.9595289)
+bones/52/rotation = Quaternion(0.4616708, 0.042255986, 0.070298545, 0.8832513)
+bones/53/rotation = Quaternion(-0.7430024, 0.17602515, 0.036613345, 0.6446876)
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2" unique_id=18184044]
+tree_root = SubResource("AnimationNodeStateMachine_u52i8")
+anim_player = NodePath("../AnimationPlayer")

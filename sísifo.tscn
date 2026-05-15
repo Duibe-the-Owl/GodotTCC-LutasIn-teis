@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://d4jpcs2f2dyr1"]
+
+[ext_resource type="PackedScene" uid="uid://b74qldflfojto" path="res://Sísifo.glb" id="1_6sw3n"]
+[ext_resource type="Script" uid="uid://b1loki4gelx2" path="res://sísifo.gd" id="2_ceoir"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ceoir"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6sw3n"]
+radius = 0.6
+height = 4.0
+
+[node name="Sísifo" unique_id=139896411 instance=ExtResource("1_6sw3n")]
+script = ExtResource("2_ceoir")
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2" unique_id=1748186942]
+tree_root = SubResource("AnimationNodeStateMachine_ceoir")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="3" unique_id=12639600]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0010937452, -0.7784443, 0)
+shape = SubResource("CapsuleShape3D_6sw3n")

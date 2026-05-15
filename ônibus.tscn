@@ -1,0 +1,218 @@
+[gd_scene format=3 uid="uid://cxr8m564nxwm4"]
+
+[ext_resource type="PackedScene" uid="uid://de55qgjoyg7n0" path="res://Õnibus.glb" id="1_rmrfu"]
+[ext_resource type="AudioStream" uid="uid://dd1fdwjpg02ot" path="res://Bus_SE.wav" id="2_thvwp"]
+[ext_resource type="Script" uid="uid://etxlbpwpuu2p" path="res://bus_transition.gd" id="3_lgbcn"]
+[ext_resource type="AudioStream" uid="uid://dqgbgopnbwcr3" path="res://BusTakeOff_SE.wav" id="4_jox6m"]
+
+[sub_resource type="Animation" id="Animation_rmrfu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BusUnit/Wheel1:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, -1.5707964)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_thvwp"]
+_data = {
+&"RESET": SubResource("Animation_rmrfu")
+}
+
+[sub_resource type="Animation" id="Animation_lgbcn"]
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BusUnit/Wheel1:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, -1.5707964), Vector3(6.2831855, 1.5707964, -1.5707964)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jox6m"]
+_data = {
+&"spin": SubResource("Animation_lgbcn")
+}
+
+[sub_resource type="Animation" id="Animation_4f21k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BusUnit/Wheel2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, -1.5707964)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2xphx"]
+_data = {
+&"RESET": SubResource("Animation_4f21k")
+}
+
+[sub_resource type="Animation" id="Animation_y6hkm"]
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BusUnit/Wheel2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, -1.5707964), Vector3(6.2831855, 1.5707964, -1.5707964)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7bxu2"]
+_data = {
+&"spin2": SubResource("Animation_y6hkm")
+}
+
+[sub_resource type="Animation" id="Animation_xdh6h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BusUnit/Wheel3:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, -1.5707964)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2e210"]
+_data = {
+&"RESET": SubResource("Animation_xdh6h")
+}
+
+[sub_resource type="Animation" id="Animation_nfmr4"]
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BusUnit/Wheel3:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, -1.5707964), Vector3(6.2831855, 1.5707964, -1.5707964)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s0c3k"]
+_data = {
+&"spin3": SubResource("Animation_nfmr4")
+}
+
+[sub_resource type="Animation" id="Animation_llxgk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BusUnit/Wheel4:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, -1.5707964)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b2shc"]
+_data = {
+&"RESET": SubResource("Animation_llxgk")
+}
+
+[sub_resource type="Animation" id="Animation_xkm1h"]
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BusUnit/Wheel4:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, -1.5707964), Vector3(6.2831855, 1.5707964, -1.5707964)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ssjgm"]
+_data = {
+&"spin4": SubResource("Animation_xkm1h")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rmrfu"]
+size = Vector3(1, 3, 3)
+
+[node name="Ônibus" unique_id=1347629826 instance=ExtResource("1_rmrfu")]
+
+[node name="Wheel1" parent="BusUnit" parent_id_path=PackedInt32Array(225111900) index="2" unique_id=2096818328]
+transform = Transform3D(1.9106853e-15, -4.371139e-08, 0.99999994, -0.99999994, -4.371139e-08, 0, 4.3711385e-08, -1, -4.3711385e-08, 3.311226, -0.3548356, 1.50988)
+
+[node name="Wheel2" parent="BusUnit" parent_id_path=PackedInt32Array(225111900) index="3" unique_id=1003932877]
+transform = Transform3D(1.9106853e-15, -4.3711385e-08, 1, -0.99999994, -4.3711385e-08, 0, 4.3711385e-08, -0.99999994, -4.371139e-08, -5.4145365, -0.3548356, 1.5098804)
+
+[node name="Wheel3" parent="BusUnit" parent_id_path=PackedInt32Array(225111900) index="4" unique_id=382648245]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 3.311226, -0.3548356, -2.0453444)
+
+[node name="Wheel4" parent="BusUnit" parent_id_path=PackedInt32Array(225111900) index="5" unique_id=1352063480]
+transform = Transform3D(1.9106853e-15, -4.371139e-08, 0.99999994, -0.99999994, -4.371139e-08, 0, 4.3711385e-08, -1, -4.3711385e-08, -5.4145365, -0.3548356, -2.0453444)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="1" unique_id=2055769628]
+stream = ExtResource("2_thvwp")
+
+[node name="WheelsPlayer1" type="AnimationPlayer" parent="." index="3" unique_id=1585204580]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_thvwp")
+libraries/WheelLib = SubResource("AnimationLibrary_jox6m")
+
+[node name="WheelsPlayer2" type="AnimationPlayer" parent="." index="4" unique_id=140186463]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_2xphx")
+libraries/WheelLib2 = SubResource("AnimationLibrary_7bxu2")
+
+[node name="WheelsPlayer3" type="AnimationPlayer" parent="." index="5" unique_id=61009064]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_2e210")
+libraries/WheelLib3 = SubResource("AnimationLibrary_s0c3k")
+
+[node name="WheelsPlayer4" type="AnimationPlayer" parent="." index="6" unique_id=315228683]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_b2shc")
+libraries/WheelLib4 = SubResource("AnimationLibrary_ssjgm")
+
+[node name="Area3D" type="Area3D" parent="." index="7" unique_id=1164175362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5815406, 0.90676355, 0.62717724)
+script = ExtResource("3_lgbcn")
+interaction_sound = ExtResource("4_jox6m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=1611903857]
+shape = SubResource("BoxShape3D_rmrfu")
+
+[node name="InteractionSound" type="AudioStreamPlayer3D" parent="Area3D" index="1" unique_id=951198036]
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

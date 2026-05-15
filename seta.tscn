@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://j41kl5ku03hk"]
+
+[ext_resource type="PackedScene" uid="uid://bh4i4ajkcixjd" path="res://Seta.glb" id="1_xuu5o"]
+
+[node name="Seta" unique_id=2037528918 instance=ExtResource("1_xuu5o")]

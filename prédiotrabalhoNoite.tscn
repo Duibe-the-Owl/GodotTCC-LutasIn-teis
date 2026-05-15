@@ -1,0 +1,477 @@
+[gd_scene format=3 uid="uid://bulupk1ceir7s"]
+
+[ext_resource type="PackedScene" uid="uid://c0x7eubguyw05" path="res://RuaTrabalho.glb" id="1_b6saw"]
+[ext_resource type="PackedScene" uid="uid://bf5miglqo0v1t" path="res://PrédioTrabalho.glb" id="2_qe36d"]
+[ext_resource type="PackedScene" uid="uid://d3u82oi3rkevi" path="res://player.tscn" id="3_blb7k"]
+[ext_resource type="PackedScene" uid="uid://3u56xkd77e1q" path="res://Planta.glb" id="4_jyvf8"]
+[ext_resource type="PackedScene" uid="uid://ndxyhvkgi02i" path="res://Tapete.glb" id="5_y1rg7"]
+[ext_resource type="PackedScene" uid="uid://c8gqsetj60e3v" path="res://Balcão.glb" id="6_fac30"]
+[ext_resource type="PackedScene" uid="uid://bvcpsjik7ljtq" path="res://Poltrona.glb" id="7_uq8ta"]
+[ext_resource type="PackedScene" uid="uid://wlwu7vcaqsbu" path="res://MesaCafé.glb" id="8_2056r"]
+[ext_resource type="PackedScene" uid="uid://c4x2t8i0qxwex" path="res://Bebedouro.glb" id="9_qv5sc"]
+[ext_resource type="PackedScene" uid="uid://cuyrxnuh0gp2j" path="res://PortaElevador.glb" id="10_ki75r"]
+[ext_resource type="PackedScene" uid="uid://bd21n8p33ty64" path="res://Elevador.glb" id="11_dmhmy"]
+[ext_resource type="PackedScene" uid="uid://dxh6xhrk7srm7" path="res://Roleta.glb" id="14_y2uve"]
+[ext_resource type="PackedScene" uid="uid://dkj77838dfbcm" path="res://Barreira.glb" id="15_x1nse"]
+[ext_resource type="PackedScene" uid="uid://cm3hjytswxlr7" path="res://Barreira2.glb" id="16_x725q"]
+[ext_resource type="PackedScene" uid="uid://c4gxer50s1dgv" path="res://Placa.glb" id="17_g257b"]
+[ext_resource type="PackedScene" uid="uid://cxr8m564nxwm4" path="res://ônibus.tscn" id="19_dvfyh"]
+[ext_resource type="Script" uid="uid://dx6406sbnxrdj" path="res://placa.gd" id="19_vohkx"]
+[ext_resource type="PackedScene" uid="uid://k4ktjyesiaoe" path="res://Buildings5.glb" id="19_yu31i"]
+[ext_resource type="Texture2D" uid="uid://crl6mobypc55b" path="res://Lutas-Inúteis-Skybox(Noite).png" id="20_b6saw"]
+[ext_resource type="Script" uid="uid://r8wxmrrg31a3" path="res://bus_track.gd" id="20_qe36d"]
+[ext_resource type="PackedScene" uid="uid://dha3rygg0y4o4" path="res://Postes(Noite).glb" id="21_qe36d"]
+[ext_resource type="PackedScene" uid="uid://c06ua5hgmi5jn" path="res://Buildings3.glb" id="22_blb7k"]
+[ext_resource type="PackedScene" uid="uid://t8bneworcuq8" path="res://Buildings4.glb" id="23_jyvf8"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_blb7k"]
+panorama = ExtResource("20_b6saw")
+
+[sub_resource type="Sky" id="Sky_00pjk"]
+sky_material = SubResource("PanoramaSkyMaterial_blb7k")
+
+[sub_resource type="Environment" id="Environment_jyvf8"]
+background_mode = 2
+sky = SubResource("Sky_00pjk")
+ambient_light_source = 3
+tonemap_mode = 3
+ssao_enabled = true
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.03
+adjustment_enabled = true
+adjustment_contrast = 1.1
+adjustment_saturation = 0.8
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jyvf8"]
+size = Vector3(2, 3, 1.5)
+
+[sub_resource type="Curve3D" id="Curve3D_vohkx"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -1.3815956, 0, 1.5192566, -9.921478, 0, -22.137253, 9.921478, 0, 22.137253, 59.18821, 0, 13.275299, 0, 0, 0, 0, 0, 0, 50.329865, 0, 202.28891),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
+[node name="prédiotrabalho" type="Node3D" unique_id=2069597799]
+
+[node name="RuaTrabalho" parent="." unique_id=244722580 instance=ExtResource("1_b6saw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.629753, -1.1730971, -64.45812)
+
+[node name="PrédioTrabalho" parent="." unique_id=1124549358 instance=ExtResource("2_qe36d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1216536, -1.3468385, -7.380094)
+
+[node name="Player" parent="." unique_id=621330810 instance=ExtResource("3_blb7k")]
+
+[node name="Planta" parent="." unique_id=1268389693 instance=ExtResource("4_jyvf8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5195818, -0.37348217, -14.785296)
+
+[node name="Planta2" parent="." unique_id=1104384929 instance=ExtResource("4_jyvf8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.637313, -0.37348217, -14.785296)
+
+[node name="Tapete" parent="." unique_id=1861226863 instance=ExtResource("5_y1rg7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1216536, -0.7721571, -8.012655)
+
+[node name="Balcão" parent="." unique_id=2074732167 instance=ExtResource("6_fac30")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5999365, -0.7916643, -7.896013)
+
+[node name="Poltrona" parent="." unique_id=902341032 instance=ExtResource("7_uq8ta")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.150556, -0.7011962, -14.2702055)
+
+[node name="Poltrona2" parent="." unique_id=1075886323 instance=ExtResource("7_uq8ta")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.998837, -0.7011962, -11.321921)
+
+[node name="MesaCafé" parent="." unique_id=200178970 instance=ExtResource("8_2056r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.85489, -0.56934905, -11.230729)
+
+[node name="Bebedouro" parent="." unique_id=1160362960 instance=ExtResource("9_qv5sc")]
+transform = Transform3D(0.005113774, 0, -0.99998695, 0, 1, 0, 0.99998695, 0, 0.005113774, -10.45082, -0.28261936, -4.2438054)
+
+[node name="Bebedouro2" parent="." unique_id=1443657804 instance=ExtResource("9_qv5sc")]
+transform = Transform3D(0.005113774, 0, -0.99998695, 0, 1, 0, 0.99998695, 0, 0.005113774, -10.455277, -0.28261936, -5.1155972)
+
+[node name="PortaElevador" parent="." unique_id=993516462 instance=ExtResource("10_ki75r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105317116, 1.5091076, 1.0795922)
+
+[node name="PortaElevador2" parent="." unique_id=1468186546 instance=ExtResource("10_ki75r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5198927, 1.5091076, 1.0795922)
+
+[node name="PortaElevador3" parent="." unique_id=476536184 instance=ExtResource("10_ki75r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1872473, 1.5091076, 1.0795922)
+
+[node name="Elevador" parent="." unique_id=1034898151 instance=ExtResource("11_dmhmy")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.018662453, 0.48236585, 2.20814)
+
+[node name="Roleta" parent="." unique_id=1151982969 instance=ExtResource("14_y2uve")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41026115, -0.21345198, -1.6254935)
+
+[node name="Roleta2" parent="." unique_id=1810670455 instance=ExtResource("14_y2uve")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2731771, -0.21345198, -1.6254935)
+
+[node name="Roleta3" parent="." unique_id=674761730 instance=ExtResource("14_y2uve")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2188025, -0.21345198, -1.6254935)
+
+[node name="Barreira" parent="." unique_id=238683195 instance=ExtResource("15_x1nse")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7689197, -0.2005803, -1.5689864)
+
+[node name="Barreira2" parent="." unique_id=289330705 instance=ExtResource("16_x725q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.722499, -0.201, -1.5694518)
+
+[node name="Prédios5" parent="." unique_id=362353404 instance=ExtResource("19_yu31i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.438038, -0.70315886, -0.8709922)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1343595014]
+transform = Transform3D(1, 0, 0, 0, 0.99997, 0.0077491845, 0, -0.0077491845, 0.99997, 2.3584895, 5.627966, -7.00559)
+light_energy = 2.0
+shadow_enabled = true
+omni_range = 23.561
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1724778947]
+transform = Transform3D(1, 0, 0, 0, 0.99997, 0.0077491845, 0, -0.0077491845, 0.99997, -6.253546, 5.627966, -7.00559)
+light_energy = 2.0
+shadow_enabled = true
+omni_range = 23.561
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=629950352]
+environment = SubResource("Environment_jyvf8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=632984101]
+transform = Transform3D(-0.7013167, 0.6180122, 0.35526857, 0.671782, 0.40626898, 0.61939836, 0.23846114, 0.67305756, -0.7000928, -26.84834, 65.49814, 0)
+light_color = Color(0.5819238, 0.62724096, 0.7880468, 1)
+light_energy = 0.131
+shadow_enabled = true
+
+[node name="Postes(Noite)" parent="." unique_id=852313084 instance=ExtResource("21_qe36d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 94.78089, 2.865, -39.98129)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Postes(Noite)" unique_id=2086729296]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -221.25491, 1.8192365, -1.1671901)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Postes(Noite)" unique_id=207596795]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -204.06837, 1.8192365, -1.1659884)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Postes(Noite)" unique_id=45576752]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -187.30884, 1.8192365, -1.1648173)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="Postes(Noite)" unique_id=1914389101]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -170.4332, 1.8192365, -1.1636462)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="Postes(Noite)" unique_id=1447524363]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -153.4837, 1.8192365, -1.1624637)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="Postes(Noite)" unique_id=1954080608]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -136.45096, 1.8192365, -1.1612735)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="Postes(Noite)" unique_id=174647192]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -119.5664, 1.8192365, -1.1600986)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="Postes(Noite)" unique_id=1625951404]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -102.37987, 1.8192365, -1.1588969)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="Postes(Noite)" unique_id=1561236533]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -85.62033, 1.8192365, -1.1577296)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D10" type="SpotLight3D" parent="Postes(Noite)" unique_id=1388641564]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -68.74469, 1.8192365, -1.1565509)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="Postes(Noite)" unique_id=1663883311]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -51.79518, 1.8192365, -1.1553683)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="Postes(Noite)" unique_id=282871487]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -34.76245, 1.8192365, -1.1541781)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D13" type="SpotLight3D" parent="Postes(Noite)" unique_id=484705469]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -17.240906, 1.8192365, -1.1529574)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D14" type="SpotLight3D" parent="Postes(Noite)" unique_id=1417941576]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -0.20817566, 1.8192365, -1.1517673)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="Postes(Noite)4" parent="." unique_id=1670242109 instance=ExtResource("21_qe36d")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -217.18248, 2.865, 64.53485)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Postes(Noite)4" unique_id=521422804]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -221.25491, 1.8192365, -1.1671901)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Postes(Noite)4" unique_id=1472812804]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -204.06837, 1.8192365, -1.1659884)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Postes(Noite)4" unique_id=1523088698]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -187.30884, 1.8192365, -1.1648173)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="Postes(Noite)4" unique_id=2120179185]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -170.4332, 1.8192365, -1.1636462)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="Postes(Noite)4" unique_id=2069686334]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -153.4837, 1.8192365, -1.1624637)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="Postes(Noite)4" unique_id=2030335956]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -136.45096, 1.8192365, -1.1612735)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="Postes(Noite)4" unique_id=328244650]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -119.5664, 1.8192365, -1.1600986)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="Postes(Noite)4" unique_id=1767964366]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -102.37987, 1.8192365, -1.1588969)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="Postes(Noite)4" unique_id=953368350]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -85.62033, 1.8192365, -1.1577296)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D10" type="SpotLight3D" parent="Postes(Noite)4" unique_id=1152158200]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -68.74469, 1.8192365, -1.1565509)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="Postes(Noite)4" unique_id=1850061449]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -51.79518, 1.8192365, -1.1553683)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="Postes(Noite)4" unique_id=662714828]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -34.76245, 1.8192365, -1.1541781)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D13" type="SpotLight3D" parent="Postes(Noite)4" unique_id=2063562546]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -17.240906, 1.8192365, -1.1529574)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D14" type="SpotLight3D" parent="Postes(Noite)4" unique_id=1271263091]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -0.20817566, 1.8192365, -1.1517673)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="Postes(Noite)3" parent="." unique_id=1466941143 instance=ExtResource("21_qe36d")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 137.43538, 2.865, -172.70284)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Postes(Noite)3" unique_id=1212653142]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -221.25491, 1.8192365, -1.1671901)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Postes(Noite)3" unique_id=321962196]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -204.06837, 1.8192365, -1.1659884)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Postes(Noite)3" unique_id=87102570]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -187.30884, 1.8192365, -1.1648173)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="Postes(Noite)3" unique_id=1537201182]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -170.4332, 1.8192365, -1.1636462)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="Postes(Noite)3" unique_id=1559877019]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -153.4837, 1.8192365, -1.1624637)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="Postes(Noite)3" unique_id=684430897]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -136.45096, 1.8192365, -1.1612735)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="Postes(Noite)3" unique_id=945128308]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -119.5664, 1.8192365, -1.1600986)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="Postes(Noite)3" unique_id=537923182]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -102.37987, 1.8192365, -1.1588969)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="Postes(Noite)3" unique_id=1413287079]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -85.62033, 1.8192365, -1.1577296)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D10" type="SpotLight3D" parent="Postes(Noite)3" unique_id=1170711942]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -68.74469, 1.8192365, -1.1565509)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="Postes(Noite)3" unique_id=2118088480]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -51.79518, 1.8192365, -1.1553683)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="Postes(Noite)3" unique_id=441387972]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -34.76245, 1.8192365, -1.1541781)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D13" type="SpotLight3D" parent="Postes(Noite)3" unique_id=2109655248]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -17.240906, 1.8192365, -1.1529574)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D14" type="SpotLight3D" parent="Postes(Noite)3" unique_id=1293453352]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -0.20817566, 1.8192365, -1.1517673)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="Postes(Noite)2" parent="." unique_id=1117282678 instance=ExtResource("21_qe36d")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -130.01837, 2.865, -91.759705)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Postes(Noite)2" unique_id=551146759]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -221.25491, 1.8192365, -1.1671901)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Postes(Noite)2" unique_id=1528111025]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -204.06837, 1.8192365, -1.1659884)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Postes(Noite)2" unique_id=514703582]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -187.30884, 1.8192365, -1.1648173)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="Postes(Noite)2" unique_id=1990641953]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -170.4332, 1.8192365, -1.1636462)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="Postes(Noite)2" unique_id=1438741445]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -153.4837, 1.8192365, -1.1624637)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="Postes(Noite)2" unique_id=1710950640]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -136.45096, 1.8192365, -1.1612735)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="Postes(Noite)2" unique_id=284738999]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -119.5664, 1.8192365, -1.1600986)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="Postes(Noite)2" unique_id=1272457996]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -102.37987, 1.8192365, -1.1588969)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="Postes(Noite)2" unique_id=1437222621]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -85.62033, 1.8192365, -1.1577296)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D10" type="SpotLight3D" parent="Postes(Noite)2" unique_id=505374709]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -68.74469, 1.8192365, -1.1565509)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="Postes(Noite)2" unique_id=2010837327]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -51.79518, 1.8192365, -1.1553683)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="Postes(Noite)2" unique_id=247281533]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -34.76245, 1.8192365, -1.1541781)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D13" type="SpotLight3D" parent="Postes(Noite)2" unique_id=1819885841]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -17.240906, 1.8192365, -1.1529574)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D14" type="SpotLight3D" parent="Postes(Noite)2" unique_id=1812919125]
+transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -0.20817566, 1.8192365, -1.1517673)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="Placa2" parent="." unique_id=595736324 instance=ExtResource("17_g257b")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.731, 0.885, -41.717)
+
+[node name="Area3D" type="Area3D" parent="Placa2" unique_id=1334244419]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("19_vohkx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Placa2/Area3D" unique_id=1176314277]
+shape = SubResource("BoxShape3D_jyvf8")
+
+[node name="BusPath" type="Path3D" parent="." unique_id=1734997112]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -193.13799, 0, 4.9156723)
+curve = SubResource("Curve3D_vohkx")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="BusPath" unique_id=883106378]
+transform = Transform3D(0.20079084, 0, -0.9796279, 0, 1.0000403, 0, 0.9796279, 0, 0.20079084, -1.3815956, 0, 1.5192566)
+rotation_mode = 4
+loop = false
+script = ExtResource("20_qe36d")
+
+[node name="Ônibus" parent="BusPath/PathFollow3D" unique_id=1347629826 instance=ExtResource("19_dvfyh")]
+transform = Transform3D(-4.4703484e-08, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, -4.4703484e-08, 0, -0.23791029, 0)
+
+[node name="Area3D" parent="BusPath/PathFollow3D/Ônibus" index="7" unique_id=1164175362]
+destination_scene = "uid://21hpt0mhbcym"
+
+[node name="SpotLight3D" type="SpotLight3D" parent="BusPath/PathFollow3D/Ônibus" unique_id=1725536178]
+transform = Transform3D(-4.4703484e-08, 0, -1.000006, 0, 0.9999635, 0, 1.000006, 0, -4.4703484e-08, 5.914196, 0.4003902, 0.86968994)
+light_energy = 7.0
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="BusPath/PathFollow3D/Ônibus" unique_id=879526878]
+transform = Transform3D(-4.4703484e-08, 0, -1.000006, 0, 0.9999635, 0, 1.000006, 0, -4.4703484e-08, 6.001816, 0.40039045, -1.6074219)
+light_energy = 7.0
+
+[node name="Prédios3" parent="." unique_id=2088217847 instance=ExtResource("22_blb7k")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 154.91476, -0.61156654, -62.193428)
+
+[node name="Prédios4" parent="." unique_id=532214711 instance=ExtResource("23_jyvf8")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -230.67293, -0.9303932, -68.15387)
+
+[editable path="BusPath/PathFollow3D/Ônibus"]

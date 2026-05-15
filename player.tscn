@@ -1,0 +1,309 @@
+[gd_scene format=3 uid="uid://d3u82oi3rkevi"]
+
+[ext_resource type="Script" uid="uid://wtvhtw1b7mxy" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="AudioStream" uid="uid://latb40cs266p" path="res://Footstep (Test).wav" id="2_onrkg"]
+[ext_resource type="PackedScene" uid="uid://b00a05ih480jg" path="res://nick.tscn" id="3_hqtel"]
+[ext_resource type="Texture2D" uid="uid://b35jvvbrk88o2" path="res://Loading Circle.png" id="3_i3pqv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4flbx"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="Animation" id="Animation_hqtel"]
+length = 9.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.466, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Nick:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -3.1415925, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Nick:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.3601207, 0.17311221)]
+}
+
+[sub_resource type="Animation" id="Animation_i3pqv"]
+resource_name = "intro_get_up"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 3.25, 3.75, 4.233333, 4.733333, 4.75, 5.25, 6.0466666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-2.489521, 0.12361753, 1.7076881), Vector3(0, 0.466, 0), Vector3(0, 0.551, 0), Vector3(0, 0.466, 0), Vector3(0, 0.551, 0), Vector3(0, 0.466, 0), Vector3(0, 0.551, 0), Vector3(0, 0.466, 0), Vector3(0, 0.551, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3, 6.3333335, 9.633333),
+"transitions": PackedFloat32Array(1.8025081, 1, 1, 1),
+"update": 0,
+"values": [Vector3(1.5707964, -1.5707964, 0), Vector3(0, 0, 0), Vector3(0.43284166, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-2.95, 0, -0.73)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5707964, 0)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3, 5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"_play_footstep"
+}, {
+"args": [],
+"method": &"_force_stop_footsteps"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(5.133333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"trigger_dialogue"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Nick:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 3.01),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.5707964, 1.5707964, 0), Vector3(0, -3.1415925, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Nick:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 2.9994478),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-2.0954833, 0.04980713, 1.761588), Vector3(0.014092922, 0.37700468, 0.14288247)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hqtel"]
+_data = {
+&"RESET": SubResource("Animation_hqtel"),
+&"intro_get_up": SubResource("Animation_i3pqv")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sweqy"]
+animation = &"Idle_Nick"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2hs0m"]
+animation = &"Walk_Nick"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1jxqw"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dw050"]
+xfade_time = 0.2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b26j0"]
+xfade_time = 0.2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_n7ghd"]
+states/Idle_Nick/node = SubResource("AnimationNodeAnimation_sweqy")
+states/Idle_Nick/position = Vector2(408, 65)
+states/Start/position = Vector2(249, 78)
+states/Walk_Nick/node = SubResource("AnimationNodeAnimation_2hs0m")
+states/Walk_Nick/position = Vector2(596, 78)
+transitions = ["Start", "Idle_Nick", SubResource("AnimationNodeStateMachineTransition_1jxqw"), "Idle_Nick", "Walk_Nick", SubResource("AnimationNodeStateMachineTransition_dw050"), "Walk_Nick", "Idle_Nick", SubResource("AnimationNodeStateMachineTransition_b26j0")]
+graph_offset = Vector2(-156.4226, -10.460249)
+
+[node name="Player" type="CharacterBody3D" unique_id=621330810 groups=["player"]]
+script = ExtResource("1_4flbx")
+bob_freq = 1.0
+default_footstep_sound = ExtResource("2_onrkg")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=604022162]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.466, 0)
+fov = 43.4
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=993507703]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.46613717, 0)
+target_position = Vector3(0, 0, -2.5)
+collision_mask = 2
+collide_with_areas = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=177987412]
+shape = SubResource("CapsuleShape3D_4flbx")
+
+[node name="Nick" parent="." unique_id=1664565471 instance=ExtResource("3_hqtel")]
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0.3601207, 0.17311221)
+
+[node name="Skeleton3D" parent="Nick/Armature" parent_id_path=PackedInt32Array(1664565471, 1008208416) index="0" unique_id=1363365338]
+bones/3/rotation = Quaternion(0.046478633, 0.00043875488, 0.0040310756, 0.9989111)
+bones/6/rotation = Quaternion(0.09005779, 0.0025063988, 0.038817357, 0.9951766)
+bones/23/rotation = Quaternion(0.14295466, 0.0011941015, -0.0049240463, 0.9897163)
+bones/48/rotation = Quaternion(-0.048146296, -0.0663635, -0.027903778, 0.9962426)
+
+[node name="AnimationPlayer" parent="Nick" index="1" unique_id=1362444446]
+speed_scale = 1.5
+
+[node name="FootstepPlayer" type="AudioStreamPlayer3D" parent="." unique_id=1065433117]
+stream = ExtResource("2_onrkg")
+volume_db = 8.972
+unit_size = 3.0
+max_distance = 5.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1565155607]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1095320962]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.5
+offset_top = -11.5
+offset_right = 88.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Segure E para interagir"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=1353399016]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.5
+offset_top = -101.0
+offset_right = 100.5
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+fill_mode = 4
+texture_under = ExtResource("3_i3pqv")
+texture_progress = ExtResource("3_i3pqv")
+tint_under = Color(0.19881096, 0.19881096, 0.19881096, 1)
+tint_progress = Color(0.69099766, 0.69099766, 0.69099766, 1)
+
+[node name="InteractionAudioPlayer" type="AudioStreamPlayer3D" parent="." unique_id=1475105871]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1556190275]
+libraries/ = SubResource("AnimationLibrary_hqtel")
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=793491641]
+active = false
+root_node = NodePath("../Nick")
+tree_root = SubResource("AnimationNodeStateMachine_n7ghd")
+anim_player = NodePath("../Nick/AnimationPlayer")
+
+[editable path="Nick"]

@@ -1,0 +1,486 @@
+[gd_scene format=3 uid="uid://21hpt0mhbcym"]
+
+[ext_resource type="PackedScene" uid="uid://d3u82oi3rkevi" path="res://player.tscn" id="1_ui4cq"]
+[ext_resource type="Script" uid="uid://d1wwsjlhsvca4" path="res://ap_transition.gd" id="5_42sii"]
+[ext_resource type="PackedScene" uid="uid://c8fr51oevchw5" path="res://Árvore.glb" id="5_xl13i"]
+[ext_resource type="PackedScene" uid="uid://bohx7a8ayqdfw" path="res://Rua(AS).glb" id="6_rvt2e"]
+[ext_resource type="AudioStream" uid="uid://duj8tt3c3r6i6" path="res://Elevator_SE.wav" id="6_ui4cq"]
+[ext_resource type="PackedScene" uid="uid://clakbgg4o0jdc" path="res://Buildings.glb" id="7_yww2o"]
+[ext_resource type="PackedScene" uid="uid://bydip21p1euj" path="res://Buildings2.glb" id="8_ce2bt"]
+[ext_resource type="PackedScene" uid="uid://c06ua5hgmi5jn" path="res://Buildings3.glb" id="9_8rvjc"]
+[ext_resource type="PackedScene" uid="uid://t8bneworcuq8" path="res://Buildings4.glb" id="10_n6rfl"]
+[ext_resource type="PackedScene" uid="uid://c4gxer50s1dgv" path="res://Placa.glb" id="13_1ahnm"]
+[ext_resource type="Script" uid="uid://cvf451s7daiev" path="res://bus_takeoff.gd" id="13_b7eu1"]
+[ext_resource type="PackedScene" uid="uid://de55qgjoyg7n0" path="res://Õnibus.glb" id="14_42sii"]
+[ext_resource type="PackedScene" uid="uid://btog0veyoumcv" path="res://Fundo.glb" id="15_cxx3x"]
+[ext_resource type="Texture2D" uid="uid://crl6mobypc55b" path="res://Lutas-Inúteis-Skybox(Noite).png" id="16_ui4cq"]
+[ext_resource type="PackedScene" uid="uid://dha3rygg0y4o4" path="res://Postes(Noite).glb" id="16_xdyah"]
+[ext_resource type="PackedScene" uid="uid://dtxcdtn6avjrk" path="res://Fundo2.glb" id="16_xfwsx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b7eu1"]
+size = Vector3(3, 3, 2)
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_xdyah"]
+panorama = ExtResource("16_ui4cq")
+
+[sub_resource type="Sky" id="Sky_00pjk"]
+sky_material = SubResource("PanoramaSkyMaterial_xdyah")
+
+[sub_resource type="Environment" id="Environment_ygype"]
+background_mode = 2
+sky = SubResource("Sky_00pjk")
+ambient_light_source = 3
+tonemap_mode = 3
+ssao_enabled = true
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.03
+adjustment_enabled = true
+adjustment_contrast = 1.1
+adjustment_saturation = 0.8
+
+[sub_resource type="Curve3D" id="Curve3D_ui4cq"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.37196207, 0, 4.917775, -15.530136, 2.044919, -10.669268, 15.530136, -2.044919, 10.669268, 73.30187, 0.13529873, 5.4785376, 0, 0, 0, 0, 0, 0, 85.12847, 0.48618793, 86.05028),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
+[sub_resource type="Animation" id="Animation_rmrfu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BusUnit/Wheel1:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, -1.5707964)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xdyah"]
+_data = {
+&"RESET": SubResource("Animation_rmrfu")
+}
+
+[sub_resource type="Animation" id="Animation_lgbcn"]
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BusUnit/Wheel1:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, -1.5707964), Vector3(6.2831855, 1.5707964, -1.5707964)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ygype"]
+_data = {
+&"spin": SubResource("Animation_lgbcn")
+}
+
+[sub_resource type="Animation" id="Animation_4f21k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BusUnit/Wheel2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, -1.5707964)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iw7tv"]
+_data = {
+&"RESET": SubResource("Animation_4f21k")
+}
+
+[sub_resource type="Animation" id="Animation_y6hkm"]
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BusUnit/Wheel2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, -1.5707964), Vector3(6.2831855, 1.5707964, -1.5707964)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xl13i"]
+_data = {
+&"spin2": SubResource("Animation_y6hkm")
+}
+
+[sub_resource type="Animation" id="Animation_xdh6h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BusUnit/Wheel3:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, -1.5707964)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rvt2e"]
+_data = {
+&"RESET": SubResource("Animation_xdh6h")
+}
+
+[sub_resource type="Animation" id="Animation_nfmr4"]
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BusUnit/Wheel3:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, -1.5707964), Vector3(6.2831855, 1.5707964, -1.5707964)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yww2o"]
+_data = {
+&"spin3": SubResource("Animation_nfmr4")
+}
+
+[sub_resource type="Animation" id="Animation_llxgk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BusUnit/Wheel4:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, -1.5707964)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ce2bt"]
+_data = {
+&"RESET": SubResource("Animation_llxgk")
+}
+
+[sub_resource type="Animation" id="Animation_xkm1h"]
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BusUnit/Wheel4:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, -1.5707964), Vector3(6.2831855, 1.5707964, -1.5707964)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8rvjc"]
+_data = {
+&"spin4": SubResource("Animation_xkm1h")
+}
+
+[node name="rua" type="Node3D" unique_id=1976608128]
+
+[node name="Player" parent="." unique_id=621330810 instance=ExtResource("1_ui4cq")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1812071559]
+autoplay = true
+
+[node name="Árvore" parent="." unique_id=1392830244 instance=ExtResource("5_xl13i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7108936, -0.7160511, 57.903645)
+
+[node name="Árvore2" parent="." unique_id=160528888 instance=ExtResource("5_xl13i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.990364, -0.7160511, 101.4984)
+
+[node name="Árvore3" parent="." unique_id=467126969 instance=ExtResource("5_xl13i")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.319216, -0.7160511, -18.58059)
+
+[node name="Árvore4" parent="." unique_id=1100434926 instance=ExtResource("5_xl13i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.904667, -0.7160511, 31.921776)
+
+[node name="Árvore5" parent="." unique_id=768170701 instance=ExtResource("5_xl13i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.384255, -0.716, 117.8123)
+
+[node name="Rua(AS)" parent="." unique_id=474917808 instance=ExtResource("6_rvt2e")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -21.176836, -1.09, 56.11856)
+
+[node name="Prédios" parent="." unique_id=1849051298 instance=ExtResource("7_yww2o")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.076088, -0.76517963, 45.763786)
+
+[node name="Area3D" type="Area3D" parent="Prédios" unique_id=1936353676]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.04653, 0, -5.870679)
+script = ExtResource("5_42sii")
+target_scene_path = "res://ApartamentoNoite.tscn"
+interaction_sound = ExtResource("6_ui4cq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Prédios/Area3D" unique_id=1407905564]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3809738, 1.3859118, 0)
+shape = SubResource("BoxShape3D_b7eu1")
+
+[node name="InteractionSound" type="AudioStreamPlayer3D" parent="Prédios/Area3D" unique_id=1370160447]
+
+[node name="Prédios2" parent="." unique_id=246267005 instance=ExtResource("8_ce2bt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -62.095634, -0.74586296, 44.868633)
+
+[node name="Prédios3" parent="." unique_id=1314807129 instance=ExtResource("9_8rvjc")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.762337, -0.723073, 215.46173)
+
+[node name="Prédios4" parent="." unique_id=1865034748 instance=ExtResource("10_n6rfl")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.999641, -1.00776, -104.75381)
+
+[node name="Placa" parent="." unique_id=595736324 instance=ExtResource("13_1ahnm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6672106, 0.88510907, -4.5386276)
+
+[node name="Fundo" parent="." unique_id=239693333 instance=ExtResource("15_cxx3x")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 23.582056, 6.431802, 49.912216)
+
+[node name="Fundo2" parent="." unique_id=677170024 instance=ExtResource("16_xfwsx")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -70.07067, 7.8657074, 48.07638)
+
+[node name="Árvore6" parent="." unique_id=1121851960 instance=ExtResource("5_xl13i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.03585, -0.716, 159.77765)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1687773204]
+environment = SubResource("Environment_ygype")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=484332989]
+transform = Transform3D(0.46976632, 0.41286415, -0.78029656, 0.6717821, 0.406269, 0.6193985, 0.57273775, -0.8151618, -0.08650323, -26.84834, 13.169069, 0)
+light_color = Color(0.5819238, 0.62724096, 0.7880468, 1)
+light_energy = 0.131
+shadow_enabled = true
+
+[node name="Postes(Noite)" parent="." unique_id=852313084 instance=ExtResource("16_xdyah")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.409, 2.751, -59.541)
+
+[node name="Postes(Noite)2" parent="." unique_id=20817710 instance=ExtResource("16_xdyah")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -41.167, 2.751, 161.06)
+
+[node name="Postes(Noite)3" parent="." unique_id=812068228 instance=ExtResource("16_xdyah")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.944, 2.751, 203.113)
+
+[node name="Postes(Noite)4" parent="." unique_id=693581623 instance=ExtResource("16_xdyah")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -125.232, 2.751, -94.111)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1615624482]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, -59.51959)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=531609252]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, -42.333057)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=1406199927]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, -25.573513)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="." unique_id=1519102078]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, -8.697884)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="." unique_id=1755098283]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 8.251616)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="." unique_id=2045728174]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 25.28435)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="." unique_id=1920657179]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 42.16892)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="." unique_id=529094494]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 59.35545)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="." unique_id=1404456920]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 76.11499)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D10" type="SpotLight3D" parent="." unique_id=1890393232]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 92.99062)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="." unique_id=1715850021]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 109.940125)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="." unique_id=152993681]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 126.972855)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D13" type="SpotLight3D" parent="." unique_id=2027411354]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 144.49442)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D14" type="SpotLight3D" parent="." unique_id=627904911]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 161.52715)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D15" type="SpotLight3D" parent="." unique_id=723825239]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, -59.51959)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D16" type="SpotLight3D" parent="." unique_id=985324674]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, -42.333057)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D17" type="SpotLight3D" parent="." unique_id=904308513]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, -25.573513)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D18" type="SpotLight3D" parent="." unique_id=989746679]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, -8.697884)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D19" type="SpotLight3D" parent="." unique_id=164344850]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 8.251616)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D20" type="SpotLight3D" parent="." unique_id=1044696422]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 25.28435)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D21" type="SpotLight3D" parent="." unique_id=1198361374]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 42.16892)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D22" type="SpotLight3D" parent="." unique_id=8171885]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 59.35545)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D23" type="SpotLight3D" parent="." unique_id=1398018958]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 76.11499)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D24" type="SpotLight3D" parent="." unique_id=1077115453]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 92.99062)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D25" type="SpotLight3D" parent="." unique_id=843755126]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 109.940125)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D26" type="SpotLight3D" parent="." unique_id=916923652]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 126.972855)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D27" type="SpotLight3D" parent="." unique_id=1859654155]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 144.49442)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="SpotLight3D28" type="SpotLight3D" parent="." unique_id=1093709868]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 161.52715)
+light_energy = 7.337
+spot_range = 8.195
+
+[node name="BusPath" type="Path3D" parent="." unique_id=158173864]
+transform = Transform3D(0.108450435, 0, 0.9941019, 0, 1, 0, -0.9941019, 0, 0.108450435, -12.4533205, -0.38183594, -2.4505692)
+curve = SubResource("Curve3D_ui4cq")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="BusPath" unique_id=715264372]
+transform = Transform3D(0.17128268, -0.03637197, -0.98454434, 0, 0.9993136, -0.036917515, 0.98521084, 0.006323406, 0.1711668, -0.37196207, 0, 4.917775)
+rotation_mode = 4
+loop = false
+script = ExtResource("13_b7eu1")
+
+[node name="Ônibus" parent="BusPath/PathFollow3D" unique_id=667804955 instance=ExtResource("14_42sii")]
+transform = Transform3D(2.3081899e-05, 0.0034919037, 0.9999939, -0.024252007, 0.9996998, -0.0034903171, -0.99970585, -0.024251774, 0.000107735395, 0, 0.090044826, -0.0016884804)
+
+[node name="Wheel1" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 225111900) index="2" unique_id=2096818328]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 3.311226, -0.3548356, 1.50988)
+
+[node name="Wheel2" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 225111900) index="3" unique_id=1003932877]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -5.4145365, -0.3548356, 1.5098804)
+
+[node name="Wheel3" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 225111900) index="4" unique_id=382648245]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 3.311226, -0.3548356, -2.0453444)
+
+[node name="Wheel4" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 225111900) index="5" unique_id=1352063480]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -5.4145365, -0.3548356, -2.0453444)
+
+[node name="WheelsPlayer1" type="AnimationPlayer" parent="BusPath/PathFollow3D/Ônibus" unique_id=103642161]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_xdyah")
+libraries/WheelLib = SubResource("AnimationLibrary_ygype")
+
+[node name="WheelsPlayer2" type="AnimationPlayer" parent="BusPath/PathFollow3D/Ônibus" unique_id=71584571]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_iw7tv")
+libraries/WheelLib2 = SubResource("AnimationLibrary_xl13i")
+
+[node name="WheelsPlayer3" type="AnimationPlayer" parent="BusPath/PathFollow3D/Ônibus" unique_id=61781259]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_rvt2e")
+libraries/WheelLib3 = SubResource("AnimationLibrary_yww2o")
+
+[node name="WheelsPlayer4" type="AnimationPlayer" parent="BusPath/PathFollow3D/Ônibus" unique_id=827029521]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_ce2bt")
+libraries/WheelLib4 = SubResource("AnimationLibrary_8rvjc")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="BusPath/PathFollow3D/Ônibus" unique_id=1179742101]
+transform = Transform3D(-4.4703484e-08, 0, -1.000006, 0, 0.9999635, 0, 1.000006, 0, -4.4703484e-08, 5.914196, 0.4003902, 0.86968994)
+light_energy = 7.0
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="BusPath/PathFollow3D/Ônibus" unique_id=1928426854]
+transform = Transform3D(-4.4703484e-08, 0, -1.000006, 0, 0.9999635, 0, 1.000006, 0, -4.4703484e-08, 6.001816, 0.40039045, -1.6074219)
+light_energy = 7.0
+
+[connection signal="body_entered" from="Prédios/Area3D" to="Prédios/Area3D" method="_on_body_entered"]
+
+[editable path="BusPath/PathFollow3D/Ônibus"]

@@ -1,0 +1,4 @@
+[signal arg="talk_porteiro"]
+join Porteiro center
+Porteiro: Bom dia.
+Nick: Ah, bom dia.

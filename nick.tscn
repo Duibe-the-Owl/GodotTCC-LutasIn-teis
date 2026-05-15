@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://b00a05ih480jg"]
+
+[ext_resource type="PackedScene" uid="uid://cg7lkh2vh6ij8" path="res://Nick.glb" id="1_8k2re"]
+
+[node name="Nick" unique_id=1664565471 instance=ExtResource("1_8k2re")]
+
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(345324355) index="0" unique_id=1553722971]
+bones/0/position = Vector3(0, -1.2439296, 0)
+bones/2/rotation = Quaternion(-0.1448133, 4.3298698e-14, -3.4526177e-08, 0.98945904)
+bones/3/rotation = Quaternion(0.059421234, 0.00038647276, 0.004036426, 0.9982248)
+bones/4/rotation = Quaternion(0.05984497, -0.07845785, -0.7640836, 0.63752586)
+bones/5/rotation = Quaternion(-0.110011846, -0.05382863, -0.6565094, 0.74430865)
+bones/6/rotation = Quaternion(0.08999493, 0.0025066843, 0.038827453, 0.9951819)
+bones/7/rotation = Quaternion(-0.047496304, -1.0056305e-05, -0.005498231, 0.9988563)
+bones/23/rotation = Quaternion(0.07554464, 0.0013829893, -0.0051552416, 0.99712825)
+bones/25/rotation = Quaternion(0.05951536, 0.07717789, 0.75902516, 0.64372534)
+bones/26/rotation = Quaternion(-0.11001188, 0.053828605, 0.65650946, 0.7443086)
+bones/27/rotation = Quaternion(0.06901586, -0.0029699234, -0.061350167, 0.99572295)
+bones/28/rotation = Quaternion(-0.0474963, 1.0059564e-05, 0.005498238, 0.9988563)
+bones/44/rotation = Quaternion(-0.49945602, 0.50228095, 0.5089145, -0.4891459)
+bones/46/rotation = Quaternion(0.9880502, 0.028724238, -0.004400089, 0.15136816)
+bones/47/rotation = Quaternion(0.11894611, 0.0034579667, 0.028852925, 0.9924754)
+bones/48/rotation = Quaternion(-0.048148233, -0.066310935, -0.027908377, 0.9962459)
+bones/49/rotation = Quaternion(-0.69481564, 0.024903446, 0.067496404, 0.7155804)
+bones/50/rotation = Quaternion(0.9880502, -0.028724264, 0.0044003385, 0.15136819)
+bones/51/rotation = Quaternion(0.11894615, -0.003457956, -0.0288529, 0.9924754)
+bones/52/rotation = Quaternion(-0.04814825, 0.06631092, 0.027908372, 0.9962459)
+bones/53/rotation = Quaternion(-0.69481564, -0.0249035, -0.06749645, 0.7155804)

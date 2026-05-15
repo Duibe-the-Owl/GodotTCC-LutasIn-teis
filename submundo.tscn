@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://k6ya35j27kl8"]
+
+[ext_resource type="PackedScene" uid="uid://yem4i6s5b0ul" path="res://Montanha.glb" id="1_btv6c"]
+[ext_resource type="PackedScene" uid="uid://d3u82oi3rkevi" path="res://player.tscn" id="2_1qhst"]
+[ext_resource type="Texture2D" uid="uid://b3l0a1pswi8ou" path="res://Lutas-Inúteis-Skybox(Submundo).png" id="3_b63dl"]
+[ext_resource type="PackedScene" uid="uid://cypxg21ux408a" path="res://Montanha2.glb" id="4_h3mjy"]
+[ext_resource type="PackedScene" uid="uid://ll5rvcf0xynf" path="res://Montanha3.glb" id="5_icxyv"]
+[ext_resource type="PackedScene" uid="uid://bmkptjnx6ym2p" path="res://Montanha4.glb" id="6_gxjer"]
+[ext_resource type="PackedScene" uid="uid://ddn4srarx22cn" path="res://Montanha5.glb" id="7_lfu1u"]
+[ext_resource type="PackedScene" uid="uid://pi7xoc3wwbtu" path="res://Nuvens.glb" id="8_vwoq7"]
+[ext_resource type="Texture2D" uid="uid://dldotm4yjsylf" path="res://Nuvens_MistTexture.png" id="9_ketr1"]
+[ext_resource type="AudioStream" uid="uid://cio7i24ea4j3q" path="res://Wind_SE.wav" id="10_ketr1"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jcoy0"]
+panorama = ExtResource("3_b63dl")
+
+[sub_resource type="Sky" id="Sky_h3mjy"]
+sky_material = SubResource("PanoramaSkyMaterial_jcoy0")
+
+[sub_resource type="Environment" id="Environment_icxyv"]
+background_mode = 2
+sky = SubResource("Sky_h3mjy")
+ambient_light_source = 3
+tonemap_mode = 3
+ssao_enabled = true
+fog_light_color = Color(0.99998456, 0.38697997, 0.47476554, 1)
+fog_height_density = 0.3299
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0381
+volumetric_fog_albedo = Color(0.5091657, 0.08045111, 0.09768476, 1)
+adjustment_enabled = true
+adjustment_brightness = 0.79
+adjustment_contrast = 1.035
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_gxjer"]
+frequency = 0.02
+
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_lfu1u"]
+noise = SubResource("FastNoiseLite_gxjer")
+seamless = true
+
+[sub_resource type="FogMaterial" id="FogMaterial_vwoq7"]
+density = 2.0971
+albedo = Color(0.99979275, 0.2722567, 0.23193568, 1)
+density_texture = SubResource("NoiseTexture3D_lfu1u")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h53hy"]
+transparency = 1
+albedo_texture = ExtResource("9_ketr1")
+proximity_fade_enabled = true
+distance_fade_mode = 2
+
+[sub_resource type="Animation" id="Animation_vwoq7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Plane:surface_material_override/0:uv1_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0nynm"]
+resource_name = "cloud_roll"
+length = 20.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Plane:surface_material_override/0:uv1_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(1, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eqkyt"]
+_data = {
+&"RESET": SubResource("Animation_vwoq7"),
+&"cloud_roll": SubResource("Animation_0nynm")
+}
+
+[node name="submundo" type="Node3D" unique_id=1630282636]
+
+[node name="Montanha" parent="." unique_id=1458667891 instance=ExtResource("1_btv6c")]
+transform = Transform3D(0.9569657, 0.2902012, 0, -0.2902012, 0.9569657, 0, 0, 0, 1, 24.986828, -1.194932, 0)
+
+[node name="Player" parent="." unique_id=621330810 instance=ExtResource("2_1qhst")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1487394927]
+environment = SubResource("Environment_icxyv")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=810031887]
+transform = Transform3D(-3.2681715e-08, 0.66406983, -0.7476706, 2.902741e-08, 0.7476706, 0.66406983, 1, 1.7763568e-15, -4.3711385e-08, -125.328705, 311.07977, 2.4863396)
+light_color = Color(1, 1, 0.8117647, 1)
+light_energy = 1.792
+shadow_enabled = true
+
+[node name="FogVolume" type="FogVolume" parent="." unique_id=848124833]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10.307808, 0)
+size = Vector3(416.51, 3.35, 471.59)
+material = SubResource("FogMaterial_vwoq7")
+
+[node name="Montanha2" parent="." unique_id=1165089844 instance=ExtResource("4_h3mjy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.695925, -83.01019)
+
+[node name="Montanha3" parent="." unique_id=299580998 instance=ExtResource("5_icxyv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -17.794235, 125.49675)
+
+[node name="Montanha4" parent="." unique_id=8882935 instance=ExtResource("6_gxjer")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -131.10648, -8.194796, -13.392052)
+
+[node name="Montanha5" parent="." unique_id=1394973744 instance=ExtResource("7_lfu1u")]
+transform = Transform3D(0.24373354, 0, -0.96984226, 0, 1, 0, 0.96984226, 0, 0.24373354, 43.935028, -14.287771, 153.55588)
+
+[node name="Montanha6" parent="." unique_id=16518635 instance=ExtResource("6_gxjer")]
+transform = Transform3D(0.899931, 0, 0.43603233, 0, 1, 0, -0.43603233, 0, 0.899931, 122.02858, -19.630043, 44.86818)
+
+[node name="Montanha7" parent="." unique_id=932201457 instance=ExtResource("4_h3mjy")]
+transform = Transform3D(-0.036504187, 0, -0.9993335, 0, 1, 0, 0.9993335, 0, -0.036504187, 122.851, -17.708206, -51.414566)
+
+[node name="Montanha8" parent="." unique_id=1128072678 instance=ExtResource("7_lfu1u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.41667, 13.117142, -108.293304)
+
+[node name="Montanha9" parent="." unique_id=741007356 instance=ExtResource("4_h3mjy")]
+transform = Transform3D(0.6467898, 0, -0.7626684, 0, 1, 0, 0.7626684, 0, 0.6467898, -173.79578, -5.8123493, 158.69606)
+
+[node name="Nuvens" parent="." unique_id=243861410 instance=ExtResource("8_vwoq7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.407043, 0)
+
+[node name="Plane" parent="Nuvens" index="0" unique_id=1182882345]
+surface_material_override/0 = SubResource("StandardMaterial3D_h53hy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Nuvens" unique_id=1408293191]
+libraries/ = SubResource("AnimationLibrary_eqkyt")
+autoplay = &"cloud_roll"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2049307430]
+stream = ExtResource("10_ketr1")
+autoplay = true
+
+[editable path="Nuvens"]

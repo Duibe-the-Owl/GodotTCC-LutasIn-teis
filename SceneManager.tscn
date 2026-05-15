@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://cetm63qcsv4jc"]
+
+[ext_resource type="Script" uid="uid://btc1u7ukwm12p" path="res://scene_manager.gd" id="1_o6d0x"]
+
+[sub_resource type="Animation" id="Animation_03psc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tu27g"]
+resource_name = "fade_to_black"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ik8mu"]
+resource_name = "fade_to_normal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o6d0x"]
+_data = {
+&"RESET": SubResource("Animation_03psc"),
+&"fade_to_black": SubResource("Animation_tu27g"),
+&"fade_to_normal": SubResource("Animation_ik8mu")
+}
+
+[node name="SceneManager" type="CanvasLayer" unique_id=1867062067]
+layer = 100
+script = ExtResource("1_o6d0x")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=980702834]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2063433501]
+libraries/ = SubResource("AnimationLibrary_o6d0x")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1968546597]

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://eyewolqrn7xf"]
+
+[ext_resource type="PackedScene" uid="uid://drbkq1qmh5c22" path="res://SetaLado.glb" id="1_c37wv"]
+
+[node name="SetaLado" unique_id=1545600204 instance=ExtResource("1_c37wv")]
+
+[node name="ArrowSide" parent="." index="0" unique_id=166019420]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=1096391474]
+autoplay = &"ArrowSide_Spin"
