@@ -1,0 +1,5 @@
+[signal arg="talk_colega"]
+join Colega center
+Colega: Bom dia Nick.
+Nick: Bom dia.
+[signal arg="end_dialogue"]
