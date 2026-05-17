@@ -1,12 +1,34 @@
-[gd_scene format=3 uid="uid://b0l71abc2vfo5"]
+[gd_scene format=3 uid="uid://cm1gfabrid871"]
 
 [ext_resource type="PackedScene" uid="uid://corvxucwtcf0r" path="res://Coworker.glb" id="1_ygwon"]
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ygwon"]
+animation = &"Idle_Coworker"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2w3d4"]
+animation = &"Talk_Coworker"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nl7ko"]
+xfade_time = 0.25
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ofnld"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b2drg"]
+xfade_time = 0.25
+advance_mode = 0
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_2w3d4"]
+states/Idle_Coworker/node = SubResource("AnimationNodeAnimation_ygwon")
+states/Idle_Coworker/position = Vector2(336, 131)
+states/Talk_Coworker/node = SubResource("AnimationNodeAnimation_2w3d4")
+states/Talk_Coworker/position = Vector2(561, 136)
+transitions = ["Idle_Coworker", "Talk_Coworker", SubResource("AnimationNodeStateMachineTransition_nl7ko"), "Start", "Idle_Coworker", SubResource("AnimationNodeStateMachineTransition_ofnld"), "Talk_Coworker", "Idle_Coworker", SubResource("AnimationNodeStateMachineTransition_b2drg")]
 
 [node name="Colega de Trabalho" unique_id=1449720757 instance=ExtResource("1_ygwon")]
 
-[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(804187705) index="0" unique_id=2012468430]
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(1265610037) index="0" unique_id=594828182]
 bones/2/rotation = Quaternion(-0.09744682, 1.7097435e-14, -2.323314e-08, 0.99524075)
 bones/3/rotation = Quaternion(0.059421238, 0.00038647166, 0.0040364275, 0.9982248)
 bones/4/rotation = Quaternion(0.1283036, -0.13674492, -0.7571969, 0.62569314)

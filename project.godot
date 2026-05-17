@@ -24,10 +24,12 @@ GameManager="*uid://y1evsuwjnou1"
 [dialogic]
 
 directories/dch_directory={
+"Colega": "res://Colega.dch",
 "Nick": "res://Nick.dch",
 "Porteiro": "res://Porteiro.dch"
 }
 directories/dtl_directory={
+"EscritórioTalk": "res://EscritórioTalk.dtl",
 "PortariaTalk": "res://PortariaTalk.dtl",
 "StartCutscene": "res://StartCutscene.dtl",
 "StreetBlockDialogue": "res://StreetBlockDialogue.dtl",
