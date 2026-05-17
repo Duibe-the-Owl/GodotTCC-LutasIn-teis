@@ -11,27 +11,35 @@ animation = &"Talk_Porteiro"
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_u52i8"]
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rn8gm"]
+xfade_time = 0.25
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_o3pmx"]
+xfade_time = 0.25
+advance_mode = 0
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_u52i8"]
 states/Idle_Porteiro/node = SubResource("AnimationNodeAnimation_rn8gm")
 states/Idle_Porteiro/position = Vector2(426, 100)
 states/Start/position = Vector2(198, 100)
 states/Talk_Porteiro/node = SubResource("AnimationNodeAnimation_u52i8")
 states/Talk_Porteiro/position = Vector2(448, 182)
-transitions = ["Start", "Idle_Porteiro", SubResource("AnimationNodeStateMachineTransition_u52i8")]
-graph_offset = Vector2(-208, 29)
+transitions = ["Start", "Idle_Porteiro", SubResource("AnimationNodeStateMachineTransition_u52i8"), "Idle_Porteiro", "Talk_Porteiro", SubResource("AnimationNodeStateMachineTransition_rn8gm"), "Talk_Porteiro", "Idle_Porteiro", SubResource("AnimationNodeStateMachineTransition_o3pmx")]
+graph_offset = Vector2(-137, 36)
 
 [node name="Porteiro" unique_id=93237742 instance=ExtResource("1_rn8gm")]
 
 [node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(402796763) index="0" unique_id=656996876]
-bones/3/rotation = Quaternion(0.10448847, 0.00020358278, 0.004049784, 0.9945179)
+bones/3/rotation = Quaternion(0.10576301, 0.00019839214, 0.00405004, 0.9943831)
 bones/5/rotation = Quaternion(0.47523588, 0.15327922, -0.08899899, 0.8618211)
-bones/6/rotation = Quaternion(0.23734012, -0.00918699, 0.04007863, 0.9705561)
+bones/6/rotation = Quaternion(0.23708187, -0.006346758, 0.059512623, 0.96964437)
 bones/7/rotation = Quaternion(0.16662073, 0.06346444, 0.121380135, 0.9764613)
 bones/20/rotation = Quaternion(0.44892225, 0.34601402, -0.21260121, 0.7959547)
-bones/23/rotation = Quaternion(0.079030104, -0.22904983, 0.03393614, 0.9696076)
-bones/26/rotation = Quaternion(-0.15765382, 0.034277394, 0.5210745, 0.83812404)
-bones/27/rotation = Quaternion(0.1687562, 0.16089106, 0.1178465, 0.9652708)
-bones/28/rotation = Quaternion(-0.05790916, 0.16639844, 0.2610983, 0.9490974)
+bones/23/rotation = Quaternion(0.08055137, -0.23122089, 0.02822856, 0.96915)
+bones/26/rotation = Quaternion(-0.11835365, 0.04458829, 0.52422154, 0.8421378)
+bones/27/rotation = Quaternion(0.25521767, 0.028284088, 0.01719527, 0.9663169)
+bones/28/rotation = Quaternion(-0.050594408, 0.017546112, 0.08267409, 0.9951369)
 bones/29/rotation = Quaternion(-0.08167926, 0.11385532, 0.4276291, 0.8930279)
 bones/30/rotation = Quaternion(-0.058373053, 0.109124996, 0.33892164, 0.9326395)
 bones/32/rotation = Quaternion(-0.07264473, 0.100151435, 0.38473523, 0.91469747)
