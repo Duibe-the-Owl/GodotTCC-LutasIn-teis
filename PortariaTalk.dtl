@@ -2,3 +2,4 @@
 join Porteiro center
 Porteiro: Bom dia.
 Nick: Ah, bom dia.
+[signal arg="end_dialogue"]
