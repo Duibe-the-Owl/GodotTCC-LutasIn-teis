@@ -165,13 +165,13 @@ shape = SubResource("BoxShape3D_iw8jk")
 script = ExtResource("18_wxeep")
 objectives = [NodePath("../Placa")]
 
-[node name="SetaLado" parent="ObjectiveArrow" unique_id=2055762299 instance=ExtResource("19_0ymfv")]
+[node name="SetaLado" parent="ObjectiveArrow" unique_id=1133751353 instance=ExtResource("19_0ymfv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.77)
 
-[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=1951850407]
+[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2064431747]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
-[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=2040951130]
+[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=343420702]
 autoplay = &"ArrowSide_Spin"
 
 [connection signal="body_entered" from="StaticBody3D/Area3D" to="StaticBody3D/Area3D" method="_on_body_entered"]

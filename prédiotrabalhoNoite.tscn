@@ -58,78 +58,78 @@ point_count = 3
 [node name="prédiotrabalho" type="Node3D" unique_id=2069597799]
 
 [node name="RuaTrabalho" parent="." unique_id=244722580 instance=ExtResource("1_b6saw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.629753, -1.1730971, -64.45812)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.629753, -1.2669396, -64.45812)
 
 [node name="PrédioTrabalho" parent="." unique_id=1124549358 instance=ExtResource("2_qe36d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1216536, -1.3468385, -7.380094)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1216536, -1.440681, -7.380094)
 
 [node name="Player" parent="." unique_id=621330810 instance=ExtResource("3_blb7k")]
 
 [node name="Planta" parent="." unique_id=1268389693 instance=ExtResource("4_jyvf8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5195818, -0.37348217, -14.785296)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5195818, -0.46732467, -14.785296)
 
 [node name="Planta2" parent="." unique_id=1104384929 instance=ExtResource("4_jyvf8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.637313, -0.37348217, -14.785296)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.637313, -0.46732467, -14.785296)
 
 [node name="Tapete" parent="." unique_id=1861226863 instance=ExtResource("5_y1rg7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1216536, -0.7721571, -8.012655)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1216536, -0.8659996, -8.012655)
 
 [node name="Balcão" parent="." unique_id=2074732167 instance=ExtResource("6_fac30")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5999365, -0.7916643, -7.896013)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5999365, -0.8855068, -7.896013)
 
 [node name="Poltrona" parent="." unique_id=902341032 instance=ExtResource("7_uq8ta")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.150556, -0.7011962, -14.2702055)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.150556, -0.7950387, -14.2702055)
 
 [node name="Poltrona2" parent="." unique_id=1075886323 instance=ExtResource("7_uq8ta")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.998837, -0.7011962, -11.321921)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.998837, -0.7950387, -11.321921)
 
 [node name="MesaCafé" parent="." unique_id=200178970 instance=ExtResource("8_2056r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.85489, -0.56934905, -11.230729)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.85489, -0.66319156, -11.230729)
 
 [node name="Bebedouro" parent="." unique_id=1160362960 instance=ExtResource("9_qv5sc")]
-transform = Transform3D(0.005113774, 0, -0.99998695, 0, 1, 0, 0.99998695, 0, 0.005113774, -10.45082, -0.28261936, -4.2438054)
+transform = Transform3D(0.005113774, 0, -0.99998695, 0, 1, 0, 0.99998695, 0, 0.005113774, -10.45082, -0.37646186, -4.2438054)
 
 [node name="Bebedouro2" parent="." unique_id=1443657804 instance=ExtResource("9_qv5sc")]
-transform = Transform3D(0.005113774, 0, -0.99998695, 0, 1, 0, 0.99998695, 0, 0.005113774, -10.455277, -0.28261936, -5.1155972)
+transform = Transform3D(0.005113774, 0, -0.99998695, 0, 1, 0, 0.99998695, 0, 0.005113774, -10.455277, -0.37646186, -5.1155972)
 
 [node name="PortaElevador" parent="." unique_id=993516462 instance=ExtResource("10_ki75r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105317116, 1.5091076, 1.0795922)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105317116, 1.4152651, 1.0795922)
 
 [node name="PortaElevador2" parent="." unique_id=1468186546 instance=ExtResource("10_ki75r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5198927, 1.5091076, 1.0795922)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5198927, 1.4152651, 1.0795922)
 
 [node name="PortaElevador3" parent="." unique_id=476536184 instance=ExtResource("10_ki75r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1872473, 1.5091076, 1.0795922)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1872473, 1.4152651, 1.0795922)
 
 [node name="Elevador" parent="." unique_id=1034898151 instance=ExtResource("11_dmhmy")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.018662453, 0.48236585, 2.20814)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.018662453, 0.38852334, 2.20814)
 
 [node name="Roleta" parent="." unique_id=1151982969 instance=ExtResource("14_y2uve")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41026115, -0.21345198, -1.6254935)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41026115, -0.3072945, -1.6254935)
 
 [node name="Roleta2" parent="." unique_id=1810670455 instance=ExtResource("14_y2uve")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2731771, -0.21345198, -1.6254935)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2731771, -0.3072945, -1.6254935)
 
 [node name="Roleta3" parent="." unique_id=674761730 instance=ExtResource("14_y2uve")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2188025, -0.21345198, -1.6254935)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2188025, -0.3072945, -1.6254935)
 
 [node name="Barreira" parent="." unique_id=238683195 instance=ExtResource("15_x1nse")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7689197, -0.2005803, -1.5689864)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7689197, -0.2944228, -1.5689864)
 
 [node name="Barreira2" parent="." unique_id=289330705 instance=ExtResource("16_x725q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.722499, -0.201, -1.5694518)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.722499, -0.2948425, -1.5694518)
 
 [node name="Prédios5" parent="." unique_id=362353404 instance=ExtResource("19_yu31i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.438038, -0.70315886, -0.8709922)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.438038, -0.79700136, -0.8709922)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1343595014]
-transform = Transform3D(1, 0, 0, 0, 0.99997, 0.0077491845, 0, -0.0077491845, 0.99997, 2.3584895, 5.627966, -7.00559)
+transform = Transform3D(1, 0, 0, 0, 0.99997, 0.0077491845, 0, -0.0077491845, 0.99997, 2.3584895, 5.5341234, -7.00559)
 light_energy = 2.0
 shadow_enabled = true
 omni_range = 23.561
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1724778947]
-transform = Transform3D(1, 0, 0, 0, 0.99997, 0.0077491845, 0, -0.0077491845, 0.99997, -6.253546, 5.627966, -7.00559)
+transform = Transform3D(1, 0, 0, 0, 0.99997, 0.0077491845, 0, -0.0077491845, 0.99997, -6.253546, 5.5341234, -7.00559)
 light_energy = 2.0
 shadow_enabled = true
 omni_range = 23.561
@@ -144,7 +144,7 @@ light_energy = 0.131
 shadow_enabled = true
 
 [node name="Postes(Noite)" parent="." unique_id=852313084 instance=ExtResource("21_qe36d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 94.78089, 2.865, -39.98129)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 94.78089, 2.7711575, -39.98129)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Postes(Noite)" unique_id=2086729296]
 transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -221.25491, 1.8192365, -1.1671901)
@@ -217,7 +217,7 @@ light_energy = 7.337
 spot_range = 8.195
 
 [node name="Postes(Noite)4" parent="." unique_id=1670242109 instance=ExtResource("21_qe36d")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -217.18248, 2.865, 64.53485)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -217.18248, 2.7711575, 64.53485)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Postes(Noite)4" unique_id=521422804]
 transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -221.25491, 1.8192365, -1.1671901)
@@ -290,7 +290,7 @@ light_energy = 7.337
 spot_range = 8.195
 
 [node name="Postes(Noite)3" parent="." unique_id=1466941143 instance=ExtResource("21_qe36d")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 137.43538, 2.865, -172.70284)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 137.43538, 2.7711575, -172.70284)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Postes(Noite)3" unique_id=1212653142]
 transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -221.25491, 1.8192365, -1.1671901)
@@ -363,7 +363,7 @@ light_energy = 7.337
 spot_range = 8.195
 
 [node name="Postes(Noite)2" parent="." unique_id=1117282678 instance=ExtResource("21_qe36d")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -130.01837, 2.865, -91.759705)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -130.01837, 2.7711575, -91.759705)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Postes(Noite)2" unique_id=551146759]
 transform = Transform3D(6.975978e-05, -1, -4.3711385e-08, 2.949535e-17, -4.3711385e-08, 1, -1, -6.975978e-05, -3.049267e-12, -221.25491, 1.8192365, -1.1671901)
@@ -436,7 +436,7 @@ light_energy = 7.337
 spot_range = 8.195
 
 [node name="Placa2" parent="." unique_id=595736324 instance=ExtResource("17_g257b")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.731, 0.885, -41.717)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.731, 0.7911575, -41.717)
 
 [node name="Area3D" type="Area3D" parent="Placa2" unique_id=1334244419]
 collision_layer = 2
@@ -447,11 +447,11 @@ script = ExtResource("19_vohkx")
 shape = SubResource("BoxShape3D_jyvf8")
 
 [node name="BusPath" type="Path3D" parent="." unique_id=1734997112]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -193.13799, 0, 4.9156723)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -193.13799, -0.09384251, 4.9156723)
 curve = SubResource("Curve3D_vohkx")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="BusPath" unique_id=883106378]
-transform = Transform3D(0.20079084, 0, -0.9796279, 0, 1.0000405, 0, 0.9796279, 0, 0.20079084, -1.3815956, 0, 1.5192566)
+transform = Transform3D(0.20079084, 0, -0.9796279, 0, 1.0000418, 0, 0.9796279, 0, 0.20079084, -1.3815956, 0, 1.5192566)
 rotation_mode = 4
 loop = false
 script = ExtResource("20_qe36d")
@@ -471,22 +471,23 @@ transform = Transform3D(-4.4703484e-08, 0, -1.000006, 0, 0.9999635, 0, 1.000006,
 light_energy = 7.0
 
 [node name="Prédios3" parent="." unique_id=2088217847 instance=ExtResource("22_blb7k")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 154.91476, -0.61156654, -62.193428)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 154.91476, -0.70540905, -62.193428)
 
 [node name="Prédios4" parent="." unique_id=532214711 instance=ExtResource("23_jyvf8")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -230.67293, -0.9303932, -68.15387)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -230.67293, -1.0242357, -68.15387)
 
 [node name="ObjectiveArrow" type="Node3D" parent="." unique_id=372662125 node_paths=PackedStringArray("objectives")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.09384251, 0)
 script = ExtResource("24_y1rg7")
 objectives = [NodePath("../Placa2")]
 
-[node name="SetaLado" parent="ObjectiveArrow" unique_id=2055762299 instance=ExtResource("25_fac30")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.85289204)
+[node name="SetaLado" parent="ObjectiveArrow" unique_id=1133751353 instance=ExtResource("25_fac30")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.7084502)
 
-[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=1951850407]
+[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2064431747]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
-[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=2040951130]
+[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=343420702]
 autoplay = &"ArrowSide_Spin"
 
 [editable path="BusPath/PathFollow3D/Ônibus"]

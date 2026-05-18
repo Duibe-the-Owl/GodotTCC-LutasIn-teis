@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://drbkq1qmh5c22" path="res://SetaLado.glb" id="1_c37wv"]
 
-[node name="SetaLado" unique_id=1545600204 instance=ExtResource("1_c37wv")]
+[node name="SetaLado" unique_id=1133751353 groups=["ObjectiveArrows"] instance=ExtResource("1_c37wv")]
 
-[node name="ArrowSide" parent="." index="0" unique_id=1682786767]
+[node name="ArrowSide" parent="." index="0" unique_id=2064431747]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=728319091]
+[node name="AnimationPlayer" parent="." index="1" unique_id=343420702]
 autoplay = &"ArrowSide_Spin"

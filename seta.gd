@@ -5,6 +5,7 @@ var current_target : Node3D = null
 var player : Node3D = null
 
 func _ready():
+	add_to_group("ObjectiveArrows")
 	# Find your player node to calculate the initial safe angle
 	player = get_node_or_null("/root/Apartamento/Player")
 	_update_target()
@@ -48,10 +49,10 @@ func _update_target():
 			dir_to_player = dir_to_player.normalized()
 			
 			# ALTERE AQUI: Mudando de 1.2 para 0.5 (meio metro acima do item)
-			global_position = target_pos + Vector3(0, 0.9, 0) + (dir_to_player * 0.25)
+			global_position = target_pos + Vector3(0, 0.7, 0) + (dir_to_player * 0.25)
 		else:
 			# Altere aqui também para o caso de fallback
-			global_position = target_pos + Vector3(0, 0.9, 0.2)
+			global_position = target_pos + Vector3(0, 0.7, 0.2)
 	else:
 		current_target = null
 		hide()
