@@ -4,8 +4,8 @@
 
 [node name="SetaLado" unique_id=1545600204 instance=ExtResource("1_c37wv")]
 
-[node name="ArrowSide" parent="." index="0" unique_id=166019420]
+[node name="ArrowSide" parent="." index="0" unique_id=1682786767]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=1096391474]
+[node name="AnimationPlayer" parent="." index="1" unique_id=728319091]
 autoplay = &"ArrowSide_Spin"

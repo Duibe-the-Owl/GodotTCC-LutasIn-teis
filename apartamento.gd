@@ -49,3 +49,4 @@ func _on_area_3d_body_entered(body: Node3D):
 	if body.name == "Player" and not wardrobe_dialogue_played:
 		wardrobe_dialogue_played = true
 		Dialogic.start("WardrobeTalk")
+		
