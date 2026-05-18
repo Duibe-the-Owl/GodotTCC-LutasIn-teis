@@ -8,3 +8,8 @@ func interact():
 	player_sat_down.emit()
 	# Disable interaction so they can't spam E during the movie
 	process_mode = PROCESS_MODE_DISABLED
+	var arrow = get_node_or_null("/root/escritório/ObjectiveArrow")
+	if arrow:
+		arrow.complete_objective()
+		hide()
+	queue_free()

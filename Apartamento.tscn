@@ -173,7 +173,12 @@ script = ExtResource("19_brrh6")
 objectives = [NodePath("../Armário/Wardrobe_Area/Uniform"), NodePath("../../Cozinha (Móveis)/Pia/Sink_Area/Bread"), NodePath("../../Sala (Móveis)/Mesita/Shelf_Area/House_Keys")]
 
 [node name="SetaLado" parent="Móveis (Quarto)/ObjectiveArrow" unique_id=1545600204 instance=ExtResource("19_4kluu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0346457, 0.7785921, -0.683477)
+
+[node name="ArrowSide" parent="Móveis (Quarto)/ObjectiveArrow/SetaLado" index="0" unique_id=1951850407]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+
+[node name="AnimationPlayer" parent="Móveis (Quarto)/ObjectiveArrow/SetaLado" index="1" unique_id=2040951130]
+autoplay = &"ArrowSide_Spin"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1788792756]
 transform = Transform3D(0.17680193, 0.2258806, -0.9579765, 0.80044526, 0.53337544, 0.27349254, 0.57273775, -0.81516176, -0.086503245, -26.84834, 6.4616127, 0)
@@ -391,5 +396,6 @@ shape = SubResource("BoxShape3D_cyvy7")
 [editable path="Corredor (Estrutura)/PortaSala"]
 [editable path="Estrutura (Quarto)/Teto"]
 [editable path="Móveis (Quarto)/Armário"]
+[editable path="Móveis (Quarto)/ObjectiveArrow/SetaLado"]
 [editable path="Sala (Móveis)/Mesita"]
 [editable path="Cozinha (Móveis)/Pia"]
