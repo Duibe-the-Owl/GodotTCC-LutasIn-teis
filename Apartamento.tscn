@@ -98,10 +98,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.886, 1.742, 0.688)
 [node name="PortaSala" parent="Corredor (Estrutura)" unique_id=313484311 instance=ExtResource("4_4kluu")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.053, -0.84, 7.2059)
 
-[node name="Door3" parent="Corredor (Estrutura)/PortaSala/WallUnit" parent_id_path=PackedInt32Array(313484311, 1934797539) index="1" unique_id=703381200]
+[node name="Door3" parent="Corredor (Estrutura)/PortaSala/WallUnit" parent_id_path=PackedInt32Array(313484311, 1487549571) index="1" unique_id=2087079324]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -0.58589363, -0.09912104, 0.09193897)
 
-[node name="StaticBody3D" parent="Corredor (Estrutura)/PortaSala/WallUnit/Door3" index="0" unique_id=615634654 node_paths=PackedStringArray("anim_player")]
+[node name="StaticBody3D" parent="Corredor (Estrutura)/PortaSala/WallUnit/Door3" index="0" unique_id=2134040926 node_paths=PackedStringArray("anim_player")]
 script = ExtResource("5_brrh6")
 anim_player = NodePath("../../../AnimationPlayer")
 open_sound = ExtResource("6_lggs3")
@@ -124,10 +124,10 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.10
 [node name="Teto" parent="Estrutura (Quarto)" unique_id=1758642804 instance=ExtResource("11_mgqwf")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.19293119, 2.2600229, 0)
 
-[node name="Ceiling" parent="Estrutura (Quarto)/Teto/CeilingUnit" parent_id_path=PackedInt32Array(1758642804, 784119565) index="0" unique_id=97749658]
+[node name="Ceiling" parent="Estrutura (Quarto)/Teto/CeilingUnit" parent_id_path=PackedInt32Array(1758642804, 1050014772) index="0" unique_id=1546520696]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020920277, 0.3054564, 0.10086185)
 
-[node name="CeilingLight" parent="Estrutura (Quarto)/Teto/CeilingUnit" parent_id_path=PackedInt32Array(1758642804, 784119565) index="1" unique_id=1523619844]
+[node name="CeilingLight" parent="Estrutura (Quarto)/Teto/CeilingUnit" parent_id_path=PackedInt32Array(1758642804, 1050014772) index="1" unique_id=1010187430]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.015042305, 0.20168495, -0.0034415126)
 
 [node name="ParedeDireita" parent="Estrutura (Quarto)" unique_id=1745976896 instance=ExtResource("12_e3lbo")]
@@ -148,13 +148,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9187465, -0.8222265, 2.0816
 [node name="Armário" parent="Móveis (Quarto)" unique_id=2100953546 instance=ExtResource("16_m30uk")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.6525167, -0.8273673, -2.352987)
 
-[node name="Bar" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(2100953546, 931373925) index="0" unique_id=1348519556]
+[node name="Bar" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(2100953546, 1254493397) index="0" unique_id=1188668377]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 2.13585, -0.17623472)
 
-[node name="Pants" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(2100953546, 931373925) index="2" unique_id=1833900659]
+[node name="Pants" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(2100953546, 1254493397) index="2" unique_id=2077216626]
 transform = Transform3D(-0.7071066, 0.70710695, 5.9604645e-08, 5.9604645e-08, 0, 1, 0.70710695, 0.7071066, 0, -0.015007257, 1.5682206, 0.36414862)
 
-[node name="Uniform" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(2100953546, 931373925) index="3" unique_id=2095613133]
+[node name="Uniform" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(2100953546, 1254493397) index="3" unique_id=676083003]
 transform = Transform3D(-0.7071066, 0.70710695, 5.9604645e-08, 5.9604645e-08, 0, 1, 0.70710695, 0.7071066, 0, -0.015007257, 1.5682206, 0.7805791)
 layers = 2
 
@@ -255,7 +255,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, -
 [node name="Mesita" parent="Sala (Móveis)" unique_id=1390310044 instance=ExtResource("27_j73w0")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.592, -0.81552064, 4.456)
 
-[node name="House_Keys" parent="Sala (Móveis)/Mesita/Shelf_Area" parent_id_path=PackedInt32Array(1390310044, 76603930) index="3" unique_id=1662533513]
+[node name="House_Keys" parent="Sala (Móveis)/Mesita/Shelf_Area" parent_id_path=PackedInt32Array(1390310044, 131802738) index="3" unique_id=423176181]
 layers = 2
 
 [node name="Area3D" type="Area3D" parent="Sala (Móveis)/Mesita/Shelf_Area/House_Keys" index="0" unique_id=550533673 node_paths=PackedStringArray("target_door")]
@@ -326,7 +326,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.85
 [node name="Pia" parent="Cozinha (Móveis)" unique_id=1885725256 instance=ExtResource("41_it2c2")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.338, -0.8303562, 0.773)
 
-[node name="Bread" parent="Cozinha (Móveis)/Pia/Sink_Area" parent_id_path=PackedInt32Array(1885725256, 785683525) index="0" unique_id=1697317159]
+[node name="Bread" parent="Cozinha (Móveis)/Pia/Sink_Area" parent_id_path=PackedInt32Array(1885725256, 1866083033) index="0" unique_id=2118630028]
 layers = 2
 
 [node name="Area3D" type="Area3D" parent="Cozinha (Móveis)/Pia/Sink_Area/Bread" index="0" unique_id=769775108]
