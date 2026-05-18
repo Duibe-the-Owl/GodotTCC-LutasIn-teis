@@ -71,22 +71,22 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.6
 [node name="Postes(CenaAlternativa)2" parent="." unique_id=1021076085 instance=ExtResource("5_wxt12")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -48.394745, 2.7514172, 59.092815)
 
-[node name="Árvore" parent="." unique_id=1392830244 instance=ExtResource("6_mrwcl")]
+[node name="Árvore" parent="." unique_id=239877968 instance=ExtResource("6_mrwcl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.468374, -0.716, -49.423786)
 
-[node name="Árvore2" parent="." unique_id=160528888 instance=ExtResource("6_mrwcl")]
+[node name="Árvore2" parent="." unique_id=1114679136 instance=ExtResource("6_mrwcl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.21225, -0.7160511, -0.46858597)
 
-[node name="Árvore3" parent="." unique_id=467126969 instance=ExtResource("6_mrwcl")]
+[node name="Árvore3" parent="." unique_id=465320814 instance=ExtResource("6_mrwcl")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.468, -0.716, -120.548)
 
-[node name="Árvore4" parent="." unique_id=1100434926 instance=ExtResource("6_mrwcl")]
+[node name="Árvore4" parent="." unique_id=1472754731 instance=ExtResource("6_mrwcl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.126556, -0.7160511, -70.04521)
 
-[node name="Árvore5" parent="." unique_id=768170701 instance=ExtResource("6_mrwcl")]
+[node name="Árvore5" parent="." unique_id=1136980318 instance=ExtResource("6_mrwcl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.468, -0.716, 15.845)
 
-[node name="Árvore7" parent="." unique_id=1052228898 instance=ExtResource("6_mrwcl")]
+[node name="Árvore7" parent="." unique_id=688395178 instance=ExtResource("6_mrwcl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.506393, -0.716, -167.68)
 
 [node name="Rua(AS)" parent="." unique_id=474917808 instance=ExtResource("4_dclif")]
@@ -137,7 +137,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.3
 [node name="Fundo2" parent="." unique_id=677170024 instance=ExtResource("16_il3kc")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -79.472176, 7.8657074, -53.890606)
 
-[node name="Árvore6" parent="." unique_id=1121851960 instance=ExtResource("6_mrwcl")]
+[node name="Árvore6" parent="." unique_id=1417043134 instance=ExtResource("6_mrwcl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.264015, -0.716, 58.843536)
 
 [node name="Prédios5" parent="." unique_id=1392213642 instance=ExtResource("5_wxt12")]
