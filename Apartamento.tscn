@@ -20,6 +20,7 @@
 [ext_resource type="AudioStream" uid="uid://duva0kva8ojbk" path="res://Clothes_SE.wav" id="18_jtn8r"]
 [ext_resource type="PackedScene" uid="uid://drbkq1qmh5c22" path="res://SetaLado.glb" id="19_4kluu"]
 [ext_resource type="Texture2D" uid="uid://dg3s1npxvmk37" path="res://Lutas-Inúteis-Skybox(2).png" id="19_78xk1"]
+[ext_resource type="Script" uid="uid://b3b1nvpv8eymp" path="res://seta.gd" id="19_brrh6"]
 [ext_resource type="PackedScene" uid="uid://d3u82oi3rkevi" path="res://player.tscn" id="20_8rf52"]
 [ext_resource type="PackedScene" uid="uid://dduuhhmi6gaq" path="res://Chão(Sala).glb" id="21_n464d"]
 [ext_resource type="PackedScene" uid="uid://dcsj0kcr30l7u" path="res://Teto(Sala).glb" id="22_jojd5"]
@@ -167,7 +168,11 @@ interaction_sound = ExtResource("18_jtn8r")
 transform = Transform3D(0.82609826, -0.5635261, 0, 0.5635261, 0.82609826, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_libsc")
 
-[node name="SetaLado" parent="Móveis (Quarto)" unique_id=1545600204 instance=ExtResource("19_4kluu")]
+[node name="ObjectiveArrow" type="Node3D" parent="Móveis (Quarto)" unique_id=1609176942 node_paths=PackedStringArray("objectives")]
+script = ExtResource("19_brrh6")
+objectives = [NodePath("../Armário/Wardrobe_Area/Uniform"), NodePath("../../Cozinha (Móveis)/Pia/Sink_Area/Bread"), NodePath("../../Sala (Móveis)/Mesita/Shelf_Area/House_Keys")]
+
+[node name="SetaLado" parent="Móveis (Quarto)/ObjectiveArrow" unique_id=1545600204 instance=ExtResource("19_4kluu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0346457, 0.7785921, -0.683477)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1788792756]
@@ -275,10 +280,10 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.4
 [node name="Postes2" parent="Exterior" unique_id=700899891 instance=ExtResource("31_ujyib")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -15.078901, -4.446, -27.218136)
 
-[node name="Árvore" parent="Exterior" unique_id=1392830244 instance=ExtResource("32_kpcmk")]
+[node name="Árvore" parent="Exterior" unique_id=239877968 instance=ExtResource("32_kpcmk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.195901, -4.6248198, 11.840523)
 
-[node name="Árvore2" parent="Exterior" unique_id=753504780 instance=ExtResource("32_kpcmk")]
+[node name="Árvore2" parent="Exterior" unique_id=1690727726 instance=ExtResource("32_kpcmk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5376945, -4.625, -13.850605)
 
 [node name="Prédios(Mini)" parent="Exterior" unique_id=251143555 instance=ExtResource("33_cyvy7")]
