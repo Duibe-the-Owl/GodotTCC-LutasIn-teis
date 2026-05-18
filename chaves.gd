@@ -31,3 +31,9 @@ func interact():
 	# If you want to play a sound, we usually don't queue_free immediately.
 	# For now, we'll just delete it like before:
 	get_parent().queue_free()
+	
+	var arrow = get_node_or_null("/root/Apartamento/Móveis (Quarto)/ObjectiveArrow")
+	if arrow:
+		arrow.complete_objective()
+		
+	queue_free()

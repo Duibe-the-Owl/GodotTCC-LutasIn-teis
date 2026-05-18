@@ -12,3 +12,9 @@ func interact():
 	
 	# Tell the PathFollow to start moving
 	get_node("../../BusPath/PathFollow3D").start_bus_event()
+	
+	var arrow = get_node_or_null("/root/rua/ObjectiveArrow")
+	if arrow:
+		arrow.complete_objective()
+		hide()
+	queue_free()

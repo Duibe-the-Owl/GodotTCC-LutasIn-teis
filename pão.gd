@@ -14,6 +14,11 @@ func interact():
 	# We use set_deferred to avoid errors during physics processing
 	$CollisionShape3D.set_deferred("disabled", true)
 # This variable holds the shader material we just made
+	var arrow = get_node_or_null("/root/Apartamento/Móveis (Quarto)/ObjectiveArrow")
+	if arrow:
+		arrow.complete_objective()
+		
+	queue_free()
 @export var outline_material : ShaderMaterial
 
 func show_outline():

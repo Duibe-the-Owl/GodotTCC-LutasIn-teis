@@ -1,36 +1,57 @@
 extends Node3D
 
-# Drag your 3 objective items into this list inside the Inspector (in order!)
 @export var objectives : Array[Node3D] = []
-
 var current_target : Node3D = null
+var player : Node3D = null
 
 func _ready():
+	# Find your player node to calculate the initial safe angle
+	player = get_node_or_null("/root/Apartamento/Player")
 	_update_target()
 
 func _process(_delta):
-	# If we have a valid target, rotate the wrapper to face it
 	if is_instance_valid(current_target):
-		var target_pos = Vector3(current_target.global_position.x, global_position.y, current_target.global_position.z)
+		var target_pos = current_target.global_position
 		
-		# Prevent errors if the player stands directly on the item
-		if global_position.distance_to(target_pos) > 0.2:
+		# Now the look_at math is 100% stable because global_position never moves at runtime!
+		if global_position.distance_to(target_pos) > 0.1:
 			look_at(target_pos, Vector3.UP)
 	else:
-		# No targets left! Hide the arrow entirely
 		hide()
 
-# Call this function whenever an objective item is completed!
 func complete_objective():
+	# --- THE INSTANT CLEAR FIX ---
+	# We immediately make the current target null and hide the arrow
+	current_target = null
+	hide()
+	
 	if objectives.size() > 0:
-		objectives.remove_at(0) # Remove the finished item from the front of the list
+		objectives.remove_at(0)
+		
+		# If that was the last item, we stop right here
+		if objectives.size() == 0:
+			return
+			
+		# If there are more items left, update to the next one
 		_update_target()
 
 func _update_target():
 	if objectives.size() > 0:
-		current_target = objectives[0] # Set the next item as the current tracking target
+		current_target = objectives[0]
 		show()
-		global_position = current_target.global_position + Vector3(0, 0.5, 0)
+		
+		var target_pos = current_target.global_position
+		
+		if is_instance_valid(player):
+			var dir_to_player = (player.global_position - target_pos).normalized()
+			dir_to_player.y = 0.0
+			dir_to_player = dir_to_player.normalized()
+			
+			# ALTERE AQUI: Mudando de 1.2 para 0.5 (meio metro acima do item)
+			global_position = target_pos + Vector3(0, 0.9, 0) + (dir_to_player * 0.25)
+		else:
+			# Altere aqui também para o caso de fallback
+			global_position = target_pos + Vector3(0, 0.9, 0.2)
 	else:
 		current_target = null
 		hide()

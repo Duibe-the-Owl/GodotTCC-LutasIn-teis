@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://btog0veyoumcv" path="res://Fundo.glb" id="15_h2mom"]
 [ext_resource type="PackedScene" uid="uid://dtxcdtn6avjrk" path="res://Fundo2.glb" id="16_il3kc"]
 [ext_resource type="Script" uid="uid://kckea25ubgyj" path="res://barrier.gd" id="17_iw8jk"]
+[ext_resource type="Script" uid="uid://b3b1nvpv8eymp" path="res://seta.gd" id="18_wxeep"]
+[ext_resource type="PackedScene" uid="uid://drbkq1qmh5c22" path="res://SetaLado.glb" id="19_0ymfv"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mlb2s"]
 panorama = ExtResource("2_huwj0")
@@ -159,6 +161,20 @@ script = ExtResource("17_iw8jk")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/Area3D" unique_id=1864310619]
 shape = SubResource("BoxShape3D_iw8jk")
 
+[node name="ObjectiveArrow" type="Node3D" parent="." unique_id=1826208238 node_paths=PackedStringArray("objectives")]
+script = ExtResource("18_wxeep")
+objectives = [NodePath("../Placa")]
+
+[node name="SetaLado" parent="ObjectiveArrow" unique_id=2055762299 instance=ExtResource("19_0ymfv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.77)
+
+[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=1951850407]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+
+[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=2040951130]
+autoplay = &"ArrowSide_Spin"
+
 [connection signal="body_entered" from="StaticBody3D/Area3D" to="StaticBody3D/Area3D" method="_on_body_entered"]
 
 [editable path="BusPath/PathFollow3D/Ônibus"]
+[editable path="ObjectiveArrow/SetaLado"]

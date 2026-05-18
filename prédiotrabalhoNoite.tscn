@@ -23,6 +23,8 @@
 [ext_resource type="PackedScene" uid="uid://dha3rygg0y4o4" path="res://Postes(Noite).glb" id="21_qe36d"]
 [ext_resource type="PackedScene" uid="uid://c06ua5hgmi5jn" path="res://Buildings3.glb" id="22_blb7k"]
 [ext_resource type="PackedScene" uid="uid://t8bneworcuq8" path="res://Buildings4.glb" id="23_jyvf8"]
+[ext_resource type="Script" uid="uid://b3b1nvpv8eymp" path="res://seta.gd" id="24_y1rg7"]
+[ext_resource type="PackedScene" uid="uid://drbkq1qmh5c22" path="res://SetaLado.glb" id="25_fac30"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_blb7k"]
 panorama = ExtResource("20_b6saw")
@@ -449,7 +451,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -193
 curve = SubResource("Curve3D_vohkx")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="BusPath" unique_id=883106378]
-transform = Transform3D(0.20079084, 0, -0.9796279, 0, 1.0000403, 0, 0.9796279, 0, 0.20079084, -1.3815956, 0, 1.5192566)
+transform = Transform3D(0.20079084, 0, -0.9796279, 0, 1.0000405, 0, 0.9796279, 0, 0.20079084, -1.3815956, 0, 1.5192566)
 rotation_mode = 4
 loop = false
 script = ExtResource("20_qe36d")
@@ -474,4 +476,18 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 154.
 [node name="Prédios4" parent="." unique_id=532214711 instance=ExtResource("23_jyvf8")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -230.67293, -0.9303932, -68.15387)
 
+[node name="ObjectiveArrow" type="Node3D" parent="." unique_id=372662125 node_paths=PackedStringArray("objectives")]
+script = ExtResource("24_y1rg7")
+objectives = [NodePath("../Placa2")]
+
+[node name="SetaLado" parent="ObjectiveArrow" unique_id=2055762299 instance=ExtResource("25_fac30")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.85289204)
+
+[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=1951850407]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+
+[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=2040951130]
+autoplay = &"ArrowSide_Spin"
+
 [editable path="BusPath/PathFollow3D/Ônibus"]
+[editable path="ObjectiveArrow/SetaLado"]
