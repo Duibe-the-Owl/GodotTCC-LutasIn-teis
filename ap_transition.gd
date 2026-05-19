@@ -7,10 +7,6 @@ extends Area3D
 
 var has_triggered = false
 
-func _ready():
-	# Connect the body entered signal to our function below
-	body_entered.connect(_on_body_entered)
-
 func _on_body_entered(body):
 	if (body.name == "Player" or body.is_in_group("Player")) and not has_triggered:
 		has_triggered = true

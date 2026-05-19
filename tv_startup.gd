@@ -8,3 +8,8 @@ func interact():
 	player_sat_down.emit()
 	# Disable interaction so they can't spam E during the movie
 	process_mode = PROCESS_MODE_DISABLED
+
+	var active_arrow = get_tree().get_first_node_in_group("ObjectiveArrows")
+	if active_arrow:
+		active_arrow.complete_objective()
+		hide()

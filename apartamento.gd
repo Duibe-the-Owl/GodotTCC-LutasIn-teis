@@ -12,8 +12,6 @@ func _ready():
 	# Connect the remote's signal to this script
 	if remote_control:
 		remote_control.player_sat_down.connect(_on_tv_started)
-	else:
-		push_error("Remote Control Area3D not assigned to World Script!")
 		
 func _on_tv_started():
 	# 1. Visual Prep: Hide the player to prevent mesh clipping

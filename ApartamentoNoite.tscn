@@ -50,7 +50,9 @@
 [ext_resource type="PackedScene" uid="uid://bamhsgt6ayjc6" path="res://ParedeElevador.glb" id="47_e651u"]
 [ext_resource type="PackedScene" uid="uid://bd21n8p33ty64" path="res://Elevador.glb" id="48_x4qp5"]
 [ext_resource type="PackedScene" uid="uid://uween7amr14p" path="res://Teto(Hall).glb" id="51_dru1k"]
+[ext_resource type="Script" uid="uid://b3b1nvpv8eymp" path="res://seta.gd" id="52_a1sow"]
 [ext_resource type="VoxelGIData" uid="uid://vtkwkd4g5g23" path="res://Apartamento.VoxelGI_data.res" id="53_466y7"]
+[ext_resource type="PackedScene" uid="uid://drbkq1qmh5c22" path="res://SetaLado.glb" id="53_x0xca"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w6bbu"]
 size = Vector3(2, 1, 2)
@@ -81,17 +83,17 @@ size = Vector3(3.5, 1, 3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_phupe"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_xpu1w"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_6oyi0"]
 viewport_path = NodePath("TvUnit/TvScreen/SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_8parx"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_ackpd"]
 viewport_path = NodePath("TvUnit/TvScreen/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8parx"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nk7vw"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_xpu1w")
+albedo_texture = SubResource("ViewportTexture_6oyi0")
 emission_enabled = true
-emission_texture = SubResource("ViewportTexture_8parx")
+emission_texture = SubResource("ViewportTexture_ackpd")
 
 [sub_resource type="Animation" id="Animation_w6bbu"]
 length = 0.001
@@ -215,11 +217,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8248076, 0.89258605, -1.327
 [node name="PortaSala" parent="Corredor (Estrutura)" unique_id=313484311 instance=ExtResource("4_ackpd")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.053, -0.84, 7.2059)
 
-[node name="Door3" parent="Corredor (Estrutura)/PortaSala/WallUnit" parent_id_path=PackedInt32Array(313484311, 1934797539) index="1" unique_id=703381200]
+[node name="Door3" parent="Corredor (Estrutura)/PortaSala/WallUnit" parent_id_path=PackedInt32Array(313484311, 1487549571) index="1" unique_id=2087079324]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -0.58589363, -0.09912104, 0.09193897)
 layers = 2
 
-[node name="StaticBody3D" parent="Corredor (Estrutura)/PortaSala/WallUnit/Door3" index="0" unique_id=615634654 node_paths=PackedStringArray("anim_player")]
+[node name="StaticBody3D" parent="Corredor (Estrutura)/PortaSala/WallUnit/Door3" index="0" unique_id=2134040926 node_paths=PackedStringArray("anim_player")]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("5_phupe")
@@ -276,13 +278,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9187465, -0.8222265, 2.0816
 [node name="Armário" parent="Móveis (Quarto)" unique_id=2100953546 instance=ExtResource("16_2wsvb")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.6525167, -0.8273673, -2.352987)
 
-[node name="Bar" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(2100953546, 931373925) index="0" unique_id=1348519556]
+[node name="Bar" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(2100953546, 1254493397) index="0" unique_id=1188668377]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 2.13585, -0.17623472)
 
-[node name="Pants" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(2100953546, 931373925) index="2" unique_id=1833900659]
+[node name="Pants" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(2100953546, 1254493397) index="2" unique_id=2077216626]
 transform = Transform3D(-0.7071066, 0.70710695, 5.9604645e-08, 5.9604645e-08, 0, 1, 0.70710695, 0.7071066, 0, -0.015007257, 1.5682206, 0.36414862)
 
-[node name="Uniform" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(2100953546, 931373925) index="3" unique_id=2095613133]
+[node name="Uniform" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(2100953546, 1254493397) index="3" unique_id=676083003]
 transform = Transform3D(-0.7071066, 0.70710695, 5.9604645e-08, 5.9604645e-08, 0, 1, 0.70710695, 0.7071066, 0, -0.015007257, 1.5682206, 0.7805791)
 layers = 2
 
@@ -299,7 +301,7 @@ shape = SubResource("BoxShape3D_libsc")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1788792756]
 transform = Transform3D(0.46976632, 0.41286415, -0.78029656, 0.6717821, 0.406269, 0.6193985, 0.57273775, -0.8151618, -0.08650323, -26.84834, 13.169069, 0)
 light_color = Color(0.5819238, 0.62724096, 0.7880468, 1)
-light_energy = 0.2
+light_energy = 0.3
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=296799082]
@@ -364,7 +366,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.13447, 0, -12.077182)
 [node name="Mesa" parent="Sala (Móveis)" unique_id=2015652747 instance=ExtResource("25_auu61")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.65, 4.859)
 
-[node name="Controller" parent="Sala (Móveis)/Mesa/Table_Area" parent_id_path=PackedInt32Array(2015652747, 1962003077) index="1" unique_id=767923324]
+[node name="Controller" parent="Sala (Móveis)/Mesa/Table_Area" parent_id_path=PackedInt32Array(2015652747, 707995995) index="1" unique_id=1272864950]
 layers = 2
 
 [node name="Area3D" type="Area3D" parent="Sala (Móveis)/Mesa/Table_Area/Controller" index="0" unique_id=1764803429]
@@ -381,15 +383,15 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, -
 [node name="Mesita" parent="Sala (Móveis)" unique_id=1390310044 instance=ExtResource("27_8l40s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.592, -0.81552064, 4.456)
 
-[node name="House_Keys" parent="Sala (Móveis)/Mesita/Shelf_Area" parent_id_path=PackedInt32Array(1390310044, 76603930) index="3" unique_id=1662533513]
+[node name="House_Keys" parent="Sala (Móveis)/Mesita/Shelf_Area" parent_id_path=PackedInt32Array(1390310044, 131802738) index="3" unique_id=423176181]
 visible = false
 layers = 2
 
 [node name="TV(Noite)" parent="Sala (Móveis)" unique_id=1153428048 instance=ExtResource("28_xpu1w")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.008749008, 0.046983063, 3.1197329)
 
-[node name="TvScreen" parent="Sala (Móveis)/TV(Noite)/TvUnit" parent_id_path=PackedInt32Array(1153428048, 2115584366) index="1" unique_id=1323120555]
-surface_material_override/0 = SubResource("StandardMaterial3D_8parx")
+[node name="TvScreen" parent="Sala (Móveis)/TV(Noite)/TvUnit" parent_id_path=PackedInt32Array(1153428048, 477419022) index="1" unique_id=741435713]
+surface_material_override/0 = SubResource("StandardMaterial3D_nk7vw")
 
 [node name="SubViewport" type="SubViewport" parent="Sala (Móveis)/TV(Noite)/TvUnit/TvScreen" index="0" unique_id=1821945060]
 size = Vector2i(1280, 700)
@@ -408,10 +410,10 @@ rotation = 1.5707964
 stream = ExtResource("29_8parx")
 expand = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sala (Móveis)/TV(Noite)/TvUnit" parent_id_path=PackedInt32Array(1153428048, 2115584366) index="2" unique_id=1976325482]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sala (Móveis)/TV(Noite)/TvUnit" parent_id_path=PackedInt32Array(1153428048, 477419022) index="2" unique_id=1976325482]
 libraries/ = SubResource("AnimationLibrary_w6bbu")
 
-[node name="CutsceneCamera" type="Camera3D" parent="Sala (Móveis)/TV(Noite)/TvUnit" parent_id_path=PackedInt32Array(1153428048, 2115584366) index="3" unique_id=865297217]
+[node name="CutsceneCamera" type="Camera3D" parent="Sala (Móveis)/TV(Noite)/TvUnit" parent_id_path=PackedInt32Array(1153428048, 477419022) index="3" unique_id=865297217]
 transform = Transform3D(-0.41945213, -0.1949319, 0.8866011, 0, 0.9766723, 0.21473533, -0.9077775, 0.090071194, -0.40966728, 3.0740004, 0.38446176, -0.8189993)
 
 [node name="Exterior" type="Node3D" parent="." unique_id=638229496]
@@ -474,7 +476,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.85
 [node name="Pia" parent="Cozinha (Móveis)" unique_id=1885725256 instance=ExtResource("42_ptdtb")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.338, -0.8303562, 0.773)
 
-[node name="Bread" parent="Cozinha (Móveis)/Pia/Sink_Area" parent_id_path=PackedInt32Array(1885725256, 785683525) index="0" unique_id=1697317159]
+[node name="Bread" parent="Cozinha (Móveis)/Pia/Sink_Area" parent_id_path=PackedInt32Array(1885725256, 1866083033) index="0" unique_id=2118630028]
 visible = false
 layers = 2
 
@@ -511,6 +513,19 @@ transform = Transform3D(-3.9869725e-08, 0.40993893, -0.91211295, 1.7919e-08, 0.9
 spot_range = 5.895
 spot_angle = 14.7
 
+[node name="ObjectiveArrow" type="Node3D" parent="." unique_id=976879125 node_paths=PackedStringArray("objectives")]
+script = ExtResource("52_a1sow")
+objectives = [NodePath("../Sala (Móveis)/Mesa/Table_Area/Controller"), NodePath("../Móveis (Quarto)/Cama")]
+
+[node name="SetaLado" parent="ObjectiveArrow" unique_id=1891383591 instance=ExtResource("53_x0xca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.37126368)
+
+[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2056864381]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+
+[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=1002935279]
+autoplay = &"ArrowSide_Spin"
+
 [connection signal="body_entered" from="Móveis (Quarto)/Armário/Wardrobe_Area/Uniform/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Sala (Estrutura)/Area3D" to="Sala (Estrutura)/Area3D" method="_on_body_entered"]
 
@@ -520,3 +535,4 @@ spot_angle = 14.7
 [editable path="Sala (Móveis)/Mesita"]
 [editable path="Sala (Móveis)/TV(Noite)"]
 [editable path="Cozinha (Móveis)/Pia"]
+[editable path="ObjectiveArrow/SetaLado"]
