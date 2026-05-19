@@ -4,6 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://latb40cs266p" path="res://Footstep (Test).wav" id="2_onrkg"]
 [ext_resource type="PackedScene" uid="uid://b00a05ih480jg" path="res://nick.tscn" id="3_hqtel"]
 [ext_resource type="Texture2D" uid="uid://b35jvvbrk88o2" path="res://Loading Circle.png" id="3_i3pqv"]
+[ext_resource type="PackedScene" uid="uid://sedjt4hal2pe" path="res://pause_menu.tscn" id="5_sweqy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4flbx"]
 radius = 0.4
@@ -294,6 +295,8 @@ texture_under = ExtResource("3_i3pqv")
 texture_progress = ExtResource("3_i3pqv")
 tint_under = Color(0.19881096, 0.19881096, 0.19881096, 1)
 tint_progress = Color(0.69099766, 0.69099766, 0.69099766, 1)
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=1637949776 instance=ExtResource("5_sweqy")]
 
 [node name="InteractionAudioPlayer" type="AudioStreamPlayer3D" parent="." unique_id=1475105871]
 
