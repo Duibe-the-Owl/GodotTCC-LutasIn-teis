@@ -13,8 +13,9 @@ func interact():
 	# Tell the PathFollow to start moving
 	get_node("../../BusPath/PathFollow3D").start_bus_event()
 	
-	var arrow = get_node_or_null("/root/rua/ObjectiveArrow")
-	if arrow:
-		arrow.complete_objective()
+# This automatically finds the active arrow, no matter what scene it is in!
+	var active_arrow = get_tree().get_first_node_in_group("ObjectiveArrows")
+	if active_arrow:
+		active_arrow.complete_objective()
 		hide()
 	queue_free()

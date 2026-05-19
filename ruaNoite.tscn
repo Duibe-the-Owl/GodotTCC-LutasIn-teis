@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://crl6mobypc55b" path="res://Lutas-Inúteis-Skybox(Noite).png" id="16_ui4cq"]
 [ext_resource type="PackedScene" uid="uid://dha3rygg0y4o4" path="res://Postes(Noite).glb" id="16_xdyah"]
 [ext_resource type="PackedScene" uid="uid://dtxcdtn6avjrk" path="res://Fundo2.glb" id="16_xfwsx"]
+[ext_resource type="Script" uid="uid://b3b1nvpv8eymp" path="res://seta.gd" id="17_ygype"]
+[ext_resource type="PackedScene" uid="uid://drbkq1qmh5c22" path="res://SetaLado.glb" id="18_iw7tv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b7eu1"]
 size = Vector3(3, 3, 2)
@@ -235,13 +237,12 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -21.
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.076088, -0.76517963, 45.763786)
 
 [node name="Area3D" type="Area3D" parent="Prédios" unique_id=1936353676]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.04653, 0, -5.870679)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.632973, 1.3995277, -5.870679)
 script = ExtResource("5_42sii")
 target_scene_path = "res://ApartamentoNoite.tscn"
 interaction_sound = ExtResource("6_ui4cq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Prédios/Area3D" unique_id=1407905564]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3809738, 1.3859118, 0)
 shape = SubResource("BoxShape3D_b7eu1")
 
 [node name="InteractionSound" type="AudioStreamPlayer3D" parent="Prédios/Area3D" unique_id=1370160447]
@@ -441,16 +442,16 @@ script = ExtResource("13_b7eu1")
 [node name="Ônibus" parent="BusPath/PathFollow3D" unique_id=667804955 instance=ExtResource("14_42sii")]
 transform = Transform3D(2.3081899e-05, 0.0034919037, 0.9999939, -0.024252007, 0.9996998, -0.0034903171, -0.99970585, -0.024251774, 0.000107735395, 0, 0.090044826, -0.0016884804)
 
-[node name="Wheel1" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 225111900) index="2" unique_id=2096818328]
+[node name="Wheel1" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 377440844) index="2" unique_id=2102173027]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 3.311226, -0.3548356, 1.50988)
 
-[node name="Wheel2" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 225111900) index="3" unique_id=1003932877]
+[node name="Wheel2" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 377440844) index="3" unique_id=1993096043]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -5.4145365, -0.3548356, 1.5098804)
 
-[node name="Wheel3" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 225111900) index="4" unique_id=382648245]
+[node name="Wheel3" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 377440844) index="4" unique_id=407127336]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 3.311226, -0.3548356, -2.0453444)
 
-[node name="Wheel4" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 225111900) index="5" unique_id=1352063480]
+[node name="Wheel4" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 377440844) index="5" unique_id=699099953]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -5.4145365, -0.3548356, -2.0453444)
 
 [node name="WheelsPlayer1" type="AnimationPlayer" parent="BusPath/PathFollow3D/Ônibus" unique_id=103642161]
@@ -481,6 +482,20 @@ light_energy = 7.0
 transform = Transform3D(-4.4703484e-08, 0, -1.000006, 0, 0.9999635, 0, 1.000006, 0, -4.4703484e-08, 6.001816, 0.40039045, -1.6074219)
 light_energy = 7.0
 
+[node name="ObjectiveArrow" type="Node3D" parent="." unique_id=1481134381 node_paths=PackedStringArray("objectives")]
+script = ExtResource("17_ygype")
+objectives = [NodePath("../Prédios/Area3D")]
+
+[node name="SetaLado" parent="ObjectiveArrow" unique_id=1133751353 instance=ExtResource("18_iw7tv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.284691, 0, 0)
+
+[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2056864381]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+
+[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=1002935279]
+autoplay = &"ArrowSide_Spin"
+
 [connection signal="body_entered" from="Prédios/Area3D" to="Prédios/Area3D" method="_on_body_entered"]
 
 [editable path="BusPath/PathFollow3D/Ônibus"]
+[editable path="ObjectiveArrow/SetaLado"]

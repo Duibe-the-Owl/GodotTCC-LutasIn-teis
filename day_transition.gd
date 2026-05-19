@@ -1,19 +1,24 @@
 extends Area3D
 
-# The path to the scene you want to load (e.g., "res://scenes/next_day.tscn")
 @export_file("*.tscn") var target_scene_path : String
-# Optional: A snoring or "yawn" sound effect
-@export var sleep_sound : AudioStream
+@export var sleep_sound : AudioStream 
+
 @onready var collision_shape_3d = $CollisionShape3D
 
 func interact():
-	print("Going to sleep...")
+	print("Going to bed...")
 	
 	if target_scene_path == "":
-		print("Error: No target scene assigned to the bed!")
+		print("Error: No target scene assigned!")
 		return
-		
+	
+	# Disable interaction immediately
 	collision_shape_3d.set_deferred("disabled", true)
-	# Use the transition function we built earlier!
-	# This handles the fade out, the sound, the scene change, and the fade in.
-	SceneManager.transition_to(target_scene_path, sleep_sound)
+	
+	# Pass 'true' as the third argument to trigger the waking up sequence in the next scene
+	SceneManager.transition_to(target_scene_path, sleep_sound, true)
+	var active_arrow = get_tree().get_first_node_in_group("ObjectiveArrows")
+	if active_arrow:
+		active_arrow.complete_objective()
+
+		queue_free()
