@@ -44,7 +44,7 @@ var last_bob_sine = 0.0
 
 var is_in_cutscene = false
 
-@onready var anim_tree = $AnimationTree
+@export var anim_tree : AnimationTree
 @onready var playback = anim_tree.get("parameters/playback")
 
 func _ready():
@@ -55,6 +55,9 @@ func _ready():
 		foot_audio.stream = default_footstep_sound
 	if anim_tree:
 		anim_tree.active = true
+	if GameManager.fresh_game_started:
+		start_intro_sequence()
+		GameManager.fresh_game_started = false # Reset so it doesn't trigger again
 
 func _input(event):
 	if get_tree().paused:
@@ -62,8 +65,10 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		mouse_input = event.relative
 	if Input.is_action_just_pressed("ui_cancel"):
-		if not is_in_cutscene:
-			toggle_pause()
+		#if not is_in_cutscene:
+		if Dialogic.current_timeline != null:
+			return
+		toggle_pause()
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		
 func toggle_pause():

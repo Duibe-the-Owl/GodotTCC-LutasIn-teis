@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://ch5ggwj72gst7"]
+
+[ext_resource type="Script" uid="uid://c2xoumi8ixg2e" path="res://main_menu.gd" id="1_06t4h"]
+
+[node name="MainMenu" type="Control" unique_id=981178143]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06t4h")
+gameplay_scene_path = "uid://du2rjxyi221xa"
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=815831253]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand = true
+
+[node name="GameTitle" type="Label" parent="." unique_id=1892030447]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 57
+text = "Lutas Inúteis e seus Propósitos"
+
+[node name="MenuButtons" type="VBoxContainer" parent="." unique_id=468396089]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -352.0
+offset_top = -135.0
+offset_right = -51.999146
+offset_bottom = 135.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 55
+
+[node name="PlayButton" type="Button" parent="MenuButtons" unique_id=327571567]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "Começar"
+
+[node name="OptionsButton" type="Button" parent="MenuButtons" unique_id=311774027]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "Opções"
+
+[node name="QuitButton" type="Button" parent="MenuButtons" unique_id=1437420137]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "Sair"
+
+[node name="OptionsWindow" type="PanelContainer" parent="." unique_id=360698778]
+visible = false
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -437.58002
+offset_top = -150.0
+offset_right = -37.579712
+offset_bottom = 150.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsWindow" unique_id=129729099]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Label" type="Label" parent="OptionsWindow/VBoxContainer" unique_id=915188977]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Música"
+horizontal_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="OptionsWindow/VBoxContainer" unique_id=377214803]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Label2" type="Label" parent="OptionsWindow/VBoxContainer" unique_id=1006919479]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Efeitos Sonoros"
+horizontal_alignment = 1
+
+[node name="SFXSlider" type="HSlider" parent="OptionsWindow/VBoxContainer" unique_id=1842789076]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="BackButton" type="Button" parent="OptionsWindow/VBoxContainer" unique_id=1741737614]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Voltar"
+
+[connection signal="pressed" from="MenuButtons/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MenuButtons/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="MenuButtons/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="value_changed" from="OptionsWindow/VBoxContainer/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="OptionsWindow/VBoxContainer/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="OptionsWindow/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

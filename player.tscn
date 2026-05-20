@@ -6,6 +6,30 @@
 [ext_resource type="Texture2D" uid="uid://b35jvvbrk88o2" path="res://Loading Circle.png" id="3_i3pqv"]
 [ext_resource type="PackedScene" uid="uid://sedjt4hal2pe" path="res://pause_menu.tscn" id="5_sweqy"]
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sweqy"]
+animation = &"Idle_Nick"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2hs0m"]
+animation = &"Walk_Nick"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1jxqw"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dw050"]
+xfade_time = 0.2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b26j0"]
+xfade_time = 0.2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_n7ghd"]
+states/Idle_Nick/node = SubResource("AnimationNodeAnimation_sweqy")
+states/Idle_Nick/position = Vector2(408, 65)
+states/Start/position = Vector2(249, 78)
+states/Walk_Nick/node = SubResource("AnimationNodeAnimation_2hs0m")
+states/Walk_Nick/position = Vector2(596, 78)
+transitions = ["Start", "Idle_Nick", SubResource("AnimationNodeStateMachineTransition_1jxqw"), "Idle_Nick", "Walk_Nick", SubResource("AnimationNodeStateMachineTransition_dw050"), "Walk_Nick", "Idle_Nick", SubResource("AnimationNodeStateMachineTransition_b26j0")]
+graph_offset = Vector2(-156.4226, -10.460249)
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4flbx"]
 radius = 0.4
 height = 1.8
@@ -198,34 +222,17 @@ _data = {
 &"intro_get_up": SubResource("Animation_i3pqv")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sweqy"]
-animation = &"Idle_Nick"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2hs0m"]
-animation = &"Walk_Nick"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1jxqw"]
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dw050"]
-xfade_time = 0.2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b26j0"]
-xfade_time = 0.2
-
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_n7ghd"]
-states/Idle_Nick/node = SubResource("AnimationNodeAnimation_sweqy")
-states/Idle_Nick/position = Vector2(408, 65)
-states/Start/position = Vector2(249, 78)
-states/Walk_Nick/node = SubResource("AnimationNodeAnimation_2hs0m")
-states/Walk_Nick/position = Vector2(596, 78)
-transitions = ["Start", "Idle_Nick", SubResource("AnimationNodeStateMachineTransition_1jxqw"), "Idle_Nick", "Walk_Nick", SubResource("AnimationNodeStateMachineTransition_dw050"), "Walk_Nick", "Idle_Nick", SubResource("AnimationNodeStateMachineTransition_b26j0")]
-graph_offset = Vector2(-156.4226, -10.460249)
-
-[node name="Player" type="CharacterBody3D" unique_id=621330810 groups=["player"]]
+[node name="Player" type="CharacterBody3D" unique_id=621330810 node_paths=PackedStringArray("anim_tree") groups=["player"]]
 script = ExtResource("1_4flbx")
 bob_freq = 1.0
 default_footstep_sound = ExtResource("2_onrkg")
+anim_tree = NodePath("AnimationTree")
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=793491641]
+active = false
+root_node = NodePath("../Nick")
+tree_root = SubResource("AnimationNodeStateMachine_n7ghd")
+anim_player = NodePath("../Nick/AnimationPlayer")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=604022162]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.466, 0)
@@ -243,13 +250,7 @@ shape = SubResource("CapsuleShape3D_4flbx")
 [node name="Nick" parent="." unique_id=1664565471 instance=ExtResource("3_hqtel")]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0.3601207, 0.17311221)
 
-[node name="Skeleton3D" parent="Nick/Armature" parent_id_path=PackedInt32Array(1664565471, 1008208416) index="0" unique_id=1363365338]
-bones/3/rotation = Quaternion(0.046478633, 0.00043875488, 0.0040310756, 0.9989111)
-bones/6/rotation = Quaternion(0.09005779, 0.0025063988, 0.038817357, 0.9951766)
-bones/23/rotation = Quaternion(0.14295466, 0.0011941015, -0.0049240463, 0.9897163)
-bones/48/rotation = Quaternion(-0.048146296, -0.0663635, -0.027903778, 0.9962426)
-
-[node name="AnimationPlayer" parent="Nick" index="1" unique_id=1362444446]
+[node name="AnimationPlayer" parent="Nick" index="1" unique_id=227485537]
 speed_scale = 1.5
 
 [node name="FootstepPlayer" type="AudioStreamPlayer3D" parent="." unique_id=1065433117]
@@ -302,11 +303,5 @@ tint_progress = Color(0.69099766, 0.69099766, 0.69099766, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1556190275]
 libraries/ = SubResource("AnimationLibrary_hqtel")
-
-[node name="AnimationTree" type="AnimationTree" parent="." unique_id=793491641]
-active = false
-root_node = NodePath("../Nick")
-tree_root = SubResource("AnimationNodeStateMachine_n7ghd")
-anim_player = NodePath("../Nick/AnimationPlayer")
 
 [editable path="Nick"]
