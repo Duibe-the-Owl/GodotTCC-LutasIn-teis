@@ -32,6 +32,8 @@ var current_hold_time = 0.0
 @onready var interact_label = $CanvasLayer/Label 
 @onready var interact_progress = $CanvasLayer/TextureProgressBar 
 
+@onready var pause_menu = $CanvasLayer/PauseMenu
+
 var rotation_x = 0.0
 var target_rotation_x = 0.0
 var mouse_input := Vector2.ZERO
@@ -42,7 +44,7 @@ var last_bob_sine = 0.0
 
 var is_in_cutscene = false
 
-@onready var anim_tree = $AnimationTree
+@export var anim_tree : AnimationTree
 @onready var playback = anim_tree.get("parameters/playback")
 
 func _ready():
@@ -53,12 +55,43 @@ func _ready():
 		foot_audio.stream = default_footstep_sound
 	if anim_tree:
 		anim_tree.active = true
+	if GameManager.fresh_game_started:
+		start_intro_sequence()
+		GameManager.fresh_game_started = false # Reset so it doesn't trigger again
 
 func _input(event):
+	if get_tree().paused:
+		return
 	if event is InputEventMouseMotion:
 		mouse_input = event.relative
 	if Input.is_action_just_pressed("ui_cancel"):
+		#if not is_in_cutscene:
+		if Dialogic.current_timeline != null:
+			return
+		toggle_pause()
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		
+func toggle_pause():
+	if pause_menu == null:
+		push_warning("Pause Menu reference missing on Player!")
+		return
+		
+	var new_pause_state = !get_tree().paused
+	get_tree().paused = new_pause_state
+	
+	if new_pause_state:
+		pause_menu.show()
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	else:
+		pause_menu.hide()
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+# Public helper function your Pause UI buttons can safely trigger
+func unpause_game():
+	get_tree().paused = false
+	if pause_menu:
+		pause_menu.hide()
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _physics_process(delta):
 	rotate_y(-mouse_input.x * mouse_sensitivity)
