@@ -145,16 +145,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7027485, -0.5698448, -2.20
 [node name="Despertador" parent="Móveis (Quarto)" unique_id=1760712600 instance=ExtResource("15_kuy5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9187465, -0.8222265, 2.0816455)
 
-[node name="Armário" parent="Móveis (Quarto)" unique_id=2100953546 instance=ExtResource("16_m30uk")]
+[node name="Armário" parent="Móveis (Quarto)" unique_id=1992327535 instance=ExtResource("16_m30uk")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.6525167, -0.8273673, -2.352987)
 
-[node name="Bar" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(2100953546, 931373925) index="0" unique_id=1348519556]
-transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 2.13585, -0.17623472)
+[node name="Bar" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1992327535, 1787340824) index="0" unique_id=751771753]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 2.059648, -0.17623472)
 
-[node name="Pants" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(2100953546, 931373925) index="2" unique_id=1833900659]
+[node name="Pants" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1992327535, 1787340824) index="2" unique_id=1445431085]
 transform = Transform3D(-0.7071066, 0.70710695, 5.9604645e-08, 5.9604645e-08, 0, 1, 0.70710695, 0.7071066, 0, -0.015007257, 1.5682206, 0.36414862)
 
-[node name="Uniform" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(2100953546, 931373925) index="3" unique_id=2095613133]
+[node name="Uniform" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1992327535, 1787340824) index="3" unique_id=971748510]
 transform = Transform3D(-0.7071066, 0.70710695, 5.9604645e-08, 5.9604645e-08, 0, 1, 0.70710695, 0.7071066, 0, -0.015007257, 1.5682206, 0.7805791)
 layers = 2
 
@@ -170,7 +170,7 @@ shape = SubResource("BoxShape3D_libsc")
 
 [node name="ObjectiveArrow" type="Node3D" parent="Móveis (Quarto)" unique_id=1609176942 node_paths=PackedStringArray("objectives")]
 script = ExtResource("19_brrh6")
-objectives = [NodePath("../Armário/Wardrobe_Area/Uniform"), NodePath("../../Cozinha (Móveis)/Pia/Sink_Area/Bread"), NodePath("../../Sala (Móveis)/Mesita/Shelf_Area/House_Keys")]
+objectives = [NodePath(""), NodePath("../../Cozinha (Móveis)/Pia/Sink_Area/Bread"), NodePath("../../Sala (Móveis)/Mesita/Shelf_Area/House_Keys")]
 
 [node name="SetaLado" parent="Móveis (Quarto)/ObjectiveArrow" unique_id=1133751353 instance=ExtResource("19_4kluu")]
 

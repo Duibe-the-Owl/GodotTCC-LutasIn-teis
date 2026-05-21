@@ -314,16 +314,16 @@ script = ExtResource("20_7d0rl")
 [node name="Ônibus" parent="BusPath/PathFollow3D" unique_id=828663201 instance=ExtResource("19_man7g")]
 transform = Transform3D(2.3081899e-05, 0.0034919037, 0.9999939, -0.024252007, 0.9996998, -0.0034903171, -0.99970585, -0.024251774, 0.000107735395, 0, 0.090044826, -0.0016884804)
 
-[node name="Wheel1" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(828663201, 377440844) index="2" unique_id=2102173027]
+[node name="Wheel1" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(828663201, 225111900) index="2" unique_id=2096818328]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 3.311226, -0.3548356, 1.50988)
 
-[node name="Wheel2" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(828663201, 377440844) index="3" unique_id=1993096043]
+[node name="Wheel2" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(828663201, 225111900) index="3" unique_id=1003932877]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -5.4145365, -0.3548356, 1.5098804)
 
-[node name="Wheel3" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(828663201, 377440844) index="4" unique_id=407127336]
+[node name="Wheel3" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(828663201, 225111900) index="4" unique_id=382648245]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 3.311226, -0.3548356, -2.0453444)
 
-[node name="Wheel4" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(828663201, 377440844) index="5" unique_id=699099953]
+[node name="Wheel4" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(828663201, 225111900) index="5" unique_id=1352063480]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -5.4145365, -0.3548356, -2.0453444)
 
 [node name="WheelsPlayer1" type="AnimationPlayer" parent="BusPath/PathFollow3D/Ônibus" unique_id=689532780]
@@ -349,7 +349,7 @@ libraries/WheelLib4 = SubResource("AnimationLibrary_66ypc")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1838939806]
 transform = Transform3D(0.9925945, -0.029335154, 0.11788017, -0.09228302, -0.8131435, 0.5747013, 0.07899456, -0.5813235, -0.8098289, 13.834465, 40.21839, -57.027565)
 light_color = Color(0.96648425, 0.90865546, 0.7090232, 1)
-light_energy = 0.5
+light_energy = 0.2
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2077223128]
@@ -385,15 +385,15 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 138.
 [node name="Porteiro" parent="." unique_id=1188977315 instance=ExtResource("26_kh6rx")]
 transform = Transform3D(0.36269826, 0, -0.93190664, 0, 1, 0, 0.93190664, 0, 0.36269826, 8.498664, 0.15698874, 32.875446)
 
-[node name="Skeleton3D" parent="Porteiro/Armature" parent_id_path=PackedInt32Array(1188977315, 1050920848) index="0" unique_id=1147197981]
-bones/3/rotation = Quaternion(0.1042916, 0.00020438425, 0.0040497435, 0.99453855)
-bones/6/rotation = Quaternion(0.23821656, -0.007990966, 0.056994054, 0.9695055)
-bones/23/rotation = Quaternion(0.08046602, -0.23107342, 0.028499046, 0.96918434)
-bones/26/rotation = Quaternion(-0.11847432, 0.04447846, 0.524203, 0.8421382)
-bones/27/rotation = Quaternion(0.25521767, 0.028284092, 0.01719527, 0.9663169)
-bones/28/rotation = Quaternion(-0.05048146, 0.017365938, 0.08290486, 0.99512655)
+[node name="Skeleton3D" parent="Porteiro/Armature" parent_id_path=PackedInt32Array(1188977315, 402796763) index="0" unique_id=656996876]
+bones/3/rotation = Quaternion(0.10822654, 0.00018835657, 0.0040505207, 0.99411803)
+bones/6/rotation = Quaternion(0.2304132, 0.00042801723, 0.054493017, 0.97156584)
+bones/23/rotation = Quaternion(0.07897203, -0.22895028, 0.034121644, 0.9696293)
+bones/26/rotation = Quaternion(-0.16009466, 0.03221919, 0.5206568, 0.8380024)
+bones/27/rotation = Quaternion(0.16303574, 0.16104358, 0.114770085, 0.9665983)
+bones/28/rotation = Quaternion(-0.057909153, 0.16639838, 0.26109824, 0.9490974)
 
-[node name="Porteiro" parent="Porteiro/Armature/Skeleton3D" index="0" unique_id=1417063898]
+[node name="Porteiro" parent="Porteiro/Armature/Skeleton3D" index="0" unique_id=345336151]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013343811, 0, 0.03428936)
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1160754904 node_paths=PackedStringArray("npc_node")]
