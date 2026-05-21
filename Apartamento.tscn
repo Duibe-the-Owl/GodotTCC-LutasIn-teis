@@ -170,7 +170,7 @@ shape = SubResource("BoxShape3D_libsc")
 
 [node name="ObjectiveArrow" type="Node3D" parent="Móveis (Quarto)" unique_id=1609176942 node_paths=PackedStringArray("objectives")]
 script = ExtResource("19_brrh6")
-objectives = [NodePath(""), NodePath("../../Cozinha (Móveis)/Pia/Sink_Area/Bread"), NodePath("../../Sala (Móveis)/Mesita/Shelf_Area/House_Keys")]
+objectives = [NodePath("../Armário/Wardrobe_Area/Uniform"), NodePath("../../Cozinha (Móveis)/Pia/Sink_Area/Bread"), NodePath("../../Sala (Móveis)/Mesita/Shelf_Area/House_Keys")]
 
 [node name="SetaLado" parent="Móveis (Quarto)/ObjectiveArrow" unique_id=1133751353 instance=ExtResource("19_4kluu")]
 
