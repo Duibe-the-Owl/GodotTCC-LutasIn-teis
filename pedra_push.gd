@@ -6,7 +6,7 @@ signal push_stopped
 @export var boulder_body : RigidBody3D
 @export var snap_point : Marker3D
 @export var boulder_mesh : MeshInstance3D
-@export var rotation_speed : float = 5.0
+@export var rotation_speed : float = 1.0
 
 var is_being_pushed = false
 
@@ -21,17 +21,19 @@ func interact():
 
 func _process(delta):
 	if is_being_pushed:
+		# The boulder checks the keyboard directly!
 		if Input.is_action_just_released("interact"):
 			stop_pushing()
 		
-		# Rotate the mesh visually since physics rotation is frozen!
 		if boulder_mesh:
-			boulder_mesh.rotate_y(rotation_speed * delta)
+			boulder_mesh.rotate_object_local(Vector3.RIGHT, rotation_speed * delta)
 			
 func stop_pushing():
 	is_being_pushed = false
 	
 	# Unfreeze physics so it realistically rolls backward down the hill!
 	boulder_body.freeze = false 
-	
+	boulder_body.linear_velocity = Vector3.ZERO
+	boulder_body.angular_velocity = Vector3.ZERO
+
 	push_stopped.emit()

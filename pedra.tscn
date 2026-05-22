@@ -3,21 +3,32 @@
 [ext_resource type="PackedScene" uid="uid://c2yqestm4m4yw" path="res://Pedra.glb" id="1_o3i74"]
 [ext_resource type="Script" uid="uid://bcr55aihp2sfg" path="res://pedra_push.gd" id="2_3q7da"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3q7da"]
+
 [sub_resource type="SphereShape3D" id="SphereShape3D_3q7da"]
-radius = 2.35
+radius = 2.3
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_hufuc"]
-radius = 2.7
+radius = 2.5
 
 [node name="Pedra" unique_id=166356469 instance=ExtResource("1_o3i74")]
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+mass = 50.0
+physics_material_override = SubResource("PhysicsMaterial_3q7da")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="0" unique_id=209061277]
 shape = SubResource("SphereShape3D_3q7da")
 
-[node name="Marker3D" type="Marker3D" parent="Boulder" parent_id_path=PackedInt32Array(1602674807) index="0" unique_id=359536956]
+[node name="Marker3D" type="Marker3D" parent="." index="2" unique_id=359536956]
+transform = Transform3D(-3.761374e-08, -0.509447, -0.86050206, -2.2268635e-08, 0.86050206, -0.509447, 1, 0, -4.371139e-08, -3.0424087, -2.146436, 0)
 
-[node name="InteractionArea" type="Area3D" parent="Boulder" parent_id_path=PackedInt32Array(1602674807) index="2" unique_id=1145619310]
+[node name="InteractionArea" type="Area3D" parent="." index="3" unique_id=1145619310 node_paths=PackedStringArray("boulder_body", "snap_point", "boulder_mesh")]
 script = ExtResource("2_3q7da")
+boulder_body = NodePath("..")
+snap_point = NodePath("../Marker3D")
+boulder_mesh = NodePath("../Boulder")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Boulder/InteractionArea" index="0" unique_id=122798751]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea" index="0" unique_id=122798751]
 shape = SubResource("SphereShape3D_hufuc")

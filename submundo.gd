@@ -33,47 +33,67 @@ func _on_push_started(snap_point: Marker3D):
 
 func _on_push_stopped():
 	is_pushing = false
-	# Re-enable player controls when they let go of E
+
 	if player:
 		player.set_physics_process(true)
 
 func _physics_process(delta):
 	if is_pushing:
-		# 1. Manually move the boulder up the hill axis
-		boulder.global_position += push_direction * push_speed * delta
+		# SAFETY FALLBACK: If the player somehow releases E without triggering the signal
+		if not Input.is_action_pressed("interact"):
+			_on_push_stopped()
+			boulder_interaction_area.stop_pushing() # Tells the boulder to unfreeze
+			return # Exit early so it doesn't move this frame
+			
+		# Otherwise, proceed with moving up the hill...
+		var movement = push_direction * push_speed * delta
+		boulder.global_position += movement
 		
-		# 2. Keep the player locked to the boulder's snap point while moving
 		if player and current_snap_point:
 			player.global_position = current_snap_point.global_position
+			player.global_transform.basis = Basis(Vector3.UP, current_snap_point.global_transform.basis.get_euler().y)
 			
-		# 3. Check if we reached the top of the hill
 		if boulder.global_position.distance_to(top_of_hill_marker.global_position) < 2.0:
 			_on_reached_top()
 
 func _on_reached_top():
-	_on_push_stopped() # Force the interaction to break
+	# 1. IMMEDIATELY turn off the movement engine so it stops climbing!
+	is_pushing = false 
+	
+	# 2. Force the interaction scripts to break their states
 	boulder_interaction_area.is_being_pushed = false
+	boulder_interaction_area.stop_pushing()
+	_on_push_stopped() 
 	
 	push_count += 1
-	print("Boulder reached the top! Count: ", push_count)
+	print("Sisyphus Loop Count: ", push_count, " / 3")
 	
 	if push_count >= 3:
-		# INTERRUPT WITH DIALOGIC
-		boulder.freeze = true # Lock it in place so it doesn't roll away during the talking
-		Dialogic.start("sisyphus_boulder_timeline") # Replace with your Dialogic timeline name
+		# VICTORY: Stop the rock completely and start Dialogic!
+		boulder.freeze = true 
+		Dialogic.start("sisyphus_boulder_timeline") 
 	else:
-		# Let physics take over so it rolls back down on its own!
+		# RESET SEQUENCE: Let physics drop it back down
 		boulder.freeze = false 
 		
-		# Set up a check to wait until it settles back at the bottom, or manually reset it
-		await get_tree().create_timer(5.0).timeout # Give it 5 seconds to roll down
+		# Turn off the interaction zone temporarily so the player 
+		# can't grab it while it's mid-roll
+		boulder_interaction_area.process_mode = PROCESS_MODE_DISABLED
+		
+		# Wait 5 seconds for the boulder to finish rolling down the hill naturally
+		await get_tree().create_timer(5.0).timeout 
+		
+		# Snap it back to the exact start marker to clean up any messy physics drifting
 		_reset_boulder_to_start()
 
 func _reset_boulder_to_start():
-	boulder.freeze = true # Freeze it again so it stays put
+	boulder.freeze = true # Freeze it so it stays still at the bottom
 	boulder.global_position = starting_boulder_position.global_position
-	boulder.linear_velocity = Vector3.ZERO # Cancel out any leftover physics momentum
+	
+	# Completely wipe out any residual momentum from the roll down
+	boulder.linear_velocity = Vector3.ZERO 
 	boulder.angular_velocity = Vector3.ZERO
 	
-	# Re-enable the interaction area so they can push it again
+	# Turn the interaction back on! The player can now push lap #2 or #3
 	boulder_interaction_area.process_mode = PROCESS_MODE_INHERIT
+	print("Boulder reset! Ready for next push.")

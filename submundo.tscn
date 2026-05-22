@@ -93,12 +93,15 @@ _data = {
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0nynm"]
 friction = 0.2
 
-[node name="submundo" type="Node3D" unique_id=1630282636 node_paths=PackedStringArray("boulder", "top_of_hill_marker", "starting_boulder_position", "player")]
+[sub_resource type="BoxShape3D" id="BoxShape3D_0nynm"]
+size = Vector3(63.95, 32.61, 1)
+
+[node name="submundo" type="Node3D" unique_id=1630282636 node_paths=PackedStringArray("boulder", "boulder_interaction_area", "top_of_hill_marker", "player")]
 script = ExtResource("1_0nynm")
 boulder = NodePath("Pedra")
+boulder_interaction_area = NodePath("Pedra/InteractionArea")
 push_direction = Vector3(0.6, 0.3, 0)
 top_of_hill_marker = NodePath("EndMarker3D")
-starting_boulder_position = NodePath("Pedra/Boulder/Marker3D")
 player = NodePath("Player")
 
 [node name="Montanha" parent="." unique_id=1458667891 instance=ExtResource("1_btv6c")]
@@ -147,7 +150,7 @@ transform = Transform3D(0.6467898, 0, -0.7626684, 0, 1, 0, 0.7626684, 0, 0.64678
 [node name="Nuvens" parent="." unique_id=243861410 instance=ExtResource("8_vwoq7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.041735, 0)
 
-[node name="Plane" parent="Nuvens" index="0" unique_id=1182882345]
+[node name="Plane" parent="Nuvens" index="0" unique_id=1316836445]
 surface_material_override/0 = SubResource("StandardMaterial3D_h53hy")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Nuvens" unique_id=1408293191]
@@ -159,20 +162,37 @@ stream = ExtResource("10_ketr1")
 autoplay = true
 
 [node name="EndMarker3D" type="Marker3D" parent="." unique_id=2127564923]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.253414, 17.844418, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.342403, 17.844418, 0)
 
 [node name="Pedra" parent="." unique_id=166356469 instance=ExtResource("12_0nynm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6179276, 3.8595943, 0)
-mass = 50.0
 physics_material_override = SubResource("PhysicsMaterial_0nynm")
 freeze = true
 
-[node name="InteractionArea" parent="Pedra/Boulder" parent_id_path=PackedInt32Array(166356469, 1602674807) index="2" unique_id=1145619310 node_paths=PackedStringArray("boulder_body", "snap_point", "boulder_mesh")]
+[node name="InteractionArea" parent="Pedra" index="3" unique_id=1145619310]
 collision_layer = 2
 collision_mask = 2
-boulder_body = NodePath("../..")
-snap_point = NodePath("../Marker3D")
-boulder_mesh = NodePath("..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1869017404]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.076979, 2.9113383, -12.739744)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=56575953]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.036253, 0, 1.3381748)
+shape = SubResource("BoxShape3D_0nynm")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="." unique_id=1991382580]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 40.26834, 11.468582, 7.9113455)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3" unique_id=1648682665]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.036253, 0, 1.3381748)
+shape = SubResource("BoxShape3D_0nynm")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1665200845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.076979, 2.9113383, 7.831503)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=2108994352]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.036253, 0, 1.3381748)
+shape = SubResource("BoxShape3D_0nynm")
 
 [editable path="Nuvens"]
 [editable path="Pedra"]
