@@ -150,7 +150,7 @@ transform = Transform3D(0.6467898, 0, -0.7626684, 0, 1, 0, 0.7626684, 0, 0.64678
 [node name="Nuvens" parent="." unique_id=243861410 instance=ExtResource("8_vwoq7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.041735, 0)
 
-[node name="Plane" parent="Nuvens" index="0" unique_id=1316836445]
+[node name="Plane" parent="Nuvens" index="0" unique_id=1182882345]
 surface_material_override/0 = SubResource("StandardMaterial3D_h53hy")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Nuvens" unique_id=1408293191]

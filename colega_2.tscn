@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://dwbsnpna54q3j"]
+
+[ext_resource type="PackedScene" uid="uid://bncmbo0qm1wtx" path="res://Coworker2.glb" id="1_fmij5"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v0dhp"]
+animation = &"Idle_Coworker2"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2dki7"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_gnjx5"]
+states/Idle_Coworker2/node = SubResource("AnimationNodeAnimation_v0dhp")
+states/Idle_Coworker2/position = Vector2(341, 84)
+states/Start/position = Vector2(197, 100)
+transitions = ["Start", "Idle_Coworker2", SubResource("AnimationNodeStateMachineTransition_2dki7")]
+
+[node name="Colega 2" unique_id=1609022559 instance=ExtResource("1_fmij5")]
+
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(39951722) index="0" unique_id=1241516100]
+bones/1/rotation = Quaternion(0.10033269, 1.1860772e-07, 1.1960587e-08, 0.99495393)
+bones/2/rotation = Quaternion(-0.09744682, 1.7097435e-14, -2.323314e-08, 0.99524075)
+bones/3/rotation = Quaternion(0.05968252, -0.007794732, -0.12946637, 0.98975545)
+bones/4/rotation = Quaternion(0.1283036, -0.13674493, -0.7571969, 0.62569314)
+bones/5/rotation = Quaternion(0.27989134, 0.53028244, -0.40278837, 0.6915366)
+bones/6/rotation = Quaternion(-0.1647312, 0.17021988, 0.9522772, 0.19250199)
+bones/7/rotation = Quaternion(-0.06963465, -0.7017855, 0.5555296, 0.44049403)
+bones/8/rotation = Quaternion(-0.0005892639, 0.007915431, -0.02769053, 0.99958503)
+bones/11/rotation = Quaternion(-0.0005892943, 0.007915606, -0.027690826, 0.99958503)
+bones/14/rotation = Quaternion(0.0038330085, 0.0077907774, -0.030462306, 0.9994983)
+bones/16/rotation = Quaternion(0.006445748, 0.0002896441, -0.15834239, 0.9873633)
+bones/17/rotation = Quaternion(-0.00072724174, 0.00798368, -0.03427952, 0.99938023)
+bones/20/rotation = Quaternion(0.4446805, 0.35191482, -0.20206645, 0.7984888)
+bones/21/rotation = Quaternion(0.18772659, 0.024696486, 0.03469199, 0.98129785)
+bones/23/rotation = Quaternion(0.10174397, -0.060989447, -0.27062267, 0.95534915)
+bones/24/rotation = Quaternion(-0.09890632, -0.000411956, -0.0029015397, 0.99509245)
+bones/25/rotation = Quaternion(0.12435983, 0.1526646, 0.8034753, 0.56183225)
+bones/26/rotation = Quaternion(0.3500892, -0.3906377, 0.41048667, 0.7458824)
+bones/27/rotation = Quaternion(0.120928586, 0.02313414, -0.642377, 0.7564344)
+bones/28/rotation = Quaternion(-0.17784558, -0.0071020126, -0.024868099, 0.9837185)
+bones/29/rotation = Quaternion(0.34979597, -0.01932194, -0.023386726, 0.9363346)
+bones/30/rotation = Quaternion(0.01283076, 0.027248558, 0.16295032, 0.98617446)
+bones/31/rotation = Quaternion(0.018993957, 0.11986815, 0.23747388, 0.96378267)
+bones/32/rotation = Quaternion(0.07226791, 0.00467574, 0.006059336, 0.99735594)
+bones/33/rotation = Quaternion(0.0065554576, -0.0002392068, -0.0012960444, 0.99997765)
+bones/34/rotation = Quaternion(-0.06440499, -0.14655426, 0.32882825, 0.93072325)
+bones/35/rotation = Quaternion(0.0011942418, -0.008159609, 0.09197095, 0.99572754)
+bones/38/rotation = Quaternion(-0.11214097, 0.06532913, 0.110427685, 0.98537415)
+bones/40/rotation = Quaternion(-0.022098597, -0.04871146, 0.26069745, 0.9639376)
+bones/41/rotation = Quaternion(0.47662938, -0.391597, -0.24444813, 0.7481453)
+bones/43/rotation = Quaternion(0.030050784, -0.30668393, 0.22051807, 0.92542624)
+bones/44/rotation = Quaternion(-0.49945492, 0.50228196, 0.50891554, -0.48914483)
+bones/46/rotation = Quaternion(0.681825, 0.058209028, -0.07334211, 0.725498)
+bones/47/rotation = Quaternion(0.6757713, 0.019645777, 0.021412801, 0.73653835)
+bones/48/rotation = Quaternion(0.008690332, -0.064613186, -0.03164102, 0.99737084)
+bones/50/rotation = Quaternion(0.681825, -0.05820918, 0.073342174, 0.72549796)
+bones/51/rotation = Quaternion(0.67577136, -0.019645741, -0.021412838, 0.7365383)
+bones/52/rotation = Quaternion(0.008690365, 0.06461318, 0.031641025, 0.9973708)
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2" unique_id=1971601849]
+tree_root = SubResource("AnimationNodeStateMachine_gnjx5")
+anim_player = NodePath("../AnimationPlayer")
