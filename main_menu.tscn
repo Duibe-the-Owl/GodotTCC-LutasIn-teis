@@ -41,30 +41,30 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -352.0
-offset_top = -135.0
-offset_right = -51.999146
-offset_bottom = 135.0
+offset_left = -423.83502
+offset_top = -165.595
+offset_right = -73.83496
+offset_bottom = 194.40515
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_constants/separation = 55
+theme_override_constants/separation = 75
 
 [node name="PlayButton" type="Button" parent="MenuButtons" unique_id=327571567]
-custom_minimum_size = Vector2(300, 60)
+custom_minimum_size = Vector2(350, 80)
 layout_mode = 2
-theme_override_font_sizes/font_size = 27
+theme_override_font_sizes/font_size = 35
 text = "Começar"
 
 [node name="OptionsButton" type="Button" parent="MenuButtons" unique_id=311774027]
-custom_minimum_size = Vector2(300, 60)
+custom_minimum_size = Vector2(350, 80)
 layout_mode = 2
-theme_override_font_sizes/font_size = 27
+theme_override_font_sizes/font_size = 35
 text = "Opções"
 
 [node name="QuitButton" type="Button" parent="MenuButtons" unique_id=1437420137]
-custom_minimum_size = Vector2(300, 60)
+custom_minimum_size = Vector2(350, 80)
 layout_mode = 2
-theme_override_font_sizes/font_size = 27
+theme_override_font_sizes/font_size = 35
 text = "Sair"
 
 [node name="OptionsWindow" type="PanelContainer" parent="." unique_id=360698778]
@@ -89,7 +89,7 @@ theme_override_constants/separation = 25
 
 [node name="Label" type="Label" parent="OptionsWindow/VBoxContainer" unique_id=915188977]
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 35
 text = "Música"
 horizontal_alignment = 1
 
@@ -101,7 +101,7 @@ value = 1.0
 
 [node name="Label2" type="Label" parent="OptionsWindow/VBoxContainer" unique_id=1006919479]
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 35
 text = "Efeitos Sonoros"
 horizontal_alignment = 1
 
@@ -112,9 +112,9 @@ step = 0.05
 value = 1.0
 
 [node name="BackButton" type="Button" parent="OptionsWindow/VBoxContainer" unique_id=1741737614]
-custom_minimum_size = Vector2(250, 60)
+custom_minimum_size = Vector2(350, 80)
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 35
 text = "Voltar"
 
 [connection signal="pressed" from="MenuButtons/PlayButton" to="." method="_on_play_button_pressed"]
