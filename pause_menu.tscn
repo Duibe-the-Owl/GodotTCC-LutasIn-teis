@@ -29,21 +29,21 @@ grow_vertical = 2
 theme_override_constants/separation = 40
 
 [node name="ResumeButton" type="Button" parent="MenuButtons" unique_id=364477323]
-custom_minimum_size = Vector2(250, 60)
+custom_minimum_size = Vector2(350, 80)
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 35
 text = "Voltar"
 
 [node name="OptionsButton" type="Button" parent="MenuButtons" unique_id=729852188]
-custom_minimum_size = Vector2(250, 60)
+custom_minimum_size = Vector2(350, 80)
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 35
 text = "Opções"
 
 [node name="QuitButton" type="Button" parent="MenuButtons" unique_id=1477723781]
-custom_minimum_size = Vector2(250, 60)
+custom_minimum_size = Vector2(350, 80)
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 35
 text = "Sair"
 
 [node name="OptionsWindow" type="PanelContainer" parent="." unique_id=1514911851]
@@ -67,7 +67,7 @@ theme_override_constants/separation = 25
 
 [node name="Label" type="Label" parent="OptionsWindow/VBoxContainer" unique_id=2131669268]
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 35
 text = "Música"
 horizontal_alignment = 1
 
@@ -79,7 +79,7 @@ value = 1.0
 
 [node name="Label2" type="Label" parent="OptionsWindow/VBoxContainer" unique_id=1144705850]
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 35
 text = "Efeitos Sonoros"
 horizontal_alignment = 1
 

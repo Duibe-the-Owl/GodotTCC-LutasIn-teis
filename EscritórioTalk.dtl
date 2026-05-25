@@ -2,4 +2,7 @@
 join Colega center
 Colega: Bom dia Nick.
 Nick: Bom dia.
+Colega: Viu o jogo ontem à noite?
+Nick: Ah, eu não acompanho esportes...
+Colega: Saquei.
 [signal arg="end_dialogue"]

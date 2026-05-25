@@ -1,4 +1,4 @@
-extends StaticBody3D
+extends Area3D
 
 # This signal tells the scene 'The player interacted!'
 signal player_sat_down

@@ -26,24 +26,25 @@
 [ext_resource type="Texture2D" uid="uid://crl6mobypc55b" path="res://Lutas-Inúteis-Skybox(Noite).png" id="24_qa2tn"]
 [ext_resource type="PackedScene" uid="uid://bohx7a8ayqdfw" path="res://Rua(AS).glb" id="25_f7mf8"]
 [ext_resource type="PackedScene" uid="uid://btog0veyoumcv" path="res://Fundo.glb" id="26_pee7e"]
+[ext_resource type="PackedScene" uid="uid://bwar3gsp87os2" path="res://colega_3.tscn" id="27_f7mf8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w63rs"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vqoap"]
 points = PackedVector3Array(-0.17457025, -0.0020341033, -0.2272107, -0.17258668, 0.015372725, -0.2272107, 0.024219781, 0.6285622, -0.45909503, 0.024219781, 0.16154072, -0.45909503, 0.19145297, -0.0020341033, -0.2272107, -0.17457025, -0.0020341033, 0.22712085, -0.10572225, 0.46288872, -0.07181224, -0.17258668, 0.015372725, 0.22712085, 0.06385516, 0.6285622, -0.45909503, 0.024219781, 0.6285622, 0.45909503, 0.06385516, 0.16154072, -0.45909503, 0.19383325, 0.015372725, -0.2272107, 0.19386931, 0.015372725, 0.22712085, 0.19145297, -0.0020341033, 0.22712085, 0.024219781, 0.16154072, 0.45909503, -0.10572225, 0.46288872, 0.07172236, 0.06385516, 0.6285622, 0.45909503, 0.06385516, 0.16154072, 0.45909503)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ju7q4"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_pee7e"]
 viewport_path = NodePath("DeskUnit/Screen/SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_f7mf8"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_vuag0"]
 viewport_path = NodePath("DeskUnit/Screen/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pee7e"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_upvgb"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_ju7q4")
+albedo_texture = SubResource("ViewportTexture_pee7e")
 emission_enabled = true
 emission_energy_multiplier = 0.3
-emission_texture = SubResource("ViewportTexture_f7mf8")
+emission_texture = SubResource("ViewportTexture_vuag0")
 
 [sub_resource type="VideoStreamTheora" id="VideoStreamTheora_wjgvv"]
 file = "res://Work_Cutscene.ogv"
@@ -308,7 +309,7 @@ collision_mask = 2
 shape = SubResource("ConvexPolygonShape3D_vqoap")
 
 [node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 387614369) index="7" unique_id=2078624118]
-surface_material_override/0 = SubResource("StandardMaterial3D_pee7e")
+surface_material_override/0 = SubResource("StandardMaterial3D_upvgb")
 
 [node name="SubViewport" type="SubViewport" parent="MainCarteira/DeskUnit/Screen" index="0" unique_id=1884540969]
 size = Vector2i(1024, 800)
@@ -414,6 +415,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 43.3
 
 [node name="Fundo" parent="." unique_id=1881256334 instance=ExtResource("26_pee7e")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 94.07344, -30.767843, -4.0114746)
+
+[node name="Colega 3" parent="." unique_id=853093262 instance=ExtResource("27_f7mf8")]
+transform = Transform3D(-4.371139e-08, -0.057564024, 0.9983418, 0, 0.9983418, 0.057564024, -1, 2.5162035e-09, -4.3638906e-08, -3.3052425, 0.073, -4.682)
 
 [connection signal="body_entered" from="Elevador/Area3D" to="Elevador/Area3D" method="_on_body_entered"]
 
