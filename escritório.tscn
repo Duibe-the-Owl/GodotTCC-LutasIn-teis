@@ -309,7 +309,7 @@ root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_5lkqy")
 
 [node name="CutsceneCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 387614369) index="10" unique_id=188736818]
-transform = Transform3D(0.8338857, 0, 0.5519369, 0, 1, 0, -0.5519369, 0, 0.8338857, 1.0576382, 0.55, 1.489955)
+transform = Transform3D(0.83388567, 0, 0.5519369, 0, 1, 0, -0.5519369, 0, 0.83388567, 1.0576382, 0.55, 1.489955)
 fov = 72.6
 
 [node name="Relógio" parent="." unique_id=668349015 instance=ExtResource("23_5lkqy")]
