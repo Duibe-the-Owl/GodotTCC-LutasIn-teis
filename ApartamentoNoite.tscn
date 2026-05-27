@@ -53,6 +53,7 @@
 [ext_resource type="Script" uid="uid://b3b1nvpv8eymp" path="res://seta.gd" id="52_a1sow"]
 [ext_resource type="VoxelGIData" uid="uid://vtkwkd4g5g23" path="res://Apartamento.VoxelGI_data.res" id="53_466y7"]
 [ext_resource type="PackedScene" uid="uid://drbkq1qmh5c22" path="res://SetaLado.glb" id="53_x0xca"]
+[ext_resource type="Shader" uid="uid://g53we0g41lwa" path="res://dither.gdshader" id="54_x0xca"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w6bbu"]
 size = Vector3(2, 1, 2)
@@ -201,6 +202,12 @@ _data = {
 &"start_tv": SubResource("Animation_phupe")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5y3jk"]
+shader = ExtResource("54_x0xca")
+shader_parameter/pixel = 1.0
+shader_parameter/brightness_boost = 1.3
+shader_parameter/shadow_softness = 5.0
+
 [node name="Apartamento" type="Node3D" unique_id=338808659 node_paths=PackedStringArray("tv_animator", "tv_camera", "player_node", "remote_control")]
 script = ExtResource("1_a1sow")
 tv_animator = NodePath("Sala (Móveis)/TV(Noite)/TvUnit/AnimationPlayer")
@@ -245,13 +252,13 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.0
 [node name="ParedeJanela" parent="Estrutura (Quarto)" unique_id=1271280872 instance=ExtResource("9_6qbfb")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.6392782, -0.9300701, 2.586493)
 
-[node name="Chão" parent="Estrutura (Quarto)" unique_id=859540146 instance=ExtResource("10_fay8b")]
+[node name="Chão" parent="Estrutura (Quarto)" unique_id=1937994234 instance=ExtResource("10_fay8b")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.102, -1.023, 0.001)
 
 [node name="ParedeDireita" parent="Estrutura (Quarto)" unique_id=1745976896 instance=ExtResource("12_fvtt7")]
 transform = Transform3D(1, 0, 0, 0, 0.9999985, 0.0017278751, 0, -0.0017278751, 0.9999985, -0.016213417, 0.831, 2.9280005)
 
-[node name="Teto" parent="Estrutura (Quarto)" unique_id=1222991607 instance=ExtResource("13_xpu1w")]
+[node name="Teto" parent="Estrutura (Quarto)" unique_id=1864396251 instance=ExtResource("13_xpu1w")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.17326736, 2.2298403, 0)
 
 [node name="Móveis (Quarto)" type="Node3D" parent="." unique_id=1033436415]
@@ -278,13 +285,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9187465, -0.8222265, 2.0816
 [node name="Armário" parent="Móveis (Quarto)" unique_id=2100953546 instance=ExtResource("16_2wsvb")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.6525167, -0.8273673, -2.352987)
 
-[node name="Bar" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(2100953546, 1254493397) index="0" unique_id=1188668377]
+[node name="Bar" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(2100953546, 1354650949) index="0" unique_id=621183347]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 2.13585, -0.17623472)
 
-[node name="Pants" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(2100953546, 1254493397) index="2" unique_id=2077216626]
+[node name="Pants" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(2100953546, 1354650949) index="2" unique_id=566327375]
 transform = Transform3D(-0.7071066, 0.70710695, 5.9604645e-08, 5.9604645e-08, 0, 1, 0.70710695, 0.7071066, 0, -0.015007257, 1.5682206, 0.36414862)
 
-[node name="Uniform" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(2100953546, 1254493397) index="3" unique_id=676083003]
+[node name="Uniform" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(2100953546, 1354650949) index="3" unique_id=1770473136]
 transform = Transform3D(-0.7071066, 0.70710695, 5.9604645e-08, 5.9604645e-08, 0, 1, 0.70710695, 0.7071066, 0, -0.015007257, 1.5682206, 0.7805791)
 layers = 2
 
@@ -440,16 +447,16 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -18.
 [node name="Cozinha (Estrutura)" type="Node3D" parent="." unique_id=1563958204]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.13447, 0, -12.077182)
 
-[node name="ParedeFCozinha" parent="Cozinha (Estrutura)" unique_id=1048639446 instance=ExtResource("34_cp5r2")]
+[node name="ParedeFCozinha" parent="Cozinha (Estrutura)" unique_id=1147909245 instance=ExtResource("34_cp5r2")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.616, 0.8626335, 2.175)
 
-[node name="ParedeECozinha" parent="Cozinha (Estrutura)" unique_id=2087105443 instance=ExtResource("35_wqbd8")]
+[node name="ParedeECozinha" parent="Cozinha (Estrutura)" unique_id=1908600437 instance=ExtResource("35_wqbd8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.783, 0.86, 0.255)
 
-[node name="ParedeDCozinha" parent="Cozinha (Estrutura)" unique_id=1154806756 instance=ExtResource("35_wqbd8")]
+[node name="ParedeDCozinha" parent="Cozinha (Estrutura)" unique_id=915047905 instance=ExtResource("35_wqbd8")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.847, 0.867, 4.113)
 
-[node name="ChãoCozinha" parent="Cozinha (Estrutura)" unique_id=172130125 instance=ExtResource("36_y71ed")]
+[node name="ChãoCozinha" parent="Cozinha (Estrutura)" unique_id=1279846601 instance=ExtResource("36_y71ed")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.833, -0.967, 2.227)
 
 [node name="TetoCozinha2" parent="Cozinha (Estrutura)" unique_id=1436939080 instance=ExtResource("36_8parx")]
@@ -525,6 +532,17 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0
 
 [node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=1002935279]
 autoplay = &"ArrowSide_Spin"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1989484596]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=2043561414]
+material = SubResource("ShaderMaterial_5y3jk")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [connection signal="body_entered" from="Móveis (Quarto)/Armário/Wardrobe_Area/Uniform/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Sala (Estrutura)/Area3D" to="Sala (Estrutura)/Area3D" method="_on_body_entered"]

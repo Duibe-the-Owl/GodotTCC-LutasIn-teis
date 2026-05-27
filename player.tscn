@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://wtvhtw1b7mxy" path="res://player.gd" id="1_4flbx"]
 [ext_resource type="AudioStream" uid="uid://latb40cs266p" path="res://Footstep (Test).wav" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://dcpx11ta7c4ef" path="res://camera.gd" id="3_2hs0m"]
 [ext_resource type="PackedScene" uid="uid://b00a05ih480jg" path="res://nick.tscn" id="3_hqtel"]
 [ext_resource type="Texture2D" uid="uid://b35jvvbrk88o2" path="res://Loading Circle.png" id="3_i3pqv"]
 [ext_resource type="PackedScene" uid="uid://sedjt4hal2pe" path="res://pause_menu.tscn" id="5_sweqy"]
@@ -237,6 +238,7 @@ anim_player = NodePath("../Nick/AnimationPlayer")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=604022162]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.466, 0)
 fov = 43.4
+script = ExtResource("3_2hs0m")
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=993507703]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.46613717, 0)

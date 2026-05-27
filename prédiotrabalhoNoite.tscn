@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://t8bneworcuq8" path="res://Buildings4.glb" id="23_jyvf8"]
 [ext_resource type="Script" uid="uid://b3b1nvpv8eymp" path="res://seta.gd" id="24_y1rg7"]
 [ext_resource type="PackedScene" uid="uid://drbkq1qmh5c22" path="res://SetaLado.glb" id="25_fac30"]
+[ext_resource type="Shader" uid="uid://g53we0g41lwa" path="res://dither.gdshader" id="27_uq8ta"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_blb7k"]
 panorama = ExtResource("20_b6saw")
@@ -55,6 +56,12 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0)
 }
 point_count = 3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2056r"]
+shader = ExtResource("27_uq8ta")
+shader_parameter/pixel = 1.0
+shader_parameter/brightness_boost = 1.3
+shader_parameter/shadow_softness = 5.0
 
 [node name="prédiotrabalho" type="Node3D" unique_id=2069597799]
 
@@ -141,7 +148,7 @@ environment = SubResource("Environment_jyvf8")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=632984101]
 transform = Transform3D(-0.7013167, 0.6180122, 0.35526857, 0.671782, 0.40626898, 0.61939836, 0.23846114, 0.67305756, -0.7000928, -26.84834, 65.49814, 0)
 light_color = Color(0.5819238, 0.62724096, 0.7880468, 1)
-light_energy = 0.131
+light_energy = 0.2
 shadow_enabled = true
 
 [node name="Postes(Noite)" parent="." unique_id=852313084 instance=ExtResource("21_qe36d")]
@@ -452,7 +459,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -193
 curve = SubResource("Curve3D_vohkx")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="BusPath" unique_id=883106378]
-transform = Transform3D(0.20079084, 0, -0.9796279, 0, 1.0000428, 0, 0.9796279, 0, 0.20079084, -1.3815956, 0, 1.5192566)
+transform = Transform3D(0.20079084, 0, -0.9796279, 0, 1.000043, 0, 0.9796279, 0, 0.20079084, -1.3815956, 0, 1.5192566)
 rotation_mode = 4
 loop = false
 script = ExtResource("20_qe36d")
@@ -489,11 +496,22 @@ objectives = [NodePath("../Placa2")]
 [node name="SetaLado" parent="ObjectiveArrow" unique_id=1133751353 instance=ExtResource("25_fac30")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.7084502)
 
-[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2064431747]
+[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2056864381]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
-[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=343420702]
+[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=1002935279]
 autoplay = &"ArrowSide_Spin"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1556836814]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=846180561]
+material = SubResource("ShaderMaterial_2056r")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [editable path="BusPath/PathFollow3D/Ônibus"]
 [editable path="ObjectiveArrow/SetaLado"]
