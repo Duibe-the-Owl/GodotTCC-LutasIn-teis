@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bx08h4dgw73ov"
-path.s3tc="res://.godot/imported/Cama_CoverTexture(test).png-90f5d6bcd2cc7ffcec2e1f4986320dac.s3tc.ctex"
+uid="uid://b1cqjiwkmxasg"
+path.s3tc="res://.godot/imported/Armario_PantsTexture(NEW).png-0f3b7d56b9a1862fb6528541457725b0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "9d82e59d82b4b5ed1aa0646499d1945e"
+"md5": "1b2d68976ed5aeb2a9ede75eaa3b5170"
 }
 
 [deps]
 
-source_file="res://Cama_CoverTexture(test).png"
-dest_files=["res://.godot/imported/Cama_CoverTexture(test).png-90f5d6bcd2cc7ffcec2e1f4986320dac.s3tc.ctex"]
+source_file="res://Armario_PantsTexture(NEW).png"
+dest_files=["res://.godot/imported/Armario_PantsTexture(NEW).png-0f3b7d56b9a1862fb6528541457725b0.s3tc.ctex"]
 
 [params]
 

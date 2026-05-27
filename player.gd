@@ -58,16 +58,25 @@ func _ready():
 	if GameManager.fresh_game_started:
 		start_intro_sequence()
 		GameManager.fresh_game_started = false # Reset so it doesn't trigger again
-
+		
+func _unhandled_input(event):
+	if is_in_cutscene:
+		return 
+		
 func _input(event):
 	if get_tree().paused:
 		return
+		
+	# 1. CAMERA MOVEMENT: Only capture mouse motion if we are NOT in a cutscene
 	if event is InputEventMouseMotion:
-		mouse_input = event.relative
+		if not is_in_cutscene:
+			mouse_input = event.relative
+			
+	# 2. PAUSE MENU: Allow pausing at any time, even during the cutscene
 	if Input.is_action_just_pressed("ui_cancel"):
-		#if not is_in_cutscene:
 		if Dialogic.current_timeline != null:
 			return
+			
 		toggle_pause()
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		
@@ -94,6 +103,8 @@ func unpause_game():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _physics_process(delta):
+	var _is_in_cutscene: bool = false
+	
 	rotate_y(-mouse_input.x * mouse_sensitivity)
 	target_rotation_x -= mouse_input.y * mouse_sensitivity * y_sensitivity_multiplier
 	target_rotation_x = clamp(target_rotation_x, deg_to_rad(-80), deg_to_rad(80))

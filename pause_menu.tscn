@@ -4,6 +4,7 @@
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=1637949776]
 process_mode = 2
+layer = 4
 script = ExtResource("1_hdmo1")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1127702181]
@@ -92,7 +93,7 @@ value = 1.0
 [node name="BackButton" type="Button" parent="OptionsWindow/VBoxContainer" unique_id=15422715]
 custom_minimum_size = Vector2(250, 60)
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 35
 text = "Voltar"
 
 [connection signal="pressed" from="MenuButtons/ResumeButton" to="." method="_on_resume_button_pressed"]

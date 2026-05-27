@@ -12,11 +12,13 @@ var is_drawing: bool = false
 var current_line: Line2D
 var ink_color: Color = Color.BLACK
 var line_width: float = 4.0
+var center_x: float = 0.0
 
 # Store ink lines here so they slide *with* the paper container
 var active_lines: Array[Line2D] = []
 
 func _ready():
+	center_x = paper_container.position.x
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	if document_textures.size() > 0:
 		paper_bg.texture = document_textures[0]
@@ -25,8 +27,8 @@ func _ready():
 	_update_button_text()
 
 func _gui_input(event: InputEvent):
-	# Crucial adjustment: We must map the global mouse position 
-	# to the LOCAL coordinates of the moving paper container
+	if event is InputEventMouseButton and event.pressed:
+		print("2D Canvas received a click at local pos: ", event.position) # DIAGNOSTIC
 	var local_pos = paper_container.make_input_local(event).position
 	
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -78,8 +80,15 @@ func _on_button_pressed():
 func animate_page_transition():
 	var tween = create_tween().set_parallel(false)
 	
-	# 1. Slide the current signed paper off to the left (X = -1050)
-	tween.tween_property(paper_container, "position:x", -1050, 0.4).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+	# Dynamically grab the current width of the viewport/screen
+	var screen_width = get_viewport_rect().size.x
+	
+	# Calculate safe off-screen positions relative to your center
+	var offscreen_left = center_x - screen_width
+	var offscreen_right = center_x + screen_width
+	
+	# 1. Slide the current signed paper off to the left dynamically
+	tween.tween_property(paper_container, "position:x", offscreen_left, 0.4).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 	
 	# 2. When it's fully off-screen, swap data instantly
 	tween.tween_callback(func():
@@ -88,12 +97,12 @@ func animate_page_transition():
 		paper_bg.texture = document_textures[current_page_index]
 		_update_button_text()
 		
-		# Instantly teleport the paper to the far RIGHT side (X = 1050)
-		paper_container.position.x = 1050
+		# Instantly teleport the paper to the dynamic far RIGHT side
+		paper_container.position.x = offscreen_right
 	)
 	
-	# 3. Slide the new fresh paper back into the center (X = 0)
-	tween.tween_property(paper_container, "position:x", 0, 0.4).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	# 3. Slide the new fresh paper back into the EXACT captured center
+	tween.tween_property(paper_container, "position:x", center_x, 0.4).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	
 	# 4. Re-enable the button when the animation is completely done
 	tween.tween_callback(func(): action_button.disabled = false)

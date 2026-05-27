@@ -25,9 +25,14 @@
 [ext_resource type="Script" uid="uid://dv6m137b7u6vl" path="res://write_interaction.gd" id="22_wi2vf"]
 [ext_resource type="PackedScene" uid="uid://cqeknaioj76xx" path="res://Relógio.glb" id="23_5lkqy"]
 [ext_resource type="PackedScene" uid="uid://dp0vv72qq2b3y" path="res://Lixo(Escritório).glb" id="24_0hvgb"]
+[ext_resource type="Texture2D" uid="uid://cf2mvlducll0a" path="res://Paper1.png" id="24_6bht1"]
+[ext_resource type="Texture2D" uid="uid://bxcdfps7c7ib7" path="res://DesktopBackground.png" id="24_ukk4k"]
 [ext_resource type="PackedScene" uid="uid://bydip21p1euj" path="res://Buildings2.glb" id="25_6yd0b"]
+[ext_resource type="Texture2D" uid="uid://bgwe7wcqwnne" path="res://Paper2.png" id="25_p85jf"]
 [ext_resource type="VoxelGIData" uid="uid://dweeeokuo1wln" path="res://escritório.VoxelGI_data.res" id="26_mo6l2"]
+[ext_resource type="Texture2D" uid="uid://b75ly1bkqmfga" path="res://Paper3.png" id="26_p85jf"]
 [ext_resource type="PackedScene" uid="uid://bohx7a8ayqdfw" path="res://Rua(AS).glb" id="27_xrcyy"]
+[ext_resource type="Texture2D" uid="uid://uefubqoalo1l" path="res://Paper4.png" id="27_y24xq"]
 [ext_resource type="PackedScene" uid="uid://btog0veyoumcv" path="res://Fundo.glb" id="28_1vucl"]
 [ext_resource type="PackedScene" uid="uid://cm1gfabrid871" path="res://colega_de_trabalho.tscn" id="29_xrcyy"]
 [ext_resource type="Script" uid="uid://c0026mrk1ds0x" path="res://colega_dialogue.gd" id="30_1vucl"]
@@ -56,20 +61,20 @@ volumetric_fog_density = 0.03
 [sub_resource type="BoxShape3D" id="BoxShape3D_8v41d"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wi2vf"]
-size = Vector3(0.1, 0.425, 0.865)
+size = Vector3(0.15, 0.425, 0.865)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_8v41d"]
-viewport_path = NodePath("DeskUnit/Screen/SubViewport")
+[sub_resource type="ViewportTexture" id="ViewportTexture_y24xq"]
+viewport_path = NodePath("../ComputerCanvas/SubViewportContainer/SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ukk4k"]
-viewport_path = NodePath("DeskUnit/Screen/SubViewport")
+[sub_resource type="ViewportTexture" id="ViewportTexture_584g4"]
+viewport_path = NodePath("../ComputerCanvas/SubViewportContainer/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_etv6d"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32rqj"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_8v41d")
+albedo_texture = SubResource("ViewportTexture_y24xq")
 emission_enabled = true
-emission_energy_multiplier = 0.3
-emission_texture = SubResource("ViewportTexture_ukk4k")
+emission_energy_multiplier = 0.5
+emission_texture = SubResource("ViewportTexture_584g4")
 
 [sub_resource type="Animation" id="Animation_5lkqy"]
 length = 0.001
@@ -100,7 +105,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_wigrh"]
 resource_name = "start_computer"
-length = 49.5
+length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -108,10 +113,10 @@ tracks/0/path = NodePath("MainCarteira/DeskUnit/CutsceneCamera:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 2, 2.01),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(1.0576382, 0.55, 1.489955), Vector3(0.305, 0.43, -0.054)]
+"values": [Vector3(1.0576382, 0.55, 1.489955), Vector3(0.305, 0.43, -0.054), Vector3(0.16396332, 0.43, -0.0539999)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -146,13 +151,10 @@ tracks/3/path = NodePath("Player")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 48.033333),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "values": [{
 "args": [false],
-"method": &"set_physics_process"
-}, {
-"args": [true],
 "method": &"set_physics_process"
 }]
 }
@@ -214,7 +216,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.249003, -0.055074453, 4.13
 [node name="Carteira14" parent="." unique_id=962471977 instance=ExtResource("9_dc56r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.474821, -0.055074453, 10.789474)
 
-[node name="Chair" parent="Carteira14/DeskUnit" parent_id_path=PackedInt32Array(962471977, 1098109233) index="0" unique_id=1983518949]
+[node name="Chair" parent="Carteira14/DeskUnit" parent_id_path=PackedInt32Array(962471977, 1308521510) index="0" unique_id=1609557495]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8137474, -0.29560387, 0.04257965)
 
 [node name="Carteira15" parent="." unique_id=1328760553 instance=ExtResource("9_dc56r")]
@@ -276,70 +278,39 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.1
 [node name="MainCarteira" parent="." unique_id=707634930 instance=ExtResource("19_vqoap")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.475147, -0.055103928, 13.9879265)
 
-[node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 203776616) index="3" unique_id=733034456]
+[node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 387614369) index="3" unique_id=1623658015]
 layers = 2
 
 [node name="Area3D" type="Area3D" parent="MainCarteira/DeskUnit/Monitor" index="0" unique_id=1872963870]
 collision_layer = 2
 collision_mask = 2
+input_ray_pickable = false
 script = ExtResource("20_4q64r")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MainCarteira/DeskUnit/Monitor/Area3D" unique_id=409013197]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22179025, 0)
 shape = SubResource("BoxShape3D_8v41d")
 
-[node name="ScreenInteractionArea" type="Area3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 203776616) index="7" unique_id=985870322]
+[node name="ScreenInteractionArea" type="Area3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 387614369) index="7" unique_id=985870322]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24362564, 0.03672272, -0.05687332)
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("22_8v41d")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MainCarteira/DeskUnit/ScreenInteractionArea" unique_id=1055670022]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.112773895, 0.41383284, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13251686, 0.41383284, 0)
 shape = SubResource("BoxShape3D_wi2vf")
 
-[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 203776616) index="8" unique_id=1855767950]
-surface_material_override/0 = SubResource("StandardMaterial3D_etv6d")
+[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 387614369) index="8" unique_id=2078624118]
+surface_material_override/0 = SubResource("StandardMaterial3D_32rqj")
 
-[node name="SubViewport" type="SubViewport" parent="MainCarteira/DeskUnit/Screen" index="0" unique_id=1884540969]
-size = Vector2i(1280, 700)
-render_target_update_mode = 4
-
-[node name="ScribbleCanvas" type="Control" parent="MainCarteira/DeskUnit/Screen/SubViewport" unique_id=1831979651]
-layout_mode = 3
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 0
-script = ExtResource("22_wi2vf")
-
-[node name="DesktopBackground" type="TextureRect" parent="MainCarteira/DeskUnit/Screen/SubViewport/ScribbleCanvas" unique_id=143309405]
-layout_mode = 0
-offset_top = -700.0
-offset_right = 40.0
-offset_bottom = -660.0
-
-[node name="PaperContainer" type="Control" parent="MainCarteira/DeskUnit/Screen/SubViewport/ScribbleCanvas" unique_id=585737815]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="PaperBackground" type="TextureRect" parent="MainCarteira/DeskUnit/Screen/SubViewport/ScribbleCanvas/PaperContainer" unique_id=141448305]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="ActionButton" type="Button" parent="MainCarteira/DeskUnit/Screen/SubViewport/ScribbleCanvas" unique_id=639573111]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 203776616) index="9" unique_id=1558306546]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 387614369) index="9" unique_id=1558306546]
 root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_5lkqy")
 
-[node name="CutsceneCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 203776616) index="10" unique_id=188736818]
-transform = Transform3D(0.8338856, 0, 0.55193686, 0, 1, 0, -0.55193686, 0, 0.8338856, 1.0576382, 0.55, 1.489955)
+[node name="CutsceneCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 387614369) index="10" unique_id=188736818]
+transform = Transform3D(0.8338857, 0, 0.5519369, 0, 1, 0, -0.5519369, 0, 0.8338857, 1.0576382, 0.55, 1.489955)
+fov = 72.6
 
 [node name="Relógio" parent="." unique_id=668349015 instance=ExtResource("23_5lkqy")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 13.859442, 1.8883786, 19.651203)
@@ -349,7 +320,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.231073, -0.40540057, 0.342
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1775407165]
 transform = Transform3D(0.41349754, 0.35090446, 0.8401702, -0.64410055, -0.53947127, 0.5423149, 0.64354837, -0.7653999, 0.0029476339, 50.129604, 8.994417, 12.319012)
-light_color = Color(1, 1, 0.8980392, 1)
+light_color = Color(0.91764706, 0.94509804, 1, 1)
 light_energy = 0.606
 shadow_enabled = true
 
@@ -441,10 +412,10 @@ objectives = [NodePath("../MainCarteira/DeskUnit/Monitor")]
 [node name="SetaLado" parent="ObjectiveArrow" unique_id=2055762299 instance=ExtResource("32_oh124")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.48)
 
-[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2056864381]
+[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2064431747]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
-[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=1002935279]
+[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=343420702]
 autoplay = &"ArrowSide_Spin"
 
 [node name="Colega 2" parent="." unique_id=1609022559 instance=ExtResource("33_oh124")]
@@ -458,6 +429,105 @@ transform = Transform3D(0.013787709, 0, -0.999905, 0, 1, 0, 0.999905, 0, 0.01378
 
 [node name="Colega5" parent="." unique_id=17545379 instance=ExtResource("36_wi2vf")]
 transform = Transform3D(0.40514165, 0, 0.914254, 0, 1, 0, -0.914254, 0, 0.40514165, 12.8293085, 0.19748956, 18.230532)
+
+[node name="ComputerCanvas" type="CanvasLayer" parent="." unique_id=128018872]
+layer = 3
+visible = false
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="ComputerCanvas" unique_id=13255547]
+custom_minimum_size = Vector2(1280, 700)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -350.0
+offset_right = 640.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="ComputerCanvas/SubViewportContainer" unique_id=1884540969]
+handle_input_locally = false
+physics_object_picking = true
+size = Vector2i(1280, 700)
+render_target_update_mode = 0
+
+[node name="ScribbleCanvas" type="Control" parent="ComputerCanvas/SubViewportContainer/SubViewport" unique_id=1831979651]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("22_wi2vf")
+document_textures = Array[Texture2D]([ExtResource("24_6bht1"), ExtResource("25_p85jf"), ExtResource("26_p85jf"), ExtResource("27_y24xq")])
+
+[node name="DesktopBackground" type="TextureRect" parent="ComputerCanvas/SubViewportContainer/SubViewport/ScribbleCanvas" unique_id=143309405]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -350.0
+offset_right = 640.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("24_ukk4k")
+
+[node name="PaperContainer" type="Control" parent="ComputerCanvas/SubViewportContainer/SubViewport/ScribbleCanvas" unique_id=585737815]
+custom_minimum_size = Vector2(300, 427)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -213.5
+offset_right = 150.0
+offset_bottom = 213.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PaperBackground" type="TextureRect" parent="ComputerCanvas/SubViewportContainer/SubViewport/ScribbleCanvas/PaperContainer" unique_id=141448305]
+custom_minimum_size = Vector2(300, 427)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -213.5
+offset_right = 150.0
+offset_bottom = 213.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ActionButton" type="Button" parent="ComputerCanvas/SubViewportContainer/SubViewport/ScribbleCanvas" unique_id=639573111]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 133.28998
+offset_top = -95.235
+offset_right = 253.28998
+offset_bottom = -45.235
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 24
+text = "Próximo"
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 

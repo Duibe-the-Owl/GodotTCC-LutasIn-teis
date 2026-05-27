@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://x27i1trdusxp"]
+
+[ext_resource type="Shader" uid="uid://g53we0g41lwa" path="res://dither.gdshader" id="1_40k4o"]
+[ext_resource type="Texture2D" uid="uid://c8xdjilmkqbvu" path="res://ColorPalette2.png" id="2_8cu33"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8cu33"]
+shader = ExtResource("1_40k4o")
+shader_parameter/pixel = 10.0
+shader_parameter/palette = ExtResource("2_8cu33")
+shader_parameter/brightness_boost = 1.0
+shader_parameter/shadow_softness = 5.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" unique_id=466093494]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1926099968]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=289130981]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=260202360]
+material = SubResource("ShaderMaterial_8cu33")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

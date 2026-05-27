@@ -56,7 +56,7 @@ bob_freq = 1.6
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=659676882]
 transform = Transform3D(0.69945145, -0.006423763, 0.7146513, -0.71468014, -0.0062868833, 0.69942325, -2.7366537e-10, -0.99995965, -0.008988305, 13.834465, 40.21839, 0)
-light_color = Color(0.96648425, 0.90865546, 0.7090232, 1)
+light_color = Color(0.91764706, 0.94509804, 1, 1)
 light_energy = 0.5
 shadow_enabled = true
 
@@ -169,10 +169,10 @@ objectives = [NodePath("../Placa")]
 [node name="SetaLado" parent="ObjectiveArrow" unique_id=1133751353 instance=ExtResource("19_0ymfv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.77)
 
-[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2056864381]
+[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2064431747]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
-[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=1002935279]
+[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=343420702]
 autoplay = &"ArrowSide_Spin"
 
 [connection signal="body_entered" from="StaticBody3D/Area3D" to="StaticBody3D/Area3D" method="_on_body_entered"]
