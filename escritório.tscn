@@ -43,6 +43,8 @@
 [ext_resource type="PackedScene" uid="uid://wd2pyspv4bx8" path="res://colega_4.tscn" id="35_xa1x8"]
 [ext_resource type="PackedScene" uid="uid://dgvnt3xfelxdq" path="res://colega_5.tscn" id="36_wi2vf"]
 [ext_resource type="Shader" uid="uid://g53we0g41lwa" path="res://dither.gdshader" id="43_584g4"]
+[ext_resource type="Script" uid="uid://eiysx37uwu7q" path="res://colega2dialogue.gd" id="44_32rqj"]
+[ext_resource type="Script" uid="uid://r3ba58scjqek" path="res://colega3dialogue.gd" id="45_ffs5t"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_che6b"]
 panorama = ExtResource("17_qaf3e")
@@ -64,18 +66,18 @@ volumetric_fog_density = 0.03
 [sub_resource type="BoxShape3D" id="BoxShape3D_wi2vf"]
 size = Vector3(0.15, 0.425, 0.865)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_32rqj"]
-viewport_path = NodePath("../ComputerCanvas/SubViewportContainer/SubViewport")
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_ffs5t"]
 viewport_path = NodePath("../ComputerCanvas/SubViewportContainer/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bwteo"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_bwteo"]
+viewport_path = NodePath("../ComputerCanvas/SubViewportContainer/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lygj3"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_32rqj")
+albedo_texture = SubResource("ViewportTexture_ffs5t")
 emission_enabled = true
 emission_energy_multiplier = 0.5
-emission_texture = SubResource("ViewportTexture_ffs5t")
+emission_texture = SubResource("ViewportTexture_bwteo")
 
 [sub_resource type="Animation" id="Animation_5lkqy"]
 length = 0.001
@@ -174,6 +176,11 @@ shader = ExtResource("43_584g4")
 shader_parameter/pixel = 1.0
 shader_parameter/brightness_boost = 1.3
 shader_parameter/shadow_softness = 5.0
+shader_parameter/camera_rotation = Vector2(0, 0)
+shader_parameter/dither_movement_weight = 15.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1ab0y"]
+size = Vector3(2.5, 1, 3)
 
 [node name="escritório" type="Node3D" unique_id=362160571]
 script = ExtResource("1_wigrh")
@@ -193,19 +200,19 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.89
 [node name="ParedeJanela" parent="." unique_id=1639460970 instance=ExtResource("5_3nuhn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.4459, -0.8538871, 9.856885)
 
-[node name="Divisória" parent="." unique_id=765938211 instance=ExtResource("6_1v5dy")]
+[node name="Divisória" parent="." unique_id=1968590068 instance=ExtResource("6_1v5dy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.658281, 0.12551737, 9.025009)
 
-[node name="Divisória2" parent="." unique_id=395882984 instance=ExtResource("6_1v5dy")]
+[node name="Divisória2" parent="." unique_id=1607426081 instance=ExtResource("6_1v5dy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.422284, 0.12551737, 9.025009)
 
-[node name="Planta" parent="." unique_id=1268389693 instance=ExtResource("7_wisdi")]
+[node name="Planta" parent="." unique_id=1463050685 instance=ExtResource("7_wisdi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.425828, -0.41144872, 18.706747)
 
-[node name="Bebedouro" parent="." unique_id=1160362960 instance=ExtResource("8_b21sp")]
+[node name="Bebedouro" parent="." unique_id=258541794 instance=ExtResource("8_b21sp")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.2989225, -0.33282554, 2.2989922)
 
-[node name="Bebedouro2" parent="." unique_id=1679356125 instance=ExtResource("8_b21sp")]
+[node name="Bebedouro2" parent="." unique_id=1266373385 instance=ExtResource("8_b21sp")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.2989225, -0.33282554, 3.1927528)
 
 [node name="Carteira" parent="." unique_id=1659575544 instance=ExtResource("9_dc56r")]
@@ -223,7 +230,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.249003, -0.055074453, 4.13
 [node name="Carteira14" parent="." unique_id=962471977 instance=ExtResource("9_dc56r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.474821, -0.055074453, 10.789474)
 
-[node name="Chair" parent="Carteira14/DeskUnit" parent_id_path=PackedInt32Array(962471977, 1098109233) index="0" unique_id=1983518949]
+[node name="Chair" parent="Carteira14/DeskUnit" parent_id_path=PackedInt32Array(962471977, 1308521510) index="0" unique_id=1609557495]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8137474, -0.29560387, 0.04257965)
 
 [node name="Carteira15" parent="." unique_id=1328760553 instance=ExtResource("9_dc56r")]
@@ -256,7 +263,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16.0
 [node name="Carteira12" parent="." unique_id=1480297173 instance=ExtResource("9_dc56r")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16.072735, -0.055074453, 4.0596657)
 
-[node name="Mesa" parent="." unique_id=1057372829 instance=ExtResource("10_31c4r")]
+[node name="Mesa" parent="." unique_id=1284913815 instance=ExtResource("10_31c4r")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 13.21562, -0.18483937, 19.126108)
 
 [node name="ChãoCorredor" parent="." unique_id=1057851921 instance=ExtResource("11_b21sp")]
@@ -280,12 +287,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08215213, 0.37489915, -1.2
 environment = SubResource("Environment_4q64r")
 
 [node name="TetoEscritório" parent="." unique_id=1215813620 instance=ExtResource("18_vqoap")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.136667, 2.527732, 9.579564)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.136667, 2.4467359, 9.579564)
 
 [node name="MainCarteira" parent="." unique_id=707634930 instance=ExtResource("19_vqoap")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.475147, -0.055103928, 13.9879265)
 
-[node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 203776616) index="3" unique_id=733034456]
+[node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 387614369) index="3" unique_id=1623658015]
 layers = 2
 
 [node name="Area3D" type="Area3D" parent="MainCarteira/DeskUnit/Monitor" index="0" unique_id=1872963870]
@@ -298,7 +305,7 @@ script = ExtResource("20_4q64r")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22179025, 0)
 shape = SubResource("BoxShape3D_8v41d")
 
-[node name="ScreenInteractionArea" type="Area3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 203776616) index="7" unique_id=985870322]
+[node name="ScreenInteractionArea" type="Area3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 387614369) index="7" unique_id=985870322]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24362564, 0.03672272, -0.05687332)
 collision_layer = 2
 collision_mask = 2
@@ -308,21 +315,21 @@ script = ExtResource("22_8v41d")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13251686, 0.41383284, 0)
 shape = SubResource("BoxShape3D_wi2vf")
 
-[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 203776616) index="8" unique_id=1855767950]
-surface_material_override/0 = SubResource("StandardMaterial3D_bwteo")
+[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 387614369) index="8" unique_id=2078624118]
+surface_material_override/0 = SubResource("StandardMaterial3D_lygj3")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 203776616) index="9" unique_id=1558306546]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 387614369) index="9" unique_id=1558306546]
 root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_5lkqy")
 
-[node name="CutsceneCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 203776616) index="10" unique_id=188736818]
+[node name="CutsceneCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 387614369) index="10" unique_id=188736818]
 transform = Transform3D(0.8338856, 0, 0.55193686, 0, 1, 0, -0.55193686, 0, 0.8338856, 1.0576382, 0.55, 1.489955)
 fov = 72.6
 
-[node name="Relógio" parent="." unique_id=668349015 instance=ExtResource("23_5lkqy")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 13.859442, 1.8883786, 19.651203)
+[node name="Relógio" parent="." unique_id=875575135 instance=ExtResource("23_5lkqy")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 13.4282875, 1.8883786, 19.651203)
 
-[node name="Lixo" parent="." unique_id=1461906512 instance=ExtResource("24_0hvgb")]
+[node name="Lixo" parent="." unique_id=1562370793 instance=ExtResource("24_0hvgb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.231073, -0.40540057, 0.34275204)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1775407165]
@@ -419,10 +426,10 @@ objectives = [NodePath("../MainCarteira/DeskUnit/Monitor")]
 [node name="SetaLado" parent="ObjectiveArrow" unique_id=2055762299 instance=ExtResource("32_oh124")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.48)
 
-[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2056864381]
+[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2064431747]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
-[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=1002935279]
+[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=343420702]
 autoplay = &"ArrowSide_Spin"
 
 [node name="Colega 2" parent="." unique_id=1609022559 instance=ExtResource("33_oh124")]
@@ -547,7 +554,25 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
+[node name="Area3D2" type="Area3D" parent="." unique_id=1380077594 node_paths=PackedStringArray("npc_node")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.266099, 0, 7.4489145)
+script = ExtResource("44_32rqj")
+npc_node = NodePath("../Colega 2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2" unique_id=1075384203]
+shape = SubResource("BoxShape3D_1ab0y")
+
+[node name="Area3D3" type="Area3D" parent="." unique_id=1477239410 node_paths=PackedStringArray("npc_node")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.242197, 0, 10.713493)
+script = ExtResource("45_ffs5t")
+npc_node = NodePath("../Colega 3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D3" unique_id=174496642]
+shape = SubResource("BoxShape3D_1ab0y")
+
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Area3D2" to="Area3D2" method="_on_body_entered"]
+[connection signal="body_entered" from="Area3D3" to="Area3D3" method="_on_body_entered"]
 
 [editable path="Carteira14"]
 [editable path="MainCarteira"]

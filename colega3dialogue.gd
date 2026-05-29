@@ -12,10 +12,6 @@ func _ready():
 	else:
 		print("Warning: No NPC assigned to Area3D!")
 
-	# --- THE MISSING LINK ---
-	# This wires Dialogic directly to the _on_dialogic_signal function below
-	Dialogic.signal_event.connect(_on_dialogic_signal)
-
 func _on_body_entered(body):
 	if (body.name == "Player" or body.is_in_group("Player")) and not has_triggered:
 		has_triggered = true
@@ -25,15 +21,4 @@ func _on_body_entered(body):
 		start_dialogue()
 
 func start_dialogue():
-	Dialogic.start("EscritórioTalk")
-	if npc_playback:
-		npc_playback.travel("Talk_Coworker")
-		
-func _on_dialogic_signal(argument: String):
-	if argument == "talk_colega":
-		if npc_playback:
-			npc_playback.travel("Talk_Coworker")
-	if argument == "end_dialogue":
-		if npc_playback:
-			# This will now successfully fire when the timeline hits the end event
-			npc_playback.travel("Idle_Coworker")
+	Dialogic.start("Colega3Talk")

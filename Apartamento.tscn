@@ -291,10 +291,10 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.4
 [node name="Postes2" parent="Exterior" unique_id=700899891 instance=ExtResource("31_ujyib")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -15.078901, -4.446, -27.218136)
 
-[node name="Árvore" parent="Exterior" unique_id=239877968 instance=ExtResource("32_kpcmk")]
+[node name="Árvore" parent="Exterior" unique_id=2098301847 instance=ExtResource("32_kpcmk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.195901, -4.6248198, 11.840523)
 
-[node name="Árvore2" parent="Exterior" unique_id=1690727726 instance=ExtResource("32_kpcmk")]
+[node name="Árvore2" parent="Exterior" unique_id=204266781 instance=ExtResource("32_kpcmk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5376945, -4.625, -13.850605)
 
 [node name="Prédios(Mini)" parent="Exterior" unique_id=251143555 instance=ExtResource("33_cyvy7")]
@@ -379,7 +379,7 @@ shape = SubResource("BoxShape3D_num3o")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.177, 2.289, 7.536)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer3D" parent="." unique_id=1915217441]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.638281, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.79717, 0, 0)
 stream = ExtResource("51_vrrh3")
 volume_db = -5.981
 autoplay = true
