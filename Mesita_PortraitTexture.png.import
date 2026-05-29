@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3ceuclnrho4h"
-path.s3tc="res://.godot/imported/Chão(Sala)_Carpet.png-ff0acf4157f20e59a02cc8574fb8194c.s3tc.ctex"
+uid="uid://cneehb41ivepc"
+path.s3tc="res://.godot/imported/Mesita_PortraitTexture.png-a5572bb851373df8bd287e987b9ba834.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "1de2581266eb2784b34f31f98689ac0c"
+"md5": "afa30c51a92853a978caafe83ba1dc6a"
 }
 
 [deps]
 
-source_file="res://Chão(Sala)_Carpet.png"
-dest_files=["res://.godot/imported/Chão(Sala)_Carpet.png-ff0acf4157f20e59a02cc8574fb8194c.s3tc.ctex"]
+source_file="res://Mesita_PortraitTexture.png"
+dest_files=["res://.godot/imported/Mesita_PortraitTexture.png-a5572bb851373df8bd287e987b9ba834.s3tc.ctex"]
 
 [params]
 

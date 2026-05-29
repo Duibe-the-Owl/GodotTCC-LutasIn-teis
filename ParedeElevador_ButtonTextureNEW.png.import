@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyorwecf5n6qy"
-path.s3tc="res://.godot/imported/ParedePorta(Sala)_DoorFrameTexture.png-2667e69a769b7dc247fab173618d1963.s3tc.ctex"
+uid="uid://cs16u71ihwb7l"
+path.s3tc="res://.godot/imported/ParedeElevador_ButtonTextureNEW.png-dfe4832932b258e115a78d19ed9ffe35.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "cfe5d8b8a893ed72cf8983157996a550"
+"md5": "384ff92cbfa6221d23db4b4353f9d19c"
 }
 
 [deps]
 
-source_file="res://ParedePorta(Sala)_DoorFrameTexture.png"
-dest_files=["res://.godot/imported/ParedePorta(Sala)_DoorFrameTexture.png-2667e69a769b7dc247fab173618d1963.s3tc.ctex"]
+source_file="res://ParedeElevador_ButtonTextureNEW.png"
+dest_files=["res://.godot/imported/ParedeElevador_ButtonTextureNEW.png-dfe4832932b258e115a78d19ed9ffe35.s3tc.ctex"]
 
 [params]
 

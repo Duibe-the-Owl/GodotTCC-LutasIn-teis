@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfn15u1bj74ei"
-path.s3tc="res://.godot/imported/ParedePorta(Sala)_Door3Texture.png-bb8b422bc2824bc4ef8f638358853eae.s3tc.ctex"
+uid="uid://dag7w25lxp0lc"
+path.s3tc="res://.godot/imported/Chão(Sala)_CarpetNew.png-82d27875983c942e6b7cb03c6b253853.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "c3ce9b4a387b1b337ee3d26d9090ecfc"
+"md5": "97f651fc75e978d07de5a58d84887005"
 }
 
 [deps]
 
-source_file="res://ParedePorta(Sala)_Door3Texture.png"
-dest_files=["res://.godot/imported/ParedePorta(Sala)_Door3Texture.png-bb8b422bc2824bc4ef8f638358853eae.s3tc.ctex"]
+source_file="res://addons/dialogic/Modules/Chão(Sala)_CarpetNew.png"
+dest_files=["res://.godot/imported/Chão(Sala)_CarpetNew.png-82d27875983c942e6b7cb03c6b253853.s3tc.ctex"]
 
 [params]
 

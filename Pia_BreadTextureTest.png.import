@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://13crloaqxh8s"
-path.s3tc="res://.godot/imported/ParedePorta(Sala)_DoorTexture.png-1cfa858bfbe2971186f3f96d855c5211.s3tc.ctex"
+uid="uid://bimnan2k18f82"
+path.s3tc="res://.godot/imported/Pia_BreadTextureTest.png-e0fbeb68610c85630b8a6140ab288202.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "5510fe52c12aead6d0fb14e3a8449223"
+"md5": "c20e55e74040797fc78c40154ee62f88"
 }
 
 [deps]
 
-source_file="res://ParedePorta(Sala)_DoorTexture.png"
-dest_files=["res://.godot/imported/ParedePorta(Sala)_DoorTexture.png-1cfa858bfbe2971186f3f96d855c5211.s3tc.ctex"]
+source_file="res://Pia_BreadTextureTest.png"
+dest_files=["res://.godot/imported/Pia_BreadTextureTest.png-e0fbeb68610c85630b8a6140ab288202.s3tc.ctex"]
 
 [params]
 
