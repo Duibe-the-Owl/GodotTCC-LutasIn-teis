@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ll5rvcf0xynf" path="res://Montanha3.glb" id="5_icxyv"]
 [ext_resource type="PackedScene" uid="uid://bmkptjnx6ym2p" path="res://Montanha4.glb" id="6_gxjer"]
 [ext_resource type="PackedScene" uid="uid://ddn4srarx22cn" path="res://Montanha5.glb" id="7_lfu1u"]
-[ext_resource type="PackedScene" uid="uid://pi7xoc3wwbtu" path="res://Nuvens.glb" id="8_vwoq7"]
+[ext_resource type="Texture2D" uid="uid://dldotm4yjsylf" path="res://Nuvens_MistTexture.png" id="9_ketr1"]
 [ext_resource type="AudioStream" uid="uid://cio7i24ea4j3q" path="res://Wind_SE.wav" id="10_ketr1"]
 [ext_resource type="Script" uid="uid://bcr55aihp2sfg" path="res://pedra_push.gd" id="12_xedls"]
 [ext_resource type="Shader" uid="uid://g53we0g41lwa" path="res://dither.gdshader" id="13_eqkyt"]
@@ -45,6 +45,51 @@ seamless = true
 density = 2.0971
 albedo = Color(0.99979275, 0.2722567, 0.23193568, 1)
 density_texture = SubResource("NoiseTexture3D_lfu1u")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nplhr"]
+resource_name = "Material.065"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("9_ketr1")
+roughness = 0.93846154
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_n6ev5"]
+_surfaces = [{
+"aabb": AABB(-208, 0, -235.5, 416, 1e-05, 471),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "Material.065",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2v1o4"]
+resource_name = "Nuvens_Plane_002"
+_surfaces = [{
+"aabb": AABB(-208, 0, -235.5, 416, 1e-05, 471),
+"attribute_data": PackedByteArray("FeIGAAYA+P8GAAYAFeL4/w=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_nplhr"),
+"name": "Material.065",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP///////wAAAAD/////AAD/////AAAAAAAA////f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_n6ev5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h53hy"]
+transparency = 1
+albedo_texture = ExtResource("9_ketr1")
+proximity_fade_enabled = true
+distance_fade_mode = 2
 
 [sub_resource type="Animation" id="Animation_vwoq7"]
 length = 0.001
@@ -172,9 +217,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.90076447, 0)
 size = Vector3(416.51, 3.35, 471.59)
 material = SubResource("FogMaterial_vwoq7")
 
-[node name="Nuvens" parent="Effects" unique_id=243861410 instance=ExtResource("8_vwoq7")]
+[node name="Nuvem" type="Node3D" parent="Effects" unique_id=2090027476]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Effects/Nuvens" unique_id=1408293191]
+[node name="Plane" type="MeshInstance3D" parent="Effects/Nuvem" unique_id=1636716085]
+mesh = SubResource("ArrayMesh_2v1o4")
+surface_material_override/0 = SubResource("StandardMaterial3D_h53hy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Effects/Nuvem" unique_id=1397008342]
 libraries/ = SubResource("AnimationLibrary_eqkyt")
 autoplay = &"cloud_roll"
 
@@ -292,5 +341,3 @@ transform = Transform3D(0.71180546, 0, 0.7023767, 0, 1, 0, -0.7023767, 0, 0.7118
 
 [node name="Montanha11" parent="Scenery" unique_id=2041547702 instance=ExtResource("7_lfu1u")]
 transform = Transform3D(0.9587255, 0, 0.2843333, 0, 1, 0, -0.2843333, 0, 0.9587255, 118.525635, -14.586479, -141.5)
-
-[editable path="Effects/Nuvens"]
