@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/Nick.glb-172d69620e8a15f8bbda102a50263e18.scn
 
 [params]
 
-nodes/root_type="CharacterBody3D"
+nodes/root_type="Node3D"
 nodes/root_name="Nick"
 nodes/root_script=null
 nodes/apply_root_scale=true

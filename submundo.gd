@@ -10,6 +10,7 @@ extends Node3D
 
 @export_group("Player Settings")
 @export var player : CharacterBody3D
+@export var rockOffset : Vector3
 
 var is_pushing : bool = false
 var push_count : int = 0
@@ -28,14 +29,15 @@ func _on_push_started(snap_point: Marker3D):
 	# Lock player out of normal movement and hide their mesh if needed
 	if player:
 		player.set_physics_process(false)
+		player.global_position = boulder.global_position + rockOffset
+		player.face_target(top_of_hill_marker.position)
 		# Optional: player.global_position = snap_point.global_position
 		# Optional: player.global_rotation = snap_point.global_rotation
 
 func _on_push_stopped():
+	print("a")
+	player.set_physics_process(true)
 	is_pushing = false
-
-	if player:
-		player.set_physics_process(true)
 
 func _physics_process(delta):
 	if is_pushing:
@@ -50,11 +52,18 @@ func _physics_process(delta):
 		boulder.global_position += movement
 		
 		if player and current_snap_point:
-			player.global_position = current_snap_point.global_position
-			player.global_transform.basis = Basis(Vector3.UP, current_snap_point.global_transform.basis.get_euler().y)
+			#player.global_transform.basis = Basis(Vector3.UP, current_snap_point.global_transform.basis.get_euler().y)
+			#var tempBasis = Basis()
+			#tempBasis = tempBasis.looking_at(top_of_hill_marker.position)
+			#player.global_transform.basis = tempBasis
+			#print(player.rotation)
+			player.global_position = boulder.global_position + rockOffset
+			pass
 			
 		if boulder.global_position.distance_to(top_of_hill_marker.global_position) < 2.0:
 			_on_reached_top()
+	else:
+		player.set_physics_process(true)
 
 func _on_reached_top():
 	# 1. IMMEDIATELY turn off the movement engine so it stops climbing!

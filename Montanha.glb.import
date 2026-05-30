@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/Montanha.glb-e998d56012512639ca7d24c51acc8074
 
 [params]
 
-nodes/root_type="StaticBody3D"
+nodes/root_type="Node3D"
 nodes/root_name="Montanha"
 nodes/root_script=null
 nodes/apply_root_scale=true
