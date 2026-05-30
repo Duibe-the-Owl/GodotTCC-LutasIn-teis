@@ -37,6 +37,7 @@ func _on_push_started(snap_point: Marker3D):
 func _on_push_stopped():
 	print("a")
 	player.set_physics_process(true)
+	player.move_and_slide()
 	is_pushing = false
 
 func _physics_process(delta):
@@ -63,7 +64,7 @@ func _physics_process(delta):
 		if boulder.global_position.distance_to(top_of_hill_marker.global_position) < 2.0:
 			_on_reached_top()
 	else:
-		player.set_physics_process(true)
+		player.velocity += Vector3.UP * -10 * delta
 
 func _on_reached_top():
 	# 1. IMMEDIATELY turn off the movement engine so it stops climbing!
