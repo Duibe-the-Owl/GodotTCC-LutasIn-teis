@@ -1,2 +1,7 @@
 join Nick center
-Nick: Nublado de novo, é? Igual semana passada.
+if {GameManager.current_day} == 1.0:
+	Nick: Nublado de novo, é? Igual semana passada.
+elif {GameManager.current_day} == 2:
+	Nick: …Esse Sol não chega não?
+elif {GameManager.current_day} == 3:
+	Nick: …De novo.

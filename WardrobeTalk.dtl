@@ -1,1 +1,4 @@
+set {GameManager} = 1.0
 Nick: Bom, é melhor eu me arrumar se eu quiser chegar a tempo no trabalho.
+elif {GameManager.current_day} == 2:
+	Nick: <Empty Text Event>

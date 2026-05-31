@@ -26,7 +26,8 @@ GameManager="*uid://y1evsuwjnou1"
 directories/dch_directory={
 "Colega": "res://Colega.dch",
 "Nick": "res://Nick.dch",
-"Porteiro": "res://Porteiro.dch"
+"Porteiro": "res://Porteiro.dch",
+"Sísifo": "res://Sísifo.dch"
 }
 directories/dtl_directory={
 "Colega2Talk": "res://Colega2Talk.dtl",
@@ -35,6 +36,7 @@ directories/dtl_directory={
 "PortariaTalk": "res://PortariaTalk.dtl",
 "StartCutscene": "res://StartCutscene.dtl",
 "StreetBlockDialogue": "res://StreetBlockDialogue.dtl",
+"SísifoTalk": "res://SísifoTalk.dtl",
 "TvTalk": "res://TvTalk.dtl",
 "WardrobeTalk": "res://WardrobeTalk.dtl"
 }

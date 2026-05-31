@@ -2,7 +2,7 @@
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
 &"_translation_id": "",
-&"color": Color(0.34375, 0.34375, 0.34375, 1),
+&"color": Color(0.4140625, 0.012939453, 0.012939453, 1),
 &"custom_info": {
 "prefix": "",
 "sound_mood_default": "",
@@ -12,7 +12,7 @@
 },
 &"default_portrait": "",
 &"description": "",
-&"display_name": "Colega",
+&"display_name": "Sísifo",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
