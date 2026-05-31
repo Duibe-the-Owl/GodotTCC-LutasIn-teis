@@ -188,14 +188,14 @@ size = Vector3(1, 14.381714, 23.34961)
 script = ExtResource("1_0nynm")
 boulder = NodePath("Pedra2")
 boulder_interaction_area = NodePath("Pedra2/InteractionArea")
-push_speed = 10.0
+push_speed = 5.0
 push_direction = Vector3(0.6, 0.3, 0)
 top_of_hill_marker = NodePath("EndMarker3D")
 starting_boulder_position = NodePath("StartMarker")
 player = NodePath("Player")
 rockOffset = Vector3(-4, -3, 0)
 
-[node name="Montanha" parent="." unique_id=1458667891 instance=ExtResource("1_btv6c")]
+[node name="Montanha" parent="." unique_id=558583841 instance=ExtResource("1_btv6c")]
 transform = Transform3D(0.9219848, 0.38722596, 0, -0.38722596, 0.9219848, 0, 0, 0, 1, 25.002466, -2.7718, -0.004631996)
 
 [node name="Player" parent="." unique_id=621330810 instance=ExtResource("2_1qhst")]
@@ -311,33 +311,33 @@ shape = SubResource("BoxShape3D_eqkyt")
 [node name="Scenery" type="Node3D" parent="." unique_id=143874484]
 process_mode = 4
 
-[node name="Montanha2" parent="Scenery" unique_id=1165089844 instance=ExtResource("4_h3mjy")]
+[node name="Montanha2" parent="Scenery" unique_id=1619616441 instance=ExtResource("4_h3mjy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -15.330616, -83.01019)
 
-[node name="Montanha3" parent="Scenery" unique_id=299580998 instance=ExtResource("5_icxyv")]
+[node name="Montanha3" parent="Scenery" unique_id=1379343713 instance=ExtResource("5_icxyv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -19.428926, 125.49675)
 
-[node name="Montanha4" parent="Scenery" unique_id=8882935 instance=ExtResource("6_gxjer")]
+[node name="Montanha4" parent="Scenery" unique_id=248476292 instance=ExtResource("6_gxjer")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -131.10648, -9.829487, -13.392052)
 
-[node name="Montanha5" parent="Scenery" unique_id=1394973744 instance=ExtResource("7_lfu1u")]
+[node name="Montanha5" parent="Scenery" unique_id=1709611004 instance=ExtResource("7_lfu1u")]
 transform = Transform3D(0.24373354, 0, -0.96984226, 0, 1, 0, 0.96984226, 0, 0.24373354, 43.935028, -15.922462, 153.55588)
 
-[node name="Montanha6" parent="Scenery" unique_id=16518635 instance=ExtResource("6_gxjer")]
+[node name="Montanha6" parent="Scenery" unique_id=1213390529 instance=ExtResource("6_gxjer")]
 transform = Transform3D(0.899931, 0, 0.43603233, 0, 1, 0, -0.43603233, 0, 0.899931, 122.02858, -21.264734, 44.86818)
 
-[node name="Montanha7" parent="Scenery" unique_id=932201457 instance=ExtResource("4_h3mjy")]
+[node name="Montanha7" parent="Scenery" unique_id=1073670421 instance=ExtResource("4_h3mjy")]
 process_mode = 4
 transform = Transform3D(-0.036504187, 0, -0.9993335, 0, 1, 0, 0.9993335, 0, -0.036504187, 135.16685, -12.299038, -63.167667)
 
-[node name="Montanha8" parent="Scenery" unique_id=1128072678 instance=ExtResource("7_lfu1u")]
+[node name="Montanha8" parent="Scenery" unique_id=1315460062 instance=ExtResource("7_lfu1u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.41667, 11.4824505, -108.293304)
 
-[node name="Montanha9" parent="Scenery" unique_id=741007356 instance=ExtResource("4_h3mjy")]
+[node name="Montanha9" parent="Scenery" unique_id=1242186242 instance=ExtResource("4_h3mjy")]
 transform = Transform3D(0.6467898, 0, -0.7626684, 0, 1, 0, 0.7626684, 0, 0.6467898, -173.79578, -7.4470406, 158.69606)
 
-[node name="Montanha10" parent="Scenery" unique_id=307484322 instance=ExtResource("7_lfu1u")]
+[node name="Montanha10" parent="Scenery" unique_id=1660374151 instance=ExtResource("7_lfu1u")]
 transform = Transform3D(0.71180546, 0, 0.7023767, 0, 1, 0, -0.7023767, 0, 0.71180546, 145.97699, 0, -123.28473)
 
-[node name="Montanha11" parent="Scenery" unique_id=2041547702 instance=ExtResource("7_lfu1u")]
+[node name="Montanha11" parent="Scenery" unique_id=1260653442 instance=ExtResource("7_lfu1u")]
 transform = Transform3D(0.9587255, 0, 0.2843333, 0, 1, 0, -0.2843333, 0, 0.9587255, 118.525635, -14.586479, -141.5)
