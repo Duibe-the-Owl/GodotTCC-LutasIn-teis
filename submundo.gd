@@ -10,6 +10,7 @@ extends Node3D
 
 @export_group("Player Settings")
 @export var player : CharacterBody3D
+@export var rockOffset : Vector3
 
 var is_pushing : bool = false
 var push_count : int = 0
@@ -28,14 +29,16 @@ func _on_push_started(snap_point: Marker3D):
 	# Lock player out of normal movement and hide their mesh if needed
 	if player:
 		player.set_physics_process(false)
+		player.global_position = boulder.global_position + rockOffset
+		player.face_target(top_of_hill_marker.position)
 		# Optional: player.global_position = snap_point.global_position
 		# Optional: player.global_rotation = snap_point.global_rotation
 
 func _on_push_stopped():
+	print("a")
+	player.set_physics_process(true)
+	player.move_and_slide()
 	is_pushing = false
-
-	if player:
-		player.set_physics_process(true)
 
 func _physics_process(delta):
 	if is_pushing:
@@ -50,14 +53,22 @@ func _physics_process(delta):
 		boulder.global_position += movement
 		
 		if player and current_snap_point:
-			player.global_position = current_snap_point.global_position
-			player.global_transform.basis = Basis(Vector3.UP, current_snap_point.global_transform.basis.get_euler().y)
+			#player.global_transform.basis = Basis(Vector3.UP, current_snap_point.global_transform.basis.get_euler().y)
+			#var tempBasis = Basis()
+			#tempBasis = tempBasis.looking_at(top_of_hill_marker.position)
+			#player.global_transform.basis = tempBasis
+			#print(player.rotation)
+			player.global_position = boulder.global_position + rockOffset
+			pass
 			
-		if boulder.global_position.distance_to(top_of_hill_marker.global_position) < 2.0:
+		if boulder.global_position.distance_to(top_of_hill_marker.global_position) < 5.0:
 			_on_reached_top()
+	else:
+		player.velocity += Vector3.UP * -10 * delta
 
 func _on_reached_top():
 	# 1. IMMEDIATELY turn off the movement engine so it stops climbing!
+	print("a")
 	is_pushing = false 
 	
 	# 2. Force the interaction scripts to break their states
@@ -70,30 +81,16 @@ func _on_reached_top():
 	
 	if push_count >= 3:
 		# VICTORY: Stop the rock completely and start Dialogic!
-		boulder.freeze = true 
 		Dialogic.start("sisyphus_boulder_timeline") 
 	else:
-		# RESET SEQUENCE: Let physics drop it back down
-		boulder.freeze = false 
-		
-		# Turn off the interaction zone temporarily so the player 
-		# can't grab it while it's mid-roll
-		boulder_interaction_area.process_mode = PROCESS_MODE_DISABLED
-		
-		# Wait 5 seconds for the boulder to finish rolling down the hill naturally
-		await get_tree().create_timer(5.0).timeout 
-		
 		# Snap it back to the exact start marker to clean up any messy physics drifting
 		_reset_boulder_to_start()
 
 func _reset_boulder_to_start():
-	boulder.freeze = true # Freeze it so it stays still at the bottom
 	boulder.global_position = starting_boulder_position.global_position
 	
 	# Completely wipe out any residual momentum from the roll down
 	boulder.linear_velocity = Vector3.ZERO 
 	boulder.angular_velocity = Vector3.ZERO
 	
-	# Turn the interaction back on! The player can now push lap #2 or #3
-	boulder_interaction_area.process_mode = PROCESS_MODE_INHERIT
 	print("Boulder reset! Ready for next push.")

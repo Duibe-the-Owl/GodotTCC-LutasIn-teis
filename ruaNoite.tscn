@@ -214,6 +214,8 @@ shader = ExtResource("19_iw7tv")
 shader_parameter/pixel = 1.0
 shader_parameter/brightness_boost = 1.3
 shader_parameter/shadow_softness = 5.0
+shader_parameter/camera_rotation = Vector2(0, 0)
+shader_parameter/dither_movement_weight = 15.0
 
 [node name="rua" type="Node3D" unique_id=1976608128]
 
@@ -237,7 +239,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.904667, -0.7160511, 31.92
 [node name="Árvore5" parent="." unique_id=768170701 instance=ExtResource("5_xl13i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.384255, -0.716, 117.8123)
 
-[node name="Rua(AS)" parent="." unique_id=474917808 instance=ExtResource("6_rvt2e")]
+[node name="Rua(AS)" parent="." unique_id=1277502179 instance=ExtResource("6_rvt2e")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -21.176836, -1.09, 56.11856)
 
 [node name="Prédios" parent="." unique_id=1849051298 instance=ExtResource("7_yww2o")]
@@ -284,16 +286,16 @@ light_color = Color(0.5819238, 0.62724096, 0.7880468, 1)
 light_energy = 0.131
 shadow_enabled = true
 
-[node name="Postes(Noite)" parent="." unique_id=852313084 instance=ExtResource("16_xdyah")]
+[node name="Postes(Noite)" parent="." unique_id=995176037 instance=ExtResource("16_xdyah")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.409, 2.751, -59.541)
 
-[node name="Postes(Noite)2" parent="." unique_id=20817710 instance=ExtResource("16_xdyah")]
+[node name="Postes(Noite)2" parent="." unique_id=593039757 instance=ExtResource("16_xdyah")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -41.167, 2.751, 161.06)
 
-[node name="Postes(Noite)3" parent="." unique_id=812068228 instance=ExtResource("16_xdyah")]
+[node name="Postes(Noite)3" parent="." unique_id=426858633 instance=ExtResource("16_xdyah")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.944, 2.751, 203.113)
 
-[node name="Postes(Noite)4" parent="." unique_id=693581623 instance=ExtResource("16_xdyah")]
+[node name="Postes(Noite)4" parent="." unique_id=1101454461 instance=ExtResource("16_xdyah")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -125.232, 2.751, -94.111)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1615624482]
@@ -449,16 +451,16 @@ script = ExtResource("13_b7eu1")
 [node name="Ônibus" parent="BusPath/PathFollow3D" unique_id=667804955 instance=ExtResource("14_42sii")]
 transform = Transform3D(2.3081899e-05, 0.0034919037, 0.9999939, -0.024252007, 0.9996998, -0.0034903171, -0.99970585, -0.024251774, 0.000107735395, 0, 0.090044826, -0.0016884804)
 
-[node name="Wheel1" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 377440844) index="2" unique_id=2102173027]
+[node name="Wheel1" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 225111900) index="2" unique_id=2096818328]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 3.311226, -0.3548356, 1.50988)
 
-[node name="Wheel2" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 377440844) index="3" unique_id=1993096043]
+[node name="Wheel2" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 225111900) index="3" unique_id=1003932877]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -5.4145365, -0.3548356, 1.5098804)
 
-[node name="Wheel3" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 377440844) index="4" unique_id=407127336]
+[node name="Wheel3" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 225111900) index="4" unique_id=382648245]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 3.311226, -0.3548356, -2.0453444)
 
-[node name="Wheel4" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 377440844) index="5" unique_id=699099953]
+[node name="Wheel4" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 225111900) index="5" unique_id=1352063480]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -5.4145365, -0.3548356, -2.0453444)
 
 [node name="WheelsPlayer1" type="AnimationPlayer" parent="BusPath/PathFollow3D/Ônibus" unique_id=103642161]
@@ -496,10 +498,10 @@ objectives = [NodePath("../Prédios/Area3D")]
 [node name="SetaLado" parent="ObjectiveArrow" unique_id=1133751353 instance=ExtResource("18_iw7tv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.284691, 0, 0)
 
-[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2056864381]
+[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2064431747]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
-[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=1002935279]
+[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=343420702]
 autoplay = &"ArrowSide_Spin"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=958557692]

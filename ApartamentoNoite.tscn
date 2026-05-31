@@ -392,7 +392,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, -
 [node name="Mesita" parent="Sala (Móveis)" unique_id=1390310044 instance=ExtResource("27_8l40s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.592, -0.81552064, 4.456)
 
-[node name="House_Keys" parent="Sala (Móveis)/Mesita/Shelf_Area" parent_id_path=PackedInt32Array(1390310044, 76603930) index="3" unique_id=1662533513]
+[node name="House_Keys" parent="Sala (Móveis)/Mesita/Shelf_Area" parent_id_path=PackedInt32Array(1390310044, 2021909727) index="3" unique_id=991776827]
 visible = false
 layers = 2
 
@@ -524,7 +524,7 @@ spot_angle = 14.7
 
 [node name="ObjectiveArrow" type="Node3D" parent="." unique_id=976879125 node_paths=PackedStringArray("objectives")]
 script = ExtResource("52_a1sow")
-objectives = [NodePath(""), NodePath("../Móveis (Quarto)/Cama")]
+objectives = [NodePath("../Sala (Móveis)/Mesa/Table_Area/Controller"), NodePath("../Móveis (Quarto)/Cama")]
 
 [node name="SetaLado" parent="ObjectiveArrow" unique_id=1891383591 instance=ExtResource("53_x0xca")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.37126368)

@@ -252,7 +252,7 @@ shape = SubResource("CapsuleShape3D_4flbx")
 [node name="Nick" parent="." unique_id=1664565471 instance=ExtResource("3_hqtel")]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0.3601207, 0.17311221)
 
-[node name="AnimationPlayer" parent="Nick" index="1" unique_id=227485537]
+[node name="AnimationPlayer" parent="Nick" index="1" unique_id=1104883894]
 speed_scale = 1.5
 
 [node name="FootstepPlayer" type="AudioStreamPlayer3D" parent="." unique_id=1065433117]
