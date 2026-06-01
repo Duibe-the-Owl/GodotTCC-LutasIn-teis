@@ -323,16 +323,16 @@ script = ExtResource("20_7d0rl")
 [node name="Ônibus" parent="BusPath/PathFollow3D" unique_id=828663201 instance=ExtResource("19_man7g")]
 transform = Transform3D(2.3081899e-05, 0.0034919037, 0.9999939, -0.024252007, 0.9996998, -0.0034903171, -0.99970585, -0.024251774, 0.000107735395, 0, 0.090044826, -0.0016884804)
 
-[node name="Wheel1" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(828663201, 225111900) index="2" unique_id=2096818328]
+[node name="Wheel1" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(828663201, 377440844) index="2" unique_id=2102173027]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 3.311226, -0.3548356, 1.50988)
 
-[node name="Wheel2" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(828663201, 225111900) index="3" unique_id=1003932877]
+[node name="Wheel2" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(828663201, 377440844) index="3" unique_id=1993096043]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -5.4145365, -0.3548356, 1.5098804)
 
-[node name="Wheel3" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(828663201, 225111900) index="4" unique_id=382648245]
+[node name="Wheel3" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(828663201, 377440844) index="4" unique_id=407127336]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 3.311226, -0.3548356, -2.0453444)
 
-[node name="Wheel4" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(828663201, 225111900) index="5" unique_id=1352063480]
+[node name="Wheel4" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(828663201, 377440844) index="5" unique_id=699099953]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -5.4145365, -0.3548356, -2.0453444)
 
 [node name="WheelsPlayer1" type="AnimationPlayer" parent="BusPath/PathFollow3D/Ônibus" unique_id=689532780]
@@ -394,15 +394,15 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 138.
 [node name="Porteiro" parent="." unique_id=1188977315 instance=ExtResource("26_kh6rx")]
 transform = Transform3D(0.36269826, 0, -0.93190664, 0, 1, 0, 0.93190664, 0, 0.36269826, 8.498664, 0.15698874, 32.875446)
 
-[node name="Skeleton3D" parent="Porteiro/Armature" parent_id_path=PackedInt32Array(1188977315, 402796763) index="0" unique_id=656996876]
-bones/3/rotation = Quaternion(0.1150176, 0.00016067197, 0.004051715, 0.9933553)
-bones/6/rotation = Quaternion(0.21945454, 0.015570539, 0.07802222, 0.97237337)
-bones/23/rotation = Quaternion(0.07892262, -0.22886565, 0.03427948, 0.96964777)
-bones/26/rotation = Quaternion(-0.16013093, 0.032188598, 0.5206507, 0.8380005)
-bones/27/rotation = Quaternion(0.16268165, 0.1610526, 0.11457964, 0.966679)
-bones/28/rotation = Quaternion(-0.057909153, 0.16639835, 0.2610982, 0.9490974)
+[node name="Skeleton3D" parent="Porteiro/Armature" parent_id_path=PackedInt32Array(1188977315, 1050920848) index="0" unique_id=1147197981]
+bones/3/rotation = Quaternion(0.11232636, 0.00017164649, 0.004051265, 0.99366313)
+bones/6/rotation = Quaternion(0.23236434, 0.00045215565, 0.06991959, 0.97011226)
+bones/23/rotation = Quaternion(0.08074561, -0.23155646, 0.027612988, 0.96907145)
+bones/26/rotation = Quaternion(-0.118079074, 0.0448382, 0.52426356, 0.842137)
+bones/27/rotation = Quaternion(0.25521767, 0.028284088, 0.01719527, 0.9663169)
+bones/28/rotation = Quaternion(-0.050851434, 0.017956145, 0.08214888, 0.99516)
 
-[node name="Porteiro" parent="Porteiro/Armature/Skeleton3D" index="0" unique_id=345336151]
+[node name="Porteiro" parent="Porteiro/Armature/Skeleton3D" index="0" unique_id=1417063898]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013343811, 0, 0.03428936)
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1160754904 node_paths=PackedStringArray("npc_node")]

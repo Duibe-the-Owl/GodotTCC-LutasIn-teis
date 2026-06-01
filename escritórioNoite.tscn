@@ -302,12 +302,12 @@ shape = SubResource("BoxShape3D_w63rs")
 [node name="Player" parent="." unique_id=621330810 instance=ExtResource("17_lyf4y")]
 
 [node name="TetoEscritório" parent="." unique_id=1215813620 instance=ExtResource("19_c07xu")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.534197, 2.5141287, -5.706635)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.534197, 2.3213081, -5.706635)
 
 [node name="MainCarteira" parent="." unique_id=707634930 instance=ExtResource("20_exbnn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1957173, -0.06870723, -1.2982726)
 
-[node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 387614369) index="3" unique_id=1623658015]
+[node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 300741575) index="3" unique_id=1233270428]
 layers = 2
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MainCarteira/DeskUnit/Monitor" index="0" unique_id=1444464812]
@@ -317,7 +317,7 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MainCarteira/DeskUnit/Monitor/StaticBody3D" unique_id=271298312]
 shape = SubResource("ConvexPolygonShape3D_vqoap")
 
-[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 387614369) index="7" unique_id=2078624118]
+[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 300741575) index="7" unique_id=137443092]
 surface_material_override/0 = SubResource("StandardMaterial3D_upvgb")
 
 [node name="SubViewport" type="SubViewport" parent="MainCarteira/DeskUnit/Screen" index="0" unique_id=1884540969]
@@ -333,11 +333,11 @@ grow_vertical = 2
 stream = SubResource("VideoStreamTheora_wjgvv")
 expand = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 387614369) index="8" unique_id=1558306546]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 300741575) index="8" unique_id=1558306546]
 root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_5lkqy")
 
-[node name="CutsceneCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 387614369) index="9" unique_id=188736818]
+[node name="CutsceneCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 300741575) index="9" unique_id=188736818]
 transform = Transform3D(0.8338856, 0, 0.55193686, 0, 1, 0, -0.55193686, 0, 0.8338856, 1.0576382, 0.55, 1.489955)
 
 [node name="Relógio" parent="." unique_id=875575135 instance=ExtResource("23_xtvep")]
@@ -358,25 +358,25 @@ environment = SubResource("Environment_vuag0")
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1689738894]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.456413, 1.9518, -6.6745954)
 light_energy = 0.416
-omni_range = 8.691
+omni_range = 10.741
 omni_attenuation = 1.198
 
 [node name="OmniLight3D5" type="OmniLight3D" parent="." unique_id=1540532990]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.456413, 1.9518, -2.166494)
 light_energy = 0.416
-omni_range = 8.691
+omni_range = 10.741
 omni_attenuation = 1.198
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1784603852]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5142255, 1.9585634, -6.6915746)
 light_energy = 0.416
-omni_range = 8.691
+omni_range = 10.741
 omni_attenuation = 1.198
 
 [node name="OmniLight3D6" type="OmniLight3D" parent="." unique_id=967574715]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5142255, 1.9585634, -2.1086726)
 light_energy = 0.416
-omni_range = 8.691
+omni_range = 10.741
 omni_attenuation = 1.198
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=1484722534]
@@ -416,7 +416,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9889956, 1.1441873, -4.519
 size = Vector3(29.33, 8.205, 25.745)
 data = SubResource("VoxelGIData_ju7q4")
 
-[node name="Prédios2" parent="." unique_id=503799598 instance=ExtResource("24_ju7q4")]
+[node name="Prédios2" parent="." unique_id=1659806519 instance=ExtResource("24_ju7q4")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 74.2849, -34.024544, 0.52627945)
 
 [node name="Rua(AS)" parent="." unique_id=1708026603 instance=ExtResource("25_f7mf8")]

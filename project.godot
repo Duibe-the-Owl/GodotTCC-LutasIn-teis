@@ -35,6 +35,7 @@ directories/dtl_directory={
 "EscritórioTalk": "res://EscritórioTalk.dtl",
 "PortariaTalk": "res://PortariaTalk.dtl",
 "StartCutscene": "res://StartCutscene.dtl",
+"StreetBlock2": "res://StreetBlock2.dtl",
 "StreetBlockDialogue": "res://StreetBlockDialogue.dtl",
 "SísifoTalk": "res://SísifoTalk.dtl",
 "TvTalk": "res://TvTalk.dtl",
