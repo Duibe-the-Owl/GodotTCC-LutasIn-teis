@@ -132,7 +132,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0
 [node name="Area3D" parent="BusPath/PathFollow3D/Ônibus" index="7" unique_id=1164175362]
 destination_scene = "uid://b3ehg6e4g4118"
 
-[node name="Placa" parent="." unique_id=595736324 instance=ExtResource("13_1n4wu")]
+[node name="Placa" parent="." unique_id=585211801 instance=ExtResource("13_1n4wu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.895375, 0.88510907, -106.505615)
 
 [node name="Area3D" type="Area3D" parent="Placa" unique_id=1026088592]
