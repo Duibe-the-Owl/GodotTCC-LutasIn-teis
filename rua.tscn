@@ -104,13 +104,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.506393, -0.716, -167.68)
 [node name="Rua(AS)" parent="." unique_id=474917808 instance=ExtResource("4_dclif")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -28.405, -1.09, -45.848427)
 
-[node name="Prédios" parent="." unique_id=1849051298 instance=ExtResource("7_khq6f")]
+[node name="Prédios" parent="." unique_id=965448203 instance=ExtResource("7_khq6f")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.847923, -0.76517963, -56.2032)
 
-[node name="Prédios2" parent="." unique_id=1659806519 instance=ExtResource("8_gycr2")]
+[node name="Prédios2" parent="." unique_id=1019934953 instance=ExtResource("8_gycr2")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -69.3238, -0.74586296, -57.098354)
 
-[node name="Prédios3" parent="." unique_id=1314807129 instance=ExtResource("9_jdiv0")]
+[node name="Prédios3" parent="." unique_id=462981822 instance=ExtResource("9_jdiv0")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -27.990501, -0.723073, 113.49472)
 
 [node name="Prédios4" parent="." unique_id=1865034748 instance=ExtResource("10_dmv71")]
@@ -144,7 +144,7 @@ script = ExtResource("14_1n4wu")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Placa/Area3D" unique_id=1213783293]
 shape = SubResource("BoxShape3D_h2mom")
 
-[node name="Fundo" parent="." unique_id=239693333 instance=ExtResource("15_h2mom")]
+[node name="Fundo" parent="." unique_id=1969763602 instance=ExtResource("15_h2mom")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20.315138, 6.431802, -52.05477)
 
 [node name="Fundo2" parent="." unique_id=1578349784 instance=ExtResource("16_il3kc")]
@@ -192,10 +192,10 @@ objectives = [NodePath("../Placa")]
 [node name="SetaLado" parent="ObjectiveArrow" unique_id=1133751353 instance=ExtResource("19_0ymfv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.77)
 
-[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2056864381]
+[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2064431747]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
-[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=1002935279]
+[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=343420702]
 autoplay = &"ArrowSide_Spin"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1584944733]

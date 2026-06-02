@@ -242,7 +242,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.384255, -0.716, 117.8123)
 [node name="Rua(AS)" parent="." unique_id=1277502179 instance=ExtResource("6_rvt2e")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -21.176836, -1.09, 56.11856)
 
-[node name="Prédios" parent="." unique_id=1849051298 instance=ExtResource("7_yww2o")]
+[node name="Prédios" parent="." unique_id=965448203 instance=ExtResource("7_yww2o")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.076088, -0.76517963, 45.763786)
 
 [node name="Area3D" type="Area3D" parent="Prédios" unique_id=1936353676]
@@ -256,7 +256,7 @@ shape = SubResource("BoxShape3D_b7eu1")
 
 [node name="InteractionSound" type="AudioStreamPlayer3D" parent="Prédios/Area3D" unique_id=1370160447]
 
-[node name="Prédios2" parent="." unique_id=246267005 instance=ExtResource("8_ce2bt")]
+[node name="Prédios2" parent="." unique_id=1019934953 instance=ExtResource("8_ce2bt")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -62.095634, -0.74586296, 44.868633)
 
 [node name="Prédios3" parent="." unique_id=1314807129 instance=ExtResource("9_8rvjc")]
@@ -268,7 +268,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.
 [node name="Placa" parent="." unique_id=595736324 instance=ExtResource("13_1ahnm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6672106, 0.88510907, -4.5386276)
 
-[node name="Fundo" parent="." unique_id=239693333 instance=ExtResource("15_cxx3x")]
+[node name="Fundo" parent="." unique_id=1969763602 instance=ExtResource("15_cxx3x")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 23.582056, 6.431802, 49.912216)
 
 [node name="Fundo2" parent="." unique_id=677170024 instance=ExtResource("16_xfwsx")]
@@ -283,7 +283,7 @@ environment = SubResource("Environment_ygype")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=484332989]
 transform = Transform3D(0.46976632, 0.41286415, -0.78029656, 0.6717821, 0.406269, 0.6193985, 0.57273775, -0.8151618, -0.08650323, -26.84834, 13.169069, 0)
 light_color = Color(0.5819238, 0.62724096, 0.7880468, 1)
-light_energy = 0.131
+light_energy = 0.25
 shadow_enabled = true
 
 [node name="Postes(Noite)" parent="." unique_id=995176037 instance=ExtResource("16_xdyah")]
