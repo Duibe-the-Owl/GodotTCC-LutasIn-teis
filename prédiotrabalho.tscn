@@ -398,12 +398,12 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 138.
 transform = Transform3D(0.36269826, 0, -0.93190664, 0, 1, 0, 0.93190664, 0, 0.36269826, 8.512784, 0.14832747, 32.875446)
 
 [node name="Skeleton3D" parent="Porteiro/Armature" parent_id_path=PackedInt32Array(1188977315, 402796763) index="0" unique_id=656996876]
-bones/3/rotation = Quaternion(0.10455306, 0.00020331959, 0.004049796, 0.99451107)
-bones/6/rotation = Quaternion(0.23716764, -0.008874633, 0.040916078, 0.9705662)
-bones/23/rotation = Quaternion(0.079034, -0.22905648, 0.03392367, 0.9696061)
-bones/26/rotation = Quaternion(-0.15188625, 0.03913389, 0.52203864, 0.83837634)
-bones/27/rotation = Quaternion(0.18318266, 0.16045696, 0.12559928, 0.96172893)
-bones/28/rotation = Quaternion(-0.05790916, 0.16639844, 0.26109833, 0.9490974)
+bones/3/rotation = Quaternion(0.10770298, 0.00019048969, 0.00405042, 0.99417496)
+bones/6/rotation = Quaternion(0.23127797, -0.00077932817, 0.052614894, 0.9714636)
+bones/23/rotation = Quaternion(0.07897547, -0.22895618, 0.034110684, 0.96962804)
+bones/26/rotation = Quaternion(-0.16009216, 0.03222132, 0.52065736, 0.8380025)
+bones/27/rotation = Quaternion(0.16306034, 0.16104297, 0.114783324, 0.96659267)
+bones/28/rotation = Quaternion(-0.057909153, 0.16639838, 0.26109824, 0.9490974)
 
 [node name="Porteiro" parent="Porteiro/Armature/Skeleton3D" index="0" unique_id=345336151]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013343811, 0, 0.03428936)
