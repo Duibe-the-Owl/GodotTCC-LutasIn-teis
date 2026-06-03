@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/Pedra.glb-f020153b8eeebcc1ed3be9943df19a13.sc
 
 [params]
 
-nodes/root_type="RigidBody3D"
+nodes/root_type="Node3D"
 nodes/root_name="Pedra"
 nodes/root_script=null
 nodes/apply_root_scale=true

@@ -45,6 +45,7 @@
 [ext_resource type="Shader" uid="uid://g53we0g41lwa" path="res://dither.gdshader" id="43_584g4"]
 [ext_resource type="Script" uid="uid://eiysx37uwu7q" path="res://colega2dialogue.gd" id="44_32rqj"]
 [ext_resource type="Script" uid="uid://r3ba58scjqek" path="res://colega3dialogue.gd" id="45_ffs5t"]
+[ext_resource type="PackedScene" uid="uid://dtxcdtn6avjrk" path="res://Fundo2.glb" id="46_bwteo"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_che6b"]
 panorama = ExtResource("17_qaf3e")
@@ -66,18 +67,18 @@ volumetric_fog_density = 0.03
 [sub_resource type="BoxShape3D" id="BoxShape3D_wi2vf"]
 size = Vector3(0.15, 0.425, 0.865)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ffs5t"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_lygj3"]
 viewport_path = NodePath("../ComputerCanvas/SubViewportContainer/SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_bwteo"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_1ab0y"]
 viewport_path = NodePath("../ComputerCanvas/SubViewportContainer/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lygj3"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_33je2"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_ffs5t")
+albedo_texture = SubResource("ViewportTexture_lygj3")
 emission_enabled = true
 emission_energy_multiplier = 0.5
-emission_texture = SubResource("ViewportTexture_bwteo")
+emission_texture = SubResource("ViewportTexture_1ab0y")
 
 [sub_resource type="Animation" id="Animation_5lkqy"]
 length = 0.001
@@ -316,7 +317,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13251686, 0.41383284, 0)
 shape = SubResource("BoxShape3D_wi2vf")
 
 [node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="8" unique_id=44197733]
-surface_material_override/0 = SubResource("StandardMaterial3D_lygj3")
+surface_material_override/0 = SubResource("StandardMaterial3D_33je2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="9" unique_id=1558306546]
 root_node = NodePath("../../..")
@@ -406,7 +407,7 @@ data = ExtResource("26_mo6l2")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 44.991932, -32.59961, 1.1379261)
 
 [node name="Fundo" parent="." unique_id=1881256334 instance=ExtResource("28_1vucl")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 95.67759, -30.75424, -2.8735485)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 102.46015, -24.717525, -2.8735485)
 
 [node name="Colega de Trabalho" parent="." unique_id=1449720757 instance=ExtResource("29_xrcyy")]
 transform = Transform3D(-4.353335e-08, 0.09016327, -0.995927, 3.9411616e-09, 0.995927, 0.09016327, 1, 0, -4.371139e-08, 18.444374, 0.308, 10.835)
@@ -569,6 +570,9 @@ npc_node = NodePath("../Colega 3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D3" unique_id=174496642]
 shape = SubResource("BoxShape3D_1ab0y")
+
+[node name="Fundo2" parent="." unique_id=1181793222 instance=ExtResource("46_bwteo")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 151.43983, -22.053478, -1.5640278)
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Area3D2" to="Area3D2" method="_on_body_entered"]

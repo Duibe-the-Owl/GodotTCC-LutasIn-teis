@@ -11,7 +11,7 @@ radius = 2.3
 [sub_resource type="SphereShape3D" id="SphereShape3D_hufuc"]
 radius = 2.5
 
-[node name="Pedra" unique_id=166356469 instance=ExtResource("1_o3i74")]
+[node name="Pedra" unique_id=439572209 instance=ExtResource("1_o3i74")]
 axis_lock_linear_z = true
 axis_lock_angular_x = true
 axis_lock_angular_y = true
