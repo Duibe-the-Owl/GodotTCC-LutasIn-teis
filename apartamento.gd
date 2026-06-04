@@ -48,3 +48,7 @@ func _on_area_3d_body_entered(body: Node3D):
 		wardrobe_dialogue_played = true
 		Dialogic.start("WardrobeTalk")
 		
+func play_tv_dialogue(timeline_name: String):
+	# This starts the specific Dialogic timeline you named in the Animation keyframe
+	Dialogic.start("Channel1")
+	Dialogic.start("Channel2")

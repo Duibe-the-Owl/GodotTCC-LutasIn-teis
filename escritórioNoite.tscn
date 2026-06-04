@@ -22,30 +22,30 @@
 [ext_resource type="PackedScene" uid="uid://b53v86rkbpy6c" path="res://MainCarteira(Escritório).glb" id="20_exbnn"]
 [ext_resource type="PackedScene" uid="uid://cqeknaioj76xx" path="res://Relógio.glb" id="23_xtvep"]
 [ext_resource type="PackedScene" uid="uid://dp0vv72qq2b3y" path="res://Lixo(Escritório).glb" id="24_7l0yx"]
-[ext_resource type="PackedScene" uid="uid://bydip21p1euj" path="res://Buildings2.glb" id="24_ju7q4"]
 [ext_resource type="Texture2D" uid="uid://crl6mobypc55b" path="res://Lutas-Inúteis-Skybox(Noite).png" id="24_qa2tn"]
 [ext_resource type="PackedScene" uid="uid://bohx7a8ayqdfw" path="res://Rua(AS).glb" id="25_f7mf8"]
 [ext_resource type="PackedScene" uid="uid://btog0veyoumcv" path="res://Fundo.glb" id="26_pee7e"]
 [ext_resource type="PackedScene" uid="uid://bwar3gsp87os2" path="res://colega_3.tscn" id="27_f7mf8"]
 [ext_resource type="Shader" uid="uid://g53we0g41lwa" path="res://dither.gdshader" id="28_pee7e"]
+[ext_resource type="PackedScene" uid="uid://df505n32x2api" path="res://Buildings6.glb" id="28_vuag0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w63rs"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vqoap"]
 points = PackedVector3Array(-0.17457025, -0.0020341033, -0.2272107, -0.17258668, 0.015372725, -0.2272107, 0.024219781, 0.6285622, -0.45909503, 0.024219781, 0.16154072, -0.45909503, 0.19145297, -0.0020341033, -0.2272107, -0.17457025, -0.0020341033, 0.22712085, -0.10572225, 0.46288872, -0.07181224, -0.17258668, 0.015372725, 0.22712085, 0.06385516, 0.6285622, -0.45909503, 0.024219781, 0.6285622, 0.45909503, 0.06385516, 0.16154072, -0.45909503, 0.19383325, 0.015372725, -0.2272107, 0.19386931, 0.015372725, 0.22712085, 0.19145297, -0.0020341033, 0.22712085, 0.024219781, 0.16154072, 0.45909503, -0.10572225, 0.46288872, 0.07172236, 0.06385516, 0.6285622, 0.45909503, 0.06385516, 0.16154072, 0.45909503)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_pee7e"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_upvgb"]
 viewport_path = NodePath("DeskUnit/Screen/SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_vuag0"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_ms826"]
 viewport_path = NodePath("DeskUnit/Screen/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_upvgb"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f3b3o"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_pee7e")
+albedo_texture = SubResource("ViewportTexture_upvgb")
 emission_enabled = true
 emission_energy_multiplier = 0.3
-emission_texture = SubResource("ViewportTexture_vuag0")
+emission_texture = SubResource("ViewportTexture_ms826")
 
 [sub_resource type="VideoStreamTheora" id="VideoStreamTheora_wjgvv"]
 file = "res://Work_Cutscene.ogv"
@@ -307,7 +307,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.5
 [node name="MainCarteira" parent="." unique_id=707634930 instance=ExtResource("20_exbnn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1957173, -0.06870723, -1.2982726)
 
-[node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 300741575) index="3" unique_id=1233270428]
+[node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 666559217) index="3" unique_id=1757339918]
 layers = 2
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MainCarteira/DeskUnit/Monitor" index="0" unique_id=1444464812]
@@ -317,8 +317,8 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MainCarteira/DeskUnit/Monitor/StaticBody3D" unique_id=271298312]
 shape = SubResource("ConvexPolygonShape3D_vqoap")
 
-[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 300741575) index="7" unique_id=137443092]
-surface_material_override/0 = SubResource("StandardMaterial3D_upvgb")
+[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 666559217) index="7" unique_id=44197733]
+surface_material_override/0 = SubResource("StandardMaterial3D_f3b3o")
 
 [node name="SubViewport" type="SubViewport" parent="MainCarteira/DeskUnit/Screen" index="0" unique_id=1884540969]
 size = Vector2i(1024, 800)
@@ -333,11 +333,11 @@ grow_vertical = 2
 stream = SubResource("VideoStreamTheora_wjgvv")
 expand = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 300741575) index="8" unique_id=1558306546]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 666559217) index="8" unique_id=1558306546]
 root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_5lkqy")
 
-[node name="CutsceneCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 300741575) index="9" unique_id=188736818]
+[node name="CutsceneCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 666559217) index="9" unique_id=188736818]
 transform = Transform3D(0.8338856, 0, 0.55193686, 0, 1, 0, -0.55193686, 0, 0.8338856, 1.0576382, 0.55, 1.489955)
 
 [node name="Relógio" parent="." unique_id=875575135 instance=ExtResource("23_xtvep")]
@@ -416,9 +416,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9889956, 1.1441873, -4.519
 size = Vector3(29.33, 8.205, 25.745)
 data = SubResource("VoxelGIData_ju7q4")
 
-[node name="Prédios2" parent="." unique_id=1659806519 instance=ExtResource("24_ju7q4")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 74.2849, -34.024544, 0.52627945)
-
 [node name="Rua(AS)" parent="." unique_id=1708026603 instance=ExtResource("25_f7mf8")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 43.387787, -32.613213, 0)
 
@@ -438,6 +435,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="Prédios6" parent="." unique_id=66477665 instance=ExtResource("28_vuag0")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 74.285, -34.025, 0.526)
 
 [connection signal="body_entered" from="Elevador/Area3D" to="Elevador/Area3D" method="_on_body_entered"]
 

@@ -398,11 +398,11 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 138.
 transform = Transform3D(0.36269826, 0, -0.93190664, 0, 1, 0, 0.93190664, 0, 0.36269826, 8.512784, 0.14832747, 32.875446)
 
 [node name="Skeleton3D" parent="Porteiro/Armature" parent_id_path=PackedInt32Array(1188977315, 402796763) index="0" unique_id=656996876]
-bones/3/rotation = Quaternion(0.10770298, 0.00019048969, 0.00405042, 0.99417496)
-bones/6/rotation = Quaternion(0.23127797, -0.00077932817, 0.052614894, 0.9714636)
-bones/23/rotation = Quaternion(0.07897547, -0.22895618, 0.034110684, 0.96962804)
-bones/26/rotation = Quaternion(-0.16009216, 0.03222132, 0.52065736, 0.8380025)
-bones/27/rotation = Quaternion(0.16306034, 0.16104297, 0.114783324, 0.96659267)
+bones/3/rotation = Quaternion(0.10865928, 0.00018659323, 0.004050602, 0.9940708)
+bones/6/rotation = Quaternion(0.22970693, 0.001412745, 0.056024607, 0.97164506)
+bones/23/rotation = Quaternion(0.078969285, -0.2289456, 0.03413043, 0.96963036)
+bones/26/rotation = Quaternion(-0.16009669, 0.03221749, 0.5206566, 0.8380023)
+bones/27/rotation = Quaternion(0.16301605, 0.16104408, 0.11475948, 0.96660274)
 bones/28/rotation = Quaternion(-0.057909153, 0.16639838, 0.26109824, 0.9490974)
 
 [node name="Porteiro" parent="Porteiro/Armature/Skeleton3D" index="0" unique_id=345336151]
@@ -430,7 +430,7 @@ mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Fundo" parent="." unique_id=1969763602 instance=ExtResource("29_66ypc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.29207, 10.572337, 56.438515)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.29207, 10.572337, 61.559258)
 
 [node name="Fundo4" parent="." unique_id=765676394 instance=ExtResource("29_66ypc")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 187.5796, 5.834983, -3.548458)
@@ -451,6 +451,14 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -302
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.95042753, 7.511398, 33.031193)
 size = Vector3(30, 20, 21.404297)
 data = ExtResource("31_geryv")
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="." unique_id=836692504]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0774856, 1.4921867, 43.05474)
+light_color = Color(1, 0.8979622, 0.6707736, 1)
+light_energy = 0.25
+shadow_enabled = true
+omni_range = 5.628
+omni_attenuation = 1.198
 
 [connection signal="body_entered" from="Elevador/Area3D" to="Elevador/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

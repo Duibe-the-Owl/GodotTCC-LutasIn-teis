@@ -27,9 +27,13 @@ directories/dch_directory={
 "Colega": "res://Colega.dch",
 "Nick": "res://Nick.dch",
 "Porteiro": "res://Porteiro.dch",
-"Sísifo": "res://Sísifo.dch"
+"Sísifo": "res://Sísifo.dch",
+"TV": "res://TV.dch"
 }
 directories/dtl_directory={
+"Channel1": "res://Channel1.dtl",
+"Channel2": "res://Channel2.dtl",
+"Channel3": "res://Channel3.dtl",
 "Colega2Talk": "res://Colega2Talk.dtl",
 "Colega3Talk": "res://Colega3Talk.dtl",
 "EscritórioTalk": "res://EscritórioTalk.dtl",
