@@ -32,8 +32,6 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "Channel1": "res://Channel1.dtl",
-"Channel2": "res://Channel2.dtl",
-"Channel3": "res://Channel3.dtl",
 "Colega2Talk": "res://Colega2Talk.dtl",
 "Colega3Talk": "res://Colega3Talk.dtl",
 "EscritórioTalk": "res://EscritórioTalk.dtl",
@@ -85,6 +83,8 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
+text/autoadvance_enabled=true
+text/autoskip_time_per_event=0.1
 
 [editor_plugins]
 

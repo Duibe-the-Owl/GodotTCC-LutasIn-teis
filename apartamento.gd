@@ -48,7 +48,14 @@ func _on_area_3d_body_entered(body: Node3D):
 		wardrobe_dialogue_played = true
 		Dialogic.start("WardrobeTalk")
 		
-func play_tv_dialogue(timeline_name: String):
-	# This starts the specific Dialogic timeline you named in the Animation keyframe
+
+func play_single_tv_timeline(incoming_argument: Variant = null):
+	# Start the timeline first so the input subsystem initializes its target layout
 	Dialogic.start("Channel1")
-	Dialogic.start("Channel2")
+	
+	# Force the auto-advance states using Godot's generic setter system 
+	# This bypasses the RefCounted strict assignment crash completely!
+	var aa = Dialogic.Inputs.auto_advance
+	if aa:
+		aa.set("enabled", true)
+		aa.set("fixed_delay", 3.0) 

@@ -46,6 +46,7 @@
 [ext_resource type="Script" uid="uid://r3ba58scjqek" path="res://colega3dialogue.gd" id="45_ffs5t"]
 [ext_resource type="PackedScene" uid="uid://dtxcdtn6avjrk" path="res://Fundo2.glb" id="46_bwteo"]
 [ext_resource type="PackedScene" uid="uid://df505n32x2api" path="res://Buildings6.glb" id="46_lygj3"]
+[ext_resource type="AudioStream" uid="uid://cfmyvxqjage8u" path="res://WorkAmbience.wav" id="47_lygj3"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_che6b"]
 panorama = ExtResource("17_qaf3e")
@@ -573,6 +574,11 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 151.
 
 [node name="Prédios6" parent="." unique_id=66477665 instance=ExtResource("46_lygj3")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 75.889, -34.011, 1.664)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=960069459]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.179139, 0, 9.868143)
+stream = ExtResource("47_lygj3")
+autoplay = true
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Area3D2" to="Area3D2" method="_on_body_entered"]
