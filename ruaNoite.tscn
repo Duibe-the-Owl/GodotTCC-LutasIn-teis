@@ -283,7 +283,7 @@ environment = SubResource("Environment_ygype")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=484332989]
 transform = Transform3D(0.46976632, 0.41286415, -0.78029656, 0.6717821, 0.406269, 0.6193985, 0.57273775, -0.8151618, -0.08650323, -26.84834, 13.169069, 0)
 light_color = Color(0.5819238, 0.62724096, 0.7880468, 1)
-light_energy = 0.25
+light_energy = 0.4
 shadow_enabled = true
 
 [node name="Postes(Noite)" parent="." unique_id=995176037 instance=ExtResource("16_xdyah")]

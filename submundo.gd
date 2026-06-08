@@ -12,6 +12,15 @@ extends Node3D
 @export var player : CharacterBody3D
 @export var rockOffset : Vector3
 
+# --- NEW: Story & NPC Settings ---
+@export_group("NPC & Story Settings")
+@export var npc_scene : PackedScene      # Drag and drop your saved NPC .tscn file here!
+@export var npc_spawn_point : Marker3D   # Place a Marker3D where the NPC should appear
+
+@export_group("Ending Sequence")
+@export var white_fade_rect : ColorRect
+@export var next_scene_path : String = "res:FinalApartamento.tscn" # Paste your next scene's file path here
+
 var is_pushing : bool = false
 var push_count : int = 0
 var current_snap_point : Marker3D
@@ -21,6 +30,10 @@ func _ready():
 	if boulder_interaction_area:
 		boulder_interaction_area.push_started.connect(_on_push_started)
 		boulder_interaction_area.push_stopped.connect(_on_push_stopped)
+		
+	# 1. SCENE INTRO: Plays immediately when the player spawns into Submundo
+	Dialogic.start("submundo_intro") # Replace with your actual intro timeline name
+	Dialogic.signal_event.connect(_on_dialogic_signal)
 
 func _on_push_started(snap_point: Marker3D):
 	is_pushing = true
@@ -31,8 +44,6 @@ func _on_push_started(snap_point: Marker3D):
 		player.set_physics_process(false)
 		player.global_position = boulder.global_position + rockOffset
 		player.face_target(top_of_hill_marker.position)
-		# Optional: player.global_position = snap_point.global_position
-		# Optional: player.global_rotation = snap_point.global_rotation
 
 func _on_push_stopped():
 	print("a")
@@ -53,11 +64,6 @@ func _physics_process(delta):
 		boulder.global_position += movement
 		
 		if player and current_snap_point:
-			#player.global_transform.basis = Basis(Vector3.UP, current_snap_point.global_transform.basis.get_euler().y)
-			#var tempBasis = Basis()
-			#tempBasis = tempBasis.looking_at(top_of_hill_marker.position)
-			#player.global_transform.basis = tempBasis
-			#print(player.rotation)
 			player.global_position = boulder.global_position + rockOffset
 			pass
 			
@@ -67,11 +73,8 @@ func _physics_process(delta):
 		player.velocity += Vector3.UP * -10 * delta
 
 func _on_reached_top():
-	# 1. IMMEDIATELY turn off the movement engine so it stops climbing!
-	print("a")
+	# 1. Turn off the movement engine
 	is_pushing = false 
-	
-	# 2. Force the interaction scripts to break their states
 	boulder_interaction_area.is_being_pushed = false
 	boulder_interaction_area.stop_pushing()
 	_on_push_stopped() 
@@ -79,18 +82,59 @@ func _on_reached_top():
 	push_count += 1
 	print("Sisyphus Loop Count: ", push_count, " / 3")
 	
+	# 2. ALWAYS snap it back to the start marker first
+	_reset_boulder_to_start()
+	
+	# 3. Decide which dialogue/event to play based on the count
 	if push_count >= 3:
-		# VICTORY: Stop the rock completely and start Dialogic!
-		Dialogic.start("sisyphus_boulder_timeline") 
+		# On the 3rd drop, spawn the NPC and play the final interaction
+		_spawn_npc_and_finish()
 	else:
-		# Snap it back to the exact start marker to clean up any messy physics drifting
-		_reset_boulder_to_start()
+		# On drops 1 and 2, just play the quick internal dialogue
+		Dialogic.start("boulder_drop_" + str(push_count))
 
 func _reset_boulder_to_start():
 	boulder.global_position = starting_boulder_position.global_position
-	
-	# Completely wipe out any residual momentum from the roll down
 	boulder.linear_velocity = Vector3.ZERO 
 	boulder.angular_velocity = Vector3.ZERO
-	
 	print("Boulder reset! Ready for next push.")
+
+func _spawn_npc_and_finish():
+	if npc_scene and npc_spawn_point:
+		var npc_instance = npc_scene.instantiate()
+		add_child(npc_instance)
+		npc_instance.global_position = npc_spawn_point.global_position
+	
+	# This timeline will now act as your "boulder_drop_3" AND the NPC conversation!
+	Dialogic.start("SísifoTalk")
+	
+func _on_dialogic_signal(argument: String):
+	# When the timeline emits our secret word, start the ascension!
+	if argument == "ascend_player":
+		_start_ending_sequence()
+
+func _start_ending_sequence():
+	print("Starting Ascension Sequence!")
+	
+	# 1. Lock the player so they can't walk around while floating
+	if player:
+		player.set_physics_process(false)
+
+	# 2. Create a Tween (Godot's code-animation tool)
+	var tween = create_tween()
+	tween.set_parallel(true) # Make both animations happen at the exact same time
+
+	# 3. Lift the player up (Moves them up 10 units over 5 seconds)
+	if player:
+		tween.tween_property(player, "global_position:y", player.global_position.y + 10.0, 5.0)
+
+	# 4. Fade the screen to white (Changes Alpha to 1.0 over 5 seconds)
+	if white_fade_rect:
+		tween.tween_property(white_fade_rect, "modulate:a", 1.0, 5.0)
+
+	# 5. When the 5 seconds are over, run the scene change function
+	tween.chain().tween_callback(_change_to_next_scene)
+
+func _change_to_next_scene():
+	# Loads the next level
+	get_tree().change_scene_to_file(next_scene_path)

@@ -151,7 +151,7 @@ environment = SubResource("Environment_jyvf8")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=632984101]
 transform = Transform3D(-0.7013167, 0.6180122, 0.35526857, 0.671782, 0.40626898, 0.61939836, 0.23846114, 0.67305756, -0.7000928, -26.84834, 65.49814, 0)
 light_color = Color(0.5819238, 0.62724096, 0.7880468, 1)
-light_energy = 0.25
+light_energy = 0.4
 shadow_enabled = true
 
 [node name="Postes(Noite)" parent="." unique_id=852313084 instance=ExtResource("21_qe36d")]
@@ -462,7 +462,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -193
 curve = SubResource("Curve3D_vohkx")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="BusPath" unique_id=883106378]
-transform = Transform3D(0.20079084, 0, -0.9796279, 0, 1.0000446, 0, 0.9796279, 0, 0.20079084, -1.3815956, 0, 1.5192566)
+transform = Transform3D(0.20079084, 0, -0.9796279, 0, 1.0000451, 0, 0.9796279, 0, 0.20079084, -1.3815956, 0, 1.5192566)
 rotation_mode = 4
 loop = false
 script = ExtResource("20_qe36d")
