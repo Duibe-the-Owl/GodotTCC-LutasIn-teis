@@ -241,7 +241,18 @@ func _force_stop_footsteps():
 @onready var anim_player = $AnimationPlayer
 
 func trigger_dialogue():
-	Dialogic.start("StartCutscene")
+	# 1. This prints the exact name to your Output console
+	print("DEBUG: Godot thinks the current scene name is: '", get_tree().current_scene.name, "'")
+	
+	var current_scene = get_tree().current_scene.name
+	
+	match current_scene:
+		"Apartamento":
+			Dialogic.start("StartCutscene")
+		"FinalApartamento":
+			Dialogic.start("FinalCutscene")
+		_:
+			print("Warning: Woke up in an unhandled scene: ", current_scene)
 	
 func face_target(target_pos: Vector3):
 	var look_pos = Vector3(target_pos.x, global_position.y, target_pos.z)

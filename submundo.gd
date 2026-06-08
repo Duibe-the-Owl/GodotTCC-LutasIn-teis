@@ -136,5 +136,8 @@ func _start_ending_sequence():
 	tween.chain().tween_callback(_change_to_next_scene)
 
 func _change_to_next_scene():
+	# Explicitly point to the global Autoload singleton
+	SceneManager.should_trigger_intro = true
+	
 	# Loads the next level
 	get_tree().change_scene_to_file(next_scene_path)

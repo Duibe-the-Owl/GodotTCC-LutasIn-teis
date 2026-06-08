@@ -189,7 +189,7 @@ shader_parameter/camera_rotation = Vector2(0, 0)
 shader_parameter/dither_movement_weight = 15.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_eqkyt"]
-size = Vector3(1, 14.381714, 23.34961)
+size = Vector3(3.165, 14.382, 23.35)
 
 [node name="submundo" type="Node3D" unique_id=1630282636 node_paths=PackedStringArray("boulder", "boulder_interaction_area", "top_of_hill_marker", "starting_boulder_position", "player", "npc_spawn_point", "white_fade_rect")]
 script = ExtResource("1_0nynm")

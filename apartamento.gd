@@ -9,7 +9,7 @@ extends Node3D
 var wardrobe_dialogue_played : bool = false
 
 func _ready():
-	# Connect the remote's signal to this script
+	SceneManager.handle_scene_entrance()
 	if remote_control:
 		remote_control.player_sat_down.connect(_on_tv_started)
 		

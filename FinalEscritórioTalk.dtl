@@ -1,0 +1,8 @@
+[signal arg="talk_colega"]
+join Colega center
+Nick: Opa, bom dia!
+Colega: E aí! Po, você parece que saiu todo distraído ontem, tá tudo bem?
+Nick: …Tá. Tá tudo ótimo na verdade. E, obrigado por perguntar.
+Colega: Ah, imagina cara! Aliás, amanhã depois do expediente a galera vai sair pra pegar uma cerveja, topa ir com a gente?
+Nick: Claro!
+[signal arg="end_dialogue"]

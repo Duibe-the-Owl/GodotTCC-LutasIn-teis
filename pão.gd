@@ -19,14 +19,3 @@ func interact():
 		arrow.complete_objective()
 		
 	queue_free()
-@export var outline_material : ShaderMaterial
-
-func show_outline():
-	if get_parent() is MeshInstance3D:
-		get_parent().material_overlay = outline_material
-	elif get_parent() is CSGBox3D:
-		get_parent().material_overlay = outline_material
-
-func hide_outline():
-	if get_parent():
-		get_parent().material_overlay = null

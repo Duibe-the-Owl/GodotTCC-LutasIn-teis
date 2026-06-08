@@ -1,0 +1,9 @@
+[signal arg="talk_porteiro"]
+join Porteiro center
+Porteiro: Bom dia, chegou cedo hoje hein?
+Nick: Bom dia, pois é! Decidi…variar um pouco as coisas hoje.
+Porteiro: Hahahah, assim que é bom! Tava achando você meio cabisbaixo esses dias, bom te ver mais alegre.
+Nick: Ah…poxa, eu nem sabia que alguém reparava. Obrigado amigo.
+Porteiro: De nada! Vai lá, vamo trabalhar que a hora tá contando, depois a gente pode conversar mais.
+Nick: Beleza! Valeu!
+[signal arg="end_dialogue"]

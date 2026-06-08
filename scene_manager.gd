@@ -12,12 +12,15 @@ func _ready():
 	handle_scene_entrance()
 
 func handle_scene_entrance():
-	print("Entered scene: ", get_tree().current_scene.name)
+	var current_scene_name = get_tree().current_scene.name
+	print("Entered scene: ", current_scene_name)
 	print("Should trigger intro status: ", should_trigger_intro)
 	
-	# CRUCIAL CHANGE: We only play the intro if we explicitly allowed it 
-	# AND we are in the correct daytime scene
-	if should_trigger_intro and get_tree().current_scene.name == "Apartamento":
+	# Create a list of all scenes that are allowed to play the waking up intro
+	var allowed_intro_scenes = ["Apartamento", "FinalApartamento", "prédiotrabalho"]
+	
+	# Check if the current scene name is anywhere inside our list
+	if should_trigger_intro and current_scene_name in allowed_intro_scenes:
 		should_trigger_intro = false # Turn it off immediately so it doesn't loop
 		
 		var player = get_tree().get_root().find_child("Player", true, false)
@@ -29,7 +32,7 @@ func handle_scene_entrance():
 			print("Warning: Intro conditions met, but Player or method wasn't found. Fading in.")
 			anim.play("fade_to_normal")
 	else:
-		# If we are entering ApartamentoNoite, or walking between rooms normally,
+		# If we are entering a normal scene or walking between rooms,
 		# we make sure the intro flag is down and just fade in.
 		should_trigger_intro = false 
 		print("Normal scene entrance. Fading in.")
