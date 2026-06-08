@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c242rav6qbq2p" path="res://submundo.gd" id="1_0nynm"]
 [ext_resource type="PackedScene" uid="uid://yem4i6s5b0ul" path="res://Montanha.glb" id="1_btv6c"]
 [ext_resource type="PackedScene" uid="uid://d3u82oi3rkevi" path="res://player.tscn" id="2_1qhst"]
+[ext_resource type="PackedScene" uid="uid://d4jpcs2f2dyr1" path="res://sísifo.tscn" id="2_xedls"]
 [ext_resource type="Texture2D" uid="uid://b3l0a1pswi8ou" path="res://Lutas-Inúteis-Skybox(Submundo).png" id="3_b63dl"]
 [ext_resource type="PackedScene" uid="uid://cypxg21ux408a" path="res://Montanha2.glb" id="4_h3mjy"]
 [ext_resource type="PackedScene" uid="uid://ll5rvcf0xynf" path="res://Montanha3.glb" id="5_icxyv"]
@@ -190,7 +191,7 @@ shader_parameter/dither_movement_weight = 15.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_eqkyt"]
 size = Vector3(1, 14.381714, 23.34961)
 
-[node name="submundo" type="Node3D" unique_id=1630282636 node_paths=PackedStringArray("boulder", "boulder_interaction_area", "top_of_hill_marker", "starting_boulder_position", "player")]
+[node name="submundo" type="Node3D" unique_id=1630282636 node_paths=PackedStringArray("boulder", "boulder_interaction_area", "top_of_hill_marker", "starting_boulder_position", "player", "npc_spawn_point", "white_fade_rect")]
 script = ExtResource("1_0nynm")
 boulder = NodePath("Pedra2")
 boulder_interaction_area = NodePath("Pedra2/InteractionArea")
@@ -200,6 +201,10 @@ top_of_hill_marker = NodePath("EndMarker3D")
 starting_boulder_position = NodePath("StartMarker")
 player = NodePath("Player")
 rockOffset = Vector3(-4, -3, 0)
+npc_scene = ExtResource("2_xedls")
+npc_spawn_point = NodePath("SísifoSpawnPoint")
+white_fade_rect = NodePath("CanvasLayer2/ColorRect")
+next_scene_path = "res://FinalApartamento.tscn"
 
 [node name="Montanha" parent="." unique_id=558583841 instance=ExtResource("1_btv6c")]
 transform = Transform3D(0.9219848, 0.38722596, 0, -0.38722596, 0.9219848, 0, 0, 0, 1, 25.002466, -2.7718, -0.004631996)
@@ -330,7 +335,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -131.10648, -2.084507, -13.39
 transform = Transform3D(0.24373354, 0, -0.96984226, 0, 1, 0, 0.96984226, 0, 0.24373354, 43.935028, -8.177483, 153.55588)
 
 [node name="Montanha6" parent="Scenery" unique_id=1213390529 instance=ExtResource("6_gxjer")]
-transform = Transform3D(0.899931, 0, 0.43603233, 0, 1, 0, -0.43603233, 0, 0.899931, 100.49129, -13.519754, 44.86818)
+transform = Transform3D(0.899931, 0, 0.43603233, 0, 1, 0, -0.43603233, 0, 0.899931, 100.49129, 10.495649, 44.86818)
 
 [node name="Montanha7" parent="Scenery" unique_id=1073670421 instance=ExtResource("4_h3mjy")]
 process_mode = 4
@@ -347,3 +352,16 @@ transform = Transform3D(0.71180546, 0, 0.7023767, 0, 1, 0, -0.7023767, 0, 0.7118
 
 [node name="Montanha11" parent="Scenery" unique_id=1260653442 instance=ExtResource("7_lfu1u")]
 transform = Transform3D(0.9587255, 0, 0.2843333, 0, 1, 0, -0.2843333, 0, 0.9587255, 96.98834, -6.8414993, -141.5)
+
+[node name="SísifoSpawnPoint" type="Marker3D" parent="." unique_id=481451608]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.167301, 17.490665, -4.697034)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=2080311191]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2" unique_id=902238356]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
