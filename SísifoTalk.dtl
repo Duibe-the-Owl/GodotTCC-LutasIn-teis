@@ -26,5 +26,6 @@ Nick: ...É...É!! Tem razão!
 Sísifo: Hm. Vejo que começou a mudar de ideia. Mantenha esta conversa contigo, e agora vá. Retorne para suas batalhas! Deixe esta pedra comigo.
 Nick: Calma que?
 Nick: Espera!! Eu queria falar mais! Tem tanta coisa-
+[signal arg="anim_idle"]
 Sísifo: Vá! Confie em ti mesmo! Adeus, jovem Nicolas.
 [signal arg="ascend_player"]
