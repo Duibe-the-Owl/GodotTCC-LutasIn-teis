@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2mb0ugrgkxnd"
-path.s3tc="res://.godot/imported/Armario_UniformTexture(NEW).png-765a157bfdb2b25fccd302e623d411d5.s3tc.ctex"
+uid="uid://duwvddu4qgk3o"
+path.s3tc="res://.godot/imported/Sísifo_SysiphusTexture.png-ffa49ddf291f0b21581068f6aefda0b0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "393ea9c47172285e112cb625f3dd432a"
+"md5": "0ab8d64943f6c5567044e07e4a5b5277"
 }
 
 [deps]
 
-source_file="res://Armario_UniformTexture(NEW).png"
-dest_files=["res://.godot/imported/Armario_UniformTexture(NEW).png-765a157bfdb2b25fccd302e623d411d5.s3tc.ctex"]
+source_file="res://Sísifo_SysiphusTexture.png"
+dest_files=["res://.godot/imported/Sísifo_SysiphusTexture.png-ffa49ddf291f0b21581068f6aefda0b0.s3tc.ctex"]
 
 [params]
 
