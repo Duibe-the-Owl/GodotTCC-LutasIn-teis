@@ -288,7 +288,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7854486, -0.69694406, 1.73
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("15_w6bbu")
-target_scene_path = "uid://du2rjxyi221xa"
+target_scene_path = "uid://bjem00rft226t"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Móveis (Quarto)/Cama/Area3D" unique_id=173495365]
 shape = SubResource("BoxShape3D_w6bbu")

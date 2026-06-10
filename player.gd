@@ -249,6 +249,8 @@ func trigger_dialogue():
 	match current_scene:
 		"Apartamento":
 			Dialogic.start("StartCutscene")
+		"ApartamentoDia2":
+			Dialogic.start("SecondCutscene")
 		"FinalApartamento":
 			Dialogic.start("FinalCutscene")
 		_:

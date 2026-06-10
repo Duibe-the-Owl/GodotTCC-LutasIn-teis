@@ -31,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://b7p70rsvu2xf0" path="res://porteiro.tscn" id="29_qv5sc"]
 [ext_resource type="Script" uid="uid://dbeeteq2vo8r" path="res://porteironight_dialogue.gd" id="30_ki75r"]
 [ext_resource type="AudioStream" uid="uid://4bpflhqymmvn" path="res://NightAmbience.wav" id="31_dmhmy"]
+[ext_resource type="PackedScene" uid="uid://btog0veyoumcv" path="res://Fundo.glb" id="32_270i3"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_blb7k"]
 panorama = ExtResource("20_b6saw")
@@ -94,7 +95,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1216536, -0.7740797, -8.01
 [node name="Balcão" parent="." unique_id=2074732167 instance=ExtResource("6_fac30")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5999365, -0.7935869, -7.896013)
 
-[node name="Stool" parent="Balcão/CounterUnit" parent_id_path=PackedInt32Array(2074732167, 283878475) index="3" unique_id=1539903758]
+[node name="Stool" parent="Balcão/CounterUnit" parent_id_path=PackedInt32Array(2074732167, 1839090693) index="3" unique_id=517853581]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.60993433, 0.6291696, -0.07757568)
 
 [node name="Poltrona" parent="." unique_id=902341032 instance=ExtResource("7_uq8ta")]
@@ -471,7 +472,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -193
 curve = SubResource("Curve3D_vohkx")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="BusPath" unique_id=883106378]
-transform = Transform3D(0.20079084, 0, -0.9796279, 0, 1.0000457, 0, 0.9796279, 0, 0.20079084, -1.3815956, 0, 1.5192566)
+transform = Transform3D(0.20079084, 0, -0.9796279, 0, 1.0000465, 0, 0.9796279, 0, 0.20079084, -1.3815956, 0, 1.5192566)
 rotation_mode = 4
 loop = false
 script = ExtResource("20_qe36d")
@@ -508,10 +509,10 @@ objectives = [NodePath("../Placa2")]
 [node name="SetaLado" parent="ObjectiveArrow" unique_id=1133751353 instance=ExtResource("25_fac30")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.7084502)
 
-[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2064431747]
+[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2056864381]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
-[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=343420702]
+[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=1002935279]
 autoplay = &"ArrowSide_Spin"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1556836814]
@@ -543,6 +544,9 @@ shape = SubResource("BoxShape3D_qv5sc")
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1698241434]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3627815, -68.81002)
 stream = ExtResource("31_dmhmy")
+
+[node name="Fundo" parent="." unique_id=219323742 instance=ExtResource("32_270i3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.29207, 6.821639, 14.385185)
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 

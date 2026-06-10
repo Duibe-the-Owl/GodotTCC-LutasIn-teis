@@ -17,7 +17,7 @@ func handle_scene_entrance():
 	print("Should trigger intro status: ", should_trigger_intro)
 	
 	# Create a list of all scenes that are allowed to play the waking up intro
-	var allowed_intro_scenes = ["Apartamento", "FinalApartamento"]
+	var allowed_intro_scenes = ["Apartamento", "ApartamentoDia2", "FinalApartamento"]
 	
 	# Check if the current scene name is anywhere inside our list
 	if should_trigger_intro and current_scene_name in allowed_intro_scenes:
