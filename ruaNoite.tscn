@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://21hpt0mhbcym"]
 
 [ext_resource type="PackedScene" uid="uid://d3u82oi3rkevi" path="res://player.tscn" id="1_ui4cq"]
-[ext_resource type="AudioStream" uid="uid://4bpflhqymmvn" path="res://NightAmbience.wav" id="2_xl13i"]
 [ext_resource type="Script" uid="uid://d1wwsjlhsvca4" path="res://ap_transition.gd" id="5_42sii"]
 [ext_resource type="PackedScene" uid="uid://c8fr51oevchw5" path="res://Árvore.glb" id="5_xl13i"]
 [ext_resource type="PackedScene" uid="uid://bohx7a8ayqdfw" path="res://Rua(AS).glb" id="6_rvt2e"]
@@ -223,7 +222,6 @@ shader_parameter/dither_movement_weight = 15.0
 [node name="Player" parent="." unique_id=621330810 instance=ExtResource("1_ui4cq")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1812071559]
-stream = ExtResource("2_xl13i")
 autoplay = true
 
 [node name="Árvore" parent="." unique_id=1392830244 instance=ExtResource("5_xl13i")]
