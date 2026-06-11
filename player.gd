@@ -251,6 +251,8 @@ func trigger_dialogue():
 			Dialogic.start("StartCutscene")
 		"ApartamentoDia2":
 			Dialogic.start("SecondCutscene")
+		"ApartamentoDia3":
+			Dialogic.start("ThirdCutscene")
 		"FinalApartamento":
 			Dialogic.start("FinalCutscene")
 		_:

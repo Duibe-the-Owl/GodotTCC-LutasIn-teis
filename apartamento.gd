@@ -46,7 +46,18 @@ func _restore_player():
 func _on_area_3d_body_entered(body: Node3D):
 	if body.name == "Player" and not wardrobe_dialogue_played:
 		wardrobe_dialogue_played = true
-		Dialogic.start("WardrobeTalk")
+		
+		# Check the name of the root node of the currently active scene
+		var current_scene_name = get_tree().current_scene.name
+		
+		if current_scene_name == "ApartamentoDia2":
+			Dialogic.start("SecondWardrobe") # Plays on Day 2
+			
+		elif current_scene_name == "ApartamentoDia3":
+			Dialogic.start("ThirdWardrobe") # Plays on Day 3
+			
+		else:
+			Dialogic.start("WardrobeTalk")
 		
 
 func play_single_tv_timeline(incoming_argument: Variant = null):
