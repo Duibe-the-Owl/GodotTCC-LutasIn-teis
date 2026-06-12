@@ -7,6 +7,7 @@ Nick: O da mitologia grega? Como que você tá aqui? Ou melhor, como eu to aqui?
 Sísifo: Isto no momento não importa jovem,o que realmente importa é que há um grande conflito em teu coração.
 Nick: Uh…bom, sim, mas… tem certeza de que esse é o maior problema agora?
 [signal arg="anim_talk"]
+Sísifo: Sim.
 Sísifo: Veja bem. Esta pedra, um peso infinito que levanto todos os dias e empurro incessantemente, sem nenhuma recompensa aparente não é nada senão igual à tua vida, à vida e à condição humana.
 Nick: …Como assim?
 Sísifo: Tu levantas todo amanhecer e faz as mesmas tarefas\: come, viaja, cumprimenta teus colegas, trabalha, viaja de volta, come, dorme. Tu passa pelo mesmo processo todo dia, sem parar, repetindo uma rotina que espera te preencher, ser tua razão de vida. Eis a verdade\: não há uma razão.
@@ -17,13 +18,17 @@ Nick: …Então qual outra solução teria se não desistir?? Porque continuar!?
 Sísifo: …Porque empurrar a pedra é o que nos dá sentido.
 Nick: Hein?
 [signal arg="anim_talk"]
-Sísifo: É verdade que o universo é deveras cruel e nos força a exercer trabalhos, levantar pedras que nunca desejamos. Porém, se não há nenhuma outra verdade ou razão além disso, resta apenas uma\: a pedra. Buscamos sentido ao levantar esse peso montanha acima, mas o sentido, a alegria está em levantar este peso, em estar vivo. Não notas que recebeu o dom de respirar? De viver?
+Sísifo: É verdade que o universo é deveras cruel e nos força a exercer trabalhos, levantar pedras que nunca desejamos. Porém, se não há nenhuma outra verdade ou razão além disso, resta apenas uma\: a pedra.
+Sísifo: Buscamos sentido ao levantar esse peso montanha acima, mas o sentido, a alegria está em levantar este peso, em estar vivo. Não notas que recebeu o dom de respirar? De viver?
 Nick: ...
 Sísifo: Podes considerar tua existência um fardo, mas em cada empurrão da pedra, cada descida montanha abaixo, podes sentir a tua respiração, teus músculos se contraindo, o sol ardendo em teu rosto e o vento varrendo teus cabelos. A verdade é que, ninguém mais poderá sentir isso por ti.
 [signal arg="anim_talk"]
 Sísifo: Se o universo decide ser cruel, que nos rebelemos. Que achemos sentido em empurrar esta pedra acima, que achemos nossa alegria nisso!
-Nick: ...É...É!! Tem razão!
-Sísifo: Hm. Vejo que começou a mudar de ideia. Mantenha esta conversa contigo, e agora vá. Retorne para suas batalhas! Deixe esta pedra comigo.
+Nick: ...Então eu posso criar meu próprio sentido... posso viver a vida que eu quiser? O que eu faço com isso tudo?
+Sísifo: Isto caberá a ti, meu amigo.
+Nick: ...Você tem razão. Eu passei muito tempo preso na minha própria cabeça, acreditando com todas minhas forças que minha vida só podia ser essa rotina, mas tem tanta coisa que eu posso fazer além disso, tanto que eu quero fazer! E eu vou!!!
+Nick: Eu vou viver a vida que eu quero viver!!
+Sísifo: Hm! Vejo que começou a mudar de ideia. Mantenha esta conversa contigo, e agora vá. Retorne para suas batalhas! Deixe esta pedra comigo.
 Nick: Calma que?
 Nick: Espera!! Eu queria falar mais! Tem tanta coisa-
 [signal arg="anim_idle"]

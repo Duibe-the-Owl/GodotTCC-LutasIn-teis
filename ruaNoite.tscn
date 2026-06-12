@@ -20,6 +20,7 @@
 [ext_resource type="Script" uid="uid://b3b1nvpv8eymp" path="res://seta.gd" id="17_ygype"]
 [ext_resource type="PackedScene" uid="uid://drbkq1qmh5c22" path="res://SetaLado.glb" id="18_iw7tv"]
 [ext_resource type="Shader" uid="uid://g53we0g41lwa" path="res://dither.gdshader" id="19_iw7tv"]
+[ext_resource type="Script" uid="uid://d01kmxtbinnms" path="res://barrier4.gd" id="21_rvt2e"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b7eu1"]
 size = Vector3(3, 3, 2)
@@ -217,6 +218,12 @@ shader_parameter/brightness_boost = 1.3
 shader_parameter/shadow_softness = 5.0
 shader_parameter/camera_rotation = Vector2(0, 0)
 shader_parameter/dither_movement_weight = 15.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xl13i"]
+size = Vector3(21.34, 7.84, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rvt2e"]
+size = Vector3(21.34, 7.84, 1.5)
 
 [node name="rua" type="Node3D" unique_id=1976608128]
 
@@ -517,7 +524,35 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
+[node name="Barreira" type="StaticBody3D" parent="." unique_id=664033778]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.118875, 2.9113383, -29.827463)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Barreira" unique_id=1745991864]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0679383, 0, 0)
+shape = SubResource("BoxShape3D_xl13i")
+
+[node name="Area3D" type="Area3D" parent="Barreira" unique_id=993675646]
+script = ExtResource("21_rvt2e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Barreira/Area3D" unique_id=507891721]
+shape = SubResource("BoxShape3D_rvt2e")
+
+[node name="Barreira2" type="StaticBody3D" parent="." unique_id=360708862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.052001, 2.8870544, 120.33506)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Barreira2" unique_id=1222580277]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0679383, 0, 0)
+shape = SubResource("BoxShape3D_xl13i")
+
+[node name="Area3D" type="Area3D" parent="Barreira2" unique_id=1471056683]
+script = ExtResource("21_rvt2e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Barreira2/Area3D" unique_id=648541799]
+shape = SubResource("BoxShape3D_rvt2e")
+
 [connection signal="body_entered" from="Prédios/Area3D" to="Prédios/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Barreira/Area3D" to="Barreira/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Barreira2/Area3D" to="Barreira2/Area3D" method="_on_body_entered"]
 
 [editable path="BusPath/PathFollow3D/Ônibus"]
 [editable path="ObjectiveArrow/SetaLado"]
