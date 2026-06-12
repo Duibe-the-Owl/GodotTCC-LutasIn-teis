@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b00a05ih480jg" path="res://nick.tscn" id="3_hqtel"]
 [ext_resource type="Texture2D" uid="uid://b35jvvbrk88o2" path="res://Loading Circle.png" id="3_i3pqv"]
 [ext_resource type="PackedScene" uid="uid://sedjt4hal2pe" path="res://pause_menu.tscn" id="5_sweqy"]
+[ext_resource type="VideoStream" uid="uid://6b0lhueovwog" path="res://OpeningCutscene.ogv" id="7_1jxqw"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sweqy"]
 animation = &"Idle_Nick"
@@ -252,7 +253,7 @@ shape = SubResource("CapsuleShape3D_4flbx")
 [node name="Nick" parent="." unique_id=1664565471 instance=ExtResource("3_hqtel")]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0.3601207, 0.17311221)
 
-[node name="Skeleton3D" parent="Nick/Armature" parent_id_path=PackedInt32Array(1664565471, 1448475975) index="0" unique_id=1165785708]
+[node name="Skeleton3D" parent="Nick/Armature" parent_id_path=PackedInt32Array(1664565471, 1730220349) index="0" unique_id=1973460973]
 bones/0/position = Vector3(0, -1.2439295, 0)
 bones/2/rotation = Quaternion(-0.16544135, 5.2684446e-14, -3.944429e-08, 0.98621964)
 bones/3/rotation = Quaternion(0.059421234, 0.00038647253, 0.004036426, 0.9982248)
@@ -275,7 +276,7 @@ bones/51/rotation = Quaternion(0.118946165, -0.003457958, -0.028852927, 0.992475
 bones/52/rotation = Quaternion(-0.048148252, 0.06631092, 0.027908372, 0.9962458)
 bones/53/rotation = Quaternion(-0.69481564, -0.024903733, -0.06749609, 0.7155804)
 
-[node name="AnimationPlayer" parent="Nick" index="1" unique_id=1092122992]
+[node name="AnimationPlayer" parent="Nick" index="1" unique_id=1881272261]
 speed_scale = 1.5
 
 [node name="FootstepPlayer" type="AudioStreamPlayer3D" parent="." unique_id=1065433117]
@@ -328,5 +329,17 @@ tint_progress = Color(0.69099766, 0.69099766, 0.69099766, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1556190275]
 libraries/ = SubResource("AnimationLibrary_hqtel")
+
+[node name="CutsceneLayer" type="CanvasLayer" parent="." unique_id=622659813]
+
+[node name="IntroVideo" type="VideoStreamPlayer" parent="CutsceneLayer" unique_id=169126954]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+stream = ExtResource("7_1jxqw")
+expand = true
 
 [editable path="Nick"]
