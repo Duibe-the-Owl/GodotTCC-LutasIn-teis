@@ -188,7 +188,7 @@ size = Vector3(2.5, 1, 3)
 [sub_resource type="BoxShape3D" id="BoxShape3D_33je2"]
 size = Vector3(1.925, 1, 2.645)
 
-[node name="escritório" type="Node3D" unique_id=362160571]
+[node name="escritórioDia3" type="Node3D" unique_id=362160571]
 script = ExtResource("1_4xm8f")
 
 [node name="ChãoEscritório" parent="." unique_id=1897772582 instance=ExtResource("2_jwlwx")]
