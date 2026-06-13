@@ -1,10 +1,28 @@
 extends Area3D
 
-@onready var viewport = $/root/escritório/ComputerCanvas/SubViewportContainer/SubViewport
-@onready var screen_mesh = $/root/escritório/MainCarteira/DeskUnit/Screen
+# We switch from @onready to normal variables so we can define them dynamically in _ready()
+var viewport: SubViewport
+var screen_mesh: MeshInstance3D # Or Node3D, depending on your type
 
 func _ready():
 	input_event.connect(_input_event)
+	
+	# 1. Get the exact name of whichever world node is currently active
+	var scene_name = get_tree().current_scene.name
+	
+	# 2. Dynamically build the absolute paths using that scene name
+	var viewport_path = "/root/" + scene_name + "/ComputerCanvas/SubViewportContainer/SubViewport"
+	var screen_path = "/root/" + scene_name + "/MainCarteira/DeskUnit/Screen"
+	
+	# 3. Safely fetch the nodes
+	viewport = get_node_or_null(viewport_path)
+	screen_mesh = get_node_or_null(screen_path)
+	
+	# Quick safety check in case a path typo happens down the line
+	if not viewport:
+		print("Warning: Could not find Viewport at: ", viewport_path)
+	if not screen_mesh:
+		print("Warning: Could not find Screen Mesh at: ", screen_path)
 
 func _input_event(_camera: Camera3D, event: InputEvent, shape_position: Vector3, _normal: Vector3, _shape_idx: int):
 	if not viewport:
