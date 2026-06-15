@@ -85,9 +85,10 @@ size = Vector3(39.59, 7.84, 1.5)
 transparency = 1
 albedo_texture = ExtResource("34_ttu5f")
 emission_enabled = true
+emission_energy_multiplier = 1.5
 emission_texture = ExtResource("34_ttu5f")
 
-[node name="prédiotrabalho" type="Node3D" unique_id=2069597799]
+[node name="prédiotrabalhoNoite3" type="Node3D" unique_id=2069597799]
 
 [node name="RuaTrabalho" parent="." unique_id=244722580 instance=ExtResource("1_svhb8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.629753, -1.1750197, -64.45812)
@@ -109,7 +110,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1216536, -0.7740797, -8.01
 [node name="Balcão" parent="." unique_id=2074732167 instance=ExtResource("6_vyk5j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5999365, -0.7935869, -7.896013)
 
-[node name="Stool" parent="Balcão/CounterUnit" parent_id_path=PackedInt32Array(2074732167, 1839090693) index="3" unique_id=517853581]
+[node name="Stool" parent="Balcão/CounterUnit" parent_id_path=PackedInt32Array(2074732167, 283878475) index="3" unique_id=1539903758]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.60993433, 0.6291696, -0.07757568)
 
 [node name="Poltrona" parent="." unique_id=902341032 instance=ExtResource("7_vygn5")]
@@ -486,7 +487,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -193
 curve = SubResource("Curve3D_vohkx")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="BusPath" unique_id=883106378]
-transform = Transform3D(0.20079084, 0, -0.9796279, 0, 1.000048, 0, 0.9796279, 0, 0.20079084, -1.3815956, 0, 1.5192566)
+transform = Transform3D(0.20079084, 0, -0.9796279, 0, 1.0000483, 0, 0.9796279, 0, 0.20079084, -1.3815956, 0, 1.5192566)
 rotation_mode = 4
 loop = false
 script = ExtResource("20_ny8en")
@@ -523,10 +524,10 @@ objectives = [NodePath("../Placa2")]
 [node name="SetaLado" parent="ObjectiveArrow" unique_id=1133751353 instance=ExtResource("26_pwjd0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.7084502)
 
-[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2056864381]
+[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2064431747]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
-[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=1002935279]
+[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=343420702]
 autoplay = &"ArrowSide_Spin"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1556836814]
@@ -590,7 +591,7 @@ script = ExtResource("33_uql1b")
 shape = SubResource("BoxShape3D_x1nse")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=58602118]
-transform = Transform3D(1, 0, 0, 0, 0.9145154, -0.4045511, 0, 0.4045511, 0.9145154, -109.89084, 131.43655, -156.59482)
+transform = Transform3D(0.8563572, 0.20890367, 0.472241, 0, 0.9145154, -0.4045511, -0.5163839, 0.34644026, 0.78315187, -109.89084, 131.43655, -156.59482)
 material_override = SubResource("StandardMaterial3D_23cqf")
 pixel_size = 0.04
 billboard = 1

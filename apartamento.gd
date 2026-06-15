@@ -56,6 +56,9 @@ func _on_area_3d_body_entered(body: Node3D):
 		elif current_scene_name == "ApartamentoDia3":
 			Dialogic.start("ThirdWardrobe") # Plays on Day 3
 			
+		elif current_scene_name == "FinalApartamento":
+			Dialogic.start("FinalWardrobe") # Plays on Day 3
+			
 		else:
 			Dialogic.start("WardrobeTalk")
 		

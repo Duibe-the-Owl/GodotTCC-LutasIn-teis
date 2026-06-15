@@ -31,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://btog0veyoumcv" path="res://Fundo.glb" id="29_jyurx"]
 [ext_resource type="PackedScene" uid="uid://dtxcdtn6avjrk" path="res://Fundo2.glb" id="30_epljx"]
 [ext_resource type="VoxelGIData" uid="uid://42ebvvkixie2" path="res://prédiotrabalho.VoxelGI_data.res" id="31_tjy56"]
+[ext_resource type="Texture2D" uid="uid://djihbvo1csx1h" path="res://SunTexture.png" id="32_y5inh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1pik2"]
 
@@ -211,10 +212,12 @@ sky_material = SubResource("PanoramaSkyMaterial_man7g")
 background_mode = 2
 sky = SubResource("Sky_dclif")
 tonemap_mode = 3
+tonemap_exposure = 0.8
 ssao_enabled = true
 sdfgi_enabled = true
 glow_enabled = true
-volumetric_fog_density = 0.02
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.005
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kh6rx"]
 size = Vector3(10, 2, 12)
@@ -226,6 +229,14 @@ shader_parameter/brightness_boost = 1.3
 shader_parameter/shadow_softness = 5.0
 shader_parameter/camera_rotation = Vector2(0, 0)
 shader_parameter/dither_movement_weight = 15.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wx3tb"]
+transparency = 1
+albedo_texture = ExtResource("32_y5inh")
+emission_enabled = true
+emission = Color(1, 1, 0.94509804, 1)
+emission_energy_multiplier = 10.0
+emission_texture = ExtResource("32_y5inh")
 
 [node name="prédiotrabalho" type="Node3D" unique_id=2069597799]
 
@@ -311,7 +322,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 96.869354, 2.635418, 0.909269
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -123.74411, 2.635502, -47.228493)
 
 [node name="Prédios5" parent="." unique_id=1911606625 instance=ExtResource("19_ahapa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.349922, -0.6020465, 40.0193)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.349922, -0.94508123, 40.0193)
 
 [node name="BusPath" type="Path3D" parent="." unique_id=2011152133]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.28072357, -11.665017)
@@ -326,16 +337,16 @@ script = ExtResource("20_o1luk")
 [node name="Ônibus" parent="BusPath/PathFollow3D" unique_id=1483853583 instance=ExtResource("21_xj6ix")]
 transform = Transform3D(2.3081899e-05, 0.0034919037, 0.9999939, -0.024252007, 0.9996998, -0.0034903171, -0.99970585, -0.024251774, 0.000107735395, 0, 0.090044826, -0.0016884804)
 
-[node name="Wheel1" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(1483853583, 2143970462) index="2" unique_id=1645415341]
+[node name="Wheel1" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(1483853583, 112014410) index="2" unique_id=684274272]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 3.311226, -0.3548356, 1.50988)
 
-[node name="Wheel2" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(1483853583, 2143970462) index="3" unique_id=971992518]
+[node name="Wheel2" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(1483853583, 112014410) index="3" unique_id=1030978667]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -5.4145365, -0.3548356, 1.5098804)
 
-[node name="Wheel3" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(1483853583, 2143970462) index="4" unique_id=1535672385]
+[node name="Wheel3" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(1483853583, 112014410) index="4" unique_id=142540822]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 3.311226, -0.3548356, -2.0453444)
 
-[node name="Wheel4" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(1483853583, 2143970462) index="5" unique_id=719247399]
+[node name="Wheel4" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(1483853583, 112014410) index="5" unique_id=1375117093]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -5.4145365, -0.3548356, -2.0453444)
 
 [node name="WheelsPlayer1" type="AnimationPlayer" parent="BusPath/PathFollow3D/Ônibus" unique_id=689532780]
@@ -359,9 +370,9 @@ libraries/ = SubResource("AnimationLibrary_akh8l")
 libraries/WheelLib4 = SubResource("AnimationLibrary_66ypc")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1838939806]
-transform = Transform3D(0.9925945, -0.029335154, 0.11788017, -0.09228302, -0.8131435, 0.5747013, 0.07899456, -0.5813235, -0.8098289, 13.834465, 40.21839, -57.027565)
+transform = Transform3D(0.9925945, -0.029335195, 0.11788019, -0.11494017, -0.5408104, 0.83325434, 0.039307166, -0.8406328, -0.5401771, 13.834465, 69.68267, -57.027565)
 light_color = Color(0.91764706, 0.94509804, 1, 1)
-light_energy = 0.926
+light_energy = 0.65
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2077223128]
@@ -397,15 +408,15 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 138.
 [node name="Porteiro" parent="." unique_id=1188977315 instance=ExtResource("26_2tr0f")]
 transform = Transform3D(0.36269826, 0, -0.93190664, 0, 1, 0, 0.93190664, 0, 0.36269826, 8.512784, 0.14832747, 32.875446)
 
-[node name="Skeleton3D" parent="Porteiro/Armature" parent_id_path=PackedInt32Array(1188977315, 1050920848) index="0" unique_id=1147197981]
-bones/3/rotation = Quaternion(0.11041207, 0.00017945014, 0.004050926, 0.9938777)
-bones/6/rotation = Quaternion(0.2333963, -0.0021300474, 0.058986, 0.9705887)
-bones/23/rotation = Quaternion(0.079077065, -0.22913028, 0.033786103, 0.96959)
-bones/26/rotation = Quaternion(0.049355425, 0.2027503, 0.53655386, 0.81765914)
-bones/27/rotation = Quaternion(0.6926628, 0.09672873, 0.3926168, 0.5972554)
-bones/28/rotation = Quaternion(-0.07961571, 0.13460135, 0.06423298, 0.9856055)
+[node name="Skeleton3D" parent="Porteiro/Armature" parent_id_path=PackedInt32Array(1188977315, 402796763) index="0" unique_id=656996876]
+bones/3/rotation = Quaternion(0.111238815, 0.00017608018, 0.0040510735, 0.99378544)
+bones/6/rotation = Quaternion(0.23314756, -0.00067239464, 0.06819912, 0.97004676)
+bones/23/rotation = Quaternion(0.08071372, -0.23150133, 0.02771411, 0.9690843)
+bones/26/rotation = Quaternion(-0.11812419, 0.04479715, 0.5242566, 0.8421371)
+bones/27/rotation = Quaternion(0.25521767, 0.028284088, 0.01719527, 0.9663169)
+bones/28/rotation = Quaternion(-0.050809216, 0.017888792, 0.082235165, 0.9951562)
 
-[node name="Porteiro" parent="Porteiro/Armature/Skeleton3D" index="0" unique_id=1417063898]
+[node name="Porteiro" parent="Porteiro/Armature/Skeleton3D" index="0" unique_id=345336151]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013343811, 0, 0.03428936)
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1160754904 node_paths=PackedStringArray("npc_node")]
@@ -459,6 +470,13 @@ light_energy = 0.25
 shadow_enabled = true
 omni_range = 5.628
 omni_attenuation = 1.198
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=100120111]
+transform = Transform3D(0.99619466, 0.08715574, 0, -0.055044882, 0.629166, -0.77531934, -0.06757353, 0.77236915, 0.63156927, -25.704086, 172.85968, -94.69872)
+material_override = SubResource("StandardMaterial3D_wx3tb")
+pixel_size = 0.08
+billboard = 1
+texture = ExtResource("32_y5inh")
 
 [connection signal="body_entered" from="Elevador/Area3D" to="Elevador/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

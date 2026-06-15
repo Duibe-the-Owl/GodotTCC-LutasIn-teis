@@ -56,6 +56,8 @@
 [ext_resource type="AudioStream" uid="uid://3om68rtks47g" path="res://StreetAmbience.wav" id="54_om1rc"]
 [ext_resource type="VoxelGIData" uid="uid://vtkwkd4g5g23" path="res://Apartamento.VoxelGI_data.res" id="55_7mt17"]
 [ext_resource type="Shader" uid="uid://g53we0g41lwa" path="res://dither.gdshader" id="56_hvtju"]
+[ext_resource type="Texture2D" uid="uid://djihbvo1csx1h" path="res://SunTexture.png" id="57_kd8p5"]
+[ext_resource type="Script" uid="uid://fbb1ii4eoqnt" path="res://pãotalk.gd" id="58_yh3j2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_libsc"]
 
@@ -93,6 +95,17 @@ shader_parameter/shadow_softness = 5.0
 shader_parameter/camera_rotation = Vector2(0, 0)
 shader_parameter/dither_movement_weight = 15.0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kd8p5"]
+transparency = 1
+albedo_texture = ExtResource("57_kd8p5")
+emission_enabled = true
+emission = Color(1, 1, 0.94509804, 1)
+emission_energy_multiplier = 10.0
+emission_texture = ExtResource("57_kd8p5")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_myf78"]
+size = Vector3(1.865, 1.065, 1.88)
+
 [node name="FinalApartamento" type="Node3D" unique_id=338808659]
 script = ExtResource("1_dhrv7")
 
@@ -107,10 +120,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.746732, 1.7387962, 0.688)
 [node name="PortaSala" parent="Corredor (Estrutura)" unique_id=1930170204 instance=ExtResource("4_myf78")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.053, -0.84, 7.2059)
 
-[node name="Door3" parent="Corredor (Estrutura)/PortaSala/WallUnit" parent_id_path=PackedInt32Array(1930170204, 2071419480) index="1" unique_id=918518937]
+[node name="Door3" parent="Corredor (Estrutura)/PortaSala/WallUnit" parent_id_path=PackedInt32Array(1930170204, 611761083) index="1" unique_id=1717174748]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -0.58589363, -0.09912104, 0.09193897)
 
-[node name="StaticBody3D" parent="Corredor (Estrutura)/PortaSala/WallUnit/Door3" index="0" unique_id=567612768 node_paths=PackedStringArray("anim_player")]
+[node name="StaticBody3D" parent="Corredor (Estrutura)/PortaSala/WallUnit/Door3" index="0" unique_id=1034352604 node_paths=PackedStringArray("anim_player")]
 script = ExtResource("5_if7np")
 anim_player = NodePath("../../../AnimationPlayer")
 open_sound = ExtResource("6_kfbsu")
@@ -133,7 +146,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.10
 [node name="Teto" parent="Estrutura (Quarto)" unique_id=1864396251 instance=ExtResource("11_d2u7j")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.19293119, 2.2600229, 0)
 
-[node name="Ceiling" parent="Estrutura (Quarto)/Teto/CeilingUnit" parent_id_path=PackedInt32Array(1864396251, 559655712) index="0" unique_id=735018075]
+[node name="Ceiling" parent="Estrutura (Quarto)/Teto/CeilingUnit" parent_id_path=PackedInt32Array(1864396251, 1012003113) index="0" unique_id=848140106]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020920277, 0.3054564, 0.10086185)
 
 [node name="ParedeDireita" parent="Estrutura (Quarto)" unique_id=1745976896 instance=ExtResource("12_rpcwr")]
@@ -154,13 +167,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9187465, -0.8222265, 2.0816
 [node name="Armário" parent="Móveis (Quarto)" unique_id=1119466907 instance=ExtResource("16_cetvq")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.6525167, -0.8273673, -2.352987)
 
-[node name="Bar" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1354650949) index="0" unique_id=621183347]
+[node name="Bar" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1590062936) index="0" unique_id=921990831]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 2.059648, -0.17623472)
 
-[node name="Pants" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1354650949) index="2" unique_id=566327375]
+[node name="Pants" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1590062936) index="2" unique_id=1237091769]
 transform = Transform3D(-0.7071066, 0.70710695, 5.9604645e-08, 5.9604645e-08, 0, 1, 0.70710695, 0.7071066, 0, -0.015007257, 1.5682206, 0.36414862)
 
-[node name="Uniform" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1354650949) index="3" unique_id=1770473136]
+[node name="Uniform" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1590062936) index="3" unique_id=720640150]
 transform = Transform3D(-0.7071066, 0.70710695, 5.9604645e-08, 5.9604645e-08, 0, 1, 0.70710695, 0.7071066, 0, -0.015007257, 1.5682206, 0.7805791)
 layers = 2
 
@@ -180,14 +193,14 @@ objectives = [NodePath("../Armário/Wardrobe_Area/Uniform"), NodePath("../../Coz
 
 [node name="SetaLado" parent="Móveis (Quarto)/ObjectiveArrow" unique_id=1133751353 instance=ExtResource("20_w3lb0")]
 
-[node name="ArrowSide" parent="Móveis (Quarto)/ObjectiveArrow/SetaLado" index="0" unique_id=2056864381]
+[node name="ArrowSide" parent="Móveis (Quarto)/ObjectiveArrow/SetaLado" index="0" unique_id=2064431747]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
-[node name="AnimationPlayer" parent="Móveis (Quarto)/ObjectiveArrow/SetaLado" index="1" unique_id=1002935279]
+[node name="AnimationPlayer" parent="Móveis (Quarto)/ObjectiveArrow/SetaLado" index="1" unique_id=343420702]
 autoplay = &"ArrowSide_Spin"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1788792756]
-transform = Transform3D(0.41426593, 0.37888324, -0.82754546, 0.70735806, 0.43813115, 0.55469435, 0.5727378, -0.8151619, -0.08650323, -26.84834, 6.4616127, 0)
+transform = Transform3D(0.41426587, 0.37888318, -0.82754546, 0.707358, 0.4381311, 0.5546944, 0.57273775, -0.81516176, -0.08650328, -26.84834, 17.953743, 0)
 light_color = Color(0.91764706, 0.94509804, 0.92941177, 1)
 light_energy = 1.201
 shadow_enabled = true
@@ -266,7 +279,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, -
 [node name="Mesita" parent="Sala (Móveis)" unique_id=821214711 instance=ExtResource("29_7xu6u")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.592, -0.81552064, 4.456)
 
-[node name="House_Keys" parent="Sala (Móveis)/Mesita/Shelf_Area" parent_id_path=PackedInt32Array(821214711, 1211129970) index="3" unique_id=1321954434]
+[node name="House_Keys" parent="Sala (Móveis)/Mesita/Shelf_Area" parent_id_path=PackedInt32Array(821214711, 2021909727) index="3" unique_id=991776827]
 layers = 2
 
 [node name="Area3D" type="Area3D" parent="Sala (Móveis)/Mesita/Shelf_Area/House_Keys" index="0" unique_id=550533673 node_paths=PackedStringArray("target_door")]
@@ -337,7 +350,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.85
 [node name="Pia" parent="Cozinha (Móveis)" unique_id=585669820 instance=ExtResource("44_umcjq")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.338, -0.8303562, 0.773)
 
-[node name="Bread" parent="Cozinha (Móveis)/Pia/Sink_Area" parent_id_path=PackedInt32Array(585669820, 589050444) index="0" unique_id=491440400]
+[node name="Bread" parent="Cozinha (Móveis)/Pia/Sink_Area" parent_id_path=PackedInt32Array(585669820, 1157109093) index="0" unique_id=910013523]
 layers = 2
 
 [node name="Area3D" type="Area3D" parent="Cozinha (Móveis)/Pia/Sink_Area/Bread" index="0" unique_id=769775108]
@@ -406,9 +419,25 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1268147059]
+transform = Transform3D(-4.0655568e-08, 0.36732927, 0.93009096, 1.6056472e-08, 0.93009096, -0.36732927, -1, 0, -4.371139e-08, -39.912678, 28.266079, -14.04973)
+material_override = SubResource("StandardMaterial3D_kd8p5")
+pixel_size = 0.035
+billboard = 1
+texture = ExtResource("57_kd8p5")
+
+[node name="Area3D2" type="Area3D" parent="." unique_id=525018648]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.353599, 0, 2.0224872)
+script = ExtResource("58_yh3j2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2" unique_id=1954441886]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0644207, 0, 0)
+shape = SubResource("BoxShape3D_myf78")
+
 [connection signal="body_entered" from="Móveis (Quarto)/Armário/Wardrobe_Area/Uniform/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Elevador/Elevador/Area3D" to="Elevador/Elevador/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Area3D2" to="Area3D2" method="_on_body_entered"]
 
 [editable path="Corredor (Estrutura)/PortaSala"]
 [editable path="Estrutura (Quarto)/Teto"]

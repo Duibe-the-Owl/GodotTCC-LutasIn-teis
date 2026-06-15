@@ -230,6 +230,7 @@ size = Vector3(80, 7.84, 1.5)
 transparency = 1
 albedo_texture = ExtResource("22_xlhdb")
 emission_enabled = true
+emission_energy_multiplier = 1.5
 emission_texture = ExtResource("22_xlhdb")
 
 [node name="rua" type="Node3D" unique_id=1976608128]
@@ -467,16 +468,16 @@ script = ExtResource("16_hk4ug")
 [node name="Ônibus" parent="BusPath/PathFollow3D" unique_id=667804955 instance=ExtResource("17_rsu0v")]
 transform = Transform3D(2.3081899e-05, 0.0034919037, 0.9999939, -0.024252007, 0.9996998, -0.0034903171, -0.99970585, -0.024251774, 0.000107735395, 0, 0.090044826, -0.0016884804)
 
-[node name="Wheel1" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 2143970462) index="2" unique_id=1645415341]
+[node name="Wheel1" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 112014410) index="2" unique_id=684274272]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 3.311226, -0.3548356, 1.50988)
 
-[node name="Wheel2" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 2143970462) index="3" unique_id=971992518]
+[node name="Wheel2" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 112014410) index="3" unique_id=1030978667]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -5.4145365, -0.3548356, 1.5098804)
 
-[node name="Wheel3" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 2143970462) index="4" unique_id=1535672385]
+[node name="Wheel3" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 112014410) index="4" unique_id=142540822]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 3.311226, -0.3548356, -2.0453444)
 
-[node name="Wheel4" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 2143970462) index="5" unique_id=719247399]
+[node name="Wheel4" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 112014410) index="5" unique_id=1375117093]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -5.4145365, -0.3548356, -2.0453444)
 
 [node name="WheelsPlayer1" type="AnimationPlayer" parent="BusPath/PathFollow3D/Ônibus" unique_id=103642161]
@@ -514,10 +515,10 @@ objectives = [NodePath("../Prédios/Area3D")]
 [node name="SetaLado" parent="ObjectiveArrow" unique_id=1133751353 instance=ExtResource("19_ikt4t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.284691, 0, 0)
 
-[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2056864381]
+[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2064431747]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
-[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=1002935279]
+[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=343420702]
 autoplay = &"ArrowSide_Spin"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=958557692]
@@ -558,7 +559,7 @@ script = ExtResource("21_lp7kb")
 shape = SubResource("BoxShape3D_rvt2e")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1327648511]
-transform = Transform3D(-4.371139e-08, 0.4051416, 0.91425395, 0, 0.91425395, -0.4051416, -1, -1.77093e-08, -3.996331e-08, -109.89084, 138.1093, 142.88248)
+transform = Transform3D(-0.36035505, 0.37792227, 0.85283005, -1.7763568e-15, 0.91425395, -0.4051416, -0.93281525, -0.14599483, -0.32945603, -109.89084, 138.1093, 142.88248)
 material_override = SubResource("StandardMaterial3D_5ed0p")
 pixel_size = 0.04
 billboard = 1

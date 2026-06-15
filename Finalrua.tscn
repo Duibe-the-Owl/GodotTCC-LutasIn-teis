@@ -21,6 +21,7 @@
 [ext_resource type="Script" uid="uid://b3b1nvpv8eymp" path="res://seta.gd" id="19_ga6m2"]
 [ext_resource type="PackedScene" uid="uid://drbkq1qmh5c22" path="res://SetaLado.glb" id="20_0ngya"]
 [ext_resource type="Shader" uid="uid://g53we0g41lwa" path="res://dither.gdshader" id="21_777yp"]
+[ext_resource type="Texture2D" uid="uid://djihbvo1csx1h" path="res://SunTexture.png" id="22_jjjwh"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mlb2s"]
 panorama = ExtResource("2_qivp7")
@@ -31,9 +32,13 @@ sky_material = SubResource("PanoramaSkyMaterial_mlb2s")
 [sub_resource type="Environment" id="Environment_wxt12"]
 background_mode = 2
 sky = SubResource("Sky_dclif")
-ambient_light_source = 3
+tonemap_mode = 3
+tonemap_exposure = 0.79
 ssao_enabled = true
 sdfgi_enabled = true
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.005
 
 [sub_resource type="Curve3D" id="Curve3D_jdiv0"]
 bake_interval = 0.05
@@ -60,15 +65,23 @@ shader_parameter/shadow_softness = 5.0
 shader_parameter/camera_rotation = Vector2(0, 0)
 shader_parameter/dither_movement_weight = 15.0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dv61t"]
+transparency = 1
+albedo_texture = ExtResource("22_jjjwh")
+emission_enabled = true
+emission = Color(1, 1, 0.94509804, 1)
+emission_energy_multiplier = 10.0
+emission_texture = ExtResource("22_jjjwh")
+
 [node name="rua" type="Node3D" unique_id=1976608128]
 
 [node name="Player" parent="." unique_id=621330810 instance=ExtResource("1_qivp7")]
 bob_freq = 1.6
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=659676882]
-transform = Transform3D(0.69945145, -0.006423763, 0.7146513, -0.71468014, -0.0062868833, 0.69942325, -2.7366537e-10, -0.99995965, -0.008988305, 13.834465, 40.21839, 0)
+transform = Transform3D(-0.69963676, -0.0061056768, -0.71447265, -0.7144455, -0.006234867, 0.69966334, -0.008726561, 0.9999619, -3.0938047e-08, -79.80818, 50.82352, -28.883652)
 light_color = Color(0.91764706, 0.94509804, 1, 1)
-light_energy = 1.201
+light_energy = 0.9
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1946459089]
@@ -193,10 +206,10 @@ objectives = [NodePath("../Placa")]
 [node name="SetaLado" parent="ObjectiveArrow" unique_id=1133751353 instance=ExtResource("20_0ngya")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.77)
 
-[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2056864381]
+[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2064431747]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
-[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=1002935279]
+[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=343420702]
 autoplay = &"ArrowSide_Spin"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1584944733]
@@ -209,6 +222,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1579445228]
+transform = Transform3D(0.16625866, 0.66936004, 0.7240961, -0.06475406, 0.74014246, -0.6693251, -0.9839537, 0.064392954, 0.16639885, -138.5499, 129.48782, -45.97123)
+material_override = SubResource("StandardMaterial3D_dv61t")
+pixel_size = 0.08
+billboard = 1
+texture = ExtResource("22_jjjwh")
 
 [connection signal="body_entered" from="Barreira/Area3D" to="Barreira/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Barreira2/Area3D" to="Barreira2/Area3D" method="_on_body_entered"]

@@ -199,7 +199,7 @@ shader_parameter/dither_movement_weight = 15.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_4hs6l"]
 size = Vector3(1.345, 1, 2.045)
 
-[node name="escritório" type="Node3D" unique_id=362160571]
+[node name="escritórioNoite3" type="Node3D" unique_id=362160571]
 
 [node name="ChãoEscritório" parent="." unique_id=287050253 instance=ExtResource("1_0q8q6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.940643, -0.9976047, -5.429314)
@@ -312,7 +312,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.5
 [node name="MainCarteira" parent="." unique_id=707634930 instance=ExtResource("20_6jeu7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1957173, -0.06870723, -1.2982726)
 
-[node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 300741575) index="3" unique_id=1233270428]
+[node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 666559217) index="3" unique_id=1757339918]
 layers = 2
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MainCarteira/DeskUnit/Monitor" index="0" unique_id=1444464812]
@@ -322,7 +322,7 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MainCarteira/DeskUnit/Monitor/StaticBody3D" unique_id=271298312]
 shape = SubResource("ConvexPolygonShape3D_vqoap")
 
-[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 300741575) index="7" unique_id=137443092]
+[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 666559217) index="7" unique_id=44197733]
 surface_material_override/0 = SubResource("StandardMaterial3D_nc6qq")
 
 [node name="SubViewport" type="SubViewport" parent="MainCarteira/DeskUnit/Screen" index="0" unique_id=1884540969]
@@ -338,11 +338,11 @@ grow_vertical = 2
 stream = SubResource("VideoStreamTheora_wjgvv")
 expand = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 300741575) index="8" unique_id=1558306546]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 666559217) index="8" unique_id=1558306546]
 root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_5lkqy")
 
-[node name="CutsceneCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 300741575) index="9" unique_id=188736818]
+[node name="CutsceneCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 666559217) index="9" unique_id=188736818]
 transform = Transform3D(0.8338856, 0, 0.55193686, 0, 1, 0, -0.55193686, 0, 0.8338856, 1.0576382, 0.55, 1.489955)
 
 [node name="Relógio" parent="." unique_id=875575135 instance=ExtResource("21_0eykk")]
