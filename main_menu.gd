@@ -1,18 +1,21 @@
-extends Control
+extends Node3D
 
 # Export this so you can click and select your game's main gameplay/level scene
 @export_file("*.tscn") var gameplay_scene_path: String
 
-@onready var menu_buttons: VBoxContainer = $MenuButtons
-@onready var options_window: PanelContainer = $OptionsWindow
+@onready var play_button: Button = $MainMenu/MenuButtons/PlayButton
 
-@onready var music_slider: HSlider = $OptionsWindow/VBoxContainer/MusicSlider
-@onready var sfx_slider: HSlider = $OptionsWindow/VBoxContainer/SFXSlider
+@onready var menu_buttons: VBoxContainer = $MainMenu/MenuButtons
+@onready var options_window: PanelContainer = $MainMenu/OptionsWindow
+
+@onready var music_slider: HSlider = $MainMenu/OptionsWindow/VBoxContainer/MusicSlider
+@onready var sfx_slider: HSlider = $MainMenu/OptionsWindow/VBoxContainer/SFXSlider
 
 var music_bus_index: int
 var sfx_bus_index: int
 
 func _ready() -> void:
+	
 	# Ensure the mouse is fully visible and usable when arriving at the main menu
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	

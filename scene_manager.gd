@@ -63,3 +63,6 @@ func play_sfx(sound: AudioStream):
 	if sfx != null and sound != null:
 		sfx.stream = sound
 		sfx.play()
+
+func fadefromblack():
+	anim.play("fade_to_normal")

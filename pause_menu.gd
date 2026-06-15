@@ -58,7 +58,7 @@ func _on_options_button_pressed() -> void:
 
 func _on_quit_button_pressed() -> void:
 	get_tree().paused = false
-	SceneManager.transition_to("res://main_menu.tscn")
+	SceneManager.transition_to("res://titlescene.tscn")
 
 # --- Options Window Controls ---
 

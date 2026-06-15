@@ -1,0 +1,24 @@
+[gd_resource type="Environment" format=3 uid="uid://c7lkd82lyv225"]
+
+[ext_resource type="Texture2D" uid="uid://b3l0a1pswi8ou" path="res://Lutas-Inúteis-Skybox(Submundo).png" id="1_2kgei"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jcoy0"]
+panorama = ExtResource("1_2kgei")
+
+[sub_resource type="Sky" id="Sky_h3mjy"]
+sky_material = SubResource("PanoramaSkyMaterial_jcoy0")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_h3mjy")
+ambient_light_source = 3
+tonemap_mode = 3
+ssao_enabled = true
+fog_light_color = Color(0.99998456, 0.38697997, 0.47476554, 1)
+fog_height_density = 0.3299
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0381
+volumetric_fog_albedo = Color(0.5091657, 0.08045111, 0.09768476, 1)
+adjustment_enabled = true
+adjustment_brightness = 0.79
+adjustment_contrast = 1.035

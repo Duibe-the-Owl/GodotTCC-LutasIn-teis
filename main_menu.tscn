@@ -1,7 +1,5 @@
 [gd_scene format=3 uid="uid://ch5ggwj72gst7"]
 
-[ext_resource type="Script" uid="uid://c2xoumi8ixg2e" path="res://main_menu.gd" id="1_06t4h"]
-
 [node name="MainMenu" type="Control" unique_id=981178143]
 layout_mode = 3
 anchors_preset = 15
@@ -9,8 +7,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_06t4h")
-gameplay_scene_path = "uid://du2rjxyi221xa"
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=815831253]
 layout_mode = 1

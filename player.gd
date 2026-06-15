@@ -244,6 +244,7 @@ func start_intro_sequence():
 			# Wait here until the video completely finishes
 			await intro_video.finished
 			intro_video.hide()
+			SceneManager.fadefromblack()
 		else:
 			print("Warning: IntroVideo node not found on Player!")
 

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Lutas Inúteis e seus Propósitos (ver. PUC)"
-run/main_scene="uid://ch5ggwj72gst7"
+run/main_scene="uid://cnte0a7dnlbsj"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -63,6 +63,7 @@ directories/dtl_directory={
 "ThirdCutscene": "res://ThirdCutscene.dtl",
 "ThirdWardrobe": "res://ThirdWardrobe.dtl",
 "TvTalk": "res://TvTalk.dtl",
+"TvTalk2": "res://TvTalk2.dtl",
 "WardrobeTalk": "res://WardrobeTalk.dtl",
 "WorkBlockDialogue": "res://WorkBlockDialogue.dtl",
 "boulder_drop_1": "res://boulder_drop_1.dtl",
