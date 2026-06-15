@@ -42,8 +42,6 @@
 [ext_resource type="Texture2D" uid="uid://uefubqoalo1l" path="res://Paper4.png" id="40_s08uo"]
 [ext_resource type="Texture2D" uid="uid://bxcdfps7c7ib7" path="res://DesktopBackground.png" id="41_n1360"]
 [ext_resource type="Shader" uid="uid://g53we0g41lwa" path="res://dither.gdshader" id="42_3m0vy"]
-[ext_resource type="Script" uid="uid://eiysx37uwu7q" path="res://colega2dialogue.gd" id="43_yqdtd"]
-[ext_resource type="Script" uid="uid://r3ba58scjqek" path="res://colega3dialogue.gd" id="44_dn5jk"]
 [ext_resource type="PackedScene" uid="uid://dtxcdtn6avjrk" path="res://Fundo2.glb" id="45_vv8j4"]
 [ext_resource type="PackedScene" uid="uid://df505n32x2api" path="res://Buildings6.glb" id="46_27ugh"]
 [ext_resource type="AudioStream" uid="uid://cfmyvxqjage8u" path="res://WorkAmbience.wav" id="47_l4qir"]
@@ -69,18 +67,18 @@ volumetric_fog_density = 0.03
 [sub_resource type="BoxShape3D" id="BoxShape3D_wi2vf"]
 size = Vector3(0.15, 0.425, 0.865)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_4xm8f"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_37m51"]
 viewport_path = NodePath("../ComputerCanvas/SubViewportContainer/SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_jwlwx"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_f4umm"]
 viewport_path = NodePath("../ComputerCanvas/SubViewportContainer/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3fqt1"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4xm8f"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_4xm8f")
+albedo_texture = SubResource("ViewportTexture_37m51")
 emission_enabled = true
 emission_energy_multiplier = 0.5
-emission_texture = SubResource("ViewportTexture_jwlwx")
+emission_texture = SubResource("ViewportTexture_f4umm")
 
 [sub_resource type="Animation" id="Animation_5lkqy"]
 length = 0.001
@@ -182,9 +180,6 @@ shader_parameter/shadow_softness = 5.0
 shader_parameter/camera_rotation = Vector2(0, 0)
 shader_parameter/dither_movement_weight = 15.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_1ab0y"]
-size = Vector3(2.5, 1, 3)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_33je2"]
 size = Vector3(1.925, 1, 2.645)
 
@@ -236,7 +231,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.249003, -0.055074453, 4.13
 [node name="Carteira14" parent="." unique_id=212075373 instance=ExtResource("10_wheqm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.474821, -0.055074453, 10.789474)
 
-[node name="Chair" parent="Carteira14/DeskUnit" parent_id_path=PackedInt32Array(212075373, 1843714406) index="0" unique_id=2033621537]
+[node name="Chair" parent="Carteira14/DeskUnit" parent_id_path=PackedInt32Array(212075373, 1591636479) index="0" unique_id=1021926532]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8137474, -0.29560387, 0.04257965)
 
 [node name="Carteira15" parent="." unique_id=1340378624 instance=ExtResource("10_wheqm")]
@@ -298,7 +293,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.1
 [node name="MainCarteira" parent="." unique_id=1811457096 instance=ExtResource("20_st1ql")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.475147, -0.055103928, 13.9879265)
 
-[node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="3" unique_id=1757339918]
+[node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 300741575) index="3" unique_id=1233270428]
 layers = 2
 
 [node name="Area3D" type="Area3D" parent="MainCarteira/DeskUnit/Monitor" index="0" unique_id=1872963870]
@@ -311,7 +306,7 @@ script = ExtResource("21_rdvab")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22179025, 0)
 shape = SubResource("BoxShape3D_8v41d")
 
-[node name="ScreenInteractionArea" type="Area3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="7" unique_id=985870322]
+[node name="ScreenInteractionArea" type="Area3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 300741575) index="7" unique_id=985870322]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24362564, 0.03672272, -0.05687332)
 collision_layer = 2
 collision_mask = 2
@@ -321,14 +316,14 @@ script = ExtResource("22_da8on")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13251686, 0.41383284, 0)
 shape = SubResource("BoxShape3D_wi2vf")
 
-[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="8" unique_id=44197733]
-surface_material_override/0 = SubResource("StandardMaterial3D_3fqt1")
+[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 300741575) index="8" unique_id=137443092]
+surface_material_override/0 = SubResource("StandardMaterial3D_4xm8f")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="9" unique_id=1558306546]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 300741575) index="9" unique_id=1558306546]
 root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_5lkqy")
 
-[node name="CutsceneCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="10" unique_id=188736818]
+[node name="CutsceneCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 300741575) index="10" unique_id=188736818]
 transform = Transform3D(0.8338856, 0, 0.55193686, 0, 1, 0, -0.55193686, 0, 0.8338856, 1.0576382, 0.55, 1.489955)
 fov = 72.6
 
@@ -429,10 +424,10 @@ objectives = [NodePath("../MainCarteira/DeskUnit/Monitor")]
 [node name="SetaLado" parent="ObjectiveArrow" unique_id=2055762299 instance=ExtResource("31_ah11e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.48)
 
-[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2064431747]
+[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2056864381]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
-[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=343420702]
+[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=1002935279]
 autoplay = &"ArrowSide_Spin"
 
 [node name="Colega 2" parent="." unique_id=1609022559 instance=ExtResource("32_j0j0g")]
@@ -557,22 +552,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Area3D2" type="Area3D" parent="." unique_id=1380077594 node_paths=PackedStringArray("npc_node")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.266099, 0, 7.4489145)
-script = ExtResource("43_yqdtd")
-npc_node = NodePath("../Colega 2")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2" unique_id=1075384203]
-shape = SubResource("BoxShape3D_1ab0y")
-
-[node name="Area3D3" type="Area3D" parent="." unique_id=1477239410 node_paths=PackedStringArray("npc_node")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.242197, 0, 10.713493)
-script = ExtResource("44_dn5jk")
-npc_node = NodePath("../Colega 3")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D3" unique_id=174496642]
-shape = SubResource("BoxShape3D_1ab0y")
-
 [node name="Fundo2" parent="." unique_id=1181793222 instance=ExtResource("45_vv8j4")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 151.43983, -22.053478, -1.5640278)
 
@@ -596,8 +575,6 @@ shape = SubResource("BoxShape3D_33je2")
 transform = Transform3D(-4.371139e-08, -0.09063257, 0.99588436, 0, 0.99588436, 0.09063257, -1, 3.9616754e-09, -4.3531486e-08, 7.8482094, 0.308, 4.125241)
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
-[connection signal="body_entered" from="Area3D2" to="Area3D2" method="_on_body_entered"]
-[connection signal="body_entered" from="Area3D3" to="Area3D3" method="_on_body_entered"]
 [connection signal="body_entered" from="Area3D4" to="Area3D4" method="_on_body_entered"]
 
 [editable path="Carteira14"]

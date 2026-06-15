@@ -46,10 +46,10 @@ point_count = 3
 size = Vector3(2, 3, 1.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_il3kc"]
-size = Vector3(21.34, 7.84, 1)
+size = Vector3(80, 7.84, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iw8jk"]
-size = Vector3(21.34, 7.84, 1.5)
+size = Vector3(80, 7.84, 1.5)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mpt3h"]
 shader = ExtResource("20_0ymfv")
@@ -160,7 +160,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67.716, 2.751, 101.146)
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -132.46, 2.751, -196.07828)
 
 [node name="Barreira" type="StaticBody3D" parent="." unique_id=1994246013]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65581703, 2.9113383, -118.67819)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.655983, 2.9113383, -118.67819)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Barreira" unique_id=389482117]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0679383, 0, 0)
@@ -173,7 +173,7 @@ script = ExtResource("17_iw8jk")
 shape = SubResource("BoxShape3D_iw8jk")
 
 [node name="Barreira2" type="StaticBody3D" parent="." unique_id=1070369652]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.65581703, 2.9113383, 13.750292)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -31.799297, 2.9113383, 13.750292)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Barreira2" unique_id=1635412787]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0679383, 0, 0)

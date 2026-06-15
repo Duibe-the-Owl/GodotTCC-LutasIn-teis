@@ -1,32 +1,33 @@
-[gd_scene format=3 uid="uid://21hpt0mhbcym"]
+[gd_scene format=3 uid="uid://1v12aho52x50"]
 
-[ext_resource type="PackedScene" uid="uid://d3u82oi3rkevi" path="res://player.tscn" id="1_ui4cq"]
-[ext_resource type="AudioStream" uid="uid://4bpflhqymmvn" path="res://NightAmbience.wav" id="2_xl13i"]
-[ext_resource type="Script" uid="uid://d1wwsjlhsvca4" path="res://ap_transition.gd" id="5_42sii"]
-[ext_resource type="PackedScene" uid="uid://c8fr51oevchw5" path="res://Árvore.glb" id="5_xl13i"]
-[ext_resource type="PackedScene" uid="uid://bohx7a8ayqdfw" path="res://Rua(AS).glb" id="6_rvt2e"]
-[ext_resource type="AudioStream" uid="uid://duj8tt3c3r6i6" path="res://Elevator_SE.wav" id="6_ui4cq"]
-[ext_resource type="PackedScene" uid="uid://clakbgg4o0jdc" path="res://Buildings.glb" id="7_yww2o"]
-[ext_resource type="PackedScene" uid="uid://bydip21p1euj" path="res://Buildings2.glb" id="8_ce2bt"]
-[ext_resource type="PackedScene" uid="uid://c06ua5hgmi5jn" path="res://Buildings3.glb" id="9_8rvjc"]
-[ext_resource type="PackedScene" uid="uid://t8bneworcuq8" path="res://Buildings4.glb" id="10_n6rfl"]
-[ext_resource type="PackedScene" uid="uid://c4gxer50s1dgv" path="res://Placa.glb" id="13_1ahnm"]
-[ext_resource type="Script" uid="uid://cvf451s7daiev" path="res://bus_takeoff.gd" id="13_b7eu1"]
-[ext_resource type="PackedScene" uid="uid://de55qgjoyg7n0" path="res://Õnibus.glb" id="14_42sii"]
-[ext_resource type="PackedScene" uid="uid://btog0veyoumcv" path="res://Fundo.glb" id="15_cxx3x"]
-[ext_resource type="Texture2D" uid="uid://crl6mobypc55b" path="res://Lutas-Inúteis-Skybox(Noite).png" id="16_ui4cq"]
-[ext_resource type="PackedScene" uid="uid://dha3rygg0y4o4" path="res://Postes(Noite).glb" id="16_xdyah"]
-[ext_resource type="PackedScene" uid="uid://dtxcdtn6avjrk" path="res://Fundo2.glb" id="16_xfwsx"]
-[ext_resource type="Script" uid="uid://b3b1nvpv8eymp" path="res://seta.gd" id="17_ygype"]
-[ext_resource type="PackedScene" uid="uid://drbkq1qmh5c22" path="res://SetaLado.glb" id="18_iw7tv"]
-[ext_resource type="Shader" uid="uid://g53we0g41lwa" path="res://dither.gdshader" id="19_iw7tv"]
-[ext_resource type="Script" uid="uid://d01kmxtbinnms" path="res://barrier4.gd" id="21_rvt2e"]
+[ext_resource type="PackedScene" uid="uid://d3u82oi3rkevi" path="res://player.tscn" id="1_jg8ib"]
+[ext_resource type="AudioStream" uid="uid://4bpflhqymmvn" path="res://NightAmbience.wav" id="2_xlhdb"]
+[ext_resource type="PackedScene" uid="uid://c8fr51oevchw5" path="res://Árvore.glb" id="3_5ed0p"]
+[ext_resource type="PackedScene" uid="uid://bohx7a8ayqdfw" path="res://Rua(AS).glb" id="4_43etp"]
+[ext_resource type="PackedScene" uid="uid://clakbgg4o0jdc" path="res://Buildings.glb" id="5_vf7js"]
+[ext_resource type="Script" uid="uid://d1wwsjlhsvca4" path="res://ap_transition.gd" id="6_bt5ox"]
+[ext_resource type="AudioStream" uid="uid://duj8tt3c3r6i6" path="res://Elevator_SE.wav" id="7_pygl7"]
+[ext_resource type="PackedScene" uid="uid://bydip21p1euj" path="res://Buildings2.glb" id="8_diay3"]
+[ext_resource type="PackedScene" uid="uid://c06ua5hgmi5jn" path="res://Buildings3.glb" id="9_4kxbj"]
+[ext_resource type="PackedScene" uid="uid://t8bneworcuq8" path="res://Buildings4.glb" id="10_483uq"]
+[ext_resource type="PackedScene" uid="uid://c4gxer50s1dgv" path="res://Placa.glb" id="11_2vueo"]
+[ext_resource type="PackedScene" uid="uid://btog0veyoumcv" path="res://Fundo.glb" id="12_um3dt"]
+[ext_resource type="PackedScene" uid="uid://dtxcdtn6avjrk" path="res://Fundo2.glb" id="13_08gcx"]
+[ext_resource type="Texture2D" uid="uid://crl6mobypc55b" path="res://Lutas-Inúteis-Skybox(Noite).png" id="14_s8ifo"]
+[ext_resource type="PackedScene" uid="uid://dha3rygg0y4o4" path="res://Postes(Noite).glb" id="15_rjuab"]
+[ext_resource type="Script" uid="uid://cvf451s7daiev" path="res://bus_takeoff.gd" id="16_hk4ug"]
+[ext_resource type="PackedScene" uid="uid://de55qgjoyg7n0" path="res://Õnibus.glb" id="17_rsu0v"]
+[ext_resource type="Script" uid="uid://b3b1nvpv8eymp" path="res://seta.gd" id="18_tcgvo"]
+[ext_resource type="PackedScene" uid="uid://drbkq1qmh5c22" path="res://SetaLado.glb" id="19_ikt4t"]
+[ext_resource type="Shader" uid="uid://g53we0g41lwa" path="res://dither.gdshader" id="20_ieh0d"]
+[ext_resource type="Script" uid="uid://d01kmxtbinnms" path="res://barrier4.gd" id="21_lp7kb"]
+[ext_resource type="Texture2D" uid="uid://cud12urh70c0j" path="res://Moon.png" id="22_xlhdb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b7eu1"]
 size = Vector3(3, 3, 2)
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_xdyah"]
-panorama = ExtResource("16_ui4cq")
+panorama = ExtResource("14_s8ifo")
 
 [sub_resource type="Sky" id="Sky_00pjk"]
 sky_material = SubResource("PanoramaSkyMaterial_xdyah")
@@ -212,7 +213,7 @@ _data = {
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xl13i"]
-shader = ExtResource("19_iw7tv")
+shader = ExtResource("20_ieh0d")
 shader_parameter/pixel = 1.0
 shader_parameter/brightness_boost = 1.3
 shader_parameter/shadow_softness = 5.0
@@ -225,65 +226,71 @@ size = Vector3(80, 7.84, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_rvt2e"]
 size = Vector3(80, 7.84, 1.5)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ed0p"]
+transparency = 1
+albedo_texture = ExtResource("22_xlhdb")
+emission_enabled = true
+emission_texture = ExtResource("22_xlhdb")
+
 [node name="rua" type="Node3D" unique_id=1976608128]
 
-[node name="Player" parent="." unique_id=621330810 instance=ExtResource("1_ui4cq")]
+[node name="Player" parent="." unique_id=621330810 instance=ExtResource("1_jg8ib")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1812071559]
-stream = ExtResource("2_xl13i")
+stream = ExtResource("2_xlhdb")
 autoplay = true
 
-[node name="Árvore" parent="." unique_id=1392830244 instance=ExtResource("5_xl13i")]
+[node name="Árvore" parent="." unique_id=1392830244 instance=ExtResource("3_5ed0p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7108936, -0.7160511, 57.903645)
 
-[node name="Árvore2" parent="." unique_id=160528888 instance=ExtResource("5_xl13i")]
+[node name="Árvore2" parent="." unique_id=160528888 instance=ExtResource("3_5ed0p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.990364, -0.7160511, 101.4984)
 
-[node name="Árvore3" parent="." unique_id=467126969 instance=ExtResource("5_xl13i")]
+[node name="Árvore3" parent="." unique_id=467126969 instance=ExtResource("3_5ed0p")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.319216, -0.7160511, -18.58059)
 
-[node name="Árvore4" parent="." unique_id=1100434926 instance=ExtResource("5_xl13i")]
+[node name="Árvore4" parent="." unique_id=1100434926 instance=ExtResource("3_5ed0p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.904667, -0.7160511, 31.921776)
 
-[node name="Árvore5" parent="." unique_id=768170701 instance=ExtResource("5_xl13i")]
+[node name="Árvore5" parent="." unique_id=768170701 instance=ExtResource("3_5ed0p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.384255, -0.716, 117.8123)
 
-[node name="Rua(AS)" parent="." unique_id=1277502179 instance=ExtResource("6_rvt2e")]
+[node name="Rua(AS)" parent="." unique_id=1277502179 instance=ExtResource("4_43etp")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -21.176836, -1.09, 56.11856)
 
-[node name="Prédios" parent="." unique_id=965448203 instance=ExtResource("7_yww2o")]
+[node name="Prédios" parent="." unique_id=965448203 instance=ExtResource("5_vf7js")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.076088, -0.76517963, 45.763786)
 
 [node name="Area3D" type="Area3D" parent="Prédios" unique_id=1936353676]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.632973, 1.3995277, -5.870679)
-script = ExtResource("5_42sii")
-target_scene_path = "res://ApartamentoNoite.tscn"
-interaction_sound = ExtResource("6_ui4cq")
+script = ExtResource("6_bt5ox")
+target_scene_path = "res://ApartamentoNoite3.tscn"
+interaction_sound = ExtResource("7_pygl7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Prédios/Area3D" unique_id=1407905564]
 shape = SubResource("BoxShape3D_b7eu1")
 
 [node name="InteractionSound" type="AudioStreamPlayer3D" parent="Prédios/Area3D" unique_id=1370160447]
 
-[node name="Prédios2" parent="." unique_id=1019934953 instance=ExtResource("8_ce2bt")]
+[node name="Prédios2" parent="." unique_id=1019934953 instance=ExtResource("8_diay3")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -62.095634, -0.74586296, 44.868633)
 
-[node name="Prédios3" parent="." unique_id=1314807129 instance=ExtResource("9_8rvjc")]
+[node name="Prédios3" parent="." unique_id=1314807129 instance=ExtResource("9_4kxbj")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.762337, -0.723073, 215.46173)
 
-[node name="Prédios4" parent="." unique_id=1865034748 instance=ExtResource("10_n6rfl")]
+[node name="Prédios4" parent="." unique_id=1865034748 instance=ExtResource("10_483uq")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.999641, -1.00776, -104.75381)
 
-[node name="Placa" parent="." unique_id=595736324 instance=ExtResource("13_1ahnm")]
+[node name="Placa" parent="." unique_id=595736324 instance=ExtResource("11_2vueo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6672106, 0.88510907, -4.5386276)
 
-[node name="Fundo" parent="." unique_id=1969763602 instance=ExtResource("15_cxx3x")]
+[node name="Fundo" parent="." unique_id=1969763602 instance=ExtResource("12_um3dt")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 23.582056, 6.431802, 49.912216)
 
-[node name="Fundo2" parent="." unique_id=677170024 instance=ExtResource("16_xfwsx")]
+[node name="Fundo2" parent="." unique_id=677170024 instance=ExtResource("13_08gcx")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -70.07067, 7.8657074, 48.07638)
 
-[node name="Árvore6" parent="." unique_id=1121851960 instance=ExtResource("5_xl13i")]
+[node name="Árvore6" parent="." unique_id=1121851960 instance=ExtResource("3_5ed0p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.03585, -0.716, 159.77765)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1687773204]
@@ -295,16 +302,16 @@ light_color = Color(0.5819238, 0.62724096, 0.7880468, 1)
 light_energy = 0.4
 shadow_enabled = true
 
-[node name="Postes(Noite)" parent="." unique_id=995176037 instance=ExtResource("16_xdyah")]
+[node name="Postes(Noite)" parent="." unique_id=995176037 instance=ExtResource("15_rjuab")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.409, 2.751, -59.541)
 
-[node name="Postes(Noite)2" parent="." unique_id=593039757 instance=ExtResource("16_xdyah")]
+[node name="Postes(Noite)2" parent="." unique_id=593039757 instance=ExtResource("15_rjuab")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -41.167, 2.751, 161.06)
 
-[node name="Postes(Noite)3" parent="." unique_id=426858633 instance=ExtResource("16_xdyah")]
+[node name="Postes(Noite)3" parent="." unique_id=426858633 instance=ExtResource("15_rjuab")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.944, 2.751, 203.113)
 
-[node name="Postes(Noite)4" parent="." unique_id=1101454461 instance=ExtResource("16_xdyah")]
+[node name="Postes(Noite)4" parent="." unique_id=1101454461 instance=ExtResource("15_rjuab")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -125.232, 2.751, -94.111)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1615624482]
@@ -455,9 +462,9 @@ curve = SubResource("Curve3D_ui4cq")
 transform = Transform3D(0.17128268, -0.03637197, -0.98454434, 0, 0.9993136, -0.036917515, 0.98521084, 0.006323406, 0.1711668, -0.37196207, 0, 4.917775)
 rotation_mode = 4
 loop = false
-script = ExtResource("13_b7eu1")
+script = ExtResource("16_hk4ug")
 
-[node name="Ônibus" parent="BusPath/PathFollow3D" unique_id=667804955 instance=ExtResource("14_42sii")]
+[node name="Ônibus" parent="BusPath/PathFollow3D" unique_id=667804955 instance=ExtResource("17_rsu0v")]
 transform = Transform3D(2.3081899e-05, 0.0034919037, 0.9999939, -0.024252007, 0.9996998, -0.0034903171, -0.99970585, -0.024251774, 0.000107735395, 0, 0.090044826, -0.0016884804)
 
 [node name="Wheel1" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 2143970462) index="2" unique_id=1645415341]
@@ -501,10 +508,10 @@ transform = Transform3D(-4.4703484e-08, 0, -1.000006, 0, 0.9999635, 0, 1.000006,
 light_energy = 7.0
 
 [node name="ObjectiveArrow" type="Node3D" parent="." unique_id=1481134381 node_paths=PackedStringArray("objectives")]
-script = ExtResource("17_ygype")
+script = ExtResource("18_tcgvo")
 objectives = [NodePath("../Prédios/Area3D")]
 
-[node name="SetaLado" parent="ObjectiveArrow" unique_id=1133751353 instance=ExtResource("18_iw7tv")]
+[node name="SetaLado" parent="ObjectiveArrow" unique_id=1133751353 instance=ExtResource("19_ikt4t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.284691, 0, 0)
 
 [node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2056864381]
@@ -532,7 +539,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0679383, 0, 0)
 shape = SubResource("BoxShape3D_xl13i")
 
 [node name="Area3D" type="Area3D" parent="Barreira" unique_id=993675646]
-script = ExtResource("21_rvt2e")
+script = ExtResource("21_lp7kb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Barreira/Area3D" unique_id=507891721]
 shape = SubResource("BoxShape3D_rvt2e")
@@ -545,10 +552,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0679383, 0, 0)
 shape = SubResource("BoxShape3D_xl13i")
 
 [node name="Area3D" type="Area3D" parent="Barreira2" unique_id=1471056683]
-script = ExtResource("21_rvt2e")
+script = ExtResource("21_lp7kb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Barreira2/Area3D" unique_id=648541799]
 shape = SubResource("BoxShape3D_rvt2e")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1327648511]
+transform = Transform3D(-4.371139e-08, 0.4051416, 0.91425395, 0, 0.91425395, -0.4051416, -1, -1.77093e-08, -3.996331e-08, -109.89084, 138.1093, 142.88248)
+material_override = SubResource("StandardMaterial3D_5ed0p")
+pixel_size = 0.04
+billboard = 1
+texture = ExtResource("22_xlhdb")
 
 [connection signal="body_entered" from="Prédios/Area3D" to="Prédios/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Barreira/Area3D" to="Barreira/Area3D" method="_on_body_entered"]
