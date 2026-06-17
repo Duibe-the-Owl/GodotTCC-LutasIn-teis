@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dgsrg8feb8ay"]
 
-[ext_resource type="Script" uid="uid://gwviqqyh2lk" path="res://monitor_signal.gd" id="1_4xm8f"]
+[ext_resource type="Script" uid="uid://bsrq6nlv4mayc" path="res://vid_work.gd" id="1_aacnq"]
 [ext_resource type="PackedScene" uid="uid://bkq2mggeyhku4" path="res://Chão(Escritório).glb" id="2_jwlwx"]
 [ext_resource type="PackedScene" uid="uid://cyf6eys1eroqb" path="res://ParedeDireita(Escritório).glb" id="3_3fqt1"]
 [ext_resource type="PackedScene" uid="uid://de8u5bsjqffyn" path="res://ParedeEsquerda(Escritório).glb" id="4_fmsjv"]
@@ -21,7 +21,6 @@
 [ext_resource type="PackedScene" uid="uid://du2opnmjoo0qv" path="res://Teto(Escritório).glb" id="19_rem8r"]
 [ext_resource type="PackedScene" uid="uid://b53v86rkbpy6c" path="res://MainCarteira(Escritório).glb" id="20_st1ql"]
 [ext_resource type="Script" uid="uid://bdenqqqsnactq" path="res://monitor_startup.gd" id="21_rdvab"]
-[ext_resource type="Script" uid="uid://or0prym1m402" path="res://write_able.gd" id="22_da8on"]
 [ext_resource type="PackedScene" uid="uid://cqeknaioj76xx" path="res://Relógio.glb" id="23_fj86e"]
 [ext_resource type="PackedScene" uid="uid://dp0vv72qq2b3y" path="res://Lixo(Escritório).glb" id="24_uepqg"]
 [ext_resource type="VoxelGIData" uid="uid://dweeeokuo1wln" path="res://escritório.VoxelGI_data.res" id="25_roav3"]
@@ -35,12 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://bwar3gsp87os2" path="res://colega_3.tscn" id="33_8rfis"]
 [ext_resource type="PackedScene" uid="uid://wd2pyspv4bx8" path="res://colega_4.tscn" id="34_wabjf"]
 [ext_resource type="PackedScene" uid="uid://dgvnt3xfelxdq" path="res://colega_5.tscn" id="35_2g0jr"]
-[ext_resource type="Script" uid="uid://dv6m137b7u6vl" path="res://write_interaction.gd" id="36_7omse"]
-[ext_resource type="Texture2D" uid="uid://cf2mvlducll0a" path="res://Paper1.png" id="37_l6vyh"]
-[ext_resource type="Texture2D" uid="uid://bgwe7wcqwnne" path="res://Paper2.png" id="38_oj8np"]
-[ext_resource type="Texture2D" uid="uid://b75ly1bkqmfga" path="res://Paper3.png" id="39_qow1v"]
-[ext_resource type="Texture2D" uid="uid://uefubqoalo1l" path="res://Paper4.png" id="40_s08uo"]
-[ext_resource type="Texture2D" uid="uid://bxcdfps7c7ib7" path="res://DesktopBackground.png" id="41_n1360"]
+[ext_resource type="VideoStream" uid="uid://dubq2cg034sm2" path="res://Work2.ogv" id="36_bp265"]
 [ext_resource type="Shader" uid="uid://g53we0g41lwa" path="res://dither.gdshader" id="42_3m0vy"]
 [ext_resource type="PackedScene" uid="uid://dtxcdtn6avjrk" path="res://Fundo2.glb" id="45_vv8j4"]
 [ext_resource type="PackedScene" uid="uid://df505n32x2api" path="res://Buildings6.glb" id="46_27ugh"]
@@ -64,28 +58,25 @@ volumetric_fog_density = 0.03
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8v41d"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_wi2vf"]
-size = Vector3(0.15, 0.425, 0.865)
+[sub_resource type="ViewportTexture" id="ViewportTexture_iull5"]
+viewport_path = NodePath("DeskUnit/Screen/SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_37m51"]
-viewport_path = NodePath("../ComputerCanvas/SubViewportContainer/SubViewport")
+[sub_resource type="ViewportTexture" id="ViewportTexture_aacnq"]
+viewport_path = NodePath("DeskUnit/Screen/SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_f4umm"]
-viewport_path = NodePath("../ComputerCanvas/SubViewportContainer/SubViewport")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4xm8f"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bp265"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_37m51")
+albedo_texture = SubResource("ViewportTexture_iull5")
 emission_enabled = true
-emission_energy_multiplier = 0.5
-emission_texture = SubResource("ViewportTexture_f4umm")
+emission_energy_multiplier = 0.3
+emission_texture = SubResource("ViewportTexture_aacnq")
 
 [sub_resource type="Animation" id="Animation_5lkqy"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("MainCarteira/DeskUnit/CutsceneCamera:position")
+tracks/0/path = NodePath("MainCarteira/DeskUnit/SitCamera:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -97,7 +88,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("MainCarteira/DeskUnit/CutsceneCamera:rotation")
+tracks/1/path = NodePath("MainCarteira/DeskUnit/SitCamera:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -107,13 +98,86 @@ tracks/1/keys = {
 "values": [Vector3(0, 0.5846853, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_aacnq"]
+resource_name = "sit_video"
+length = 571.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainCarteira/DeskUnit/SitCamera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.01, 2.02),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(1.0576382, 0.55, 1.489955), Vector3(0.16376114, 0.40382975, -0.060692787), Vector3(0.17572212, 0.4239838, -0.058886528)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainCarteira/DeskUnit/SitCamera:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.01, 21.465813, 24.033333, 29.105812, 29.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.5846853, 0), Vector3(0, 1.5707964, 0), Vector3(0, 1.5707964, 0), Vector3(-0.89709926, 1.5707964, 0), Vector3(-0.8953539, 1.5707964, 0), Vector3(0, 1.5707964, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MainCarteira/DeskUnit/SitCamera")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"make_current"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"set_physics_process"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2.4, 21.666666),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"_on_sit_animation_finished_trigger"
+}, {
+"args": [],
+"method": &"trigger_custom_dialogue"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_wigrh"]
 resource_name = "start_computer"
 length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("MainCarteira/DeskUnit/CutsceneCamera:position")
+tracks/0/path = NodePath("MainCarteira/DeskUnit/SitCamera:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -125,7 +189,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("MainCarteira/DeskUnit/CutsceneCamera:rotation")
+tracks/1/path = NodePath("MainCarteira/DeskUnit/SitCamera:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -137,7 +201,7 @@ tracks/1/keys = {
 tracks/2/type = "method"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("MainCarteira/DeskUnit/CutsceneCamera")
+tracks/2/path = NodePath("MainCarteira/DeskUnit/SitCamera")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -166,6 +230,7 @@ tracks/3/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5lkqy"]
 _data = {
 &"RESET": SubResource("Animation_5lkqy"),
+&"sit_video": SubResource("Animation_aacnq"),
 &"start_computer": SubResource("Animation_wigrh")
 }
 
@@ -184,7 +249,7 @@ shader_parameter/dither_movement_weight = 15.0
 size = Vector3(1.925, 1, 2.645)
 
 [node name="escritórioDia3" type="Node3D" unique_id=362160571]
-script = ExtResource("1_4xm8f")
+script = ExtResource("1_aacnq")
 
 [node name="ChãoEscritório" parent="." unique_id=1897772582 instance=ExtResource("2_jwlwx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.730221, -0.9840014, 9.856885)
@@ -296,35 +361,38 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.475147, -0.055103928, 13.9
 [node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="3" unique_id=1757339918]
 layers = 2
 
-[node name="Area3D" type="Area3D" parent="MainCarteira/DeskUnit/Monitor" index="0" unique_id=1872963870]
+[node name="MonitorInteractionArea" type="Area3D" parent="MainCarteira/DeskUnit/Monitor" index="0" unique_id=1872963870]
 collision_layer = 2
 collision_mask = 2
 input_ray_pickable = false
 script = ExtResource("21_rdvab")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MainCarteira/DeskUnit/Monitor/Area3D" unique_id=409013197]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MainCarteira/DeskUnit/Monitor/MonitorInteractionArea" unique_id=409013197]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22179025, 0)
 shape = SubResource("BoxShape3D_8v41d")
 
-[node name="ScreenInteractionArea" type="Area3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="7" unique_id=985870322]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24362564, 0.03672272, -0.05687332)
-collision_layer = 2
-collision_mask = 2
-script = ExtResource("22_da8on")
+[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="7" unique_id=44197733]
+surface_material_override/0 = SubResource("StandardMaterial3D_bp265")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MainCarteira/DeskUnit/ScreenInteractionArea" unique_id=1055670022]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13251686, 0.41383284, 0)
-shape = SubResource("BoxShape3D_wi2vf")
+[node name="SubViewport" type="SubViewport" parent="MainCarteira/DeskUnit/Screen" index="0" unique_id=1884540969]
+size = Vector2i(1280, 700)
+render_target_update_mode = 4
 
-[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="8" unique_id=44197733]
-surface_material_override/0 = SubResource("StandardMaterial3D_4xm8f")
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="MainCarteira/DeskUnit/Screen/SubViewport" unique_id=2010966268]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("36_bp265")
+expand = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="9" unique_id=1558306546]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="8" unique_id=1558306546]
 root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_5lkqy")
 
-[node name="CutsceneCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="10" unique_id=188736818]
-transform = Transform3D(0.8338856, 0, 0.55193686, 0, 1, 0, -0.55193686, 0, 0.8338856, 1.0576382, 0.55, 1.489955)
+[node name="SitCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="9" unique_id=188736818]
+transform = Transform3D(0.8338858, 0, 0.551937, 0, 1, 0, -0.551937, 0, 0.8338858, 1.0576382, 0.55, 1.489955)
 fov = 72.6
 
 [node name="Relógio" parent="." unique_id=875575135 instance=ExtResource("23_fj86e")]
@@ -442,105 +510,6 @@ transform = Transform3D(0.013787709, 0, -0.999905, 0, 1, 0, 0.999905, 0, 0.01378
 [node name="Colega5" parent="." unique_id=17545379 instance=ExtResource("35_2g0jr")]
 transform = Transform3D(0.26947457, 0, 0.9630076, 0, 1, 0, -0.9630076, 0, 0.26947457, 12.8293085, 0.19748956, 18.230532)
 
-[node name="ComputerCanvas" type="CanvasLayer" parent="." unique_id=128018872]
-layer = 3
-visible = false
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="ComputerCanvas" unique_id=13255547]
-custom_minimum_size = Vector2(1280, 700)
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -640.0
-offset_top = -350.0
-offset_right = 640.0
-offset_bottom = 350.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="SubViewport" type="SubViewport" parent="ComputerCanvas/SubViewportContainer" unique_id=1884540969]
-handle_input_locally = false
-physics_object_picking = true
-size = Vector2i(1280, 700)
-render_target_update_mode = 0
-
-[node name="ScribbleCanvas" type="Control" parent="ComputerCanvas/SubViewportContainer/SubViewport" unique_id=1831979651]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("36_7omse")
-document_textures = Array[Texture2D]([ExtResource("37_l6vyh"), ExtResource("38_oj8np"), ExtResource("39_qow1v"), ExtResource("40_s08uo")])
-
-[node name="DesktopBackground" type="TextureRect" parent="ComputerCanvas/SubViewportContainer/SubViewport/ScribbleCanvas" unique_id=143309405]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -640.0
-offset_top = -350.0
-offset_right = 640.0
-offset_bottom = 350.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-texture = ExtResource("41_n1360")
-
-[node name="PaperContainer" type="Control" parent="ComputerCanvas/SubViewportContainer/SubViewport/ScribbleCanvas" unique_id=585737815]
-custom_minimum_size = Vector2(300, 427)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = -213.5
-offset_right = 150.0
-offset_bottom = 213.5
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="PaperBackground" type="TextureRect" parent="ComputerCanvas/SubViewportContainer/SubViewport/ScribbleCanvas/PaperContainer" unique_id=141448305]
-custom_minimum_size = Vector2(300, 427)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = -213.5
-offset_right = 150.0
-offset_bottom = 213.5
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="ActionButton" type="Button" parent="ComputerCanvas/SubViewportContainer/SubViewport/ScribbleCanvas" unique_id=639573111]
-layout_direction = 1
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 133.28998
-offset_top = -95.235
-offset_right = 253.28998
-offset_bottom = -45.235
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 24
-text = "Próximo"
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=634895044]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1039518520]
@@ -574,6 +543,7 @@ shape = SubResource("BoxShape3D_33je2")
 [node name="Colega de Trabalho2" parent="." unique_id=2070474460 instance=ExtResource("28_lrxko")]
 transform = Transform3D(-4.371139e-08, -0.09063257, 0.99588436, 0, 0.99588436, 0.09063257, -1, 3.9616754e-09, -4.3531486e-08, 7.8482094, 0.308, 4.125241)
 
+[connection signal="player_sat_down" from="MainCarteira/DeskUnit/Monitor/MonitorInteractionArea" to="." method="_on_monitor_interaction_area_player_sat_down"]
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Area3D4" to="Area3D4" method="_on_body_entered"]
 
