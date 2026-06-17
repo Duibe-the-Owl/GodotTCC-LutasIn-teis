@@ -100,7 +100,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_aacnq"]
 resource_name = "sit_video"
-length = 571.0
+length = 67.14
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -108,10 +108,10 @@ tracks/0/path = NodePath("MainCarteira/DeskUnit/SitCamera:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.01, 2.02),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 2.01, 2.02, 57.002266, 58.012264),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(1.0576382, 0.55, 1.489955), Vector3(0.16376114, 0.40382975, -0.060692787), Vector3(0.17572212, 0.4239838, -0.058886528)]
+"values": [Vector3(1.0576382, 0.55, 1.489955), Vector3(0.16376114, 0.40382975, -0.060692787), Vector3(0.17572212, 0.4239838, -0.058886528), Vector3(0.17572212, 0.4239838, -0.058886528), Vector3(0.17572212, 0.4239838, 1.3129673)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -120,10 +120,10 @@ tracks/1/path = NodePath("MainCarteira/DeskUnit/SitCamera:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 2.01, 21.465813, 24.033333, 29.105812, 29.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 2.01, 21.465813, 24.033333, 29.105812, 29.5, 57.002266, 58.012264),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0.5846853, 0), Vector3(0, 1.5707964, 0), Vector3(0, 1.5707964, 0), Vector3(-0.89709926, 1.5707964, 0), Vector3(-0.8953539, 1.5707964, 0), Vector3(0, 1.5707964, 0)]
+"values": [Vector3(0, 0.5846853, 0), Vector3(0, 1.5707964, 0), Vector3(0, 1.5707964, 0), Vector3(-0.89709926, 1.5707964, 0), Vector3(-0.8953539, 1.5707964, 0), Vector3(0, 1.5707964, 0), Vector3(0, 1.5707964, 0), Vector3(0, 1.9244524, 0)]
 }
 tracks/2/type = "method"
 tracks/2/imported = false
@@ -146,10 +146,13 @@ tracks/3/path = NodePath("Player")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 67.1),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [false],
+"method": &"set_physics_process"
+}, {
+"args": [true],
 "method": &"set_physics_process"
 }]
 }
@@ -160,14 +163,20 @@ tracks/4/path = NodePath(".")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(2.4, 21.666666),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(2.4, 21.666666, 40.033333, 58.033333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "values": [{
 "args": [],
 "method": &"_on_sit_animation_finished_trigger"
 }, {
-"args": [],
-"method": &"trigger_custom_dialogue"
+"args": ["ComputerTalk"],
+"method": &"trigger_timeline"
+}, {
+"args": ["ComputerTalk2"],
+"method": &"trigger_timeline"
+}, {
+"args": ["ComputerTalk3"],
+"method": &"trigger_timeline"
 }]
 }
 
@@ -296,7 +305,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.249003, -0.055074453, 4.13
 [node name="Carteira14" parent="." unique_id=212075373 instance=ExtResource("10_wheqm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.474821, -0.055074453, 10.789474)
 
-[node name="Chair" parent="Carteira14/DeskUnit" parent_id_path=PackedInt32Array(212075373, 1843714406) index="0" unique_id=2033621537]
+[node name="Chair" parent="Carteira14/DeskUnit" parent_id_path=PackedInt32Array(212075373, 1591636479) index="0" unique_id=1021926532]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8137474, -0.29560387, 0.04257965)
 
 [node name="Carteira15" parent="." unique_id=1340378624 instance=ExtResource("10_wheqm")]
@@ -358,7 +367,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.1
 [node name="MainCarteira" parent="." unique_id=1811457096 instance=ExtResource("20_st1ql")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.475147, -0.055103928, 13.9879265)
 
-[node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="3" unique_id=1757339918]
+[node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 300741575) index="3" unique_id=1233270428]
 layers = 2
 
 [node name="MonitorInteractionArea" type="Area3D" parent="MainCarteira/DeskUnit/Monitor" index="0" unique_id=1872963870]
@@ -371,7 +380,7 @@ script = ExtResource("21_rdvab")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22179025, 0)
 shape = SubResource("BoxShape3D_8v41d")
 
-[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="7" unique_id=44197733]
+[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 300741575) index="7" unique_id=137443092]
 surface_material_override/0 = SubResource("StandardMaterial3D_bp265")
 
 [node name="SubViewport" type="SubViewport" parent="MainCarteira/DeskUnit/Screen" index="0" unique_id=1884540969]
@@ -387,11 +396,11 @@ grow_vertical = 2
 stream = ExtResource("36_bp265")
 expand = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="8" unique_id=1558306546]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 300741575) index="8" unique_id=1558306546]
 root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_5lkqy")
 
-[node name="SitCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="9" unique_id=188736818]
+[node name="SitCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 300741575) index="9" unique_id=188736818]
 transform = Transform3D(0.8338858, 0, 0.551937, 0, 1, 0, -0.551937, 0, 0.8338858, 1.0576382, 0.55, 1.489955)
 fov = 72.6
 
@@ -492,10 +501,10 @@ objectives = [NodePath("../MainCarteira/DeskUnit/Monitor")]
 [node name="SetaLado" parent="ObjectiveArrow" unique_id=2055762299 instance=ExtResource("31_ah11e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.48)
 
-[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2064431747]
+[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2056864381]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
-[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=343420702]
+[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=1002935279]
 autoplay = &"ArrowSide_Spin"
 
 [node name="Colega 2" parent="." unique_id=1609022559 instance=ExtResource("32_j0j0g")]
