@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://3om68rtks47g"
-path="res://.godot/imported/StreetAmbience.wav-3aa390e9e864a3e51e060af8322a899a.sample"
+uid="uid://dew8t56lf0nmi"
+path="res://.godot/imported/DayAmbience.wav-6692009f298534d2fc298527183ce0e5.sample"
 
 [deps]
 
-source_file="res://StreetAmbience.wav"
-dest_files=["res://.godot/imported/StreetAmbience.wav-3aa390e9e864a3e51e060af8322a899a.sample"]
+source_file="res://DayAmbience.wav"
+dest_files=["res://.godot/imported/DayAmbience.wav-6692009f298534d2fc298527183ce0e5.sample"]
 
 [params]
 

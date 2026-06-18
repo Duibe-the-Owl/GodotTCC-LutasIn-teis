@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://d3u82oi3rkevi" path="res://player.tscn" id="1_x8ln2"]
 [ext_resource type="Texture2D" uid="uid://dg3s1npxvmk37" path="res://Lutas-Inúteis-Skybox(2).png" id="2_ncjin"]
-[ext_resource type="AudioStream" uid="uid://3om68rtks47g" path="res://StreetAmbience.wav" id="3_ngnt3"]
+[ext_resource type="AudioStream" uid="uid://dew8t56lf0nmi" path="res://DayAmbience.wav" id="3_x8ln2"]
 [ext_resource type="PackedScene" uid="uid://dq8mfkjpg8f7u" path="res://Postes(AS).glb" id="4_bvvlx"]
 [ext_resource type="PackedScene" uid="uid://c8fr51oevchw5" path="res://Árvore.glb" id="5_vp6nw"]
 [ext_resource type="PackedScene" uid="uid://bohx7a8ayqdfw" path="res://Rua(AS).glb" id="6_axf0b"]
@@ -76,7 +76,7 @@ shadow_enabled = true
 environment = SubResource("Environment_wxt12")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1812071559]
-stream = ExtResource("3_ngnt3")
+stream = ExtResource("3_x8ln2")
 autoplay = true
 
 [node name="Postes(CenaAlternativa)" parent="." unique_id=364891206 instance=ExtResource("4_bvvlx")]
@@ -194,10 +194,10 @@ objectives = [NodePath("../Placa")]
 [node name="SetaLado" parent="ObjectiveArrow" unique_id=1133751353 instance=ExtResource("20_80pgc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.77)
 
-[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2056864381]
+[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2064431747]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
-[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=1002935279]
+[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=343420702]
 autoplay = &"ArrowSide_Spin"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1584944733]

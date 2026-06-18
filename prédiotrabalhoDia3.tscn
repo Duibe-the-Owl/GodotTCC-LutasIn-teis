@@ -34,6 +34,7 @@
 [ext_resource type="Script" uid="uid://dusnfxy5uspr2" path="res://barrier3.gd" id="32_irmvc"]
 [ext_resource type="PackedScene" uid="uid://c0h2vwnl7cgfs" path="res://Estátua.glb" id="33_ncd8s"]
 [ext_resource type="Script" uid="uid://cftn86kqv1271" path="res://mesinha.gd" id="34_7ygo2"]
+[ext_resource type="AudioStream" uid="uid://dew8t56lf0nmi" path="res://DayAmbience.wav" id="35_cnr8i"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1pik2"]
 
@@ -411,12 +412,12 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 138.
 transform = Transform3D(0.36269826, 0, -0.93190664, 0, 1, 0, 0.93190664, 0, 0.36269826, 8.512784, 0.14832747, 32.875446)
 
 [node name="Skeleton3D" parent="Porteiro/Armature" parent_id_path=PackedInt32Array(1188977315, 402796763) index="0" unique_id=656996876]
-bones/3/rotation = Quaternion(0.1133967, 0.00016728247, 0.0040514474, 0.9935416)
-bones/6/rotation = Quaternion(0.22200982, 0.012065325, 0.07257997, 0.9722645)
-bones/23/rotation = Quaternion(0.078938186, -0.22889234, 0.034229748, 0.9696419)
-bones/26/rotation = Quaternion(-0.16011952, 0.03219823, 0.5206527, 0.8380012)
-bones/27/rotation = Quaternion(0.16279322, 0.16104975, 0.114639655, 0.96665365)
-bones/28/rotation = Quaternion(-0.057909153, 0.16639835, 0.26109824, 0.9490974)
+bones/3/rotation = Quaternion(0.10513731, 0.00020094034, 0.004049915, 0.99444944)
+bones/6/rotation = Quaternion(0.23680568, -0.008220342, 0.042670116, 0.97058475)
+bones/23/rotation = Quaternion(0.079040155, -0.22906703, 0.03390402, 0.96960384)
+bones/26/rotation = Quaternion(-0.13652539, 0.05202133, 0.52445275, 0.8388111)
+bones/27/rotation = Quaternion(0.22239229, 0.15896201, 0.14662914, 0.95066965)
+bones/28/rotation = Quaternion(-0.057909153, 0.16639844, 0.2610983, 0.94909734)
 
 [node name="Porteiro" parent="Porteiro/Armature/Skeleton3D" index="0" unique_id=345336151]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013343811, 0, 0.03428936)
@@ -508,6 +509,10 @@ script = ExtResource("34_7ygo2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2" unique_id=1751500036]
 shape = SubResource("BoxShape3D_cnr8i")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1579437853]
+stream = ExtResource("35_cnr8i")
+autoplay = true
 
 [connection signal="body_entered" from="Elevador/Area3D" to="Elevador/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

@@ -53,7 +53,7 @@
 [ext_resource type="Script" uid="uid://bin5d8o30lyqa" path="res://TransitionPoint.gd" id="51_a15eo"]
 [ext_resource type="AudioStream" uid="uid://duj8tt3c3r6i6" path="res://Elevator_SE.wav" id="52_yh2n1"]
 [ext_resource type="PackedScene" uid="uid://uween7amr14p" path="res://Teto(Hall).glb" id="53_jeyyr"]
-[ext_resource type="AudioStream" uid="uid://3om68rtks47g" path="res://StreetAmbience.wav" id="54_3dh6f"]
+[ext_resource type="AudioStream" uid="uid://dew8t56lf0nmi" path="res://DayAmbience.wav" id="54_0x6fd"]
 [ext_resource type="VoxelGIData" uid="uid://vtkwkd4g5g23" path="res://Apartamento.VoxelGI_data.res" id="55_7rqab"]
 [ext_resource type="Shader" uid="uid://g53we0g41lwa" path="res://dither.gdshader" id="56_q4llh"]
 
@@ -380,7 +380,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.177, 2.289, 7.536)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer3D" parent="." unique_id=1915217441]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.79717, 0, 0)
-stream = ExtResource("54_3dh6f")
+stream = ExtResource("54_0x6fd")
 volume_db = -13.661
 autoplay = true
 

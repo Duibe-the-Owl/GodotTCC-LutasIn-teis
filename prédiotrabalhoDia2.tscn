@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://dtxcdtn6avjrk" path="res://Fundo2.glb" id="30_ccxyy"]
 [ext_resource type="VoxelGIData" uid="uid://42ebvvkixie2" path="res://prédiotrabalho.VoxelGI_data.res" id="31_2nh11"]
 [ext_resource type="Script" uid="uid://dusnfxy5uspr2" path="res://barrier3.gd" id="32_ma121"]
+[ext_resource type="AudioStream" uid="uid://dew8t56lf0nmi" path="res://DayAmbience.wav" id="33_4g5o2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1pik2"]
 
@@ -415,12 +416,12 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 138.
 transform = Transform3D(0.36269826, 0, -0.93190664, 0, 1, 0, 0.93190664, 0, 0.36269826, 8.512784, 0.14832747, 32.875446)
 
 [node name="Skeleton3D" parent="Porteiro/Armature" parent_id_path=PackedInt32Array(1188977315, 402796763) index="0" unique_id=656996876]
-bones/3/rotation = Quaternion(0.106458485, 0.00019555943, 0.0040501785, 0.99430895)
-bones/6/rotation = Quaternion(0.23332669, -0.0036469647, 0.04815282, 0.9711986)
-bones/23/rotation = Quaternion(0.07898412, -0.22897103, 0.03408302, 0.96962476)
-bones/26/rotation = Quaternion(-0.16008578, 0.03222669, 0.52065855, 0.83800286)
-bones/27/rotation = Quaternion(0.16312239, 0.1610414, 0.114816695, 0.96657854)
-bones/28/rotation = Quaternion(-0.057909153, 0.1663984, 0.26109827, 0.9490974)
+bones/3/rotation = Quaternion(0.107853204, 0.00018987751, 0.004050449, 0.99415857)
+bones/6/rotation = Quaternion(0.23102792, -0.00043001235, 0.053158287, 0.9714938)
+bones/23/rotation = Quaternion(0.07897446, -0.22895445, 0.034113884, 0.9696284)
+bones/26/rotation = Quaternion(-0.1600929, 0.032220703, 0.5206572, 0.8380026)
+bones/27/rotation = Quaternion(0.16305314, 0.16104315, 0.11477945, 0.96659434)
+bones/28/rotation = Quaternion(-0.057909153, 0.16639838, 0.26109824, 0.9490974)
 
 [node name="Porteiro" parent="Porteiro/Armature/Skeleton3D" index="0" unique_id=345336151]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013343811, 0, 0.03428936)
@@ -502,6 +503,10 @@ script = ExtResource("32_ma121")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Barreira4/Area3D" unique_id=1370153930]
 shape = SubResource("BoxShape3D_rrwjv")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=70289099]
+stream = ExtResource("33_4g5o2")
+autoplay = true
 
 [connection signal="body_entered" from="Elevador/Area3D" to="Elevador/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

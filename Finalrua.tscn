@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://d3u82oi3rkevi" path="res://player.tscn" id="1_qivp7"]
 [ext_resource type="Texture2D" uid="uid://bju2s7n1bn7bf" path="res://Lutas-Inúteis-Skybox(Final).png" id="2_qivp7"]
-[ext_resource type="AudioStream" uid="uid://3om68rtks47g" path="res://StreetAmbience.wav" id="3_dv61t"]
+[ext_resource type="AudioStream" uid="uid://dew8t56lf0nmi" path="res://DayAmbience.wav" id="3_jjjwh"]
 [ext_resource type="PackedScene" uid="uid://dq8mfkjpg8f7u" path="res://Postes(AS).glb" id="4_1sdor"]
 [ext_resource type="PackedScene" uid="uid://c8fr51oevchw5" path="res://Árvore.glb" id="5_fd30y"]
 [ext_resource type="PackedScene" uid="uid://bohx7a8ayqdfw" path="res://Rua(AS).glb" id="6_3yblm"]
@@ -88,7 +88,7 @@ shadow_enabled = true
 environment = SubResource("Environment_wxt12")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1812071559]
-stream = ExtResource("3_dv61t")
+stream = ExtResource("3_jjjwh")
 autoplay = true
 
 [node name="Postes(CenaAlternativa)" parent="." unique_id=364891206 instance=ExtResource("4_1sdor")]

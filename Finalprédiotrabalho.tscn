@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://dtxcdtn6avjrk" path="res://Fundo2.glb" id="30_epljx"]
 [ext_resource type="VoxelGIData" uid="uid://42ebvvkixie2" path="res://prédiotrabalho.VoxelGI_data.res" id="31_tjy56"]
 [ext_resource type="Texture2D" uid="uid://djihbvo1csx1h" path="res://SunTexture.png" id="32_y5inh"]
+[ext_resource type="AudioStream" uid="uid://dew8t56lf0nmi" path="res://DayAmbience.wav" id="33_wx3tb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1pik2"]
 
@@ -409,12 +410,12 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 138.
 transform = Transform3D(0.36269826, 0, -0.93190664, 0, 1, 0, 0.93190664, 0, 0.36269826, 8.512784, 0.14832747, 32.875446)
 
 [node name="Skeleton3D" parent="Porteiro/Armature" parent_id_path=PackedInt32Array(1188977315, 402796763) index="0" unique_id=656996876]
-bones/3/rotation = Quaternion(0.111238815, 0.00017608018, 0.0040510735, 0.99378544)
-bones/6/rotation = Quaternion(0.23314756, -0.00067239464, 0.06819912, 0.97004676)
-bones/23/rotation = Quaternion(0.08071372, -0.23150133, 0.02771411, 0.9690843)
-bones/26/rotation = Quaternion(-0.11812419, 0.04479715, 0.5242566, 0.8421371)
-bones/27/rotation = Quaternion(0.25521767, 0.028284088, 0.01719527, 0.9663169)
-bones/28/rotation = Quaternion(-0.050809216, 0.017888792, 0.082235165, 0.9951562)
+bones/3/rotation = Quaternion(0.11311472, 0.00016843232, 0.004051399, 0.99357367)
+bones/6/rotation = Quaternion(0.22247022, 0.0114321085, 0.071596526, 0.9722399)
+bones/23/rotation = Quaternion(0.07894037, -0.22889604, 0.0342228, 0.96964115)
+bones/26/rotation = Quaternion(-0.16011791, 0.032199588, 0.52065295, 0.8380012)
+bones/27/rotation = Quaternion(0.16280882, 0.16104938, 0.114648044, 0.96665007)
+bones/28/rotation = Quaternion(-0.057909153, 0.16639835, 0.26109824, 0.9490974)
 
 [node name="Porteiro" parent="Porteiro/Armature/Skeleton3D" index="0" unique_id=345336151]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013343811, 0, 0.03428936)
@@ -477,6 +478,10 @@ material_override = SubResource("StandardMaterial3D_wx3tb")
 pixel_size = 0.08
 billboard = 1
 texture = ExtResource("32_y5inh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1780698132]
+stream = ExtResource("33_wx3tb")
+autoplay = true
 
 [connection signal="body_entered" from="Elevador/Area3D" to="Elevador/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
