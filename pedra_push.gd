@@ -7,6 +7,7 @@ signal push_stopped
 @export var snap_point : Marker3D
 @export var boulder_mesh : MeshInstance3D
 @export var rotation_speed : float = 1.0
+@export var push_audio : AudioStreamPlayer3D
 
 var is_being_pushed = false
 
@@ -16,6 +17,9 @@ func interact():
 	
 	# Freeze physics so the boulder doesn't roll over the player while they push
 	boulder_body.freeze = true 
+	
+	if push_audio and not push_audio.playing:
+		push_audio.play()
 	
 	push_started.emit(snap_point)
 
@@ -27,6 +31,20 @@ func _process(delta):
 		
 		if boulder_mesh:
 			boulder_mesh.rotate_object_local(Vector3.RIGHT, rotation_speed * delta)
+			
+	# --- NEW: Dynamic Physics Audio Controller ---
+	if boulder_body and push_audio:
+		# The boulder should make noise if:
+		# 1. The player is actively pushing it OR 
+		# 2. The physics velocity length is greater than a tiny threshold (it's rolling on its own)
+		var is_rolling : bool = is_being_pushed or (boulder_body.linear_velocity.length() > 0.1)
+		
+		if is_rolling:
+			if not push_audio.playing:
+				push_audio.play()
+		else:
+			if push_audio.playing:
+				push_audio.stop()
 			
 func stop_pushing():
 	is_being_pushed = false
