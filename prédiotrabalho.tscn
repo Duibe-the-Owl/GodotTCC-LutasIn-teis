@@ -406,12 +406,12 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 138.
 transform = Transform3D(0.36269826, 0, -0.93190664, 0, 1, 0, 0.93190664, 0, 0.36269826, 8.512784, 0.14832747, 32.875446)
 
 [node name="Skeleton3D" parent="Porteiro/Armature" parent_id_path=PackedInt32Array(1188977315, 402796763) index="0" unique_id=656996876]
-bones/3/rotation = Quaternion(0.111256145, 0.00017600962, 0.0040510767, 0.99378353)
-bones/6/rotation = Quaternion(0.23284425, -0.0011559679, 0.06159366, 0.9705609)
-bones/23/rotation = Quaternion(0.07908242, -0.22913948, 0.033768978, 0.969588)
-bones/26/rotation = Quaternion(0.078219734, 0.22530451, 0.53564197, 0.81006616)
-bones/27/rotation = Quaternion(0.74438787, 0.08047827, 0.4184042, 0.51414776)
-bones/28/rotation = Quaternion(-0.085410096, 0.124113366, 0.005421688, 0.9885706)
+bones/3/rotation = Quaternion(0.11335696, 0.00016744445, 0.00405144, 0.99354607)
+bones/6/rotation = Quaternion(0.23161583, 0.0015256777, 0.07156171, 0.97017056)
+bones/23/rotation = Quaternion(0.08077863, -0.23161343, 0.027508294, 0.9690579)
+bones/26/rotation = Quaternion(-0.118032366, 0.04488071, 0.52427065, 0.84213686)
+bones/27/rotation = Quaternion(0.25522032, 0.028284, 0.017196935, 0.9663162)
+bones/28/rotation = Quaternion(-0.050895143, 0.018025879, 0.082059555, 0.99516386)
 
 [node name="Porteiro" parent="Porteiro/Armature/Skeleton3D" index="0" unique_id=345336151]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013343811, 0, 0.03428936)
@@ -494,7 +494,8 @@ script = ExtResource("32_x6oyn")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Barreira4/Area3D" unique_id=770398838]
 shape = SubResource("BoxShape3D_0nyjk")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1274068174]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1479136302]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.0771103, -32.08446)
 stream = ExtResource("33_eulel")
 autoplay = true
 
