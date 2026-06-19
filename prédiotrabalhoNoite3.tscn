@@ -24,8 +24,6 @@
 [ext_resource type="AudioStream" uid="uid://dd1fdwjpg02ot" path="res://Bus_SE.wav" id="22_5r0sl"]
 [ext_resource type="PackedScene" uid="uid://c06ua5hgmi5jn" path="res://Buildings3.glb" id="23_af3ua"]
 [ext_resource type="PackedScene" uid="uid://t8bneworcuq8" path="res://Buildings4.glb" id="24_coy1f"]
-[ext_resource type="Script" uid="uid://b3b1nvpv8eymp" path="res://seta.gd" id="25_2qmsr"]
-[ext_resource type="PackedScene" uid="uid://drbkq1qmh5c22" path="res://SetaLado.glb" id="26_pwjd0"]
 [ext_resource type="Shader" uid="uid://g53we0g41lwa" path="res://dither.gdshader" id="27_62akp"]
 [ext_resource type="PackedScene" uid="uid://df505n32x2api" path="res://Buildings6.glb" id="28_egbqv"]
 [ext_resource type="PackedScene" uid="uid://b7p70rsvu2xf0" path="res://porteiro.tscn" id="29_56wl0"]
@@ -487,7 +485,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -193
 curve = SubResource("Curve3D_vohkx")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="BusPath" unique_id=883106378]
-transform = Transform3D(0.20079084, 0, -0.9796279, 0, 1.0000483, 0, 0.9796279, 0, 0.20079084, -1.3815956, 0, 1.5192566)
+transform = Transform3D(0.20079084, 0, -0.9796279, 0, 1.0000485, 0, 0.9796279, 0, 0.20079084, -1.3815956, 0, 1.5192566)
 rotation_mode = 4
 loop = false
 script = ExtResource("20_ny8en")
@@ -515,20 +513,6 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 154.
 
 [node name="Prédios4" parent="." unique_id=532214711 instance=ExtResource("24_coy1f")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -230.67293, -0.9323158, -68.15387)
-
-[node name="ObjectiveArrow" type="Node3D" parent="." unique_id=372662125 node_paths=PackedStringArray("objectives")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0019226074, 0)
-script = ExtResource("25_2qmsr")
-objectives = [NodePath("../Placa2")]
-
-[node name="SetaLado" parent="ObjectiveArrow" unique_id=1133751353 instance=ExtResource("26_pwjd0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.7084502)
-
-[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2064431747]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
-
-[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=343420702]
-autoplay = &"ArrowSide_Spin"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1556836814]
 
@@ -603,4 +587,3 @@ texture = ExtResource("34_ttu5f")
 
 [editable path="Balcão"]
 [editable path="BusPath/PathFollow3D/Ônibus"]
-[editable path="ObjectiveArrow/SetaLado"]

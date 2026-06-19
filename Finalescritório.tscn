@@ -28,8 +28,6 @@
 [ext_resource type="PackedScene" uid="uid://btog0veyoumcv" path="res://Fundo.glb" id="27_gds87"]
 [ext_resource type="PackedScene" uid="uid://cm1gfabrid871" path="res://colega_de_trabalho.tscn" id="28_y4ek7"]
 [ext_resource type="Script" uid="uid://fbf8wir51vuy" path="res://finalcolega_dialogue.gd" id="29_30sdm"]
-[ext_resource type="Script" uid="uid://b3b1nvpv8eymp" path="res://seta.gd" id="30_uhbuo"]
-[ext_resource type="PackedScene" uid="uid://drbkq1qmh5c22" path="res://SetaLado.glb" id="31_nct4f"]
 [ext_resource type="PackedScene" uid="uid://dwbsnpna54q3j" path="res://colega_2.tscn" id="32_5cg1b"]
 [ext_resource type="PackedScene" uid="uid://bwar3gsp87os2" path="res://colega_3.tscn" id="33_h0nol"]
 [ext_resource type="PackedScene" uid="uid://wd2pyspv4bx8" path="res://colega_4.tscn" id="34_1geui"]
@@ -72,18 +70,18 @@ volumetric_fog_density = 0.03
 [sub_resource type="BoxShape3D" id="BoxShape3D_wi2vf"]
 size = Vector3(0.15, 0.425, 0.865)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_cpy0h"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_ii3ta"]
 viewport_path = NodePath("../ComputerCanvas/SubViewportContainer/SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_wpfvb"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_1vq2c"]
 viewport_path = NodePath("../ComputerCanvas/SubViewportContainer/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uw05k"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cpy0h"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_cpy0h")
+albedo_texture = SubResource("ViewportTexture_ii3ta")
 emission_enabled = true
 emission_energy_multiplier = 0.5
-emission_texture = SubResource("ViewportTexture_wpfvb")
+emission_texture = SubResource("ViewportTexture_1vq2c")
 
 [sub_resource type="Animation" id="Animation_5lkqy"]
 length = 0.001
@@ -322,7 +320,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13251686, 0.41383284, 0)
 shape = SubResource("BoxShape3D_wi2vf")
 
 [node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="8" unique_id=44197733]
-surface_material_override/0 = SubResource("StandardMaterial3D_uw05k")
+surface_material_override/0 = SubResource("StandardMaterial3D_cpy0h")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="9" unique_id=1558306546]
 root_node = NodePath("../../..")
@@ -418,19 +416,6 @@ npc_node = NodePath("../Colega de Trabalho")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=427251099]
 shape = SubResource("BoxShape3D_ua8lq")
-
-[node name="ObjectiveArrow" type="Node3D" parent="." unique_id=539180629 node_paths=PackedStringArray("objectives")]
-script = ExtResource("30_uhbuo")
-objectives = [NodePath("../MainCarteira/DeskUnit/Monitor")]
-
-[node name="SetaLado" parent="ObjectiveArrow" unique_id=2055762299 instance=ExtResource("31_nct4f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.48)
-
-[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2064431747]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
-
-[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=343420702]
-autoplay = &"ArrowSide_Spin"
 
 [node name="Colega 2" parent="." unique_id=1609022559 instance=ExtResource("32_5cg1b")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 11.010599, 0.06971273, 7.4314904)
@@ -620,4 +605,3 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 79.1
 
 [editable path="Carteira14"]
 [editable path="MainCarteira"]
-[editable path="ObjectiveArrow/SetaLado"]

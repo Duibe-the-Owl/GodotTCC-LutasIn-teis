@@ -18,8 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://dtxcdtn6avjrk" path="res://Fundo2.glb" id="16_il3kc"]
 [ext_resource type="Script" uid="uid://kckea25ubgyj" path="res://barrier.gd" id="17_iw8jk"]
 [ext_resource type="Script" uid="uid://c2ebi0gbrumbu" path="res://barrier2.gd" id="18_mpt3h"]
-[ext_resource type="Script" uid="uid://b3b1nvpv8eymp" path="res://seta.gd" id="18_wxeep"]
-[ext_resource type="PackedScene" uid="uid://drbkq1qmh5c22" path="res://SetaLado.glb" id="19_0ymfv"]
 [ext_resource type="Shader" uid="uid://g53we0g41lwa" path="res://dither.gdshader" id="20_0ymfv"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mlb2s"]
@@ -185,19 +183,6 @@ script = ExtResource("18_mpt3h")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Barreira2/Area3D" unique_id=887360578]
 shape = SubResource("BoxShape3D_iw8jk")
 
-[node name="ObjectiveArrow" type="Node3D" parent="." unique_id=1826208238 node_paths=PackedStringArray("objectives")]
-script = ExtResource("18_wxeep")
-objectives = [NodePath("../Placa")]
-
-[node name="SetaLado" parent="ObjectiveArrow" unique_id=1133751353 instance=ExtResource("19_0ymfv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.77)
-
-[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2064431747]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
-
-[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=343420702]
-autoplay = &"ArrowSide_Spin"
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1584944733]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=909817233]
@@ -213,4 +198,3 @@ mouse_filter = 2
 [connection signal="body_entered" from="Barreira2/Area3D" to="Barreira2/Area3D" method="_on_body_entered"]
 
 [editable path="BusPath/PathFollow3D/Ônibus"]
-[editable path="ObjectiveArrow/SetaLado"]

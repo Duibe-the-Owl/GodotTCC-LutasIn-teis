@@ -18,9 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://w2gb0531cg6b" path="res://Armario.glb" id="16_m30uk"]
 [ext_resource type="Script" uid="uid://di34j1o5qec7d" path="res://uniform.gd" id="17_dn1h1"]
 [ext_resource type="AudioStream" uid="uid://duva0kva8ojbk" path="res://Clothes_SE.wav" id="18_jtn8r"]
-[ext_resource type="PackedScene" uid="uid://drbkq1qmh5c22" path="res://SetaLado.glb" id="19_4kluu"]
 [ext_resource type="Texture2D" uid="uid://dg3s1npxvmk37" path="res://Lutas-Inúteis-Skybox(2).png" id="19_78xk1"]
-[ext_resource type="Script" uid="uid://b3b1nvpv8eymp" path="res://seta.gd" id="19_brrh6"]
 [ext_resource type="PackedScene" uid="uid://d3u82oi3rkevi" path="res://player.tscn" id="20_8rf52"]
 [ext_resource type="PackedScene" uid="uid://dduuhhmi6gaq" path="res://Chão(Sala).glb" id="21_n464d"]
 [ext_resource type="PackedScene" uid="uid://dcsj0kcr30l7u" path="res://Teto(Sala).glb" id="22_jojd5"]
@@ -178,18 +176,6 @@ interaction_sound = ExtResource("18_jtn8r")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Móveis (Quarto)/Armário/Wardrobe_Area/Uniform/Area3D" unique_id=369177998]
 transform = Transform3D(0.82609826, -0.5635261, 0, 0.5635261, 0.82609826, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_libsc")
-
-[node name="ObjectiveArrow" type="Node3D" parent="Móveis (Quarto)" unique_id=1609176942 node_paths=PackedStringArray("objectives")]
-script = ExtResource("19_brrh6")
-objectives = [NodePath("../Armário/Wardrobe_Area/Uniform"), NodePath("../../Cozinha (Móveis)/Pia/Sink_Area/Bread"), NodePath("../../Sala (Móveis)/Mesita/Shelf_Area/House_Keys")]
-
-[node name="SetaLado" parent="Móveis (Quarto)/ObjectiveArrow" unique_id=1133751353 instance=ExtResource("19_4kluu")]
-
-[node name="ArrowSide" parent="Móveis (Quarto)/ObjectiveArrow/SetaLado" index="0" unique_id=2064431747]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
-
-[node name="AnimationPlayer" parent="Móveis (Quarto)/ObjectiveArrow/SetaLado" index="1" unique_id=343420702]
-autoplay = &"ArrowSide_Spin"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1788792756]
 transform = Transform3D(0.17680193, 0.22588058, -0.9579766, 0.80044526, 0.5333754, 0.27349252, 0.57273775, -0.8151618, -0.08650324, -26.84834, 6.4451704, 0)
@@ -434,6 +420,5 @@ shape = SubResource("BoxShape3D_ak33m")
 [editable path="Corredor (Estrutura)/PortaSala"]
 [editable path="Estrutura (Quarto)/Teto"]
 [editable path="Móveis (Quarto)/Armário"]
-[editable path="Móveis (Quarto)/ObjectiveArrow/SetaLado"]
 [editable path="Sala (Móveis)/Mesita"]
 [editable path="Cozinha (Móveis)/Pia"]
