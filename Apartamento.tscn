@@ -101,6 +101,7 @@ size = Vector3(1.865, 1.065, 1.88)
 script = ExtResource("1_7rnnd")
 
 [node name="Corredor (Estrutura)" type="Node3D" parent="." unique_id=298015486]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.016442537, 0)
 
 [node name="ParedeFundo" parent="Corredor (Estrutura)" unique_id=1639837719 instance=ExtResource("2_7rnnd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8248076, 0.89258605, -1.3270917)
@@ -120,7 +121,7 @@ anim_player = NodePath("../../../AnimationPlayer")
 open_sound = ExtResource("6_lggs3")
 
 [node name="Estrutura (Quarto)" type="Node3D" parent="." unique_id=1330687830]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00021291194, 0.055777967, -0.00038431192)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00021291194, 0.03933543, -0.00038431192)
 
 [node name="ParedePorta" parent="Estrutura (Quarto)" unique_id=329788854 instance=ExtResource("7_3b0f0")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.4920201, -0.8982001, -0.16978979)
@@ -144,7 +145,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020920277, 0.3054564, 0.100
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.016213048, 0.831, 2.928)
 
 [node name="Móveis (Quarto)" type="Node3D" parent="." unique_id=1033436415]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00021291194, 0.055777967, -0.00038431192)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00021291194, 0.03933543, -0.00038431192)
 
 [node name="Cama" parent="Móveis (Quarto)" unique_id=1682975157 instance=ExtResource("13_mhupb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7854486, -0.69694406, 1.7336695)
@@ -191,7 +192,7 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0
 autoplay = &"ArrowSide_Spin"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1788792756]
-transform = Transform3D(0.17680193, 0.2258806, -0.9579765, 0.80044526, 0.53337544, 0.27349254, 0.57273775, -0.81516176, -0.086503245, -26.84834, 6.4616127, 0)
+transform = Transform3D(0.17680193, 0.22588058, -0.9579766, 0.80044526, 0.5333754, 0.27349252, 0.57273775, -0.8151618, -0.08650324, -26.84834, 6.4451704, 0)
 light_color = Color(0.9163986, 0.944427, 0.9999991, 1)
 light_energy = 0.606
 shadow_enabled = true
@@ -204,14 +205,14 @@ speed = 2.4
 interaction_time = 2.5
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1531642061]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8144026, 1.6448762, 0.7467388)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8144026, 1.6284337, 0.7467388)
 light_color = Color(0.9607843, 0.69803923, 0.40392157, 1)
 light_energy = 0.317
 shadow_enabled = true
 omni_range = 4.87
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=1419419068]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1696118, 1.6391745, 5.5862274)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1696118, 1.6227319, 5.5862274)
 light_color = Color(0.96078366, 0.699022, 0.40522525, 1)
 light_energy = 0.208
 shadow_enabled = true
@@ -219,33 +220,34 @@ shadow_blur = 2.782
 omni_range = 5.741
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=1575128428]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.058546, 2.0672932, 2.2004004)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.058546, 2.0508506, 2.2004004)
 light_energy = 0.168
 shadow_enabled = true
 omni_range = 7.351
 
 [node name="OmniLight3D5" type="OmniLight3D" parent="." unique_id=339718612]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.133514, 1.9945762, 7.4442124)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.133514, 1.9781337, 7.4442124)
 light_color = Color(0.9607843, 0.69803923, 0.40392157, 1)
 light_energy = 0.273
 shadow_enabled = true
 omni_range = 8.667
 
 [node name="OmniLight3D6" type="OmniLight3D" parent="." unique_id=256646209]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.092976, 1.4039025, 12.083894)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.092976, 1.38746, 12.083894)
 light_color = Color(1, 0.8979622, 0.6707736, 1)
 light_energy = 0.208
 shadow_enabled = true
 omni_range = 8.899
 
 [node name="OmniLight3D7" type="OmniLight3D" parent="." unique_id=349068914]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.313707, 1.6853162, 5.7140417)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.313707, 1.6688737, 5.7140417)
 light_color = Color(0.9607843, 0.69803923, 0.40392157, 1)
 light_energy = 0.208
 shadow_enabled = true
 omni_range = 5.741
 
 [node name="Sala (Estrutura)" type="Node3D" parent="." unique_id=1725428945]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.016442537, 0)
 
 [node name="ChãoSala" parent="Sala (Estrutura)" unique_id=1179602924 instance=ExtResource("21_n464d")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.165, -0.967, 5.469)
@@ -257,6 +259,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.06
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.1222799, 0.8540154, 7.951)
 
 [node name="Sala (Móveis)" type="Node3D" parent="." unique_id=1626713531]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.016442537, 0)
 
 [node name="TV" parent="Sala (Móveis)" unique_id=392561265 instance=ExtResource("24_jxl4g")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0.521, 3.149543)
@@ -285,6 +288,7 @@ transform = Transform3D(0.70090926, 0, 0.71325046, 0, 1, 0, -0.71325046, 0, 0.70
 shape = SubResource("BoxShape3D_16et2")
 
 [node name="Exterior" type="Node3D" parent="." unique_id=638229496]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.016442537, 0)
 
 [node name="Rua" parent="Exterior" unique_id=424662077 instance=ExtResource("30_jb6tc")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -21.787067, -5.097, 7.683167)
@@ -305,6 +309,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5376945, -4.625, -13.85060
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -18.755775, -4.881683, -0.3904109)
 
 [node name="Cozinha (Estrutura)" type="Node3D" parent="." unique_id=1563958204]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.016442537, 0)
 
 [node name="ParedeFCozinha" parent="Cozinha (Estrutura)" unique_id=1147909245 instance=ExtResource("33_fvewt")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.616, 0.8626335, 2.175)
@@ -322,6 +327,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.83
 transform = Transform3D(-4.371139e-08, 0, 1, -0.007836448, 0.9999693, -3.4254202e-10, -0.9999693, -0.007836448, -4.3710045e-08, 9.092, 2.6005483, 2.155)
 
 [node name="Cozinha (Móveis)" type="Node3D" parent="." unique_id=1770588970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.016442537, 0)
 
 [node name="Geladeira" parent="Cozinha (Móveis)" unique_id=1774942490 instance=ExtResource("37_ldu3d")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.602, 0.14209019, 0.821)
@@ -355,6 +361,7 @@ transform = Transform3D(0.34529823, 0, 0.938493, 0, 1, 0, -0.938493, 0, 0.345298
 shape = SubResource("BoxShape3D_l4rdf")
 
 [node name="Elevador" type="Node3D" parent="." unique_id=1564093022]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.016442537, 0)
 
 [node name="ParedeHall" parent="Elevador" unique_id=858929994 instance=ExtResource("44_dwiku")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.068, -0.81469613, 7.694)
@@ -383,18 +390,18 @@ shape = SubResource("BoxShape3D_num3o")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.177, 2.289, 7.536)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer3D" parent="." unique_id=1915217441]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.040654, 1.1105304, 1.6274395)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.040654, 1.0940878, 1.6274395)
 stream = ExtResource("54_3b0f0")
 volume_db = -13.661
 autoplay = true
 
 [node name="VoxelGI" type="VoxelGI" parent="." unique_id=698792354]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.978942, 0.89310074, 3.8545995)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.978942, 0.8766582, 3.8545995)
 size = Vector3(20, 5, 20)
 data = ExtResource("51_vyym3")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=452527455]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.8151094, 0.63203496, -1.9347775)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.8151094, 0.6155924, -1.9347775)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=562919948]
 shape = SubResource("BoxShape3D_cyvy7")
@@ -409,9 +416,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Area3D2" type="Area3D" parent="." unique_id=476314928]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.353599, 0, 2.0224872)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.353599, -0.016442537, 2.0224872)
 script = ExtResource("57_3b0f0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2" unique_id=289683307]

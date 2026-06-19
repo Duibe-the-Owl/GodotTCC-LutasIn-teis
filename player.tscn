@@ -250,7 +250,7 @@ _data = {
 
 [node name="Player" type="CharacterBody3D" unique_id=621330810 node_paths=PackedStringArray("anim_tree") groups=["player"]]
 script = ExtResource("1_4flbx")
-bob_freq = 1.0
+bob_freq = 2.2
 default_footstep_sound = ExtResource("2_onrkg")
 anim_tree = NodePath("AnimationTree")
 
@@ -303,7 +303,7 @@ speed_scale = 1.5
 
 [node name="FootstepPlayer" type="AudioStreamPlayer3D" parent="." unique_id=1065433117]
 stream = ExtResource("2_onrkg")
-volume_db = 8.972
+volume_db = -6.4
 unit_size = 3.0
 max_distance = 5.0
 
