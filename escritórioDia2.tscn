@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dg3s1npxvmk37" path="res://Lutas-Inúteis-Skybox(2).png" id="18_hmnlt"]
 [ext_resource type="PackedScene" uid="uid://du2opnmjoo0qv" path="res://Teto(Escritório).glb" id="19_c13a2"]
 [ext_resource type="PackedScene" uid="uid://b53v86rkbpy6c" path="res://MainCarteira(Escritório).glb" id="20_tc26s"]
+[ext_resource type="Shader" uid="uid://ckggcjq0u6ams" path="res://outline.gdshader" id="21_24xvf"]
 [ext_resource type="Script" uid="uid://bdenqqqsnactq" path="res://monitor_startup.gd" id="21_it78f"]
 [ext_resource type="Script" uid="uid://or0prym1m402" path="res://write_able.gd" id="22_u48mh"]
 [ext_resource type="PackedScene" uid="uid://cqeknaioj76xx" path="res://Relógio.glb" id="23_ltu1y"]
@@ -62,23 +63,29 @@ ssao_radius = 0.04
 glow_enabled = true
 volumetric_fog_density = 0.03
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ma3on"]
+render_priority = 0
+shader = ExtResource("21_24xvf")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/size = 1.05
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_8v41d"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wi2vf"]
 size = Vector3(0.15, 0.425, 0.865)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_fbha8"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_i3jo5"]
 viewport_path = NodePath("../ComputerCanvas/SubViewportContainer/SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_24xvf"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_ambps"]
 viewport_path = NodePath("../ComputerCanvas/SubViewportContainer/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ma3on"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_peveb"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_fbha8")
+albedo_texture = SubResource("ViewportTexture_i3jo5")
 emission_enabled = true
 emission_energy_multiplier = 0.5
-emission_texture = SubResource("ViewportTexture_24xvf")
+emission_texture = SubResource("ViewportTexture_ambps")
 
 [sub_resource type="Animation" id="Animation_5lkqy"]
 length = 0.001
@@ -298,6 +305,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.475147, -0.055103928, 13.9
 
 [node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="3" unique_id=1757339918]
 layers = 2
+material_overlay = SubResource("ShaderMaterial_ma3on")
 
 [node name="Area3D" type="Area3D" parent="MainCarteira/DeskUnit/Monitor" index="0" unique_id=1872963870]
 collision_layer = 2
@@ -320,7 +328,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13251686, 0.41383284, 0)
 shape = SubResource("BoxShape3D_wi2vf")
 
 [node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="8" unique_id=44197733]
-surface_material_override/0 = SubResource("StandardMaterial3D_ma3on")
+surface_material_override/0 = SubResource("StandardMaterial3D_peveb")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="9" unique_id=1558306546]
 root_node = NodePath("../../..")

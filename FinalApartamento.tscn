@@ -17,7 +17,9 @@
 [ext_resource type="PackedScene" uid="uid://3ygpqewxvonl" path="res://Despertador.glb" id="15_1e3mx"]
 [ext_resource type="PackedScene" uid="uid://w2gb0531cg6b" path="res://Armario.glb" id="16_cetvq"]
 [ext_resource type="Script" uid="uid://di34j1o5qec7d" path="res://uniform.gd" id="17_kyqbd"]
+[ext_resource type="Texture2D" uid="uid://b2mb0ugrgkxnd" path="res://Armario_UniformTexture(NEW).png" id="17_yh3j2"]
 [ext_resource type="AudioStream" uid="uid://duva0kva8ojbk" path="res://Clothes_SE.wav" id="18_ejc1m"]
+[ext_resource type="Shader" uid="uid://ckggcjq0u6ams" path="res://outline.gdshader" id="18_myf78"]
 [ext_resource type="Texture2D" uid="uid://bju2s7n1bn7bf" path="res://Lutas-Inúteis-Skybox(Final).png" id="21_dhrv7"]
 [ext_resource type="PackedScene" uid="uid://d3u82oi3rkevi" path="res://player.tscn" id="22_cjmt7"]
 [ext_resource type="PackedScene" uid="uid://dduuhhmi6gaq" path="res://Chão(Sala).glb" id="23_hbgj5"]
@@ -57,6 +59,16 @@
 [ext_resource type="Texture2D" uid="uid://djihbvo1csx1h" path="res://SunTexture.png" id="57_kd8p5"]
 [ext_resource type="Script" uid="uid://fbb1ii4eoqnt" path="res://pãotalk.gd" id="58_yh3j2"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_if7np"]
+albedo_texture = ExtResource("17_yh3j2")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kfbsu"]
+render_priority = 0
+next_pass = SubResource("StandardMaterial3D_if7np")
+shader = ExtResource("18_myf78")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/size = 1.05
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_libsc"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_67oww"]
@@ -74,8 +86,20 @@ glow_enabled = true
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.01
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yh3j2"]
+render_priority = 0
+shader = ExtResource("18_myf78")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/size = 1.06999999843536
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_16et2"]
 size = Vector3(0.7, 0.7, 0.7)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lmiij"]
+render_priority = 0
+shader = ExtResource("18_myf78")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/size = 1.07999999821184
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l4rdf"]
 size = Vector3(0.7, 0.7, 0.7)
@@ -165,15 +189,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9187465, -0.8222265, 2.0816
 [node name="Armário" parent="Móveis (Quarto)" unique_id=1119466907 instance=ExtResource("16_cetvq")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.6525167, -0.8273673, -2.352987)
 
-[node name="Bar" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1590062936) index="0" unique_id=921990831]
+[node name="Bar" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1591386016) index="0" unique_id=1109988549]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 2.059648, -0.17623472)
 
-[node name="Pants" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1590062936) index="2" unique_id=1237091769]
+[node name="Pants" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1591386016) index="2" unique_id=636032468]
 transform = Transform3D(-0.7071066, 0.70710695, 5.9604645e-08, 5.9604645e-08, 0, 1, 0.70710695, 0.7071066, 0, -0.015007257, 1.5682206, 0.36414862)
 
-[node name="Uniform" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1590062936) index="3" unique_id=720640150]
+[node name="Uniform" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1591386016) index="3" unique_id=553219073]
 transform = Transform3D(-0.7071066, 0.70710695, 5.9604645e-08, 5.9604645e-08, 0, 1, 0.70710695, 0.7071066, 0, -0.015007257, 1.5682206, 0.7805791)
 layers = 2
+material_overlay = SubResource("ShaderMaterial_kfbsu")
 
 [node name="Area3D" type="Area3D" parent="Móveis (Quarto)/Armário/Wardrobe_Area/Uniform" index="0" unique_id=199652838]
 collision_layer = 2
@@ -267,6 +292,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.59
 
 [node name="House_Keys" parent="Sala (Móveis)/Mesita/Shelf_Area" parent_id_path=PackedInt32Array(821214711, 2021909727) index="3" unique_id=991776827]
 layers = 2
+material_overlay = SubResource("ShaderMaterial_yh3j2")
 
 [node name="Area3D" type="Area3D" parent="Sala (Móveis)/Mesita/Shelf_Area/House_Keys" index="0" unique_id=550533673 node_paths=PackedStringArray("target_door")]
 collision_layer = 2
@@ -338,6 +364,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.33
 
 [node name="Bread" parent="Cozinha (Móveis)/Pia/Sink_Area" parent_id_path=PackedInt32Array(585669820, 1157109093) index="0" unique_id=910013523]
 layers = 2
+material_overlay = SubResource("ShaderMaterial_lmiij")
 
 [node name="Area3D" type="Area3D" parent="Cozinha (Móveis)/Pia/Sink_Area/Bread" index="0" unique_id=769775108]
 collision_layer = 2

@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cxr8m564nxwm4" path="res://ônibus.tscn" id="12_fadbu"]
 [ext_resource type="PackedScene" uid="uid://c4gxer50s1dgv" path="res://Placa.glb" id="13_r5aid"]
 [ext_resource type="Script" uid="uid://dx6406sbnxrdj" path="res://placa.gd" id="14_gt45p"]
+[ext_resource type="Shader" uid="uid://ckggcjq0u6ams" path="res://outline.gdshader" id="14_rrjx3"]
 [ext_resource type="PackedScene" uid="uid://btog0veyoumcv" path="res://Fundo.glb" id="15_ucook"]
 [ext_resource type="PackedScene" uid="uid://dtxcdtn6avjrk" path="res://Fundo2.glb" id="16_jl05d"]
 [ext_resource type="Script" uid="uid://kckea25ubgyj" path="res://barrier.gd" id="17_rlnh1"]
@@ -41,6 +42,18 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0)
 }
 point_count = 3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rrjx3"]
+render_priority = 0
+shader = ExtResource("14_rrjx3")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/size = 1.05
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x8ln2"]
+render_priority = 0
+shader = ExtResource("14_rrjx3")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/size = 1.05
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h2mom"]
 size = Vector3(2, 3, 1.5)
@@ -130,11 +143,17 @@ max_speed = 6.5
 [node name="Ônibus" parent="BusPath/PathFollow3D" unique_id=1347629826 instance=ExtResource("12_fadbu")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 
+[node name="BusDoor" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(1347629826, 112014410) index="1" unique_id=990099557]
+material_overlay = SubResource("ShaderMaterial_rrjx3")
+
 [node name="Area3D" parent="BusPath/PathFollow3D/Ônibus" index="7" unique_id=1164175362]
 destination_scene = "uid://diyuusl8fecvw"
 
 [node name="Placa" parent="." unique_id=585211801 instance=ExtResource("13_r5aid")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.895375, 0.88510907, -106.505615)
+
+[node name="Sign" parent="Placa" index="0" unique_id=1946744231]
+material_overlay = SubResource("ShaderMaterial_x8ln2")
 
 [node name="Area3D" type="Area3D" parent="Placa" unique_id=1026088592]
 collision_layer = 2
@@ -200,3 +219,4 @@ mouse_filter = 2
 [connection signal="body_entered" from="Barreira2/Area3D" to="Barreira2/Area3D" method="_on_body_entered"]
 
 [editable path="BusPath/PathFollow3D/Ônibus"]
+[editable path="Placa"]

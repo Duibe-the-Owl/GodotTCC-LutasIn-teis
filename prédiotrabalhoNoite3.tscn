@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://crl6mobypc55b" path="res://Lutas-Inúteis-Skybox(Noite).png" id="16_7qrja"]
 [ext_resource type="PackedScene" uid="uid://dha3rygg0y4o4" path="res://Postes(Noite).glb" id="17_wqepj"]
 [ext_resource type="PackedScene" uid="uid://c4gxer50s1dgv" path="res://Placa.glb" id="18_m3k1e"]
+[ext_resource type="Shader" uid="uid://ckggcjq0u6ams" path="res://outline.gdshader" id="19_svhb8"]
 [ext_resource type="Script" uid="uid://dx6406sbnxrdj" path="res://placa.gd" id="19_xoa7p"]
 [ext_resource type="Script" uid="uid://r8wxmrrg31a3" path="res://bus_track.gd" id="20_ny8en"]
 [ext_resource type="PackedScene" uid="uid://cxr8m564nxwm4" path="res://ônibus.tscn" id="21_hpivr"]
@@ -52,6 +53,12 @@ adjustment_enabled = true
 adjustment_contrast = 1.1
 adjustment_saturation = 0.8
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ttu5f"]
+render_priority = 0
+shader = ExtResource("19_svhb8")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/size = 1.05
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_jyvf8"]
 size = Vector3(2, 3, 1.5)
 
@@ -61,6 +68,12 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0)
 }
 point_count = 3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_svhb8"]
+render_priority = 0
+shader = ExtResource("19_svhb8")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/size = 1.05
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2056r"]
 shader = ExtResource("27_62akp")
@@ -472,6 +485,9 @@ spot_range = 8.195
 [node name="Placa2" parent="." unique_id=585211801 instance=ExtResource("18_m3k1e")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.731, 0.8830774, -41.717)
 
+[node name="Sign" parent="Placa2" index="0" unique_id=1946744231]
+material_overlay = SubResource("ShaderMaterial_ttu5f")
+
 [node name="Area3D" type="Area3D" parent="Placa2" unique_id=1334244419]
 collision_layer = 2
 collision_mask = 2
@@ -485,7 +501,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -193
 curve = SubResource("Curve3D_vohkx")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="BusPath" unique_id=883106378]
-transform = Transform3D(0.20079084, 0, -0.9796279, 0, 1.0000485, 0, 0.9796279, 0, 0.20079084, -1.3815956, 0, 1.5192566)
+transform = Transform3D(0.20079084, 0, -0.9796279, 0, 1.0000486, 0, 0.9796279, 0, 0.20079084, -1.3815956, 0, 1.5192566)
 rotation_mode = 4
 loop = false
 script = ExtResource("20_ny8en")
@@ -493,6 +509,9 @@ max_speed = 6.5
 
 [node name="Ônibus" parent="BusPath/PathFollow3D" unique_id=1347629826 instance=ExtResource("21_hpivr")]
 transform = Transform3D(-4.4703484e-08, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, -4.4703484e-08, 0, -0.23791029, 0)
+
+[node name="BusDoor" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(1347629826, 112014410) index="1" unique_id=990099557]
+material_overlay = SubResource("ShaderMaterial_svhb8")
 
 [node name="Area3D" parent="BusPath/PathFollow3D/Ônibus" index="7" unique_id=1164175362]
 destination_scene = "uid://1v12aho52x50"
@@ -586,4 +605,5 @@ texture = ExtResource("34_ttu5f")
 [connection signal="body_entered" from="Barreira4/Area3D" to="Barreira4/Area3D" method="_on_body_entered"]
 
 [editable path="Balcão"]
+[editable path="Placa2"]
 [editable path="BusPath/PathFollow3D/Ônibus"]

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bohx7a8ayqdfw" path="res://Rua(AS).glb" id="4_43etp"]
 [ext_resource type="PackedScene" uid="uid://clakbgg4o0jdc" path="res://Buildings.glb" id="5_vf7js"]
 [ext_resource type="Script" uid="uid://d1wwsjlhsvca4" path="res://ap_transition.gd" id="6_bt5ox"]
+[ext_resource type="Shader" uid="uid://ckggcjq0u6ams" path="res://outline.gdshader" id="6_jg8ib"]
 [ext_resource type="AudioStream" uid="uid://duj8tt3c3r6i6" path="res://Elevator_SE.wav" id="7_pygl7"]
 [ext_resource type="PackedScene" uid="uid://bydip21p1euj" path="res://Buildings2.glb" id="8_diay3"]
 [ext_resource type="PackedScene" uid="uid://c06ua5hgmi5jn" path="res://Buildings3.glb" id="9_4kxbj"]
@@ -20,6 +21,12 @@
 [ext_resource type="Shader" uid="uid://g53we0g41lwa" path="res://dither.gdshader" id="20_ieh0d"]
 [ext_resource type="Script" uid="uid://d01kmxtbinnms" path="res://barrier4.gd" id="21_lp7kb"]
 [ext_resource type="Texture2D" uid="uid://cud12urh70c0j" path="res://Moon.png" id="22_xlhdb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xlhdb"]
+render_priority = 0
+shader = ExtResource("6_jg8ib")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/size = 1.00999999977648
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b7eu1"]
 size = Vector3(3, 3, 2)
@@ -259,6 +266,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -21.
 
 [node name="Prédios" parent="." unique_id=965448203 instance=ExtResource("5_vf7js")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.076088, -0.76517963, 45.763786)
+
+[node name="Building14" parent="Prédios/BuildingsUnit" parent_id_path=PackedInt32Array(965448203, 728412656) index="5" unique_id=1956306728]
+material_overlay = SubResource("ShaderMaterial_xlhdb")
 
 [node name="Area3D" type="Area3D" parent="Prédios" unique_id=1936353676]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.632973, 1.3995277, -5.870679)
@@ -554,4 +564,5 @@ texture = ExtResource("22_xlhdb")
 [connection signal="body_entered" from="Barreira/Area3D" to="Barreira/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Barreira2/Area3D" to="Barreira2/Area3D" method="_on_body_entered"]
 
+[editable path="Prédios"]
 [editable path="BusPath/PathFollow3D/Ônibus"]

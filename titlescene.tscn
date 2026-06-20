@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cnte0a7dnlbsj"]
 
 [ext_resource type="Script" uid="uid://c2xoumi8ixg2e" path="res://main_menu.gd" id="1_0oyug"]
+[ext_resource type="Texture2D" uid="uid://3smqx230puhf" path="res://LUTASINUTEISLOGO-06.png" id="2_wf3hx"]
 [ext_resource type="PackedScene" uid="uid://i8t40gupt2dm" path="res://Parede_Porta(Quarto).glb" id="7_60173"]
 [ext_resource type="PackedScene" uid="uid://pnqswl3fwrc0" path="res://Parede_Esquerda(Quarto).glb" id="8_1c4rq"]
 [ext_resource type="PackedScene" uid="uid://bemwcgvjwufo2" path="res://Parede_Janela(Quarto).glb" id="9_atl06"]
@@ -144,18 +145,18 @@ grow_vertical = 2
 mouse_filter = 2
 expand = true
 
-[node name="GameTitle" type="Label" parent="MainMenu" unique_id=1892030447]
+[node name="TextureRect" type="TextureRect" parent="MainMenu" unique_id=1648331864]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -425.0
-offset_top = 17.795
-offset_right = 425.0
-offset_bottom = 95.795
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 57
-text = "Lutas Inúteis e seus Propósitos"
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 111.505
+offset_top = -216.76001
+offset_right = 659.155
+offset_bottom = 165.82367
+grow_vertical = 2
+texture = ExtResource("2_wf3hx")
+expand_mode = 5
 
 [node name="MenuButtons" type="VBoxContainer" parent="MainMenu" unique_id=468396089]
 layout_mode = 1
@@ -282,13 +283,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9187465, -0.8222265, 2.0816
 [node name="Armário" parent="Móveis (Quarto)" unique_id=1119466907 instance=ExtResource("16_b8tg5")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.6525167, -0.8273673, -2.352987)
 
-[node name="Bar" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1590062936) index="0" unique_id=921990831]
+[node name="Bar" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1591386016) index="0" unique_id=1109988549]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 2.059648, -0.17623472)
 
-[node name="Pants" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1590062936) index="2" unique_id=1237091769]
+[node name="Pants" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1591386016) index="2" unique_id=636032468]
 transform = Transform3D(-0.7071066, 0.70710695, 5.9604645e-08, 5.9604645e-08, 0, 1, 0.70710695, 0.7071066, 0, -0.015007257, 1.5682206, 0.36414862)
 
-[node name="Uniform" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1590062936) index="3" unique_id=720640150]
+[node name="Uniform" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1591386016) index="3" unique_id=553219073]
 transform = Transform3D(-0.7071066, 0.70710695, 5.9604645e-08, 5.9604645e-08, 0, 1, 0.70710695, 0.7071066, 0, -0.015007257, 1.5682206, 0.7805791)
 layers = 2
 
@@ -335,7 +336,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1704421605]
-transform = Transform3D(0.3796015, 0, 0.92515016, 0, 1, 0, -0.92515016, 0, 0.3796015, -0.5169536, 0.57858217, -0.36140227)
+transform = Transform3D(0.10399039, 0, 0.9945783, 0, 1, 0, -0.9945783, 0, 0.103990406, -0.5169536, 0.57858217, -0.36140227)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=886535377]
 transform = Transform3D(-3.2681715e-08, 0.66406983, -0.7476706, 2.902741e-08, 0.7476706, 0.66406983, 1, 1.7763568e-15, -4.3711385e-08, -125.328705, 172.53343, 2.4863396)

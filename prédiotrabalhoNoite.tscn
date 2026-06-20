@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dkj77838dfbcm" path="res://Barreira.glb" id="15_x1nse"]
 [ext_resource type="PackedScene" uid="uid://cm3hjytswxlr7" path="res://Barreira2.glb" id="16_x725q"]
 [ext_resource type="PackedScene" uid="uid://c4gxer50s1dgv" path="res://Placa.glb" id="17_g257b"]
+[ext_resource type="Shader" uid="uid://ckggcjq0u6ams" path="res://outline.gdshader" id="19_270i3"]
 [ext_resource type="PackedScene" uid="uid://cxr8m564nxwm4" path="res://ônibus.tscn" id="19_dvfyh"]
 [ext_resource type="Script" uid="uid://dx6406sbnxrdj" path="res://placa.gd" id="19_vohkx"]
 [ext_resource type="PackedScene" uid="uid://k4ktjyesiaoe" path="res://Buildings5.glb" id="19_yu31i"]
@@ -51,6 +52,12 @@ adjustment_enabled = true
 adjustment_contrast = 1.1
 adjustment_saturation = 0.8
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qsspj"]
+render_priority = 0
+shader = ExtResource("19_270i3")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/size = 1.05
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_jyvf8"]
 size = Vector3(2, 3, 1.5)
 
@@ -60,6 +67,12 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0)
 }
 point_count = 3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_270i3"]
+render_priority = 0
+shader = ExtResource("19_270i3")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/size = 1.05
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2056r"]
 shader = ExtResource("27_uq8ta")
@@ -464,6 +477,9 @@ spot_range = 8.195
 [node name="Placa2" parent="." unique_id=585211801 instance=ExtResource("17_g257b")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.731, 0.8830774, -41.717)
 
+[node name="Sign" parent="Placa2" index="0" unique_id=1946744231]
+material_overlay = SubResource("ShaderMaterial_qsspj")
+
 [node name="Area3D" type="Area3D" parent="Placa2" unique_id=1334244419]
 collision_layer = 2
 collision_mask = 2
@@ -477,7 +493,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -193
 curve = SubResource("Curve3D_vohkx")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="BusPath" unique_id=883106378]
-transform = Transform3D(0.20079084, 0, -0.9796279, 0, 1.0000474, 0, 0.9796279, 0, 0.20079084, -1.3815956, 0, 1.5192566)
+transform = Transform3D(0.20079084, 0, -0.9796279, 0, 1.0000479, 0, 0.9796279, 0, 0.20079084, -1.3815956, 0, 1.5192566)
 rotation_mode = 4
 loop = false
 script = ExtResource("20_qe36d")
@@ -485,6 +501,9 @@ max_speed = 6.5
 
 [node name="Ônibus" parent="BusPath/PathFollow3D" unique_id=1347629826 instance=ExtResource("19_dvfyh")]
 transform = Transform3D(-4.4703484e-08, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, -4.4703484e-08, 0, -0.23791029, 0)
+
+[node name="BusDoor" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(1347629826, 112014410) index="1" unique_id=990099557]
+material_overlay = SubResource("ShaderMaterial_270i3")
 
 [node name="Area3D" parent="BusPath/PathFollow3D/Ônibus" index="7" unique_id=1164175362]
 destination_scene = "uid://21hpt0mhbcym"
@@ -571,4 +590,5 @@ shape = SubResource("BoxShape3D_x1nse")
 [connection signal="body_entered" from="Barreira4/Area3D" to="Barreira4/Area3D" method="_on_body_entered"]
 
 [editable path="Balcão"]
+[editable path="Placa2"]
 [editable path="BusPath/PathFollow3D/Ônibus"]

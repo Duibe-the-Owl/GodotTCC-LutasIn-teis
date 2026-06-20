@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bmkptjnx6ym2p" path="res://Montanha4.glb" id="6_gxjer"]
 [ext_resource type="Texture2D" uid="uid://bo45liupj7s1q" path="res://Pedra_BoulderTexture.png" id="7_eqkyt"]
 [ext_resource type="PackedScene" uid="uid://ddn4srarx22cn" path="res://Montanha5.glb" id="7_lfu1u"]
+[ext_resource type="Shader" uid="uid://ckggcjq0u6ams" path="res://outline.gdshader" id="8_pad6d"]
 [ext_resource type="Texture2D" uid="uid://dldotm4yjsylf" path="res://Nuvens_MistTexture.png" id="9_ketr1"]
 [ext_resource type="AudioStream" uid="uid://d21reg2bxu7np" path="res://Boulder_SE.wav" id="10_8hut6"]
 [ext_resource type="AudioStream" uid="uid://cio7i24ea4j3q" path="res://Wind_SE.wav" id="10_ketr1"]
@@ -135,6 +136,12 @@ _data = {
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0nynm"]
 friction = 0.2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8ccab"]
+render_priority = 0
+shader = ExtResource("8_pad6d")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/size = 1.02999999932944
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l238x"]
 resource_name = "Material.158"
@@ -263,6 +270,7 @@ mass = 50.0
 physics_material_override = SubResource("PhysicsMaterial_0nynm")
 
 [node name="Boulder2" type="MeshInstance3D" parent="Pedra2" unique_id=988806125]
+material_overlay = SubResource("ShaderMaterial_8ccab")
 mesh = SubResource("ArrayMesh_xedls")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pedra2" unique_id=209061277]
