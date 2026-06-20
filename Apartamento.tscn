@@ -154,16 +154,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7027485, -0.5698448, -2.20
 [node name="Despertador" parent="Móveis (Quarto)" unique_id=1760712600 instance=ExtResource("15_kuy5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9187465, -0.8222265, 2.0816455)
 
-[node name="Armário" parent="Móveis (Quarto)" unique_id=1119466907 instance=ExtResource("16_m30uk")]
+[node name="Armário" parent="Móveis (Quarto)" unique_id=112364231 instance=ExtResource("16_m30uk")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.6525167, -0.8273673, -2.352987)
 
-[node name="Bar" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1590062936) index="0" unique_id=921990831]
+[node name="Bar" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(112364231, 657048337) index="0" unique_id=1630256102]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 2.059648, -0.17623472)
 
-[node name="Pants" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1590062936) index="2" unique_id=1237091769]
+[node name="Pants" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(112364231, 657048337) index="2" unique_id=831415639]
 transform = Transform3D(-0.7071066, 0.70710695, 5.9604645e-08, 5.9604645e-08, 0, 1, 0.70710695, 0.7071066, 0, -0.015007257, 1.5682206, 0.36414862)
 
-[node name="Uniform" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1590062936) index="3" unique_id=720640150]
+[node name="Uniform" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(112364231, 657048337) index="3" unique_id=1048227490]
 transform = Transform3D(-0.7071066, 0.70710695, 5.9604645e-08, 5.9604645e-08, 0, 1, 0.70710695, 0.7071066, 0, -0.015007257, 1.5682206, 0.7805791)
 layers = 2
 
