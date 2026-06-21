@@ -71,18 +71,18 @@ volumetric_fog_density = 0.03
 [sub_resource type="BoxShape3D" id="BoxShape3D_wi2vf"]
 size = Vector3(0.15, 0.425, 0.865)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ii3ta"]
-viewport_path = NodePath("../ComputerCanvas/SubViewportContainer/SubViewport")
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_1vq2c"]
 viewport_path = NodePath("../ComputerCanvas/SubViewportContainer/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cpy0h"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_cpy0h"]
+viewport_path = NodePath("../ComputerCanvas/SubViewportContainer/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wpfvb"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_ii3ta")
+albedo_texture = SubResource("ViewportTexture_1vq2c")
 emission_enabled = true
 emission_energy_multiplier = 0.5
-emission_texture = SubResource("ViewportTexture_1vq2c")
+emission_texture = SubResource("ViewportTexture_cpy0h")
 
 [sub_resource type="Animation" id="Animation_5lkqy"]
 length = 0.001
@@ -324,7 +324,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13251686, 0.41383284, 0)
 shape = SubResource("BoxShape3D_wi2vf")
 
 [node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="8" unique_id=44197733]
-surface_material_override/0 = SubResource("StandardMaterial3D_cpy0h")
+surface_material_override/0 = SubResource("StandardMaterial3D_wpfvb")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="9" unique_id=1558306546]
 root_node = NodePath("../../..")

@@ -88,6 +88,7 @@ environment = SubResource("Environment_wxt12")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1812071559]
 stream = ExtResource("3_x8ln2")
+volume_db = -11.03
 autoplay = true
 
 [node name="Postes(CenaAlternativa)" parent="." unique_id=364891206 instance=ExtResource("4_bvvlx")]

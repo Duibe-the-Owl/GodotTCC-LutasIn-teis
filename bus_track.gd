@@ -1,7 +1,7 @@
 extends PathFollow3D
 
 # --- Variables ---
-@export var max_speed: float = 5.0
+@export var max_speed: float = 3.0
 var current_speed: float = 0.0
 var should_move: bool = false
 var has_arrived: bool = false
