@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c2xoumi8ixg2e" path="res://main_menu.gd" id="1_0oyug"]
 [ext_resource type="Texture2D" uid="uid://3smqx230puhf" path="res://LUTASINUTEISLOGO-06.png" id="2_wf3hx"]
+[ext_resource type="FontVariation" uid="uid://xeljouqmacpb" path="res://addons/dialogic/Example Assets/Fonts/font_bold.tres" id="3_c5fox"]
 [ext_resource type="PackedScene" uid="uid://i8t40gupt2dm" path="res://Parede_Porta(Quarto).glb" id="7_60173"]
 [ext_resource type="PackedScene" uid="uid://pnqswl3fwrc0" path="res://Parede_Esquerda(Quarto).glb" id="8_1c4rq"]
 [ext_resource type="PackedScene" uid="uid://bemwcgvjwufo2" path="res://Parede_Janela(Quarto).glb" id="9_atl06"]
@@ -176,18 +177,21 @@ theme_override_constants/separation = 75
 [node name="PlayButton" type="Button" parent="MainMenu/MenuButtons" unique_id=327571567]
 custom_minimum_size = Vector2(350, 80)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_c5fox")
 theme_override_font_sizes/font_size = 35
 text = "Começar"
 
 [node name="OptionsButton" type="Button" parent="MainMenu/MenuButtons" unique_id=311774027]
 custom_minimum_size = Vector2(350, 80)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_c5fox")
 theme_override_font_sizes/font_size = 35
 text = "Opções"
 
 [node name="QuitButton" type="Button" parent="MainMenu/MenuButtons" unique_id=1437420137]
 custom_minimum_size = Vector2(350, 80)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_c5fox")
 theme_override_font_sizes/font_size = 35
 text = "Sair"
 
@@ -213,6 +217,7 @@ theme_override_constants/separation = 25
 
 [node name="Label" type="Label" parent="MainMenu/OptionsWindow/VBoxContainer" unique_id=915188977]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_c5fox")
 theme_override_font_sizes/font_size = 35
 text = "Música"
 horizontal_alignment = 1
@@ -225,6 +230,7 @@ value = 1.0
 
 [node name="Label2" type="Label" parent="MainMenu/OptionsWindow/VBoxContainer" unique_id=1006919479]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_c5fox")
 theme_override_font_sizes/font_size = 35
 text = "Efeitos Sonoros"
 horizontal_alignment = 1
@@ -238,6 +244,7 @@ value = 1.0
 [node name="BackButton" type="Button" parent="MainMenu/OptionsWindow/VBoxContainer" unique_id=1741737614]
 custom_minimum_size = Vector2(350, 80)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_c5fox")
 theme_override_font_sizes/font_size = 35
 text = "Voltar"
 

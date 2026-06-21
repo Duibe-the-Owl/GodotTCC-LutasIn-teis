@@ -1,0 +1,10 @@
+[gd_resource type="FontVariation" format=3 uid="uid://cam5ntuuagdkk"]
+
+[ext_resource type="FontFile" uid="uid://deueotvi7lkde" path="res://addons/dialogic/Example Assets/Fonts/Fredoka-VariableFont_wdth,wght.ttf" id="1_j71ma"]
+
+[resource]
+base_font = ExtResource("1_j71ma")
+variation_opentype = {
+2003072104: 100,
+2003265652: 400
+}

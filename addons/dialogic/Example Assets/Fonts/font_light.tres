@@ -1,0 +1,6 @@
+[gd_resource type="FontVariation" format=3 uid="uid://chpjf1unvlsg"]
+
+[ext_resource type="FontFile" uid="uid://deueotvi7lkde" path="res://addons/dialogic/Example Assets/Fonts/Fredoka-VariableFont_wdth,wght.ttf" id="1_jmape"]
+
+[resource]
+base_font = ExtResource("1_jmape")
