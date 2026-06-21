@@ -44,5 +44,5 @@ func start_outro_sequence():
 	# 4. Once everything finishes moving and fading, change the scene
 	outro_tween.chain().tween_callback(func():
 		# Replace this with your actual scene manager transition function!
-		SceneManager.transition_to("res://main_menu.tscn")
+		SceneManager.transition_to("res://titlescene.tscn")
 	)

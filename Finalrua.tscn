@@ -42,7 +42,7 @@ volumetric_fog_density = 0.005
 [sub_resource type="Curve3D" id="Curve3D_jdiv0"]
 bake_interval = 0.05
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -111.84212, 0, 79.40321, -15.659756, 4.6491623e-05, 9.765076, 15.659756, -4.6491623e-05, -9.765076, -37.03389, -0.26957774, 72.788635, 0, 0, 0, 0, 0, 0, -14, 0, -102),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -111.84212, 0, 79.40321, -15.659756, 4.6491623e-05, 9.765076, 15.659756, -4.6491623e-05, -9.765076, -37.03389, -0.26957774, 72.788635, 0, 0, 0, 0, 0, 0, -14, 0, -69.790344),
 "tilts": PackedFloat32Array(0, 0, 0)
 }
 point_count = 3
@@ -156,6 +156,7 @@ destination_scene = "uid://def22xcqc4bee"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.895375, 0.88510907, -106.505615)
 
 [node name="Sign" parent="Placa" index="0" unique_id=1946744231]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 37.1131)
 material_overlay = SubResource("ShaderMaterial_jjjwh")
 
 [node name="Area3D" type="Area3D" parent="Placa" unique_id=1026088592]

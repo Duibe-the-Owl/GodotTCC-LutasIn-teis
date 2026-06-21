@@ -36,7 +36,7 @@ sdfgi_enabled = true
 [sub_resource type="Curve3D" id="Curve3D_jdiv0"]
 bake_interval = 0.05
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -134.61676, 0, 79.40321, -15.659756, 4.6491623e-05, 9.765076, 15.659756, -4.6491623e-05, -9.765076, -37.03389, -0.26957774, 72.788635, 0, 0, 0, 0, 0, 0, -14, 0, -102),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -134.61676, 0, 79.40321, -15.659756, 4.6491623e-05, 9.765076, 15.659756, -4.6491623e-05, -9.765076, -37.03389, -0.26957774, 72.788635, 0, 0, 0, 0, 0, 0, -14, 0, -69.7121),
 "tilts": PackedFloat32Array(0, 0, 0)
 }
 point_count = 3
@@ -148,7 +148,7 @@ material_overlay = SubResource("ShaderMaterial_0ymfv")
 destination_scene = "uid://b3ehg6e4g4118"
 
 [node name="Placa" parent="." unique_id=585211801 instance=ExtResource("13_1n4wu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.895375, 0.88510907, -106.505615)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.895375, 0.88510907, -68.80824)
 
 [node name="Sign" parent="Placa" index="0" unique_id=1946744231]
 material_overlay = SubResource("ShaderMaterial_3tdge")

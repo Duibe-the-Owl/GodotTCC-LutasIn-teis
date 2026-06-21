@@ -102,17 +102,17 @@ shader_parameter/size = 1.05
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_phupe"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_nk7vw"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_x0xca"]
 viewport_path = NodePath("TvUnit/TvScreen/SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_5y3jk"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_6oyi0"]
 viewport_path = NodePath("TvUnit/TvScreen/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q1eya"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ackpd"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_nk7vw")
+albedo_texture = SubResource("ViewportTexture_x0xca")
 emission_enabled = true
-emission_texture = SubResource("ViewportTexture_5y3jk")
+emission_texture = SubResource("ViewportTexture_6oyi0")
 
 [sub_resource type="Animation" id="Animation_w6bbu"]
 length = 0.001
@@ -439,7 +439,7 @@ layers = 2
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.008749008, 0.046983063, 3.1197329)
 
 [node name="TvScreen" parent="Sala (Móveis)/TV(Noite)/TvUnit" parent_id_path=PackedInt32Array(1153428048, 2115584366) index="1" unique_id=1323120555]
-surface_material_override/0 = SubResource("StandardMaterial3D_q1eya")
+surface_material_override/0 = SubResource("StandardMaterial3D_ackpd")
 
 [node name="SubViewport" type="SubViewport" parent="Sala (Móveis)/TV(Noite)/TvUnit/TvScreen" index="0" unique_id=1821945060]
 size = Vector2i(1280, 700)

@@ -51,7 +51,7 @@ adjustment_saturation = 0.8
 
 [sub_resource type="Curve3D" id="Curve3D_ui4cq"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.37196207, 0, 4.917775, -15.530136, 2.044919, -10.669268, 15.530136, -2.044919, 10.669268, 73.30187, 0.13529873, 5.4785376, 0, 0, 0, 0, 0, 0, 85.12847, 0.48618793, 86.05028),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -34.035812, 0, 8.590295, -15.530136, 2.044919, -10.669268, 15.530136, -2.044919, 10.669268, 73.30187, 0.13529873, 5.4785376, 0, 0, 0, 0, 0, 0, 85.12847, 0.48618793, 86.05028),
 "tilts": PackedFloat32Array(0, 0, 0)
 }
 point_count = 3
@@ -239,25 +239,25 @@ stream = ExtResource("2_xl13i")
 autoplay = true
 
 [node name="Árvore" parent="." unique_id=1392830244 instance=ExtResource("5_xl13i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7108936, -0.7160511, 57.903645)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7108936, -0.7160511, 23.793968)
 
 [node name="Árvore2" parent="." unique_id=160528888 instance=ExtResource("5_xl13i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.990364, -0.7160511, 101.4984)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.990364, -0.7160511, 67.38872)
 
 [node name="Árvore3" parent="." unique_id=467126969 instance=ExtResource("5_xl13i")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.319216, -0.7160511, -18.58059)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.319216, -0.7160511, -52.690266)
 
 [node name="Árvore4" parent="." unique_id=1100434926 instance=ExtResource("5_xl13i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.904667, -0.7160511, 31.921776)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.904667, -0.7160511, -2.1879005)
 
 [node name="Árvore5" parent="." unique_id=768170701 instance=ExtResource("5_xl13i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.384255, -0.716, 117.8123)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.384255, -0.716, 83.70262)
 
 [node name="Rua(AS)" parent="." unique_id=1277502179 instance=ExtResource("6_rvt2e")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -21.176836, -1.09, 56.11856)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -21.176836, -1.09, 22.008884)
 
 [node name="Prédios" parent="." unique_id=965448203 instance=ExtResource("7_yww2o")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.076088, -0.76517963, 45.763786)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.076088, -0.76517963, 11.65411)
 
 [node name="Building14" parent="Prédios/BuildingsUnit" parent_id_path=PackedInt32Array(965448203, 728412656) index="5" unique_id=1956306728]
 material_overlay = SubResource("ShaderMaterial_rvt2e")
@@ -274,25 +274,25 @@ shape = SubResource("BoxShape3D_b7eu1")
 [node name="InteractionSound" type="AudioStreamPlayer3D" parent="Prédios/Area3D" unique_id=1370160447]
 
 [node name="Prédios2" parent="." unique_id=1019934953 instance=ExtResource("8_ce2bt")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -62.095634, -0.74586296, 44.868633)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -62.095634, -0.74586296, 10.758957)
 
 [node name="Prédios3" parent="." unique_id=1314807129 instance=ExtResource("9_8rvjc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.762337, -0.723073, 215.46173)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.762337, -0.723073, 181.35205)
 
 [node name="Prédios4" parent="." unique_id=1865034748 instance=ExtResource("10_n6rfl")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.999641, -1.00776, -104.75381)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.999641, -1.00776, -138.86348)
 
 [node name="Placa" parent="." unique_id=595736324 instance=ExtResource("13_1ahnm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6672106, 0.88510907, -4.5386276)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6672106, 0.88510907, -1.0003204)
 
 [node name="Fundo" parent="." unique_id=1969763602 instance=ExtResource("15_cxx3x")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 23.582056, 6.431802, 49.912216)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 23.582056, 6.431802, 15.80254)
 
 [node name="Fundo2" parent="." unique_id=677170024 instance=ExtResource("16_xfwsx")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -70.07067, 7.8657074, 48.07638)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -70.07067, 7.8657074, 13.966705)
 
 [node name="Árvore6" parent="." unique_id=1121851960 instance=ExtResource("5_xl13i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.03585, -0.716, 159.77765)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.03585, -0.716, 125.66797)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1687773204]
 environment = SubResource("Environment_ygype")
@@ -304,163 +304,163 @@ light_energy = 0.4
 shadow_enabled = true
 
 [node name="Postes(Noite)" parent="." unique_id=995176037 instance=ExtResource("16_xdyah")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.409, 2.751, -59.541)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.409, 2.751, -93.65068)
 
 [node name="Postes(Noite)2" parent="." unique_id=593039757 instance=ExtResource("16_xdyah")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -41.167, 2.751, 161.06)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -41.167, 2.751, 126.95032)
 
 [node name="Postes(Noite)3" parent="." unique_id=426858633 instance=ExtResource("16_xdyah")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.944, 2.751, 203.113)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.944, 2.751, 169.00333)
 
 [node name="Postes(Noite)4" parent="." unique_id=1101454461 instance=ExtResource("16_xdyah")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -125.232, 2.751, -94.111)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -125.232, 2.751, -128.22067)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1615624482]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, -59.51959)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, -93.629265)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=531609252]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, -42.333057)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, -76.44273)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=1406199927]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, -25.573513)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, -59.68319)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D4" type="SpotLight3D" parent="." unique_id=1519102078]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, -8.697884)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, -42.80756)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D5" type="SpotLight3D" parent="." unique_id=1755098283]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 8.251616)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, -25.85806)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D6" type="SpotLight3D" parent="." unique_id=2045728174]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 25.28435)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, -8.825327)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D7" type="SpotLight3D" parent="." unique_id=1920657179]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 42.16892)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 8.059242)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D8" type="SpotLight3D" parent="." unique_id=529094494]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 59.35545)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 25.245773)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D9" type="SpotLight3D" parent="." unique_id=1404456920]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 76.11499)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 42.005314)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D10" type="SpotLight3D" parent="." unique_id=1890393232]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 92.99062)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 58.880947)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D11" type="SpotLight3D" parent="." unique_id=1715850021]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 109.940125)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 75.830444)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D12" type="SpotLight3D" parent="." unique_id=152993681]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 126.972855)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 92.863174)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D13" type="SpotLight3D" parent="." unique_id=2027411354]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 144.49442)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 110.384735)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D14" type="SpotLight3D" parent="." unique_id=627904911]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 161.52715)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.3145418, 5.1659446, 127.417465)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D15" type="SpotLight3D" parent="." unique_id=723825239]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, -59.51959)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, -93.629265)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D16" type="SpotLight3D" parent="." unique_id=985324674]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, -42.333057)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, -76.44273)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D17" type="SpotLight3D" parent="." unique_id=904308513]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, -25.573513)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, -59.68319)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D18" type="SpotLight3D" parent="." unique_id=989746679]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, -8.697884)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, -42.80756)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D19" type="SpotLight3D" parent="." unique_id=164344850]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 8.251616)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, -25.85806)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D20" type="SpotLight3D" parent="." unique_id=1044696422]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 25.28435)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, -8.825327)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D21" type="SpotLight3D" parent="." unique_id=1198361374]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 42.16892)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 8.059242)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D22" type="SpotLight3D" parent="." unique_id=8171885]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 59.35545)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 25.245773)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D23" type="SpotLight3D" parent="." unique_id=1398018958]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 76.11499)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 42.005314)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D24" type="SpotLight3D" parent="." unique_id=1077115453]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 92.99062)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 58.880947)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D25" type="SpotLight3D" parent="." unique_id=843755126]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 109.940125)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 75.830444)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D26" type="SpotLight3D" parent="." unique_id=916923652]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 126.972855)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 92.863174)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D27" type="SpotLight3D" parent="." unique_id=1859654155]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 144.49442)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 110.384735)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="SpotLight3D28" type="SpotLight3D" parent="." unique_id=1093709868]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 161.52715)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.458553, 5.1659446, 127.417465)
 light_energy = 7.337
 spot_range = 8.195
 
 [node name="BusPath" type="Path3D" parent="." unique_id=158173864]
-transform = Transform3D(0.108450435, 0, 0.9941019, 0, 1, 0, -0.9941019, 0, 0.108450435, -12.4533205, -0.38183594, -2.4505692)
+transform = Transform3D(0.108450435, 0, 0.9941019, 0, 1, 0, -0.9941019, 0, 0.108450435, -12.4533205, -0.38183594, -36.560246)
 curve = SubResource("Curve3D_ui4cq")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="BusPath" unique_id=715264372]
-transform = Transform3D(0.17128268, -0.03637197, -0.98454434, 0, 0.9993136, -0.036917515, 0.98521084, 0.006323406, 0.1711668, -0.37196207, 0, 4.917775)
+transform = Transform3D(0.14844292, -0.023217889, -0.98864275, 0, 0.99971974, -0.02347799, 0.98890877, 0.0034851863, 0.148403, -34.035812, 0, 8.590295)
 rotation_mode = 4
 loop = false
 script = ExtResource("13_b7eu1")
@@ -518,9 +518,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Barreira" type="StaticBody3D" parent="." unique_id=664033778]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.893894, 2.9113383, -29.827463)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.893894, 2.9113383, -63.93714)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Barreira" unique_id=1745991864]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0679383, 0, 0)
@@ -533,7 +534,7 @@ script = ExtResource("21_rvt2e")
 shape = SubResource("BoxShape3D_rvt2e")
 
 [node name="Barreira2" type="StaticBody3D" parent="." unique_id=360708862]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.275455, 2.8870544, 120.33506)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.275455, 2.8870544, 86.22539)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Barreira2" unique_id=1222580277]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0679383, 0, 0)

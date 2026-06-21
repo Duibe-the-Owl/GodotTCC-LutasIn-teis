@@ -39,6 +39,7 @@ directories/dtl_directory={
 "ColegasTalk": "res://ColegasTalk.dtl",
 "ColegasTalk2": "res://ColegasTalk2.dtl",
 "ColegasTalk3": "res://ColegasTalk3.dtl",
+"ColegasTalkFinal": "res://ColegasTalkFinal.dtl",
 "ComputerTalk": "res://ComputerTalk.dtl",
 "ComputerTalk2": "res://ComputerTalk2.dtl",
 "ComputerTalk3": "res://ComputerTalk3.dtl",

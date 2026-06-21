@@ -30,5 +30,8 @@ func start_dialogue():
 	elif current_scene_name == "escritórioDia3":
 		Dialogic.start("ColegasTalk3") # Plays on Day 3
 		
+	elif current_scene_name == "Finalescritório":
+		Dialogic.start("ColegasTalkFinal") # Plays on Day 3
+		
 	else:
 		Dialogic.start("ColegasTalk") # Default fallback / Plays on Day 1
