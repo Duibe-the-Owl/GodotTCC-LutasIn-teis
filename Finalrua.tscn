@@ -143,7 +143,7 @@ bob_freq = 1.6
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=659676882]
 transform = Transform3D(-0.69963676, -0.0061056768, -0.71447265, -0.7144455, -0.006234867, 0.69966334, -0.008726561, 0.9999619, -3.0938047e-08, -79.80818, 50.82352, -28.883652)
 light_color = Color(0.91764706, 0.94509804, 1, 1)
-light_energy = 0.9
+light_energy = 0.75
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1946459089]
@@ -163,43 +163,43 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -48.
 [node name="Árvore" parent="." unique_id=2098301847 instance=ExtResource("5_fd30y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.468374, -0.716, -49.423786)
 
-[node name="Leaves" parent="Árvore/TreeUnit" parent_id_path=PackedInt32Array(2098301847, 493173146) index="0" unique_id=1804023142]
+[node name="Leaves" parent="Árvore/TreeUnit" parent_id_path=PackedInt32Array(2098301847, 1783212223) index="0" unique_id=578153567]
 mesh = SubResource("ArrayMesh_fd30y")
 
 [node name="Árvore8" parent="." unique_id=353740080 instance=ExtResource("5_fd30y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.468, -0.716, 15.942)
 
-[node name="Leaves" parent="Árvore8/TreeUnit" parent_id_path=PackedInt32Array(353740080, 493173146) index="0" unique_id=1804023142]
+[node name="Leaves" parent="Árvore8/TreeUnit" parent_id_path=PackedInt32Array(353740080, 1783212223) index="0" unique_id=578153567]
 mesh = SubResource("ArrayMesh_fd30y")
 
 [node name="Árvore9" parent="." unique_id=1066771581 instance=ExtResource("5_fd30y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.264, -0.716, 58.747)
 
-[node name="Leaves" parent="Árvore9/TreeUnit" parent_id_path=PackedInt32Array(1066771581, 493173146) index="0" unique_id=1804023142]
+[node name="Leaves" parent="Árvore9/TreeUnit" parent_id_path=PackedInt32Array(1066771581, 1783212223) index="0" unique_id=578153567]
 mesh = SubResource("ArrayMesh_fd30y")
 
 [node name="Árvore10" parent="." unique_id=647795143 instance=ExtResource("5_fd30y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.592, -0.716, -0.469)
 
-[node name="Leaves" parent="Árvore10/TreeUnit" parent_id_path=PackedInt32Array(647795143, 493173146) index="0" unique_id=1804023142]
+[node name="Leaves" parent="Árvore10/TreeUnit" parent_id_path=PackedInt32Array(647795143, 1783212223) index="0" unique_id=578153567]
 mesh = SubResource("ArrayMesh_fd30y")
 
 [node name="Árvore11" parent="." unique_id=990777266 instance=ExtResource("5_fd30y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.592, -0.716, -70.045)
 
-[node name="Leaves" parent="Árvore11/TreeUnit" parent_id_path=PackedInt32Array(990777266, 493173146) index="0" unique_id=1804023142]
+[node name="Leaves" parent="Árvore11/TreeUnit" parent_id_path=PackedInt32Array(990777266, 1783212223) index="0" unique_id=578153567]
 mesh = SubResource("ArrayMesh_fd30y")
 
 [node name="Árvore12" parent="." unique_id=593172734 instance=ExtResource("5_fd30y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.468, -0.716, -120.548)
 
-[node name="Leaves" parent="Árvore12/TreeUnit" parent_id_path=PackedInt32Array(593172734, 493173146) index="0" unique_id=1804023142]
+[node name="Leaves" parent="Árvore12/TreeUnit" parent_id_path=PackedInt32Array(593172734, 1783212223) index="0" unique_id=578153567]
 mesh = SubResource("ArrayMesh_fd30y")
 
 [node name="Árvore13" parent="." unique_id=1533887807 instance=ExtResource("5_fd30y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.506, -0.716, -167.68)
 
-[node name="Leaves" parent="Árvore13/TreeUnit" parent_id_path=PackedInt32Array(1533887807, 493173146) index="0" unique_id=1804023142]
+[node name="Leaves" parent="Árvore13/TreeUnit" parent_id_path=PackedInt32Array(1533887807, 1783212223) index="0" unique_id=578153567]
 mesh = SubResource("ArrayMesh_fd30y")
 
 [node name="Rua(AS)" parent="." unique_id=474917808 instance=ExtResource("6_3yblm")]
@@ -231,7 +231,7 @@ max_speed = 6.5
 [node name="Ônibus" parent="BusPath/PathFollow3D" unique_id=1347629826 instance=ExtResource("12_64bn6")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 
-[node name="BusDoor" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(1347629826, 2143970462) index="1" unique_id=1541150870]
+[node name="BusDoor" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(1347629826, 112014410) index="1" unique_id=990099557]
 material_overlay = SubResource("ShaderMaterial_qivp7")
 
 [node name="Area3D" parent="BusPath/PathFollow3D/Ônibus" index="7" unique_id=1164175362]
@@ -240,7 +240,7 @@ destination_scene = "uid://def22xcqc4bee"
 [node name="Placa" parent="." unique_id=585211801 instance=ExtResource("13_xdtgp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.895375, 0.88510907, -106.505615)
 
-[node name="Sign" parent="Placa" index="0" unique_id=853710893]
+[node name="Sign" parent="Placa" index="0" unique_id=1946744231]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 37.1131)
 material_overlay = SubResource("ShaderMaterial_jjjwh")
 

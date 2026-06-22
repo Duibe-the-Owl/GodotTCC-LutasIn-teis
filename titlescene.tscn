@@ -21,6 +21,74 @@
 [ext_resource type="VoxelGIData" uid="uid://vtkwkd4g5g23" path="res://Apartamento.VoxelGI_data.res" id="55_4667r"]
 [ext_resource type="Shader" uid="uid://g53we0g41lwa" path="res://dither.gdshader" id="56_cbd7h"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c5fox"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 0.7764706, 1)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uyity"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 0.7764706, 1)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eb3lt"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 0.7764706, 1)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3fnni"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 0.7764706, 1)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+corner_detail = 5
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nplhr"]
 resource_name = "Material.065"
 transparency = 4
@@ -179,6 +247,7 @@ custom_minimum_size = Vector2(350, 80)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_c5fox")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_c5fox")
 text = "Começar"
 
 [node name="OptionsButton" type="Button" parent="MainMenu/MenuButtons" unique_id=311774027]
@@ -186,6 +255,7 @@ custom_minimum_size = Vector2(350, 80)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_c5fox")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_uyity")
 text = "Opções"
 
 [node name="QuitButton" type="Button" parent="MainMenu/MenuButtons" unique_id=1437420137]
@@ -193,6 +263,7 @@ custom_minimum_size = Vector2(350, 80)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_c5fox")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_eb3lt")
 text = "Sair"
 
 [node name="OptionsWindow" type="PanelContainer" parent="MainMenu" unique_id=360698778]
@@ -246,6 +317,7 @@ custom_minimum_size = Vector2(350, 80)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_c5fox")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_3fnni")
 text = "Voltar"
 
 [node name="Estrutura (Quarto)" type="Node3D" parent="." unique_id=1330687830]
