@@ -41,12 +41,14 @@
 [ext_resource type="PackedScene" uid="uid://ucvxllmgxr1a" path="res://Teto(Cozinha).glb" id="39_3lddw"]
 [ext_resource type="PackedScene" uid="uid://bxtbo68flkguv" path="res://Geladeira.glb" id="40_ycgts"]
 [ext_resource type="PackedScene" uid="uid://4ob2mdcy5m66" path="res://Forno.glb" id="41_nc1lp"]
+[ext_resource type="Script" uid="uid://cbvasbyjgmp1d" path="res://geladeira.gd" id="41_yh3j2"]
 [ext_resource type="PackedScene" uid="uid://dhwxekuv533q" path="res://Lixeira.glb" id="42_pc201"]
 [ext_resource type="PackedScene" uid="uid://b7qew5rnt2a43" path="res://Cabinete.glb" id="43_q8t6f"]
 [ext_resource type="PackedScene" uid="uid://csloe0f7uai4k" path="res://Pia.glb" id="44_umcjq"]
-[ext_resource type="Script" uid="uid://4otmkvf5v6q8" path="res://pão.gd" id="45_128qr"]
-[ext_resource type="AudioStream" uid="uid://2sbilc0yu16" path="res://Munching_SE.wav" id="46_a6eaq"]
+[ext_resource type="PackedScene" uid="uid://cjt1c0p6jsedb" path="res://Breakfeast.glb" id="46_myf78"]
+[ext_resource type="Script" uid="uid://x80xvytm3s4o" path="res://breakfeast.gd" id="47_myf78"]
 [ext_resource type="PackedScene" uid="uid://b2pco2anafkuo" path="res://Parede(Hall).glb" id="47_osk5h"]
+[ext_resource type="AudioStream" uid="uid://2sbilc0yu16" path="res://Munching_SE.wav" id="48_if7np"]
 [ext_resource type="PackedScene" uid="uid://tryd3ejhgf4s" path="res://Chão(Hall).glb" id="48_x4ra3"]
 [ext_resource type="PackedScene" uid="uid://bamhsgt6ayjc6" path="res://ParedeElevador.glb" id="49_7yowo"]
 [ext_resource type="PackedScene" uid="uid://bd21n8p33ty64" path="res://Elevador.glb" id="50_us65v"]
@@ -95,14 +97,39 @@ shader_parameter/size = 1.06999999843536
 [sub_resource type="BoxShape3D" id="BoxShape3D_16et2"]
 size = Vector3(0.7, 0.7, 0.7)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_myf78"]
+render_priority = 0
+shader = ExtResource("18_myf78")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/size = 1.05
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_if7np"]
+size = Vector3(1.215, 2.45, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_if7np"]
+render_priority = 0
+shader = ExtResource("18_myf78")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/size = 1.05
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lmiij"]
 render_priority = 0
 shader = ExtResource("18_myf78")
 shader_parameter/color = Color(1, 1, 1, 1)
-shader_parameter/size = 1.07999999821184
+shader_parameter/size = 1.05
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_l4rdf"]
-size = Vector3(0.7, 0.7, 0.7)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lhgye"]
+albedo_color = Color(1, 1, 1, 0.15294118)
+roughness = 0.5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_thdwi"]
+render_priority = 0
+next_pass = SubResource("StandardMaterial3D_lhgye")
+shader = ExtResource("18_myf78")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/size = 1.05
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kfbsu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_num3o"]
 
@@ -347,6 +374,18 @@ transform = Transform3D(-4.371139e-08, 0, 1, -0.007836448, 0.9999693, -3.4254202
 [node name="Geladeira" parent="Cozinha (Móveis)" unique_id=1774942490 instance=ExtResource("40_ycgts")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.602, 0.14209019, 0.821)
 
+[node name="Fridge" parent="Cozinha (Móveis)/Geladeira" index="0" unique_id=204283452]
+material_overlay = SubResource("ShaderMaterial_myf78")
+
+[node name="Area3D" type="Area3D" parent="Cozinha (Móveis)/Geladeira/Fridge" index="1" unique_id=52503176 node_paths=PackedStringArray("new_kitchen_items")]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("41_yh3j2")
+new_kitchen_items = NodePath("../../../NewKitchenItems")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cozinha (Móveis)/Geladeira/Fridge/Area3D" unique_id=347615031]
+shape = SubResource("BoxShape3D_if7np")
+
 [node name="Forno" parent="Cozinha (Móveis)" unique_id=2106796012 instance=ExtResource("41_nc1lp")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.154, -0.394, 0.855)
 
@@ -363,18 +402,35 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.85
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.338, -0.8303562, 0.773)
 
 [node name="Bread" parent="Cozinha (Móveis)/Pia/Sink_Area" parent_id_path=PackedInt32Array(585669820, 1157109093) index="0" unique_id=910013523]
+visible = false
 layers = 2
+
+[node name="Bread_Bag" parent="Cozinha (Móveis)/Pia/Sink_Area" parent_id_path=PackedInt32Array(585669820, 1157109093) index="1" unique_id=1119383044]
+visible = false
+
+[node name="NewKitchenItems" type="Node3D" parent="Cozinha (Móveis)" unique_id=140167856]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.2188015, 0, 0.672762)
+visible = false
+
+[node name="Café da Manhã" parent="Cozinha (Móveis)/NewKitchenItems" unique_id=768167894 instance=ExtResource("46_myf78")]
+
+[node name="Banana" parent="Cozinha (Móveis)/NewKitchenItems/Café da Manhã/Breakfeast" parent_id_path=PackedInt32Array(768167894, 1491864671) index="0" unique_id=877852046]
+material_overlay = SubResource("ShaderMaterial_if7np")
+
+[node name="Bread2" parent="Cozinha (Móveis)/NewKitchenItems/Café da Manhã/Breakfeast" parent_id_path=PackedInt32Array(768167894, 1491864671) index="1" unique_id=193641280]
 material_overlay = SubResource("ShaderMaterial_lmiij")
 
-[node name="Area3D" type="Area3D" parent="Cozinha (Móveis)/Pia/Sink_Area/Bread" index="0" unique_id=769775108]
+[node name="Cup" parent="Cozinha (Móveis)/NewKitchenItems/Café da Manhã/Breakfeast" parent_id_path=PackedInt32Array(768167894, 1491864671) index="2" unique_id=280077387]
+material_overlay = SubResource("ShaderMaterial_thdwi")
+
+[node name="Area3D" type="Area3D" parent="Cozinha (Móveis)/NewKitchenItems/Café da Manhã" unique_id=1165855014]
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("45_128qr")
-interaction_sound = ExtResource("46_a6eaq")
+script = ExtResource("47_myf78")
+interaction_sound = ExtResource("48_if7np")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Cozinha (Móveis)/Pia/Sink_Area/Bread/Area3D" unique_id=1491247542]
-transform = Transform3D(0.34529823, 0, 0.938493, 0, 1, 0, -0.938493, 0, 0.34529823, 0, 0, 0)
-shape = SubResource("BoxShape3D_l4rdf")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cozinha (Móveis)/NewKitchenItems/Café da Manhã/Area3D" unique_id=255936634]
+shape = SubResource("BoxShape3D_kfbsu")
 
 [node name="Elevador" type="Node3D" parent="." unique_id=1564093022]
 
@@ -456,4 +512,6 @@ shape = SubResource("BoxShape3D_myf78")
 [editable path="Estrutura (Quarto)/Teto"]
 [editable path="Móveis (Quarto)/Armário"]
 [editable path="Sala (Móveis)/Mesita"]
+[editable path="Cozinha (Móveis)/Geladeira"]
 [editable path="Cozinha (Móveis)/Pia"]
+[editable path="Cozinha (Móveis)/NewKitchenItems/Café da Manhã"]

@@ -163,6 +163,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 37.773987)
 material_overlay = SubResource("ShaderMaterial_d5xsf")
 
 [node name="Area3D" type="Area3D" parent="Placa" unique_id=1026088592]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 37.737)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("14_founb")
