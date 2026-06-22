@@ -1,6 +1,6 @@
 extends Area3D
 
-# Drag and drop your hidden kitchen items group node here from the Inspector
+@export var interaction_sound : AudioStream 
 @export var new_kitchen_items: Node3D
 @onready var mesh_node: MeshInstance3D = $".."
 

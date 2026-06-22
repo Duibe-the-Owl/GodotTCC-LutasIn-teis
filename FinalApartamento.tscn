@@ -42,6 +42,7 @@
 [ext_resource type="PackedScene" uid="uid://bxtbo68flkguv" path="res://Geladeira.glb" id="40_ycgts"]
 [ext_resource type="PackedScene" uid="uid://4ob2mdcy5m66" path="res://Forno.glb" id="41_nc1lp"]
 [ext_resource type="Script" uid="uid://cbvasbyjgmp1d" path="res://geladeira.gd" id="41_yh3j2"]
+[ext_resource type="AudioStream" uid="uid://b2d5m53j0ddfr" path="res://Fridge_SE.wav" id="42_kfbsu"]
 [ext_resource type="PackedScene" uid="uid://dhwxekuv533q" path="res://Lixeira.glb" id="42_pc201"]
 [ext_resource type="PackedScene" uid="uid://b7qew5rnt2a43" path="res://Cabinete.glb" id="43_q8t6f"]
 [ext_resource type="PackedScene" uid="uid://csloe0f7uai4k" path="res://Pia.glb" id="44_umcjq"]
@@ -267,7 +268,7 @@ omni_range = 5.741
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=1575128428]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.058546, 2.0672932, 2.2004004)
-light_energy = 0.168
+light_energy = 0.3
 shadow_enabled = true
 omni_range = 7.351
 
@@ -381,6 +382,7 @@ material_overlay = SubResource("ShaderMaterial_myf78")
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("41_yh3j2")
+interaction_sound = ExtResource("42_kfbsu")
 new_kitchen_items = NodePath("../../../NewKitchenItems")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cozinha (Móveis)/Geladeira/Fridge/Area3D" unique_id=347615031]
