@@ -30,6 +30,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=585728751]
+layer = 2
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1382430161]
 material = SubResource("ShaderMaterial_0uet8")
