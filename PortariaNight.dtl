@@ -1,4 +1,7 @@
+[signal arg="talk_porteiro"]
+join Porteiro center
 Porteiro: Boa noite.
 Nick: Ah, boa noite.
 Porteiro: Vai com segurança viu.
 Nick: Ah, valeu.
+[signal arg="end_dialogue"]

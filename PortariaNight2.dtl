@@ -1,5 +1,7 @@
+[signal arg="talk_porteiro"]
 Porteiro: Uma boa noite.
 Nick: Boa noite.
 Porteiro: Esse trabalho cansa né?
 Nick: É...
 Nick: (Você não tem ideia...)
+[signal arg="end_dialogue"]

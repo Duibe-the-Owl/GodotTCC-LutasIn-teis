@@ -1,3 +1,5 @@
+[signal arg="talk_porteiro"]
 join Porteiro center
 Porteiro: Bom dia.
 Nick: ...Dia.
+[signal arg="end_dialogue"]
