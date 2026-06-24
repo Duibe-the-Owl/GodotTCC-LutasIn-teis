@@ -36,18 +36,18 @@
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vqoap"]
 points = PackedVector3Array(-0.17457025, -0.0020341033, -0.2272107, -0.17258668, 0.015372725, -0.2272107, 0.024219781, 0.6285622, -0.45909503, 0.024219781, 0.16154072, -0.45909503, 0.19145297, -0.0020341033, -0.2272107, -0.17457025, -0.0020341033, 0.22712085, -0.10572225, 0.46288872, -0.07181224, -0.17258668, 0.015372725, 0.22712085, 0.06385516, 0.6285622, -0.45909503, 0.024219781, 0.6285622, 0.45909503, 0.06385516, 0.16154072, -0.45909503, 0.19383325, 0.015372725, -0.2272107, 0.19386931, 0.015372725, 0.22712085, 0.19145297, -0.0020341033, 0.22712085, 0.024219781, 0.16154072, 0.45909503, -0.10572225, 0.46288872, 0.07172236, 0.06385516, 0.6285622, 0.45909503, 0.06385516, 0.16154072, 0.45909503)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_jb5kn"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_o7ajy"]
 viewport_path = NodePath("DeskUnit/Screen/SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_1hjdv"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_w2oav"]
 viewport_path = NodePath("DeskUnit/Screen/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_edh56"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7qq1s"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_jb5kn")
+albedo_texture = SubResource("ViewportTexture_o7ajy")
 emission_enabled = true
 emission_energy_multiplier = 0.3
-emission_texture = SubResource("ViewportTexture_1hjdv")
+emission_texture = SubResource("ViewportTexture_w2oav")
 
 [sub_resource type="VideoStreamTheora" id="VideoStreamTheora_wjgvv"]
 file = "res://Work_Cutscene.ogv"
@@ -323,7 +323,7 @@ collision_mask = 2
 shape = SubResource("ConvexPolygonShape3D_vqoap")
 
 [node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 666559217) index="7" unique_id=44197733]
-surface_material_override/0 = SubResource("StandardMaterial3D_edh56")
+surface_material_override/0 = SubResource("StandardMaterial3D_7qq1s")
 
 [node name="SubViewport" type="SubViewport" parent="MainCarteira/DeskUnit/Screen" index="0" unique_id=1884540969]
 size = Vector2i(1024, 800)
@@ -445,7 +445,7 @@ mouse_filter = 2
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 74.285, -34.025, 0.526)
 
 [node name="Colega de Trabalho" parent="." unique_id=1449720757 instance=ExtResource("29_lgpxh")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.30371833, 0.33766013, -4.459295)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.44114584, 0.35872895, -4.459295)
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1645553176 node_paths=PackedStringArray("npc_node")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0315354, 0, 0.7220503)

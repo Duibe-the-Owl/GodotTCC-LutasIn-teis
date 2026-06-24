@@ -618,6 +618,7 @@ mouse_filter = 2
 
 [editable path="Corredor (Estrutura)/PortaSala"]
 [editable path="Móveis (Quarto)/Cama"]
+[editable path="Móveis (Quarto)/Despertador"]
 [editable path="Móveis (Quarto)/Armário"]
 [editable path="Sala (Móveis)/Mesa"]
 [editable path="Sala (Móveis)/Mesita"]

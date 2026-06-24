@@ -1,6 +1,8 @@
+[signal arg="talk_colega"]
 join Colega center
 Colega: E aí Nick.
 Nick: Opa, uh, e aí.
 Colega: Animado pro fim de semana?
 Nick: Não muito, eu acho.
 Colega: Ah, okay.
+[signal arg="end_dialogue"]

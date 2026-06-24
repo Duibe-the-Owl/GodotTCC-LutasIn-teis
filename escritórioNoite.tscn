@@ -445,7 +445,7 @@ mouse_filter = 2
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 74.285, -34.025, 0.526)
 
 [node name="Colega de Trabalho" parent="." unique_id=1449720757 instance=ExtResource("29_upvgb")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.30371833, 0.33766013, -4.459295)
+transform = Transform3D(-4.3695458e-08, 0.026996963, -0.9996355, 1.1800747e-09, 0.9996355, 0.026996963, 1, 0, -4.371139e-08, -0.46217927, 0.37606466, -4.459295)
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1645553176 node_paths=PackedStringArray("npc_node")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0315354, 0, 0.7220503)

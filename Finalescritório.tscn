@@ -411,7 +411,7 @@ data = ExtResource("25_jc6ro")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 120.02668, -24.717525, -2.8735485)
 
 [node name="Colega de Trabalho" parent="." unique_id=1449720757 instance=ExtResource("28_y4ek7")]
-transform = Transform3D(-4.353335e-08, 0.09016327, -0.995927, 3.9411616e-09, 0.995927, 0.09016327, 1, 0, -4.371139e-08, 18.444374, 0.308, 10.835)
+transform = Transform3D(-4.353335e-08, 0.09016327, -0.995927, 3.9411616e-09, 0.995927, 0.09016327, 1, 0, -4.371139e-08, 18.320974, 0.330336, 10.835)
 
 [node name="Area3D" type="Area3D" parent="." unique_id=894235400 node_paths=PackedStringArray("npc_node")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.347488, 0, 15.14306)

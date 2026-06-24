@@ -63,18 +63,18 @@ shader_parameter/size = 1.05
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8v41d"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_aacnq"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_6bv2t"]
 viewport_path = NodePath("DeskUnit/Screen/SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_bp265"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_iull5"]
 viewport_path = NodePath("DeskUnit/Screen/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_owrm6"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aacnq"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_aacnq")
+albedo_texture = SubResource("ViewportTexture_6bv2t")
 emission_enabled = true
 emission_energy_multiplier = 0.3
-emission_texture = SubResource("ViewportTexture_bp265")
+emission_texture = SubResource("ViewportTexture_iull5")
 
 [sub_resource type="Animation" id="Animation_5lkqy"]
 length = 0.001
@@ -387,7 +387,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22179025, 0)
 shape = SubResource("BoxShape3D_8v41d")
 
 [node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="7" unique_id=44197733]
-surface_material_override/0 = SubResource("StandardMaterial3D_owrm6")
+surface_material_override/0 = SubResource("StandardMaterial3D_aacnq")
 
 [node name="SubViewport" type="SubViewport" parent="MainCarteira/DeskUnit/Screen" index="0" unique_id=1884540969]
 size = Vector2i(1280, 700)
@@ -407,7 +407,7 @@ root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_5lkqy")
 
 [node name="SitCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="9" unique_id=188736818]
-transform = Transform3D(0.83388567, 0, 0.5519369, 0, 1, 0, -0.5519369, 0, 0.83388567, 1.0576382, 0.55, 1.489955)
+transform = Transform3D(0.8338856, 0, 0.55193686, 0, 1, 0, -0.55193686, 0, 0.8338856, 1.0576382, 0.55, 1.489955)
 fov = 72.6
 
 [node name="Relógio" parent="." unique_id=875575135 instance=ExtResource("23_fj86e")]
@@ -490,7 +490,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 44.9
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 105.383064, -24.717525, -2.8735485)
 
 [node name="Colega de Trabalho" parent="." unique_id=1449720757 instance=ExtResource("28_lrxko")]
-transform = Transform3D(-4.353335e-08, 0.09016327, -0.995927, 3.9411616e-09, 0.995927, 0.09016327, 1, 0, -4.371139e-08, 18.444374, 0.308, 10.835)
+transform = Transform3D(-4.353335e-08, 0.09016327, -0.995927, 3.9411616e-09, 0.995927, 0.09016327, 1, 0, -4.371139e-08, 18.34501, 0.34404346, 10.835)
 
 [node name="Area3D" type="Area3D" parent="." unique_id=894235400 node_paths=PackedStringArray("npc_node")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.347488, 0, 15.14306)
@@ -543,7 +543,7 @@ npc_node = NodePath("../Colega4")
 shape = SubResource("BoxShape3D_33je2")
 
 [node name="Colega de Trabalho2" parent="." unique_id=2070474460 instance=ExtResource("28_lrxko")]
-transform = Transform3D(-4.371139e-08, -0.09063257, 0.99588436, 0, 0.99588436, 0.09063257, -1, 3.9616754e-09, -4.3531486e-08, 7.8482094, 0.308, 4.125241)
+transform = Transform3D(-4.371139e-08, -0.09063257, 0.99588436, 0, 0.99588436, 0.09063257, -1, 3.9616754e-09, -4.3531486e-08, 7.974802, 0.33048114, 4.125241)
 
 [connection signal="player_sat_down" from="MainCarteira/DeskUnit/Monitor/MonitorInteractionArea" to="." method="_on_monitor_interaction_area_player_sat_down"]
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

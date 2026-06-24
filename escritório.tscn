@@ -241,7 +241,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.249003, -0.055074453, 4.13
 [node name="Carteira14" parent="." unique_id=212075373 instance=ExtResource("9_dc56r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.474821, -0.055074453, 10.789474)
 
-[node name="Chair" parent="Carteira14/DeskUnit" parent_id_path=PackedInt32Array(212075373, 1591636479) index="0" unique_id=1021926532]
+[node name="Chair" parent="Carteira14/DeskUnit" parent_id_path=PackedInt32Array(212075373, 1843714406) index="0" unique_id=2033621537]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8137474, -0.29560387, 0.04257965)
 
 [node name="Carteira15" parent="." unique_id=1340378624 instance=ExtResource("9_dc56r")]
@@ -303,7 +303,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.1
 [node name="MainCarteira" parent="." unique_id=1811457096 instance=ExtResource("19_vqoap")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.475147, -0.055103928, 13.9879265)
 
-[node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 300741575) index="3" unique_id=1233270428]
+[node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="3" unique_id=1757339918]
 layers = 2
 material_overlay = SubResource("ShaderMaterial_1ab0y")
 
@@ -317,7 +317,7 @@ script = ExtResource("20_4q64r")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22179025, 0)
 shape = SubResource("BoxShape3D_8v41d")
 
-[node name="ScreenInteractionArea" type="Area3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 300741575) index="7" unique_id=985870322]
+[node name="ScreenInteractionArea" type="Area3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="7" unique_id=985870322]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24362564, 0.03672272, -0.05687332)
 collision_layer = 2
 collision_mask = 2
@@ -327,14 +327,14 @@ script = ExtResource("22_8v41d")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13251686, 0.41383284, 0)
 shape = SubResource("BoxShape3D_wi2vf")
 
-[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 300741575) index="8" unique_id=137443092]
+[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="8" unique_id=44197733]
 surface_material_override/0 = SubResource("StandardMaterial3D_33je2")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 300741575) index="9" unique_id=1558306546]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="9" unique_id=1558306546]
 root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_5lkqy")
 
-[node name="CutsceneCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 300741575) index="10" unique_id=188736818]
+[node name="CutsceneCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="10" unique_id=188736818]
 transform = Transform3D(0.8338856, 0, 0.55193686, 0, 1, 0, -0.55193686, 0, 0.8338856, 1.0576382, 0.55, 1.489955)
 fov = 72.6
 
@@ -418,7 +418,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 44.9
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 105.383064, -24.717525, -2.8735485)
 
 [node name="Colega de Trabalho" parent="." unique_id=1449720757 instance=ExtResource("29_xrcyy")]
-transform = Transform3D(-4.353335e-08, 0.09016327, -0.995927, 3.9411616e-09, 0.995927, 0.09016327, 1, 0, -4.371139e-08, 18.444374, 0.308, 10.835)
+transform = Transform3D(-4.353335e-08, 0.09016327, -0.995927, 3.9411616e-09, 0.995927, 0.09016327, 1, 0, -4.371139e-08, 18.321009, 0.32330278, 10.835)
 
 [node name="Area3D" type="Area3D" parent="." unique_id=894235400 node_paths=PackedStringArray("npc_node")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.347488, 0, 15.14306)
@@ -585,8 +585,8 @@ npc_node = NodePath("../Colega4")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D4" unique_id=1246933472]
 shape = SubResource("BoxShape3D_33je2")
 
-[node name="Colega de Trabalho2" parent="." unique_id=2070474460 instance=ExtResource("29_xrcyy")]
-transform = Transform3D(-4.371139e-08, -0.09063257, 0.99588436, 0, 0.99588436, 0.09063257, -1, 3.9616754e-09, -4.3531486e-08, 7.8482094, 0.308, 4.125241)
+[node name="Colega de Trabalho2" parent="." unique_id=1845416362 instance=ExtResource("29_xrcyy")]
+transform = Transform3D(-4.371139e-08, -0.09063257, 0.99588436, 0, 0.99588436, 0.09063257, -1, 3.9616754e-09, -4.3531486e-08, 7.9831667, 0.33801487, 4.125241)
 
 [node name="Colega 4" parent="." unique_id=1859538585 instance=ExtResource("33_oh124")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.259386, 0.06971273, 4.1821656)
