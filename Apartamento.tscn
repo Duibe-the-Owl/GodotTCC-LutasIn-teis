@@ -291,13 +291,13 @@ mesh = SubResource("ArrayMesh_kgcm1")
 [node name="Armário" parent="Móveis (Quarto)" unique_id=112364231 instance=ExtResource("16_m30uk")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.6525167, -0.8273673, -2.352987)
 
-[node name="Bar" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(112364231, 1591386016) index="0" unique_id=1109988549]
+[node name="Bar" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(112364231, 69415005) index="0" unique_id=779636041]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 2.059648, -0.17623472)
 
-[node name="Pants" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(112364231, 1591386016) index="2" unique_id=636032468]
+[node name="Pants" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(112364231, 69415005) index="2" unique_id=100201535]
 transform = Transform3D(-0.7071066, 0.70710695, 5.9604645e-08, 5.9604645e-08, 0, 1, 0.70710695, 0.7071066, 0, -0.015007257, 1.5682206, 0.36414862)
 
-[node name="Uniform" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(112364231, 1591386016) index="3" unique_id=553219073]
+[node name="Uniform" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(112364231, 69415005) index="3" unique_id=1251525086]
 transform = Transform3D(-0.7071066, 0.70710695, 5.9604645e-08, 5.9604645e-08, 0, 1, 0.70710695, 0.7071066, 0, -0.015007257, 1.5682206, 0.7805791)
 layers = 2
 material_override = SubResource("StandardMaterial3D_3b0f0")
