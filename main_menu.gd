@@ -11,6 +11,8 @@ extends Node3D
 @onready var music_slider: HSlider = $MainMenu/OptionsWindow/VBoxContainer/MusicSlider
 @onready var sfx_slider: HSlider = $MainMenu/OptionsWindow/VBoxContainer/SFXSlider
 
+@onready var text_window: PanelContainer = $MainMenu/AboutWindow
+
 var music_bus_index: int
 var sfx_bus_index: int
 
@@ -21,6 +23,7 @@ func _ready() -> void:
 	
 	menu_buttons.show()
 	options_window.hide()
+	text_window.hide()
 	
 	# Fetch audio buses
 	music_bus_index = AudioServer.get_bus_index("Music")
@@ -67,3 +70,13 @@ func _on_music_slider_value_changed(value: float) -> void:
 func _on_sfx_slider_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(sfx_bus_index, linear_to_db(value))
 	AudioServer.set_bus_mute(sfx_bus_index, value == 0.0)
+	
+func _on_about_button_pressed() -> void:
+	# Hide the main menu buttons, open the text window
+	menu_buttons.hide()
+	text_window.show()
+	
+func _on_text_back_button_pressed() -> void:
+	# Hide the text window, bring back the main menu buttons
+	text_window.hide()
+	menu_buttons.show()

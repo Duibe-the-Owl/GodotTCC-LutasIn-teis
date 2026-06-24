@@ -216,7 +216,6 @@ rockOffset = Vector3(-4, -3, 0)
 npc_scene = ExtResource("2_xedls")
 npc_spawn_point = NodePath("SísifoSpawnPoint")
 white_fade_rect = NodePath("CanvasLayer2/ColorRect")
-next_scene_path = "res://FinalApartamento.tscn"
 
 [node name="Montanha" parent="." unique_id=558583841 instance=ExtResource("1_btv6c")]
 transform = Transform3D(0.9219848, 0.38722596, 0, -0.38722596, 0.9219848, 0, 0, 0, 1, 25.002466, -2.7718, -0.004631996)

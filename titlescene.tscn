@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c2xoumi8ixg2e" path="res://main_menu.gd" id="1_0oyug"]
 [ext_resource type="Texture2D" uid="uid://3smqx230puhf" path="res://LUTASINUTEISLOGO-06.png" id="2_wf3hx"]
 [ext_resource type="FontVariation" uid="uid://xeljouqmacpb" path="res://addons/dialogic/Example Assets/Fonts/font_bold.tres" id="3_c5fox"]
+[ext_resource type="FontVariation" uid="uid://cam5ntuuagdkk" path="res://addons/dialogic/Example Assets/Fonts/font_normal.tres" id="4_uyity"]
 [ext_resource type="PackedScene" uid="uid://i8t40gupt2dm" path="res://Parede_Porta(Quarto).glb" id="7_60173"]
 [ext_resource type="PackedScene" uid="uid://pnqswl3fwrc0" path="res://Parede_Esquerda(Quarto).glb" id="8_1c4rq"]
 [ext_resource type="PackedScene" uid="uid://bemwcgvjwufo2" path="res://Parede_Janela(Quarto).glb" id="9_atl06"]
@@ -55,6 +56,18 @@ corner_radius_bottom_right = 13
 corner_radius_bottom_left = 13
 corner_detail = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dd6w"]
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.6)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 0.7764706, 1)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eb3lt"]
 content_margin_left = 4.0
 content_margin_top = 4.0
@@ -88,6 +101,18 @@ corner_radius_top_right = 13
 corner_radius_bottom_right = 13
 corner_radius_bottom_left = 13
 corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cu7u1"]
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.6)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 0.7764706, 1)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nplhr"]
 resource_name = "Material.065"
@@ -235,9 +260,9 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -423.83502
-offset_top = -165.595
+offset_top = -265.115
 offset_right = -73.83496
-offset_bottom = 194.40515
+offset_bottom = 279.885
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_constants/separation = 75
@@ -257,6 +282,14 @@ theme_override_fonts/font = ExtResource("3_c5fox")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_uyity")
 text = "Opções"
+
+[node name="About Button" type="Button" parent="MainMenu/MenuButtons" unique_id=1580749849]
+custom_minimum_size = Vector2(350, 80)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_c5fox")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_6dd6w")
+text = "Sobre"
 
 [node name="QuitButton" type="Button" parent="MainMenu/MenuButtons" unique_id=1437420137]
 custom_minimum_size = Vector2(350, 80)
@@ -318,6 +351,40 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_c5fox")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_3fnni")
+text = "Voltar"
+
+[node name="AboutWindow" type="PanelContainer" parent="MainMenu" unique_id=883323509]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -466.25
+offset_top = -262.73
+offset_right = -66.25
+offset_bottom = 257.27002
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/AboutWindow" unique_id=489282783]
+layout_mode = 2
+theme_override_constants/separation = 37
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainMenu/AboutWindow/VBoxContainer" unique_id=1630164692]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("4_uyity")
+theme_override_font_sizes/normal_font_size = 25
+text = "Este projeto de conclusão de curso se apresenta como uma articulação de uma junta filosófica enraizada fortemente no pensamento absurdista de Albert Camus e seu Mito de Sísifo, com uma segunda junta narrativa interativa-visual que se desdobra e permite seu movimento completo. Lutas Inúteis é um olhar para dentro de um mundo sem aparente sentido e um olhar para dentro de si próprio."
+fit_content = true
+
+[node name="TextBackButton" type="Button" parent="MainMenu/AboutWindow/VBoxContainer" unique_id=1504009046]
+custom_minimum_size = Vector2(350, 80)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_c5fox")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_cu7u1")
 text = "Voltar"
 
 [node name="Estrutura (Quarto)" type="Node3D" parent="." unique_id=1330687830]
@@ -430,10 +497,12 @@ material = SubResource("FogMaterial_0oyug")
 
 [connection signal="pressed" from="MainMenu/MenuButtons/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MainMenu/MenuButtons/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="MainMenu/MenuButtons/About Button" to="." method="_on_about_button_pressed"]
 [connection signal="pressed" from="MainMenu/MenuButtons/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="value_changed" from="MainMenu/OptionsWindow/VBoxContainer/MusicSlider" to="." method="_on_music_slider_value_changed"]
 [connection signal="value_changed" from="MainMenu/OptionsWindow/VBoxContainer/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
 [connection signal="pressed" from="MainMenu/OptionsWindow/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="MainMenu/AboutWindow/VBoxContainer/TextBackButton" to="." method="_on_text_back_button_pressed"]
 
 [editable path="Estrutura (Quarto)/ParedePorta"]
 [editable path="Estrutura (Quarto)/Teto"]
