@@ -25,7 +25,18 @@ func _on_body_entered(body):
 		start_dialogue()
 
 func start_dialogue():
-	Dialogic.start("PortariaNight")
+	# Check the name of the root node of the currently active scene
+	var current_scene_name = get_tree().current_scene.name
+	
+	if current_scene_name == "prédiotrabalhoNoite2":
+		Dialogic.start("PortariaNight2") 
+		
+	elif current_scene_name == "prédiotrabalhoNoite3":
+		Dialogic.start("PortariaNight3")
+		
+	else:
+		Dialogic.start("PortariaNight")
+		
 	if npc_playback:
 		npc_playback.travel("Talk_Porteiro")
 		

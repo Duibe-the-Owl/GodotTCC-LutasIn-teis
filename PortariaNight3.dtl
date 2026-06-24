@@ -1,0 +1,5 @@
+[signal arg="talk_porteiro"]
+Porteiro: Boa noite amigo.
+Nick: Pensando bem, quando foi que eu parei de ler?
+Porteiro: ?
+[signal arg="end_dialogue"]

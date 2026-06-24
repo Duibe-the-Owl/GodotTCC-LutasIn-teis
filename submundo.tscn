@@ -10,10 +10,13 @@
 [ext_resource type="PackedScene" uid="uid://bmkptjnx6ym2p" path="res://Montanha4.glb" id="6_gxjer"]
 [ext_resource type="Texture2D" uid="uid://bo45liupj7s1q" path="res://Pedra_BoulderTexture.png" id="7_eqkyt"]
 [ext_resource type="PackedScene" uid="uid://ddn4srarx22cn" path="res://Montanha5.glb" id="7_lfu1u"]
+[ext_resource type="Shader" uid="uid://ckggcjq0u6ams" path="res://outline.gdshader" id="8_pad6d"]
 [ext_resource type="Texture2D" uid="uid://dldotm4yjsylf" path="res://Nuvens_MistTexture.png" id="9_ketr1"]
+[ext_resource type="AudioStream" uid="uid://d21reg2bxu7np" path="res://Boulder_SE.wav" id="10_8hut6"]
 [ext_resource type="AudioStream" uid="uid://cio7i24ea4j3q" path="res://Wind_SE.wav" id="10_ketr1"]
 [ext_resource type="Script" uid="uid://bcr55aihp2sfg" path="res://pedra_push.gd" id="12_xedls"]
 [ext_resource type="Shader" uid="uid://g53we0g41lwa" path="res://dither.gdshader" id="13_eqkyt"]
+[ext_resource type="Script" uid="uid://bcc2hu7xs2nma" path="res://teleport_zone.gd" id="16_0qmwk"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jcoy0"]
 panorama = ExtResource("3_b63dl")
@@ -134,6 +137,12 @@ _data = {
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0nynm"]
 friction = 0.2
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8ccab"]
+render_priority = 0
+shader = ExtResource("8_pad6d")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/size = 1.02999999932944
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l238x"]
 resource_name = "Material.158"
 cull_mode = 2
@@ -191,6 +200,9 @@ shader_parameter/dither_movement_weight = 15.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_eqkyt"]
 size = Vector3(3.165, 14.382, 23.35)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_8hut6"]
+size = Vector3(36.025, 2.375, 59.235)
+
 [node name="submundo" type="Node3D" unique_id=1630282636 node_paths=PackedStringArray("boulder", "boulder_interaction_area", "top_of_hill_marker", "starting_boulder_position", "player", "npc_spawn_point", "white_fade_rect")]
 script = ExtResource("1_0nynm")
 boulder = NodePath("Pedra2")
@@ -204,7 +216,6 @@ rockOffset = Vector3(-4, -3, 0)
 npc_scene = ExtResource("2_xedls")
 npc_spawn_point = NodePath("SísifoSpawnPoint")
 white_fade_rect = NodePath("CanvasLayer2/ColorRect")
-next_scene_path = "res://FinalApartamento.tscn"
 
 [node name="Montanha" parent="." unique_id=558583841 instance=ExtResource("1_btv6c")]
 transform = Transform3D(0.9219848, 0.38722596, 0, -0.38722596, 0.9219848, 0, 0, 0, 1, 25.002466, -2.7718, -0.004631996)
@@ -258,6 +269,7 @@ mass = 50.0
 physics_material_override = SubResource("PhysicsMaterial_0nynm")
 
 [node name="Boulder2" type="MeshInstance3D" parent="Pedra2" unique_id=988806125]
+material_overlay = SubResource("ShaderMaterial_8ccab")
 mesh = SubResource("ArrayMesh_xedls")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pedra2" unique_id=209061277]
@@ -266,16 +278,21 @@ shape = SubResource("SphereShape3D_3q7da")
 [node name="Marker3D" type="Marker3D" parent="Pedra2" unique_id=359536956]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
 
-[node name="InteractionArea" type="Area3D" parent="Pedra2" unique_id=1145619310 node_paths=PackedStringArray("boulder_body", "snap_point", "boulder_mesh")]
+[node name="InteractionArea" type="Area3D" parent="Pedra2" unique_id=1145619310 node_paths=PackedStringArray("boulder_body", "snap_point", "boulder_mesh", "push_audio")]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("12_xedls")
 boulder_body = NodePath("..")
 snap_point = NodePath("../Marker3D")
 boulder_mesh = NodePath("../Boulder2")
+push_audio = NodePath("../AudioStreamPlayer3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pedra2/InteractionArea" unique_id=122798751]
 shape = SubResource("SphereShape3D_hufuc")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Pedra2" unique_id=1020874370]
+stream = ExtResource("10_8hut6")
+volume_db = -6.4
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1869017404]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.076979, 2.9113383, -12.739744)
@@ -365,3 +382,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TeleportZone" type="Area3D" parent="." unique_id=718659862 node_paths=PackedStringArray("spawn_point")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.108059, -18.69025, 2.018849)
+script = ExtResource("16_0qmwk")
+spawn_point = NodePath("../Marker3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TeleportZone" unique_id=925441124]
+shape = SubResource("BoxShape3D_8hut6")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=834808945]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4573245, -0.28330505, 0.20685542)

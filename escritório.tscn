@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://du2opnmjoo0qv" path="res://Teto(Escritório).glb" id="18_vqoap"]
 [ext_resource type="PackedScene" uid="uid://b53v86rkbpy6c" path="res://MainCarteira(Escritório).glb" id="19_vqoap"]
 [ext_resource type="Script" uid="uid://bdenqqqsnactq" path="res://monitor_startup.gd" id="20_4q64r"]
+[ext_resource type="Shader" uid="uid://ckggcjq0u6ams" path="res://outline.gdshader" id="21_lygj3"]
 [ext_resource type="Script" uid="uid://or0prym1m402" path="res://write_able.gd" id="22_8v41d"]
 [ext_resource type="Script" uid="uid://dv6m137b7u6vl" path="res://write_interaction.gd" id="22_wi2vf"]
 [ext_resource type="PackedScene" uid="uid://cqeknaioj76xx" path="res://Relógio.glb" id="23_5lkqy"]
@@ -35,8 +36,6 @@
 [ext_resource type="PackedScene" uid="uid://btog0veyoumcv" path="res://Fundo.glb" id="28_1vucl"]
 [ext_resource type="PackedScene" uid="uid://cm1gfabrid871" path="res://colega_de_trabalho.tscn" id="29_xrcyy"]
 [ext_resource type="Script" uid="uid://c0026mrk1ds0x" path="res://colega_dialogue.gd" id="30_1vucl"]
-[ext_resource type="Script" uid="uid://b3b1nvpv8eymp" path="res://seta.gd" id="31_w0kax"]
-[ext_resource type="PackedScene" uid="uid://drbkq1qmh5c22" path="res://SetaLado.glb" id="32_oh124"]
 [ext_resource type="PackedScene" uid="uid://dwbsnpna54q3j" path="res://colega_2.tscn" id="33_oh124"]
 [ext_resource type="PackedScene" uid="uid://bwar3gsp87os2" path="res://colega_3.tscn" id="34_424ka"]
 [ext_resource type="PackedScene" uid="uid://wd2pyspv4bx8" path="res://colega_4.tscn" id="35_xa1x8"]
@@ -64,23 +63,29 @@ ssao_radius = 0.04
 glow_enabled = true
 volumetric_fog_density = 0.03
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1ab0y"]
+render_priority = 0
+shader = ExtResource("21_lygj3")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/size = 1.05
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_8v41d"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wi2vf"]
 size = Vector3(0.15, 0.425, 0.865)
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_lygj3"]
+viewport_path = NodePath("../ComputerCanvas/SubViewportContainer/SubViewport")
+
 [sub_resource type="ViewportTexture" id="ViewportTexture_1ab0y"]
 viewport_path = NodePath("../ComputerCanvas/SubViewportContainer/SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_33je2"]
-viewport_path = NodePath("../ComputerCanvas/SubViewportContainer/SubViewport")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fqo4m"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_33je2"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_1ab0y")
+albedo_texture = SubResource("ViewportTexture_lygj3")
 emission_enabled = true
 emission_energy_multiplier = 0.5
-emission_texture = SubResource("ViewportTexture_33je2")
+emission_texture = SubResource("ViewportTexture_1ab0y")
 
 [sub_resource type="Animation" id="Animation_5lkqy"]
 length = 0.001
@@ -206,11 +211,11 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.89
 [node name="ParedeJanela" parent="." unique_id=6799743 instance=ExtResource("5_3nuhn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.4459, -0.8538871, 9.856885)
 
-[node name="Divisória" parent="." unique_id=1968590068 instance=ExtResource("6_1v5dy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.658281, 0.12551737, 9.025009)
+[node name="Divisória" parent="." unique_id=507098497 instance=ExtResource("6_1v5dy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.658281, -0.06368613, 9.025009)
 
-[node name="Divisória2" parent="." unique_id=1607426081 instance=ExtResource("6_1v5dy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.422284, 0.12551737, 9.025009)
+[node name="Divisória2" parent="." unique_id=40492940 instance=ExtResource("6_1v5dy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.422284, -0.06368613, 9.025009)
 
 [node name="Planta" parent="." unique_id=1863993243 instance=ExtResource("7_wisdi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.425828, -0.41144872, 18.706747)
@@ -236,7 +241,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.249003, -0.055074453, 4.13
 [node name="Carteira14" parent="." unique_id=212075373 instance=ExtResource("9_dc56r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.474821, -0.055074453, 10.789474)
 
-[node name="Chair" parent="Carteira14/DeskUnit" parent_id_path=PackedInt32Array(212075373, 1591636479) index="0" unique_id=1021926532]
+[node name="Chair" parent="Carteira14/DeskUnit" parent_id_path=PackedInt32Array(212075373, 1843714406) index="0" unique_id=2033621537]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8137474, -0.29560387, 0.04257965)
 
 [node name="Carteira15" parent="." unique_id=1340378624 instance=ExtResource("9_dc56r")]
@@ -298,8 +303,9 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.1
 [node name="MainCarteira" parent="." unique_id=1811457096 instance=ExtResource("19_vqoap")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.475147, -0.055103928, 13.9879265)
 
-[node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 300741575) index="3" unique_id=1233270428]
+[node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="3" unique_id=1757339918]
 layers = 2
+material_overlay = SubResource("ShaderMaterial_1ab0y")
 
 [node name="Area3D" type="Area3D" parent="MainCarteira/DeskUnit/Monitor" index="0" unique_id=1872963870]
 collision_layer = 2
@@ -311,7 +317,7 @@ script = ExtResource("20_4q64r")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22179025, 0)
 shape = SubResource("BoxShape3D_8v41d")
 
-[node name="ScreenInteractionArea" type="Area3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 300741575) index="7" unique_id=985870322]
+[node name="ScreenInteractionArea" type="Area3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="7" unique_id=985870322]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24362564, 0.03672272, -0.05687332)
 collision_layer = 2
 collision_mask = 2
@@ -321,14 +327,14 @@ script = ExtResource("22_8v41d")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13251686, 0.41383284, 0)
 shape = SubResource("BoxShape3D_wi2vf")
 
-[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 300741575) index="8" unique_id=137443092]
-surface_material_override/0 = SubResource("StandardMaterial3D_fqo4m")
+[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="8" unique_id=44197733]
+surface_material_override/0 = SubResource("StandardMaterial3D_33je2")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 300741575) index="9" unique_id=1558306546]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="9" unique_id=1558306546]
 root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_5lkqy")
 
-[node name="CutsceneCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 300741575) index="10" unique_id=188736818]
+[node name="CutsceneCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="10" unique_id=188736818]
 transform = Transform3D(0.8338856, 0, 0.55193686, 0, 1, 0, -0.55193686, 0, 0.8338856, 1.0576382, 0.55, 1.489955)
 fov = 72.6
 
@@ -412,7 +418,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 44.9
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 105.383064, -24.717525, -2.8735485)
 
 [node name="Colega de Trabalho" parent="." unique_id=1449720757 instance=ExtResource("29_xrcyy")]
-transform = Transform3D(-4.353335e-08, 0.09016327, -0.995927, 3.9411616e-09, 0.995927, 0.09016327, 1, 0, -4.371139e-08, 18.444374, 0.308, 10.835)
+transform = Transform3D(-4.353335e-08, 0.09016327, -0.995927, 3.9411616e-09, 0.995927, 0.09016327, 1, 0, -4.371139e-08, 18.321009, 0.32330278, 10.835)
 
 [node name="Area3D" type="Area3D" parent="." unique_id=894235400 node_paths=PackedStringArray("npc_node")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.347488, 0, 15.14306)
@@ -421,19 +427,6 @@ npc_node = NodePath("../Colega de Trabalho")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=427251099]
 shape = SubResource("BoxShape3D_ua8lq")
-
-[node name="ObjectiveArrow" type="Node3D" parent="." unique_id=539180629 node_paths=PackedStringArray("objectives")]
-script = ExtResource("31_w0kax")
-objectives = [NodePath("../MainCarteira/DeskUnit/Monitor")]
-
-[node name="SetaLado" parent="ObjectiveArrow" unique_id=2055762299 instance=ExtResource("32_oh124")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.48)
-
-[node name="ArrowSide" parent="ObjectiveArrow/SetaLado" index="0" unique_id=2056864381]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
-
-[node name="AnimationPlayer" parent="ObjectiveArrow/SetaLado" index="1" unique_id=1002935279]
-autoplay = &"ArrowSide_Spin"
 
 [node name="Colega 2" parent="." unique_id=1609022559 instance=ExtResource("33_oh124")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 11.010599, 0.06971273, 7.4314904)
@@ -592,6 +585,12 @@ npc_node = NodePath("../Colega4")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D4" unique_id=1246933472]
 shape = SubResource("BoxShape3D_33je2")
 
+[node name="Colega de Trabalho2" parent="." unique_id=1845416362 instance=ExtResource("29_xrcyy")]
+transform = Transform3D(-4.371139e-08, -0.09063257, 0.99588436, 0, 0.99588436, 0.09063257, -1, 3.9616754e-09, -4.3531486e-08, 7.9831667, 0.33801487, 4.125241)
+
+[node name="Colega 4" parent="." unique_id=1483568660 instance=ExtResource("33_oh124")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.259386, 0.06971273, 4.1821656)
+
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Area3D2" to="Area3D2" method="_on_body_entered"]
 [connection signal="body_entered" from="Area3D3" to="Area3D3" method="_on_body_entered"]
@@ -599,4 +598,3 @@ shape = SubResource("BoxShape3D_33je2")
 
 [editable path="Carteira14"]
 [editable path="MainCarteira"]
-[editable path="ObjectiveArrow/SetaLado"]

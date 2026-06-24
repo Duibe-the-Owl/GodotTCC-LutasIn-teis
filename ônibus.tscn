@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cxr8m564nxwm4"]
 
 [ext_resource type="PackedScene" uid="uid://de55qgjoyg7n0" path="res://Õnibus.glb" id="1_rmrfu"]
-[ext_resource type="AudioStream" uid="uid://dd1fdwjpg02ot" path="res://Bus_SE.wav" id="2_thvwp"]
+[ext_resource type="AudioStream" uid="uid://dpgi7l87o5puk" path="res://Bus_SE.wav" id="2_thvwp"]
 [ext_resource type="Script" uid="uid://etxlbpwpuu2p" path="res://bus_transition.gd" id="3_lgbcn"]
 [ext_resource type="AudioStream" uid="uid://dqgbgopnbwcr3" path="res://BusTakeOff_SE.wav" id="4_jox6m"]
 
@@ -170,16 +170,16 @@ size = Vector3(1, 3, 3)
 
 [node name="Ônibus" unique_id=1347629826 instance=ExtResource("1_rmrfu")]
 
-[node name="Wheel1" parent="BusUnit" parent_id_path=PackedInt32Array(225111900) index="2" unique_id=2096818328]
+[node name="Wheel1" parent="BusUnit" parent_id_path=PackedInt32Array(112014410) index="2" unique_id=684274272]
 transform = Transform3D(1.9106853e-15, -4.371139e-08, 0.99999994, -0.99999994, -4.371139e-08, 0, 4.3711385e-08, -1, -4.3711385e-08, 3.311226, -0.3548356, 1.50988)
 
-[node name="Wheel2" parent="BusUnit" parent_id_path=PackedInt32Array(225111900) index="3" unique_id=1003932877]
+[node name="Wheel2" parent="BusUnit" parent_id_path=PackedInt32Array(112014410) index="3" unique_id=1030978667]
 transform = Transform3D(1.9106853e-15, -4.3711385e-08, 1, -0.99999994, -4.3711385e-08, 0, 4.3711385e-08, -0.99999994, -4.371139e-08, -5.4145365, -0.3548356, 1.5098804)
 
-[node name="Wheel3" parent="BusUnit" parent_id_path=PackedInt32Array(225111900) index="4" unique_id=382648245]
+[node name="Wheel3" parent="BusUnit" parent_id_path=PackedInt32Array(112014410) index="4" unique_id=142540822]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 3.311226, -0.3548356, -2.0453444)
 
-[node name="Wheel4" parent="BusUnit" parent_id_path=PackedInt32Array(225111900) index="5" unique_id=1352063480]
+[node name="Wheel4" parent="BusUnit" parent_id_path=PackedInt32Array(112014410) index="5" unique_id=1375117093]
 transform = Transform3D(1.9106853e-15, -4.371139e-08, 0.99999994, -0.99999994, -4.371139e-08, 0, 4.3711385e-08, -1, -4.3711385e-08, -5.4145365, -0.3548356, -2.0453444)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="1" unique_id=2055769628]

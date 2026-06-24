@@ -47,6 +47,8 @@ var is_in_cutscene = false
 @export var anim_tree : AnimationTree
 @onready var playback = anim_tree.get("parameters/playback")
 
+@onready var intro_video = $CutsceneLayer/IntroVideo
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	# This forces the sound into the node at runtime, 
@@ -223,15 +225,45 @@ func _play_footstep():
 		foot_audio.play()
 
 func start_intro_sequence():
-	is_in_cutscene = true
-	anim_tree.active = false
-	# Assuming your AnimationPlayer is named 'anim_player'
-	$AnimationPlayer.play("intro_get_up")
+	var current_scene = get_tree().current_scene.name
+	print("Kicking off waking up sequence for scene: ", current_scene)
 	
-	# Wait for the animation to finish before giving control back
-	await $AnimationPlayer.animation_finished
-	is_in_cutscene=false
-	anim_tree.active = true
+	# 1. Lock down player state for the cutscene
+	is_in_cutscene = true
+	if anim_tree:
+		anim_tree.active = false
+		
+	# 2. PHASE 1: Play the Video (ONLY on the very first day / Apartamento)
+	if current_scene == "Apartamento":
+		if intro_video:
+			print("Day 1 detected. Playing Dream Intro video first...")
+			intro_video.stream = load("res://OpeningCutscene.ogv")
+			intro_video.show()
+			intro_video.play()
+			
+			# Wait here until the video completely finishes
+			await intro_video.finished
+			intro_video.hide()
+			SceneManager.fadefromblack()
+		else:
+			print("Warning: IntroVideo node not found on Player!")
+
+	# 3. PHASE 2: Play the Godot Waking Up Animation
+	# This runs on Day 1 (right after the video) AND on every other day automatically!
+	if $AnimationPlayer.has_animation("intro_get_up"):
+		print("Playing 3D waking up animation...")
+		$AnimationPlayer.play("intro_get_up")
+		
+		# Wait for the 3D animation to finish
+		await $AnimationPlayer.animation_finished
+	else:
+		print("Warning: 'intro_get_up' animation not found on AnimationPlayer!")
+
+	# 4. PHASE 3: Restore control to the player
+	print("Waking up sequence complete. Restoring player control.")
+	is_in_cutscene = false
+	if anim_tree:
+		anim_tree.active = true
 
 func _force_stop_footsteps():
 	if foot_audio.playing:
@@ -249,6 +281,10 @@ func trigger_dialogue():
 	match current_scene:
 		"Apartamento":
 			Dialogic.start("StartCutscene")
+		"ApartamentoDia2":
+			Dialogic.start("SecondCutscene")
+		"ApartamentoDia3":
+			Dialogic.start("ThirdCutscene")
 		"FinalApartamento":
 			Dialogic.start("FinalCutscene")
 		_:

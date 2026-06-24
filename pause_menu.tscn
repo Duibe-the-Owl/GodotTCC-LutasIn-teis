@@ -1,6 +1,75 @@
 [gd_scene format=3 uid="uid://sedjt4hal2pe"]
 
 [ext_resource type="Script" uid="uid://c06dmkswdglxw" path="res://pause_menu.gd" id="1_hdmo1"]
+[ext_resource type="FontVariation" uid="uid://xeljouqmacpb" path="res://addons/dialogic/Example Assets/Fonts/font_bold.tres" id="2_nwcfo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nwcfo"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05uyy"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p81d2"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2nc7s"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+corner_detail = 5
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=1637949776]
 process_mode = 2
@@ -32,19 +101,25 @@ theme_override_constants/separation = 40
 [node name="ResumeButton" type="Button" parent="MenuButtons" unique_id=364477323]
 custom_minimum_size = Vector2(350, 80)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nwcfo")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_nwcfo")
 text = "Voltar"
 
 [node name="OptionsButton" type="Button" parent="MenuButtons" unique_id=729852188]
 custom_minimum_size = Vector2(350, 80)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nwcfo")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_05uyy")
 text = "Opções"
 
 [node name="QuitButton" type="Button" parent="MenuButtons" unique_id=1477723781]
 custom_minimum_size = Vector2(350, 80)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nwcfo")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_p81d2")
 text = "Sair"
 
 [node name="OptionsWindow" type="PanelContainer" parent="." unique_id=1514911851]
@@ -68,6 +143,7 @@ theme_override_constants/separation = 25
 
 [node name="Label" type="Label" parent="OptionsWindow/VBoxContainer" unique_id=2131669268]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nwcfo")
 theme_override_font_sizes/font_size = 35
 text = "Música"
 horizontal_alignment = 1
@@ -80,6 +156,7 @@ value = 1.0
 
 [node name="Label2" type="Label" parent="OptionsWindow/VBoxContainer" unique_id=1144705850]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nwcfo")
 theme_override_font_sizes/font_size = 35
 text = "Efeitos Sonoros"
 horizontal_alignment = 1
@@ -93,7 +170,9 @@ value = 1.0
 [node name="BackButton" type="Button" parent="OptionsWindow/VBoxContainer" unique_id=15422715]
 custom_minimum_size = Vector2(250, 60)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nwcfo")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_2nc7s")
 text = "Voltar"
 
 [connection signal="pressed" from="MenuButtons/ResumeButton" to="." method="_on_resume_button_pressed"]

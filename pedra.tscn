@@ -2,8 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c2yqestm4m4yw" path="res://Pedra.glb" id="1_o3i74"]
 [ext_resource type="Script" uid="uid://bcr55aihp2sfg" path="res://pedra_push.gd" id="2_3q7da"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3q7da"]
+[ext_resource type="AudioStream" uid="uid://d21reg2bxu7np" path="res://Boulder_SE.wav" id="3_hufuc"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_3q7da"]
 radius = 2.3
@@ -12,11 +11,6 @@ radius = 2.3
 radius = 2.5
 
 [node name="Pedra" unique_id=439572209 instance=ExtResource("1_o3i74")]
-axis_lock_linear_z = true
-axis_lock_angular_x = true
-axis_lock_angular_y = true
-mass = 50.0
-physics_material_override = SubResource("PhysicsMaterial_3q7da")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="0" unique_id=209061277]
 shape = SubResource("SphereShape3D_3q7da")
@@ -32,3 +26,7 @@ boulder_mesh = NodePath("../Boulder")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea" index="0" unique_id=122798751]
 shape = SubResource("SphereShape3D_hufuc")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="4" unique_id=1201565054]
+stream = ExtResource("3_hufuc")
+volume_db = -0.29

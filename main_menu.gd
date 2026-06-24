@@ -1,23 +1,29 @@
-extends Control
+extends Node3D
 
 # Export this so you can click and select your game's main gameplay/level scene
 @export_file("*.tscn") var gameplay_scene_path: String
 
-@onready var menu_buttons: VBoxContainer = $MenuButtons
-@onready var options_window: PanelContainer = $OptionsWindow
+@onready var play_button: Button = $MainMenu/MenuButtons/PlayButton
 
-@onready var music_slider: HSlider = $OptionsWindow/VBoxContainer/MusicSlider
-@onready var sfx_slider: HSlider = $OptionsWindow/VBoxContainer/SFXSlider
+@onready var menu_buttons: VBoxContainer = $MainMenu/MenuButtons
+@onready var options_window: PanelContainer = $MainMenu/OptionsWindow
+
+@onready var music_slider: HSlider = $MainMenu/OptionsWindow/VBoxContainer/MusicSlider
+@onready var sfx_slider: HSlider = $MainMenu/OptionsWindow/VBoxContainer/SFXSlider
+
+@onready var text_window: PanelContainer = $MainMenu/AboutWindow
 
 var music_bus_index: int
 var sfx_bus_index: int
 
 func _ready() -> void:
+	
 	# Ensure the mouse is fully visible and usable when arriving at the main menu
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
 	menu_buttons.show()
 	options_window.hide()
+	text_window.hide()
 	
 	# Fetch audio buses
 	music_bus_index = AudioServer.get_bus_index("Music")
@@ -64,3 +70,13 @@ func _on_music_slider_value_changed(value: float) -> void:
 func _on_sfx_slider_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(sfx_bus_index, linear_to_db(value))
 	AudioServer.set_bus_mute(sfx_bus_index, value == 0.0)
+	
+func _on_about_button_pressed() -> void:
+	# Hide the main menu buttons, open the text window
+	menu_buttons.hide()
+	text_window.show()
+	
+func _on_text_back_button_pressed() -> void:
+	# Hide the text window, bring back the main menu buttons
+	text_window.hide()
+	menu_buttons.show()

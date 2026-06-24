@@ -1,0 +1,4 @@
+[signal arg="talk_colega"]
+Colega: Valeu Nick.
+Nick: Ah, valeu.
+[signal arg="end_dialogue"]

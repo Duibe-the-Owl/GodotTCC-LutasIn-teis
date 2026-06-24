@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Lutas Inúteis e seus Propósitos (ver. PUC)"
-run/main_scene="uid://ch5ggwj72gst7"
+run/main_scene="uid://cnte0a7dnlbsj"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -31,24 +31,54 @@ directories/dch_directory={
 "TV": "res://TV.dch"
 }
 directories/dtl_directory={
+"BreakfeastTalk": "res://BreakfeastTalk.dtl",
 "Channel1": "res://Channel1.dtl",
+"Channel2": "res://Channel2.dtl",
 "Colega2Talk": "res://Colega2Talk.dtl",
+"Colega2TalkFinal": "res://Colega2TalkFinal.dtl",
 "Colega3Talk": "res://Colega3Talk.dtl",
+"Colega3TalkFinal": "res://Colega3TalkFinal.dtl",
 "ColegasTalk": "res://ColegasTalk.dtl",
+"ColegasTalk2": "res://ColegasTalk2.dtl",
+"ColegasTalk3": "res://ColegasTalk3.dtl",
+"ColegasTalkFinal": "res://ColegasTalkFinal.dtl",
+"ComputerTalk": "res://ComputerTalk.dtl",
+"ComputerTalk2": "res://ComputerTalk2.dtl",
+"ComputerTalk3": "res://ComputerTalk3.dtl",
+"Escritório2": "res://Escritório2.dtl",
+"Escritório3": "res://Escritório3.dtl",
 "EscritórioNight": "res://EscritórioNight.dtl",
+"EscritórioNight2": "res://EscritórioNight2.dtl",
+"EscritórioNight3": "res://EscritórioNight3.dtl",
 "EscritórioTalk": "res://EscritórioTalk.dtl",
 "FinalCutscene": "res://FinalCutscene.dtl",
 "FinalEscritórioTalk": "res://FinalEscritórioTalk.dtl",
+"FinalOutroTalk": "res://FinalOutroTalk.dtl",
 "FinalPortariaTalk": "res://FinalPortariaTalk.dtl",
+"FinalWardrobe": "res://FinalWardrobe.dtl",
+"MesaTalk": "res://MesaTalk.dtl",
+"Night3DreamTalk": "res://Night3DreamTalk.dtl",
+"NightBlockDialogue": "res://NightBlockDialogue.dtl",
+"Portaria2": "res://Portaria2.dtl",
+"Portaria3": "res://Portaria3.dtl",
 "PortariaNight": "res://PortariaNight.dtl",
+"PortariaNight2": "res://PortariaNight2.dtl",
+"PortariaNight3": "res://PortariaNight3.dtl",
 "PortariaTalk": "res://PortariaTalk.dtl",
 "PãoTalk": "res://PãoTalk.dtl",
+"SecondCutscene": "res://SecondCutscene.dtl",
+"SecondWardrobe": "res://SecondWardrobe.dtl",
 "StartCutscene": "res://StartCutscene.dtl",
 "StreetBlock2": "res://StreetBlock2.dtl",
 "StreetBlockDialogue": "res://StreetBlockDialogue.dtl",
 "SísifoTalk": "res://SísifoTalk.dtl",
+"ThirdCutscene": "res://ThirdCutscene.dtl",
+"ThirdWardrobe": "res://ThirdWardrobe.dtl",
 "TvTalk": "res://TvTalk.dtl",
+"TvTalk2": "res://TvTalk2.dtl",
+"TvTalk3": "res://TvTalk3.dtl",
 "WardrobeTalk": "res://WardrobeTalk.dtl",
+"WorkBlockDialogue": "res://WorkBlockDialogue.dtl",
 "boulder_drop_1": "res://boulder_drop_1.dtl",
 "boulder_drop_2": "res://boulder_drop_2.dtl",
 "submundo_intro": "res://submundo_intro.dtl"

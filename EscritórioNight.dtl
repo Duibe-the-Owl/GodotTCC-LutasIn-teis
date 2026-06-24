@@ -1,4 +1,6 @@
+[signal arg="talk_colega"]
 Colega: Boa noite Nick.
 Nick: Ah, boa noite.
 Nick: Até amanhã.
 Colega: Até.
+[signal arg="end_dialogue"]

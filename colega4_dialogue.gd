@@ -21,4 +21,17 @@ func _on_body_entered(body):
 		start_dialogue()
 
 func start_dialogue():
-	Dialogic.start("ColegasTalk")
+	# Check the name of the root node of the currently active scene
+	var current_scene_name = get_tree().current_scene.name
+	
+	if current_scene_name == "escritórioDia2":
+		Dialogic.start("ColegasTalk2") # Plays on Day 2
+		
+	elif current_scene_name == "escritórioDia3":
+		Dialogic.start("ColegasTalk3") # Plays on Day 3
+		
+	elif current_scene_name == "Finalescritório":
+		Dialogic.start("ColegasTalkFinal") # Plays on Day 3
+		
+	else:
+		Dialogic.start("ColegasTalk") # Default fallback / Plays on Day 1

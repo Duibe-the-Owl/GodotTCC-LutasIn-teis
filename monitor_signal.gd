@@ -50,7 +50,17 @@ func _on_signature_finished():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	await get_tree().create_timer(0.5).timeout
 	
-	SceneManager.transition_to("res://escritórioNoite.tscn")
+	# --- DYNAMIC SCENE TRANSITION ---
+	var current_scene_name = get_tree().current_scene.name
+	var target_scene = "res://escritórioNoite.tscn" # Day 1 Default
+	
+	if current_scene_name == "escritórioDia2":
+		target_scene = "res://escritórioNoite2.tscn"
+	elif current_scene_name == "escritórioDia3":
+		target_scene = "res://escritórioNoite3.tscn"
+		
+	print("Transitioning to night scene: ", target_scene)
+	SceneManager.transition_to(target_scene)
 	
 func _unhandled_input(event):
 	if event is InputEventMouseButton and event.pressed:

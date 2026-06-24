@@ -10,12 +10,12 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_bgxkt"]
 states/Sleep_Coworker/node = SubResource("AnimationNodeAnimation_q0gka")
-states/Sleep_Coworker/position = Vector2(321, 90)
+states/Sleep_Coworker/position = Vector2(413, 85)
 transitions = ["Start", "Sleep_Coworker", SubResource("AnimationNodeStateMachineTransition_51cly")]
 
 [node name="Colega 3" unique_id=853093262 instance=ExtResource("1_ek1es")]
 
-[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(626505058) index="0" unique_id=1416937400]
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(114093998) index="0" unique_id=517605112]
 bones/1/rotation = Quaternion(0.10033269, 1.1860772e-07, 1.1960587e-08, 0.99495393)
 bones/2/rotation = Quaternion(0.20879067, 1.5099031e-14, 4.9779583e-08, 0.97796035)
 bones/3/rotation = Quaternion(0.33097765, -0.0007356353, 0.0039876644, 0.94363)

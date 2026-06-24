@@ -36,18 +36,18 @@
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vqoap"]
 points = PackedVector3Array(-0.17457025, -0.0020341033, -0.2272107, -0.17258668, 0.015372725, -0.2272107, 0.024219781, 0.6285622, -0.45909503, 0.024219781, 0.16154072, -0.45909503, 0.19145297, -0.0020341033, -0.2272107, -0.17457025, -0.0020341033, 0.22712085, -0.10572225, 0.46288872, -0.07181224, -0.17258668, 0.015372725, 0.22712085, 0.06385516, 0.6285622, -0.45909503, 0.024219781, 0.6285622, 0.45909503, 0.06385516, 0.16154072, -0.45909503, 0.19383325, 0.015372725, -0.2272107, 0.19386931, 0.015372725, 0.22712085, 0.19145297, -0.0020341033, 0.22712085, 0.024219781, 0.16154072, 0.45909503, -0.10572225, 0.46288872, 0.07172236, 0.06385516, 0.6285622, 0.45909503, 0.06385516, 0.16154072, 0.45909503)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_f3b3o"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_upvgb"]
 viewport_path = NodePath("DeskUnit/Screen/SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_fyb1h"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_ms826"]
 viewport_path = NodePath("DeskUnit/Screen/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ij02x"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f3b3o"]
 resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_f3b3o")
+albedo_texture = SubResource("ViewportTexture_upvgb")
 emission_enabled = true
 emission_energy_multiplier = 0.3
-emission_texture = SubResource("ViewportTexture_fyb1h")
+emission_texture = SubResource("ViewportTexture_ms826")
 
 [sub_resource type="VideoStreamTheora" id="VideoStreamTheora_wjgvv"]
 file = "res://Work_Cutscene.ogv"
@@ -216,11 +216,11 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -15.
 [node name="ParedeJanela" parent="." unique_id=1639460970 instance=ExtResource("6_vuag0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7750373, -0.8674904, -5.429314)
 
-[node name="Divisória" parent="." unique_id=1968590068 instance=ExtResource("7_upvgb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8781829, 0.11191407, -6.26119)
+[node name="Divisória" parent="." unique_id=507098497 instance=ExtResource("7_upvgb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8781829, -0.064, -6.26119)
 
-[node name="Divisória2" parent="." unique_id=2103258115 instance=ExtResource("7_upvgb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.248579, 0.11191407, -6.26119)
+[node name="Divisória2" parent="." unique_id=1370332282 instance=ExtResource("7_upvgb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.248579, -0.064, -6.26119)
 
 [node name="Planta" parent="." unique_id=936496918 instance=ExtResource("8_ms826")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.245035, -0.42505202, 3.420548)
@@ -312,7 +312,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.5
 [node name="MainCarteira" parent="." unique_id=707634930 instance=ExtResource("20_exbnn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1957173, -0.06870723, -1.2982726)
 
-[node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 300741575) index="3" unique_id=1233270428]
+[node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 666559217) index="3" unique_id=1757339918]
 layers = 2
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MainCarteira/DeskUnit/Monitor" index="0" unique_id=1444464812]
@@ -322,8 +322,8 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MainCarteira/DeskUnit/Monitor/StaticBody3D" unique_id=271298312]
 shape = SubResource("ConvexPolygonShape3D_vqoap")
 
-[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 300741575) index="7" unique_id=137443092]
-surface_material_override/0 = SubResource("StandardMaterial3D_ij02x")
+[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 666559217) index="7" unique_id=44197733]
+surface_material_override/0 = SubResource("StandardMaterial3D_f3b3o")
 
 [node name="SubViewport" type="SubViewport" parent="MainCarteira/DeskUnit/Screen" index="0" unique_id=1884540969]
 size = Vector2i(1024, 800)
@@ -338,11 +338,11 @@ grow_vertical = 2
 stream = SubResource("VideoStreamTheora_wjgvv")
 expand = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 300741575) index="8" unique_id=1558306546]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 666559217) index="8" unique_id=1558306546]
 root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_5lkqy")
 
-[node name="CutsceneCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 300741575) index="9" unique_id=188736818]
+[node name="CutsceneCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(707634930, 666559217) index="9" unique_id=188736818]
 transform = Transform3D(0.8338856, 0, 0.55193686, 0, 1, 0, -0.55193686, 0, 0.8338856, 1.0576382, 0.55, 1.489955)
 
 [node name="Relógio" parent="." unique_id=875575135 instance=ExtResource("23_xtvep")]
@@ -445,7 +445,7 @@ mouse_filter = 2
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 74.285, -34.025, 0.526)
 
 [node name="Colega de Trabalho" parent="." unique_id=1449720757 instance=ExtResource("29_upvgb")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.30371833, 0.33766013, -4.459295)
+transform = Transform3D(-4.3695458e-08, 0.026996963, -0.9996355, 1.1800747e-09, 0.9996355, 0.026996963, 1, 0, -4.371139e-08, -0.46217927, 0.37606466, -4.459295)
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1645553176 node_paths=PackedStringArray("npc_node")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0315354, 0, 0.7220503)

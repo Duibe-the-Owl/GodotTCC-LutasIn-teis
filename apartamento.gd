@@ -46,16 +46,43 @@ func _restore_player():
 func _on_area_3d_body_entered(body: Node3D):
 	if body.name == "Player" and not wardrobe_dialogue_played:
 		wardrobe_dialogue_played = true
-		Dialogic.start("WardrobeTalk")
+		
+		# Check the name of the root node of the currently active scene
+		var current_scene_name = get_tree().current_scene.name
+		
+		if current_scene_name == "ApartamentoDia2":
+			Dialogic.start("SecondWardrobe") # Plays on Day 2
+			
+		elif current_scene_name == "ApartamentoDia3":
+			Dialogic.start("ThirdWardrobe") # Plays on Day 3
+			
+		elif current_scene_name == "FinalApartamento":
+			Dialogic.start("FinalWardrobe") # Plays on Day 3
+			
+		else:
+			Dialogic.start("WardrobeTalk")
 		
 
 func play_single_tv_timeline(incoming_argument: Variant = null):
-	# Start the timeline first so the input subsystem initializes its target layout
-	Dialogic.start("Channel1")
+	# 1. Print the exact name to the console to verify Godot sees it
+	print("DEBUG: TV Cutscene triggered. Scene name is: '", get_tree().current_scene.name, "'")
 	
-	# Force the auto-advance states using Godot's generic setter system 
-	# This bypasses the RefCounted strict assignment crash completely!
+	var current_scene = get_tree().current_scene.name
+	
+	# 2. Match the world node name to the correct TV dialogue timeline
+	match current_scene:
+		"ApartamentoNoite":
+			Dialogic.start("Channel1")
+		"ApartamentoNoite2":
+			Dialogic.start("Channel2")
+		"ApartamentoNoite3":
+			Dialogic.start("Channel3")
+		_:
+			print("Warning: TV turned on in an unhandled scene: ", current_scene)
+			Dialogic.start("Channel1") # Fallback so the game doesn't softlock
+	
+	# 3. Force the auto-advance states immediately after starting the timeline
 	var aa = Dialogic.Inputs.auto_advance
 	if aa:
 		aa.set("enabled", true)
-		aa.set("fixed_delay", 3.0) 
+		aa.set("fixed_delay", 3.0)
