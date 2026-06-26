@@ -19,6 +19,7 @@
 [ext_resource type="AudioStream" uid="uid://cio7i24ea4j3q" path="res://Wind_SE.wav" id="14_wf3hx"]
 [ext_resource type="PackedScene" uid="uid://3ygpqewxvonl" path="res://Despertador.glb" id="15_k74lp"]
 [ext_resource type="PackedScene" uid="uid://w2gb0531cg6b" path="res://Armario.glb" id="16_b8tg5"]
+[ext_resource type="PackedScene" uid="uid://cypxg21ux408a" path="res://Montanha2.glb" id="18_eb3lt"]
 [ext_resource type="VoxelGIData" uid="uid://vtkwkd4g5g23" path="res://Apartamento.VoxelGI_data.res" id="55_4667r"]
 [ext_resource type="Shader" uid="uid://g53we0g41lwa" path="res://dither.gdshader" id="56_cbd7h"]
 
@@ -85,6 +86,18 @@ corner_radius_bottom_right = 13
 corner_radius_bottom_left = 13
 corner_detail = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tigh1"]
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.6)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 0.7764706, 1)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3fnni"]
 content_margin_left = 4.0
 content_margin_top = 4.0
@@ -103,6 +116,18 @@ corner_radius_bottom_left = 13
 corner_detail = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cu7u1"]
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.6)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 0.7764706, 1)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rn32j"]
 bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.6)
 border_width_left = 3
 border_width_top = 3
@@ -229,16 +254,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="MainMenu" unique_id=815831253]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-expand = true
-
 [node name="TextureRect" type="TextureRect" parent="MainMenu" unique_id=1648331864]
 layout_mode = 1
 anchors_preset = 4
@@ -259,13 +274,13 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -423.83502
+offset_left = -444.53497
 offset_top = -265.115
-offset_right = -73.83496
+offset_right = -94.53467
 offset_bottom = 279.885
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_constants/separation = 75
+theme_override_constants/separation = 50
 
 [node name="PlayButton" type="Button" parent="MainMenu/MenuButtons" unique_id=327571567]
 custom_minimum_size = Vector2(350, 80)
@@ -308,16 +323,16 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -437.58002
-offset_top = -150.0
-offset_right = -37.579712
-offset_bottom = 150.0
+offset_left = -467.38
+offset_top = -232.5
+offset_right = -67.37915
+offset_bottom = 232.50024
 grow_horizontal = 0
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/OptionsWindow" unique_id=129729099]
 layout_mode = 2
-theme_override_constants/separation = 25
+theme_override_constants/separation = 37
 
 [node name="Label" type="Label" parent="MainMenu/OptionsWindow/VBoxContainer" unique_id=915188977]
 layout_mode = 2
@@ -344,6 +359,14 @@ layout_mode = 2
 max_value = 1.0
 step = 0.05
 value = 1.0
+
+[node name="CreditsButton" type="Button" parent="MainMenu/OptionsWindow/VBoxContainer" unique_id=826517944]
+custom_minimum_size = Vector2(350, 80)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_c5fox")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_tigh1")
+text = "Créditos"
 
 [node name="BackButton" type="Button" parent="MainMenu/OptionsWindow/VBoxContainer" unique_id=1741737614]
 custom_minimum_size = Vector2(350, 80)
@@ -385,6 +408,57 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_c5fox")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_cu7u1")
+text = "Voltar"
+
+[node name="CreditsWindow" type="PanelContainer" parent="MainMenu" unique_id=1201623842]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -583.37
+offset_top = -258.0
+offset_right = -63.36963
+offset_bottom = 210.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/CreditsWindow" unique_id=1286433230]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="MainMenu/CreditsWindow/VBoxContainer" unique_id=1237701207]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_c5fox")
+theme_override_font_sizes/font_size = 30
+text = "Créditos"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainMenu/CreditsWindow/VBoxContainer" unique_id=1912085535]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("4_uyity")
+theme_override_font_sizes/normal_font_size = 20
+text = "Programação - Bernardo Mafra
+Ambientação - Bernardo Mafra
+		Modelos - Bernardo Mafra
+		Texturas - Bernardo Mafra
+	  Animação - Bernardo Mafra
+Game Design - Bernardo Mafra
+Sound Design - Bernardo Mafra
+	  Logo e UI - Jolyne Marques
+Auxílios Programação - Pedro Henrique de Sá
+"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="CreditsBackButton" type="Button" parent="MainMenu/CreditsWindow/VBoxContainer" unique_id=375439493]
+custom_minimum_size = Vector2(350, 80)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_c5fox")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_rn32j")
 text = "Voltar"
 
 [node name="Estrutura (Quarto)" type="Node3D" parent="." unique_id=1330687830]
@@ -429,13 +503,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9187465, -0.8222265, 2.0816
 [node name="Armário" parent="Móveis (Quarto)" unique_id=1119466907 instance=ExtResource("16_b8tg5")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.6525167, -0.8273673, -2.352987)
 
-[node name="Bar" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1591386016) index="0" unique_id=1109988549]
+[node name="Bar" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 69415005) index="0" unique_id=779636041]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 2.059648, -0.17623472)
 
-[node name="Pants" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1591386016) index="2" unique_id=636032468]
+[node name="Pants" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 69415005) index="2" unique_id=100201535]
 transform = Transform3D(-0.7071066, 0.70710695, 5.9604645e-08, 5.9604645e-08, 0, 1, 0.70710695, 0.7071066, 0, -0.015007257, 1.5682206, 0.36414862)
 
-[node name="Uniform" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 1591386016) index="3" unique_id=553219073]
+[node name="Uniform" parent="Móveis (Quarto)/Armário/Wardrobe_Area" parent_id_path=PackedInt32Array(1119466907, 69415005) index="3" unique_id=1251525086]
 transform = Transform3D(-0.7071066, 0.70710695, 5.9604645e-08, 5.9604645e-08, 0, 1, 0.70710695, 0.7071066, 0, -0.015007257, 1.5682206, 0.7805791)
 layers = 2
 
@@ -447,6 +521,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -115.42624, 0.7752495, -65.12
 
 [node name="Montanha5" parent="WorldEnvironment/Montanha4" unique_id=55105615 instance=ExtResource("13_0oyug")]
 transform = Transform3D(0.24373354, 0, -0.96984226, 0, 1, 0, 0.96984226, 0, 0.24373354, 38.71003, -20.288435, 71.68056)
+
+[node name="Montanha7" parent="WorldEnvironment" unique_id=1619616441 instance=ExtResource("18_eb3lt")]
+process_mode = 4
+transform = Transform3D(-0.036504187, 0, -0.9993335, 0, 1, 0, 0.9993335, 0, -0.036504187, -360.34473, 8.817829, -49.961636)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer3D" parent="." unique_id=1915217441]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.79717, 0, 0)
@@ -501,8 +579,10 @@ material = SubResource("FogMaterial_0oyug")
 [connection signal="pressed" from="MainMenu/MenuButtons/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="value_changed" from="MainMenu/OptionsWindow/VBoxContainer/MusicSlider" to="." method="_on_music_slider_value_changed"]
 [connection signal="value_changed" from="MainMenu/OptionsWindow/VBoxContainer/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="MainMenu/OptionsWindow/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="MainMenu/OptionsWindow/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="MainMenu/AboutWindow/VBoxContainer/TextBackButton" to="." method="_on_text_back_button_pressed"]
+[connection signal="pressed" from="MainMenu/CreditsWindow/VBoxContainer/CreditsBackButton" to="." method="_on_credits_back_button_pressed"]
 
 [editable path="Estrutura (Quarto)/ParedePorta"]
 [editable path="Estrutura (Quarto)/Teto"]

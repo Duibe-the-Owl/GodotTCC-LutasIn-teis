@@ -13,6 +13,8 @@ extends Node3D
 
 @onready var text_window: PanelContainer = $MainMenu/AboutWindow
 
+@onready var credits_window: PanelContainer = $MainMenu/CreditsWindow
+
 var music_bus_index: int
 var sfx_bus_index: int
 
@@ -80,3 +82,14 @@ func _on_text_back_button_pressed() -> void:
 	# Hide the text window, bring back the main menu buttons
 	text_window.hide()
 	menu_buttons.show()
+	
+func _on_credits_button_pressed() -> void:
+	menu_buttons.hide()
+	options_window.hide()
+	credits_window.show()
+	
+func _on_credits_back_button_pressed() -> void:
+	# Hide the text window, bring back the main menu buttons
+	credits_window.hide()
+	options_window.show()
+	
