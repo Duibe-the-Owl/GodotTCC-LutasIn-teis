@@ -116,7 +116,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.506393, -0.716, -167.68)
 [node name="Rua(AS)" parent="." unique_id=474917808 instance=ExtResource("4_dclif")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -28.405, -1.09, -45.848427)
 
-[node name="Prédios" parent="." unique_id=965448203 instance=ExtResource("7_khq6f")]
+[node name="Prédios" parent="." unique_id=1258277786 instance=ExtResource("7_khq6f")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.847923, -0.76517963, -56.2032)
 
 [node name="Prédios2" parent="." unique_id=1019934953 instance=ExtResource("8_gycr2")]
@@ -142,7 +142,7 @@ max_speed = 6.5
 [node name="Ônibus" parent="BusPath/PathFollow3D" unique_id=1347629826 instance=ExtResource("11_dmv71")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 
-[node name="BusDoor" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(1347629826, 112014410) index="1" unique_id=990099557]
+[node name="BusDoor" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(1347629826, 1536594432) index="1" unique_id=145823191]
 material_overlay = SubResource("ShaderMaterial_0ymfv")
 
 [node name="Area3D" parent="BusPath/PathFollow3D/Ônibus" index="7" unique_id=1164175362]
@@ -151,7 +151,7 @@ destination_scene = "uid://b3ehg6e4g4118"
 [node name="Placa" parent="." unique_id=585211801 instance=ExtResource("13_1n4wu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.895375, 0.88510907, -68.80824)
 
-[node name="Sign" parent="Placa" index="0" unique_id=1946744231]
+[node name="Sign" parent="Placa" index="0" unique_id=3472256]
 material_overlay = SubResource("ShaderMaterial_3tdge")
 
 [node name="Area3D" type="Area3D" parent="Placa" unique_id=1026088592]
