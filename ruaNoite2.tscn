@@ -251,7 +251,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.31
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.904667, -0.7160511, -2.8077526)
 
 [node name="Árvore5" parent="." unique_id=768170701 instance=ExtResource("3_hiykm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.384255, -0.716, 83.08277)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.276, -0.716, 83.083)
 
 [node name="Rua(AS)" parent="." unique_id=1277502179 instance=ExtResource("4_7jwwg")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -21.176836, -1.09, 21.389032)
@@ -259,7 +259,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -21.
 [node name="Prédios" parent="." unique_id=965448203 instance=ExtResource("5_vgdmu")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.076088, -0.76517963, 11.034258)
 
-[node name="Building14" parent="Prédios/BuildingsUnit" parent_id_path=PackedInt32Array(965448203, 728412656) index="5" unique_id=1956306728]
+[node name="Building14" parent="Prédios/BuildingsUnit" parent_id_path=PackedInt32Array(965448203, 740691810) index="5" unique_id=202994748]
 material_overlay = SubResource("ShaderMaterial_1vgo3")
 
 [node name="Area3D" type="Area3D" parent="Prédios" unique_id=1936353676]
@@ -460,7 +460,7 @@ transform = Transform3D(0.108450435, 0, 0.9941019, 0, 1, 0, -0.9941019, 0, 0.108
 curve = SubResource("Curve3D_ui4cq")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="BusPath" unique_id=715264372]
-transform = Transform3D(0.1481765, -0.023063933, -0.98868614, 0, 0.9997241, -0.023321345, 0.98894924, 0.0034557215, 0.1481371, -34.65652, 0, 8.658009)
+transform = Transform3D(0.14817654, -0.02306394, -0.98868626, 0, 0.99972445, -0.02332135, 0.9889494, 0.0034557227, 0.14813711, -34.65652, 0, 8.658009)
 rotation_mode = 4
 loop = false
 script = ExtResource("16_d8hd3")
@@ -468,16 +468,16 @@ script = ExtResource("16_d8hd3")
 [node name="Ônibus" parent="BusPath/PathFollow3D" unique_id=667804955 instance=ExtResource("17_jwg6v")]
 transform = Transform3D(2.3081899e-05, 0.0034919037, 0.9999939, -0.024252007, 0.9996998, -0.0034903171, -0.99970585, -0.024251774, 0.000107735395, 0, 0.090044826, -0.0016884804)
 
-[node name="Wheel1" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 112014410) index="2" unique_id=684274272]
+[node name="Wheel1" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 1536594432) index="2" unique_id=531605045]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 3.311226, -0.3548356, 1.50988)
 
-[node name="Wheel2" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 112014410) index="3" unique_id=1030978667]
+[node name="Wheel2" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 1536594432) index="3" unique_id=518710516]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -5.4145365, -0.3548356, 1.5098804)
 
-[node name="Wheel3" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 112014410) index="4" unique_id=142540822]
+[node name="Wheel3" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 1536594432) index="4" unique_id=454626721]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 3.311226, -0.3548356, -2.0453444)
 
-[node name="Wheel4" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 112014410) index="5" unique_id=1375117093]
+[node name="Wheel4" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(667804955, 1536594432) index="5" unique_id=650137199]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -5.4145365, -0.3548356, -2.0453444)
 
 [node name="WheelsPlayer1" type="AnimationPlayer" parent="BusPath/PathFollow3D/Ônibus" unique_id=103642161]

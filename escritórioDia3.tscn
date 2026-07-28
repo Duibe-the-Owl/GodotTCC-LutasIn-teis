@@ -168,13 +168,16 @@ tracks/4/path = NodePath(".")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(2.4, 21.666666, 40.033333, 58.033333),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(2.4, 21.666666, 29.333334, 40.033333, 58.033333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "values": [{
 "args": [],
 "method": &"_on_sit_animation_finished_trigger"
 }, {
 "args": ["ComputerTalk"],
+"method": &"trigger_timeline"
+}, {
+"args": ["ComputerTalk15"],
 "method": &"trigger_timeline"
 }, {
 "args": ["ComputerTalk2"],
@@ -310,7 +313,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.249003, -0.055074453, 4.13
 [node name="Carteira14" parent="." unique_id=212075373 instance=ExtResource("10_wheqm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.474821, -0.055074453, 10.789474)
 
-[node name="Chair" parent="Carteira14/DeskUnit" parent_id_path=PackedInt32Array(212075373, 1843714406) index="0" unique_id=2033621537]
+[node name="Chair" parent="Carteira14/DeskUnit" parent_id_path=PackedInt32Array(212075373, 1129430203) index="0" unique_id=1535322970]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8137474, -0.29560387, 0.04257965)
 
 [node name="Carteira15" parent="." unique_id=1340378624 instance=ExtResource("10_wheqm")]
@@ -372,7 +375,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.1
 [node name="MainCarteira" parent="." unique_id=1811457096 instance=ExtResource("20_st1ql")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.475147, -0.055103928, 13.9879265)
 
-[node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="3" unique_id=1757339918]
+[node name="Monitor" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 606726354) index="3" unique_id=1432161028]
 layers = 2
 material_overlay = SubResource("ShaderMaterial_iull5")
 
@@ -386,7 +389,7 @@ script = ExtResource("21_rdvab")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22179025, 0)
 shape = SubResource("BoxShape3D_8v41d")
 
-[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="7" unique_id=44197733]
+[node name="Screen" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 606726354) index="7" unique_id=1248618328]
 surface_material_override/0 = SubResource("StandardMaterial3D_aacnq")
 
 [node name="SubViewport" type="SubViewport" parent="MainCarteira/DeskUnit/Screen" index="0" unique_id=1884540969]
@@ -402,11 +405,11 @@ grow_vertical = 2
 stream = ExtResource("36_bp265")
 expand = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="8" unique_id=1558306546]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 606726354) index="8" unique_id=1558306546]
 root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_5lkqy")
 
-[node name="SitCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 666559217) index="9" unique_id=188736818]
+[node name="SitCamera" type="Camera3D" parent="MainCarteira/DeskUnit" parent_id_path=PackedInt32Array(1811457096, 606726354) index="9" unique_id=188736818]
 transform = Transform3D(0.8338856, 0, 0.55193686, 0, 1, 0, -0.55193686, 0, 0.8338856, 1.0576382, 0.55, 1.489955)
 fov = 72.6
 
