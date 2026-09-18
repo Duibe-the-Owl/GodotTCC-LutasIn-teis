@@ -259,7 +259,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -21.
 [node name="Prédios" parent="." unique_id=965448203 instance=ExtResource("7_yww2o")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.076088, -0.76517963, 11.65411)
 
-[node name="Building14" parent="Prédios/BuildingsUnit" parent_id_path=PackedInt32Array(965448203, 740691810) index="5" unique_id=202994748]
+[node name="Building14" parent="Prédios/BuildingsUnit" parent_id_path=PackedInt32Array(965448203, 1178280106) index="5" unique_id=1786964100]
 material_overlay = SubResource("ShaderMaterial_rvt2e")
 
 [node name="Area3D" type="Area3D" parent="Prédios" unique_id=1936353676]

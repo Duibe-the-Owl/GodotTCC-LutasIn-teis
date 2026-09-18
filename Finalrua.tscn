@@ -163,52 +163,52 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -48.
 [node name="Árvore" parent="." unique_id=2098301847 instance=ExtResource("5_fd30y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.468374, -0.716, -49.423786)
 
-[node name="Leaves" parent="Árvore/TreeUnit" parent_id_path=PackedInt32Array(2098301847, 1783212223) index="0" unique_id=578153567]
+[node name="Leaves" parent="Árvore/TreeUnit" parent_id_path=PackedInt32Array(2098301847, 1162510402) index="0" unique_id=1936598767]
 mesh = SubResource("ArrayMesh_fd30y")
 
 [node name="Árvore8" parent="." unique_id=353740080 instance=ExtResource("5_fd30y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.468, -0.716, 15.942)
 
-[node name="Leaves" parent="Árvore8/TreeUnit" parent_id_path=PackedInt32Array(353740080, 1783212223) index="0" unique_id=578153567]
+[node name="Leaves" parent="Árvore8/TreeUnit" parent_id_path=PackedInt32Array(353740080, 1162510402) index="0" unique_id=1936598767]
 mesh = SubResource("ArrayMesh_fd30y")
 
 [node name="Árvore9" parent="." unique_id=1066771581 instance=ExtResource("5_fd30y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.264, -0.716, 58.747)
 
-[node name="Leaves" parent="Árvore9/TreeUnit" parent_id_path=PackedInt32Array(1066771581, 1783212223) index="0" unique_id=578153567]
+[node name="Leaves" parent="Árvore9/TreeUnit" parent_id_path=PackedInt32Array(1066771581, 1162510402) index="0" unique_id=1936598767]
 mesh = SubResource("ArrayMesh_fd30y")
 
 [node name="Árvore10" parent="." unique_id=647795143 instance=ExtResource("5_fd30y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.592, -0.716, -0.469)
 
-[node name="Leaves" parent="Árvore10/TreeUnit" parent_id_path=PackedInt32Array(647795143, 1783212223) index="0" unique_id=578153567]
+[node name="Leaves" parent="Árvore10/TreeUnit" parent_id_path=PackedInt32Array(647795143, 1162510402) index="0" unique_id=1936598767]
 mesh = SubResource("ArrayMesh_fd30y")
 
 [node name="Árvore11" parent="." unique_id=990777266 instance=ExtResource("5_fd30y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.592, -0.716, -70.045)
 
-[node name="Leaves" parent="Árvore11/TreeUnit" parent_id_path=PackedInt32Array(990777266, 1783212223) index="0" unique_id=578153567]
+[node name="Leaves" parent="Árvore11/TreeUnit" parent_id_path=PackedInt32Array(990777266, 1162510402) index="0" unique_id=1936598767]
 mesh = SubResource("ArrayMesh_fd30y")
 
 [node name="Árvore12" parent="." unique_id=593172734 instance=ExtResource("5_fd30y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.468, -0.716, -120.548)
 
-[node name="Leaves" parent="Árvore12/TreeUnit" parent_id_path=PackedInt32Array(593172734, 1783212223) index="0" unique_id=578153567]
+[node name="Leaves" parent="Árvore12/TreeUnit" parent_id_path=PackedInt32Array(593172734, 1162510402) index="0" unique_id=1936598767]
 mesh = SubResource("ArrayMesh_fd30y")
 
 [node name="Árvore13" parent="." unique_id=1533887807 instance=ExtResource("5_fd30y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.506, -0.716, -167.68)
 
-[node name="Leaves" parent="Árvore13/TreeUnit" parent_id_path=PackedInt32Array(1533887807, 1783212223) index="0" unique_id=578153567]
+[node name="Leaves" parent="Árvore13/TreeUnit" parent_id_path=PackedInt32Array(1533887807, 1162510402) index="0" unique_id=1936598767]
 mesh = SubResource("ArrayMesh_fd30y")
 
-[node name="Rua(AS)" parent="." unique_id=474917808 instance=ExtResource("6_3yblm")]
+[node name="Rua(AS)" parent="." unique_id=1262684908 instance=ExtResource("6_3yblm")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -28.405, -1.09, -45.848427)
 
-[node name="Prédios" parent="." unique_id=965448203 instance=ExtResource("7_xwikc")]
+[node name="Prédios" parent="." unique_id=596618822 instance=ExtResource("7_xwikc")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.847923, -0.76517963, -56.2032)
 
-[node name="Prédios2" parent="." unique_id=1019934953 instance=ExtResource("8_1et37")]
+[node name="Prédios2" parent="." unique_id=2066656146 instance=ExtResource("8_1et37")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -69.3238, -0.74586296, -57.098354)
 
 [node name="Prédios3" parent="." unique_id=462981822 instance=ExtResource("9_cqew8")]
@@ -231,7 +231,7 @@ max_speed = 6.5
 [node name="Ônibus" parent="BusPath/PathFollow3D" unique_id=1347629826 instance=ExtResource("12_64bn6")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 
-[node name="BusDoor" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(1347629826, 112014410) index="1" unique_id=990099557]
+[node name="BusDoor" parent="BusPath/PathFollow3D/Ônibus/BusUnit" parent_id_path=PackedInt32Array(1347629826, 1536594432) index="1" unique_id=145823191]
 material_overlay = SubResource("ShaderMaterial_qivp7")
 
 [node name="Area3D" parent="BusPath/PathFollow3D/Ônibus" index="7" unique_id=1164175362]
@@ -240,7 +240,7 @@ destination_scene = "uid://def22xcqc4bee"
 [node name="Placa" parent="." unique_id=585211801 instance=ExtResource("13_xdtgp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.895375, 0.88510907, -106.505615)
 
-[node name="Sign" parent="Placa" index="0" unique_id=1946744231]
+[node name="Sign" parent="Placa" index="0" unique_id=3472256]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 37.1131)
 material_overlay = SubResource("ShaderMaterial_jjjwh")
 
@@ -258,6 +258,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20.3
 
 [node name="Fundo2" parent="." unique_id=1578349784 instance=ExtResource("16_gke5m")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -82.38086, 7.8657074, -53.890606)
+
+[node name="Fundo3" parent="." unique_id=936734380 instance=ExtResource("16_gke5m")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -82.38086, -7.4969025, -53.890606)
 
 [node name="Prédios5" parent="." unique_id=1392213642 instance=ExtResource("4_1sdor")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67.716, 2.751, 101.146)

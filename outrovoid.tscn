@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cqj3gecgyijxn" path="res://outrovoid.gd" id="1_4shqd"]
 [ext_resource type="Shader" uid="uid://g53we0g41lwa" path="res://dither.gdshader" id="2_u2b6d"]
+[ext_resource type="Texture2D" uid="uid://c1vjvhr227adb" path="res://finalscene.png" id="3_u2b6d"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0uet8"]
 shader = ExtResource("2_u2b6d")
@@ -40,3 +41,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="EndingCanvas" type="CanvasLayer" parent="." unique_id=1438461682]
+
+[node name="EndingImage" type="TextureRect" parent="EndingCanvas" unique_id=1986980319]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_u2b6d")
+expand_mode = 1
