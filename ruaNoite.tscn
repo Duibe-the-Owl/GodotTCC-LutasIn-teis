@@ -239,7 +239,7 @@ stream = ExtResource("2_xl13i")
 autoplay = true
 
 [node name="Árvore" parent="." unique_id=1392830244 instance=ExtResource("5_xl13i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7108936, -0.7160511, 23.793968)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.276, -0.716, 23.794)
 
 [node name="Árvore2" parent="." unique_id=160528888 instance=ExtResource("5_xl13i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.990364, -0.7160511, 67.38872)

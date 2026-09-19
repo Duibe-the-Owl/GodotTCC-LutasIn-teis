@@ -247,7 +247,7 @@ stream = ExtResource("2_xlhdb")
 autoplay = true
 
 [node name="Árvore" parent="." unique_id=1392830244 instance=ExtResource("3_5ed0p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7108936, -0.7160511, 22.532627)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.276, -0.716, 22.533)
 
 [node name="Árvore2" parent="." unique_id=160528888 instance=ExtResource("3_5ed0p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.990364, -0.7160511, 66.12738)
@@ -267,7 +267,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -21.
 [node name="Prédios" parent="." unique_id=965448203 instance=ExtResource("5_vf7js")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.076088, -0.76517963, 10.392769)
 
-[node name="Building14" parent="Prédios/BuildingsUnit" parent_id_path=PackedInt32Array(965448203, 740691810) index="5" unique_id=202994748]
+[node name="Building14" parent="Prédios/BuildingsUnit" parent_id_path=PackedInt32Array(965448203, 1178280106) index="5" unique_id=1786964100]
 material_overlay = SubResource("ShaderMaterial_xlhdb")
 
 [node name="Area3D" type="Area3D" parent="Prédios" unique_id=1936353676]
@@ -468,7 +468,7 @@ transform = Transform3D(0.108450435, 0, 0.9941019, 0, 1, 0, -0.9941019, 0, 0.108
 curve = SubResource("Curve3D_ui4cq")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="BusPath" unique_id=715264372]
-transform = Transform3D(0.14825429, -0.023109028, -0.98867303, 0, 0.9997215, -0.023367247, 0.9889356, 0.0034643437, 0.14821494, -34.47371, 0, 8.638065)
+transform = Transform3D(0.14825429, -0.023109024, -0.9886731, 0, 0.9997214, -0.023367248, 0.9889356, 0.0034643435, 0.14821495, -34.47371, 0, 8.638065)
 rotation_mode = 4
 loop = false
 script = ExtResource("16_hk4ug")
